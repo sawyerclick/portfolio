@@ -4,6 +4,10 @@ body{
 	font-family: 'B612 Mono', monospace;
 }
 
+body a {
+	border-bottom: 3px solid rgb(183, 217, 250);
+}
+
 #container {
 	max-width:800px;
 	padding-top:20px;
@@ -40,6 +44,7 @@ section.header a{
 	text-decoration:none;
 	display:inline-block;
 	color:#000;
+	border-bottom: 3px solid rgb(183, 217, 250);
 	background:rgb(183, 217, 250);
 	transition:all 0.2s;
 	opacity:1;
@@ -60,7 +65,7 @@ section.get-in-touch {
 }
 
 section.get-in-touch a, section.links a {
-	text-decoration:none;
+	border-bottom: 3px solid rgb(183, 217, 250);
 	color:#333;
 	transition:all 0.2s;
 	font-weight:400;
