@@ -79,10 +79,9 @@ section.get-in-touch a:hover, section.links a:hover{
 	background:rgb(183, 217, 250);
 	opacity:1;
 	color:#101010;
+	text-decoration: none;
 }
 
-
-}
 
 section.links p {
 	font-size:14px;
