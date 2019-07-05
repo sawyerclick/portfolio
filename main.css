@@ -72,6 +72,7 @@ section.get-in-touch a, section.links a {
 	display:inline-block;
 	background:#fff;
 	opacity:1;
+	text-decoration: none;
 }
 
 section.get-in-touch a:hover, section.links a:hover{
