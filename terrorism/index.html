@@ -8,94 +8,266 @@
     <!-- Your CSS files -->
     <link rel="stylesheet" href="styles/styles.css">
     
-    <!-- google fonts: Open Sans (sans-serif) and Lora (serif) -->
+    <!-- google fonts: Open Sans (sans) and Lora ) -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
       
-    <title>State-level wiretapping</title>
+    <title>Lede page</title>
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Turf.js/5.1.5/turf.min.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
   </head>
 
   <body class="light-theme"> <!-- all of the content on your html page goes inside the body -->
 
     <div class="header">
-      <p class="kicker">Wiretapping</p>
-      <h1 class="headline">Drug-related wiretapping hits lowpoint</h1>
-      <h2 class="subhead">Wiretapping has been on the decline for the past few years. Drug-related cases dominate the state-level, but there's been a sharp drop off in the number of cases reported by the Administrative Office of the U.S. Courts on behalf of the Federal Judiciary.</h2>
-      <p class="byline">By Sawyer Click</p>
-      <p class="date">Published July XX, 2019</p>
+      <h1 class="headline">A simple page</h1>
+      <h2 class="subhead">If you need a subhead, it can go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+      <p class="byline">By Firstname Lastname</p>
+      <p class="date">Published Month XX, 2019</p>
     </div>
 
     <div class="story-body">
-      <p class="body-text serif">The Administrative Office of the U.S. Courts released the <a href='https://www.uscourts.gov/statistics-reports/wiretap-report-2018' target='_blank'>Wiretap Report 2018</a> at the turn of the year. The federal government, the District of Columbia, the Virgin Islands, Puerto Rico and 44 states have laws permitting "wire, oral, or electronic surveillance", according the the report. Twenty-seven of these jursidictions reported using wiretapping during 2018.</p>
-        
-      <p class="body-text serif">The report shows that over the past year, wiretapping itself has been on a decline. The dip started following 2016's report and has carried over into 2018's, with a 23% decrease in authorized wiretaps between 2017 and 2018.</p>
-
-      <div class="chart-section">
-        <p class="chart-title">Types of Wiretapping</p>
-        <p class="chart-subhead">A yearly breakdown of the types of offenses that were wiretapped.</p>
-        <div class="chart-row">
-          <div class="chart">
-            <img src="images/categorical_breakdown_by_year.svg"/>
-          </div>
-        </div>
-        <p class="chart-source">Sources: U.S. Administration of Courts</p>
-      </div>
-
-      <h3 class="section-head serif">Drugs still dominate the declining reports</h3>
-      <p class="body-text serif">Drug-related wiretapping, consisting of the offenses labelled as "Narcotics", "Drugs", "Drugs - Illegal" and "Drugs - Prescription", consistently consumed a vast majority of the intercepts. In 2013, drug-related wiretaps made up 92% of state-level wiretaps. That number has dropped steadily, with an exception of a spike in 2015. Now, per the 2018 report, drug-related intercepts sit at 77% of the year's total.</p>
-
-      <div class="chart-section">
-        <p class="chart-title">2018's drug-related wiretapping per 1 million people</p>
-        <p class="chart-subhead">Each state's legality regarding cannabis is demarcated by color. This does not imply all intercepts were cannabis-related.</p>
-        <div class="chart-row">
-          <div class="chart">
-            <img src="images/drugs_per_state_per_capita.svg"/>
-          </div>
-        </div>
-        <p class="chart-source">Sources: U.S. Administration of Courts; U.S. Census Bureau</p>
-      </div>
-
-      <p class="body-text serif">Each state had an average of 38.62 drug-related wiretaps. California, New York, New Jersey, Texas and Illinois had 46% of these wiretaps. When accounting for population, Vermont and New Mexico had the most wiretaps per capita, nearing 10 per 1 million people. In these states, respectively, cannabis is recreationally legal and medicinally legal. The three states in which cannabis is entirely illegal, Louisiana, Nebraska and Idaho, are dispersed throughout the upper, middle and lower portion.</p>
+      <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur purus sapien, tincidunt ac bibendum eget, cursus vel mi. Sed cursus tincidunt rutrum. Quisque auctor ut erat ut rhoncus. Nam vel neque mauris. Sed vel ex justo. Duis et sagittis dolor. In at auctor libero. Quisque at nisi quis elit tempus placerat.</p>
+      <p class="body-text">In ut egestas velit, non porta sapien. Nam quis magna luctus, fermentum nunc quis, ullamcorper neque. Morbi eget risus neque. Integer a tellus in lorem dapibus rutrum. Sed ut sapien libero. Cras rutrum semper aliquam. Donec in dignissim velit.</p>
+      <p class="body-text">Vivamus sagittis massa urna, nec condimentum enim tristique at. Mauris a erat quis diam pretium scelerisque a vel dolor. Etiam pulvinar laoreet gravida. Quisque consectetur, arcu non tempor pharetra, tortor massa rhoncus arcu, id vulputate tellus lectus ut elit.</p>
     </div>
+
+    <div id='map'>
+      <div id="dropdown">
+        <select id="select-menu">
+          <option value="">All Groups</option>
+        </select>
+      </div>
+      <div id='headPlace'> Rollover to get info</div>
+    </div>
+
+    <div id='articlePlace'>Click an incident to see more details.</div>
 
     <div class="chart-section">
-        <p class="chart-title">Mapping it out</p>
-        <p class="chart-subhead">When geographically charted, clusters show concentrated areas. The southwest, the northeast and parts of the midwest have a high concentration of drug-related wiretapping. Other areas, like the northern midwest, have little to none.</p>
-        <div class="chart-row">
-          <div class="chart">
-            <img src="images/drugs.svg"/>
-          </div>
-        <p class="chart-source">Sources: U.S. Administration of Courts; U.S. Census Bureau</p>
-      </div>
-
-    <div class="story-body">
-      <h3 class="section-head serif">Arrests, Convictions, Costs</h3>
-    </div>
-
-      <div class="chart-section">
-              <p class="chart-subhead">For arrests and total money spent, New York and California top the charts. However, when it comes to convictions, which is a major factor in determining the cost effectiveness, New York drops a few rungs, and California ends up having no convictions.</p>
-              <div class="chart-row">
-                <div class="chart">
-                  <p class="chart-label">Arrests</p>
-                  <img src="images/drugs_2018_arrested.svg"/>
-                </div>
-                <div class="chart">
-                  <p class="chart-label">Convictions</p>
-                  <img src="images/drugs_2018_convicted.svg"/>
-                </div>
-                <div class="chart">
-                  <p class="chart-label">Millions spent</p>
-                  <img src="images/drugs_2018_cost.svg"/>
-                </div>
-          </div>
+      <p class="chart-title">Time for some graphics</p>
+      <p class="chart-subhead">Here's two charts side-by-side outside the story well.</p>
+      <div class="chart-row">
+        <div class="chart">
+          <img src="images/test-chart.png"/>
         </div>
 
-      <div class="story-body">
-          <p class="chart-subhead">Based on the charts below, Alabama appears to be one of the most cost-effective states. It ranks lower for money spent and arrests, but it ranks second for convictions, indicating the arrests were more meaningful.
-          </p>
-          <p class="chart-subhead">On the other side, Illinois is the least cost-effective. At a little over $2 million, the state ranks 6th in total money spent. There were no reported convictions, despite having 21 arrests.
-          </p>
-          <p class="body-text serif">For the most part, states in which cannabis is entirely illegal do not have a substantial number of reported wiretapping incidences.</p>
+        <div class="chart">
+          <img src="images/test-chart.png"/>
+        </div>
       </div>
+      <p class="chart-source">Sources: One source; another source</p>
+    </div>
+
+    <div class="story-body">
+      <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur purus sapien, tincidunt ac bibendum eget, cursus vel mi. Sed cursus tincidunt rutrum. Quisque auctor ut erat ut rhoncus. Nam vel neque mauris. Sed vel ex justo. Duis et sagittis dolor. In at auctor libero. Quisque at nisi quis elit tempus placerat.</p>
+      <p class="body-text">In ut egestas velit, non porta sapien. Nam quis magna luctus, fermentum nunc quis, ullamcorper neque. Morbi eget risus neque. Integer a tellus in lorem dapibus rutrum. Sed ut sapien libero. Cras rutrum semper aliquam. Donec in dignissim velit.</p>
+
+      <div class="chart-section">
+        <p class="chart-title">Time for some graphics</p>
+        <p class="chart-subhead">This is a standard, single chart which fits in the same width as the story.</p>
+        <div class="chart-row">
+          <div class="chart">
+            <img src="images/test-chart.png"/>
+          </div>
+        </div>
+        <p class="chart-source">Sources: One source; another source</p>
+      </div>
+
+      
+    </div>
+
+<!-- Loading in Mapbox -->
+
+<!-- 
+THIS IS WHERE THE BROWSER LOADS IN YOUR GEOJSON INFORMATION
+MAKING IT A JAVASCRIPT FILE .js, RATHER THAN A GEOJSON FILE
+ALLOWS YOU TO LOAD IT LOCALLY WITHOUT DEALING WITH SETTING UP SERVERS ON YOUR MACHINE.
+ -->
+
+ <script type="text/javascript" src="geo-data.js"></script>
+
+ <!-- 
+HERE BEGINS ALL THE SCRIPT THAT SETS UP THE MAP 
+ALL THE COMMENTS FROM HERE WE'LL BE IN JAVASCRIPT COMMENTS //
+-->
+
+ <script type="text/javascript">
+// these seven lines maybe the only lines you need to edit
+// you should put in your own access token
+// you can change the style of the tiles
+// as well as the center and the zoom
+
+// but note that way down below this is a method that auto centers and zooms:
+// map.fitBounds(turf.bbox(infoData), { padding: 120, linear: true })
+//If you want to control the centering and zoom yourself, comment out that line.
+
+   mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+
+   var map = new mapboxgl.Map({
+     container: 'map', // HTML container ID
+     style: 'mapbox://styles/mapbox/light-v10', // style URL
+     center: [-98.5795, 39.8283], // starting position as [lng, lat]
+     zoom: 2
+   });
+   map.addControl(new mapboxgl.NavigationControl(), 'top-left');
+
+// all of this JavaScript manages what's displayed on hover and click
+   var popup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false });
+
+   let hoverCurrentId = null
+   var datalayer;
+
+   function updateArticle(e) {
+     let feature = e.features[0]
+     document.getElementById("articlePlace").innerHTML = feature.properties.article
+   }
+   function updateHead(e) {
+     let feature = e.features[0]
+     map.getCanvas().style.cursor = 'pointer';
+     document.getElementById("headPlace").innerHTML = feature.properties.headline
+
+   }
+   function removeHead(e) {
+     document.getElementById("headPlace").innerHTML = "&nbsp;"
+     map.getCanvas().style.cursor = '';
+
+   }
+
+   function startHover(e) {
+     let feature = e.features[0]
+
+     if (hoverCurrentId) {
+       map.setFeatureState({ source: 'datalayer', id: hoverCurrentId }, { hover: false });
+     }
+     hoverCurrentId = feature.id
+     map.setFeatureState({ source: 'datalayer', id: hoverCurrentId }, { hover: true });
+   }
+
+   function stopHover(e) {
+     if (hoverCurrentId) {
+       map.setFeatureState({ source: 'datalayer', id: hoverCurrentId }, { hover: false });
+     }
+     hoverCurrentId = null;
+   }
+
+   function drawPopup(e) {
+     let feature = e.features[0]
+     map.getCanvas().style.cursor = 'pointer';
+
+     var coordinates = feature.geometry.coordinates.slice();
+     var headline = feature.properties.headline;
+
+     while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+       coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+     }
+
+     popup.setLngLat(coordinates)
+       .setHTML(`<h4>${headline}</h4>`)
+       .addTo(map);
+   }
+
+   function removePopup(e) {
+     map.getCanvas().style.cursor = '';
+     popup.remove();
+   }
+
+   map.on('load', function () {
+     for (let i = 0; i < infoData.features.length; i++) {
+       infoData.features[i]['id'] = i + 1
+     }
+// the JavaScript below sets up the styles of the colors based on your properties
+// color, radius, and rating
+
+// Soma's explanation of 'paint': https://gist.github.com/jsoma/c91cfa7a1f4f8346d95ac2a907f0cb0c
+
+     datalayer = map.addLayer({
+       id: "datalayer",
+       type: "circle",
+       source: {
+         type: "geojson",
+         data: infoData,
+       },
+       paint: {
+         'circle-radius': ['to-number', ['get', 'radius']],
+         'circle-stroke-color': 'red',
+         'circle-stroke-width': 1,
+         'circle-color': [
+           'case',
+           ['boolean', ['feature-state', 'hover'], false],
+           '#666',
+           ['get', 'color'],
+         ],
+         'circle-opacity': [
+           'case',
+           ['boolean', ['feature-state', 'hover'], false],
+           1,
+           0.5
+         ]
+       }
+     });
+// these functions control Mouse actions
+// they make the pop-up headline or update the article text
+     // When we move the mouse over, draw the popup and change the hover style
+     map.on('mouseenter', 'datalayer', function (e) {
+       startHover(e)
+// uncomment this line to get pop-ups
+// 				drawPopup(e)
+       updateHead(e)
+     });
+
+     // When we move the mouse away from a point, turn off the hovering and popup
+     map.on('mouseleave', 'datalayer', function (e) {
+       stopHover(e)
+// uncomment this line to get pop-ups
+// 				removePopup(e)
+       removeHead(e)
+     });
+
+     // When we click, update the article (the right-hand side)
+     map.on('click', 'datalayer', function (e) {
+       updateArticle(e)
+     })
+
+// very important!! this automatically centers the map and zooms it
+
+    //  map.fitBounds(turf.bbox(infoData), { padding: 120, linear: true })
+   })
+
+
+ </script>
+ <script>
+ // this part is J query / with some mapbox JavaScript
+ // it changes what is displayed based on the pulldown menu
+   var groupsObj = {};
+
+   $(document).ready(function () {
+     infoData.features.forEach(function (feature) {
+       groupsObj[feature.properties.group_id] = feature.properties.group_name;
+     })
+
+     $.each(groupsObj, function (key, value) {
+       $('#select-menu')
+         .append($("<option></option>")
+           .attr("value", value)
+           .text(value));
+     });
+
+     $('#select-menu').change(function () {
+       var selectedGroup = $('#select-menu').val();
+
+       if (!selectedGroup) {
+         map.setFilter('datalayer', null);
+       } else {
+         map.setFilter('datalayer', ['==', ['get', 'group_name'], selectedGroup]);
+       }
+     });
+   });
+ </script>
+
   </body>
+
 </html>
