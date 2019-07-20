@@ -1,0 +1,168 @@
+/*** RESET ***/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body{
+	color:#101010;
+	background:#fff;
+	font-family: 'B612 Mono', monospace;
+}
+
+#container {
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+section {
+	padding:10px;
+}
+
+h1 {
+	font-size: 3em;
+	font-weight: 600;
+	letter-spacing: -0.1em;
+	word-spacing: -0.1em;
+	text-align: center;
+}
+
+h3 {
+	text-align: center;
+	font-size:1.25em;
+	letter-spacing:0.5px;
+	margin:0 0 5px 0;
+}
+
+p {
+	font-weight: 100;
+	font-size:16px;
+	margin:3px 0 10px 0;
+	line-height:1.5rem;
+}
+section.header {
+	text-align: center;
+}
+
+section.header a{
+	font-weight:500;
+	padding:0px 4px 2px 4px;
+	text-decoration:none;
+	display:inline-block;
+	color:#000;
+	border-bottom: none;
+	background: none;
+	transition:all 0.2s;
+	opacity:1;
+}
+
+section.header a:hover {
+	background-color:  rgb(183, 217, 250);
+}
+
+.bio {
+	padding: 0 2em;
+	line-height: 1.5em;
+}
+
+.socials {
+	font-size: 1.75em;
+  padding: 0em 2em 1em 2em;
+  text-align: center;
+}
+
+p span {
+	font-weight:900;
+	color:rgb(183, 217, 250);
+}
+
+section.links p.visible-link {
+	display:block;
+}
+section.links p.hidden-link {
+	display:none;
+}
+
+section.links a {
+	text-decoration: none;
+	border-bottom: rgb(183, 217, 250);
+}
+
+.row {
+	margin: 8px -16px;
+	text-align: center;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+	padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+	float: left;
+	width: 33%;
+	box-sizing: border-box;
+}
+
+/* Clear floats after rows */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#see-more {
+	font-weight:600;
+	font-size:16px;
+	cursor:pointer;
+	transition:all 0.15s;
+	color:#101010;
+	height:2em;
+	display:inline-block;
+}
+#see-more span {
+	width:18px;
+	height:2em;
+	vertical-align:baseline;
+	font-size:14px;
+	transition: all 0.2s;
+	display:inline-block;
+}
+#see-more:hover {
+	color: rgb(183, 217, 250);
+}
+#see-more:hover span {
+	font-size:16px;
+}
