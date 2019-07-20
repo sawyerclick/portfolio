@@ -101,8 +101,12 @@ section.links p.hidden-link {
 }
 
 section.links a {
-	text-decoration: none;
-	border-bottom: rgb(183, 217, 250);
+	text-decoration-line: none;
+	color: inherit;
+}
+
+section.links a:hover {
+	border: 5px black;
 }
 
 .row {
