@@ -1,0 +1,36 @@
+Appendix Table A-1,,,,,
+United States District Courts,,,,,
+"Report of Court-Authorized Intercepts of Wire, Oral, or Electronic Communications Pursuant to 18 U.S.C. 2519",,,,,
+Data Definitions,,,,,
+,,,,,
+Column,Field or Value,Definition,Column,Field or Value,Definition
+A,Jurisdiction,The federal district court that authorized the wiretap.,B,A.O. Number,The first four digits of the A.O. number represent the year in which the wiretap was terminated.  Wiretaps that were terminated prior to the current year were not reported if they were part of ongoing investigations.
+C,Judge,Last name of the judge who approved the wiretap.,D,Attorney General,U.S. Attorney General or the designee who authorized the reported application.
+E,Offense,The most serious offense listed on the wiretap application.,,,
+F,Intercept Type,,,,
+,,"WC = Cellular or Mobile Telephone (Wire)
+WS = Standard Telephone (Wire)
+WO = Other (Wire)
+OM = Microphone (Oral)
+OO = Other (Oral)
+AP = App (Electronic)",,"ED = Digital Pager (Electronic)
+EE = Computer or E-Mail (Electronic)
+EF = Fax Machine (Electronic)
+EO = Other (Electronic)
+TX = Text Message (Electronic)",
+G,Location,,,,
+,,"D = Portable Device
+H = Personal Residence
+B = Business
+A = Public Area",,"O = Other Location
+R = Roving (Relaxed Specification Order)
+N = Not Specified",
+H,Application Date,The date that the U.S. Attorney or the designee submitted the application to the district court.,I,Original Order (Days),The number of days authorized in the original order.
+J,Number of Extensions,The number of times an extension was sought and approved by judges.,K,Total Length (Days),The number of days the wiretap was authorized to be in use.
+L,Installation,Identifies whether the intercept was used or not used.,M,Number of Days in Operation,The total number of days that the wiretap was in use.
+N,Average Intercepts per Day,The number of intercepts divided by the number of days in operation.  NR = Not Reported.,O,Number of Persons Intercepted,The number of separate individuals whose communications were intercepted.  NR = Not Reported.
+p,Number of Intercepts,The total number of communications that were captured during the time the wiretap was in operation.  NR = Not Reported.,Q,Number of Incriminating Intercepts,The number of intercepts that were identified by law enforcement personnel as incriminating.  NR = Not Reported.
+R,Total Cost in Dollars,The personnel and resource costs of operating the wiretap.,S,Other Than Manpower Cost in Dollars,The cost of equipment and other tangible items used to operate the wiretap.
+T,Arrests,The number of individuals arrested as a result of information obtained from the wiretap.,U,Trials,The number of completed trials that were held as a result of information obtained from the wiretap or a combination of wiretaps.
+"V, W, X",Motions to Suppress Intercepts,"The number of motions to suppress by the defendant that were granted, denied, or pending.",Y,Persons Convicted,The number of individuals convicted as a result of information obtained from the wiretap.
+Z,Cost Related,Identifies the A.O. number of a related wiretap that includes cost information for this wiretap.,AA,Results Related,"Identifies the A.O. number of a related wiretap that contains data on arrests, trials, motions, or convictions for this wiretap."
