@@ -258,23 +258,31 @@ p.caption {
 
 }
 
+#container {
+	display: flex;
+	width: 90%;
+}
+
 #map {
 	display: flex;
-	flex: 1;
+	flex: 2;
 	height: calc(100vh - 30px);
-	width: 50%;
-	overflow: scroll;
-	margin: 15px;
+	width: 60%;
+}
+
+#article_container {
+	display: inline;
 }
 
 #articlePlace {
+	width: 100%;
 	display: flex;
 	flex: 1;
 	height: calc(100vh - 30px);
 	overflow: scroll;
-	margin: 15px;
+	padding-top:2%;
+	margin-left: 10px;
 }
-
 
 
 /* mobile */
