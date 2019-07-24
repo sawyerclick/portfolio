@@ -20,6 +20,10 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
+::-webkit-scrollbar { 
+	display: none; 
+}
+
 body{
 	color:#101010;
 	background:#fff;
@@ -54,10 +58,6 @@ h3 {
 }
 
 
-.title:hover {
-    background-color: rgb(183, 217, 250);
-}
-
 p {
 	font-family: 'B612', sans-serif;
 	font-weight: 100;
@@ -85,34 +85,17 @@ section.header a:hover {
 	background-color:  rgb(183, 217, 250);
 }
 
-.bio {
-	padding: 0 2em;
-	line-height: 1.5em;
-}
-
 .socials {
 	font-size: 1.75em;
-  padding: 0em 2em 1em 2em;
-  text-align: center;
 }
 
-p span {
-	font-weight:900;
-	color:rgb(183, 217, 250);
+.socials a:hover {
+	background-color: rgb(183, 217, 250);
 }
 
-section.links p.visible-link {
-	display:block;
+.bio {
+	line-height: 1.5em;
 }
-section.links p.hidden-link {
-	display:none;
-}
-
-section.links a {
-	text-decoration: none;
-	color: inherit;
-}
-
 
 .row {
 	margin: 8px -16px;
@@ -234,4 +217,180 @@ margin: 0;
 }
 #see-more:hover span {
 	font-size:16px;
+}
+
+
+/* Loading animation */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+.container .box {
+  width: auto;
+  height: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .box .title {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.container .box .title .block {
+  width: 0%;
+  height: inherit;
+  background: rgb(183, 217, 250);
+  position: absolute;
+  animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  display: flex;
+}
+.container .box .title h1 {
+  color: #000;
+  font-size: 3em;
+  font-weight: 200;
+  -webkit-animation: mainFadeIn 2s forwards;
+  -o-animation: mainFadeIn 2s forwards;
+  animation: mainFadeIn 2s forwards;
+  animation-delay: 1.6s;
+  opacity: 0;
+  display: flex;
+  align-items: baseline;
+  position: relative;
+}
+.container .box .title h1 span {
+  width: 0px;
+  height: 0px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: rgb(183, 217, 250);
+  -webkit-animation: load 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation: popIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 1.6s;
+  margin-left: 5px;
+  margin-top: -12px;
+  position: absolute;
+  bottom: 13px;
+  right: -12px;
+}
+.container .box .role {
+  width: 75%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin-top: -6px;
+  left: 35%;
+}
+.container .box .role .block {
+  width: 0%;
+  height: inherit;
+  background: lightslategray;
+  position: absolute;
+  animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 2s;
+  display: flex;
+}
+.container .box .role p {
+  animation: secFadeIn 2s forwards;
+  animation-delay: 3.2s;
+  opacity: 0;
+  font-weight: 200;
+  font-family: 'B612', sans-serif;
+  color: #000;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 6.5px;
+}
+
+@keyframes mainBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes secBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes popIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: rgb(183, 217, 250);
+    border: 0px solid #ddd;
+    opacity: 0;
+  }
+  50% {
+    width: 10px;
+    height: 10px;
+    background: rgb(183, 217, 250);
+    opacity: 1;
+    bottom: 45px;
+  }
+  65% {
+    width: 7px;
+    height: 7px;
+    bottom: 0px;
+    width: 15px;
+  }
+  80% {
+    width: 10px;
+    height: 10px;
+    bottom: 20px;
+  }
+  100% {
+    width: 7px;
+    height: 7px;
+    background: rgb(183, 217, 250);
+    border: 0px solid #222;
+    bottom: 17px;
+  }
+}
+@keyframes secFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }
