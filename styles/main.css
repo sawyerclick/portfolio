@@ -102,6 +102,12 @@ section.header a:hover {
 	text-align: center;
 }
 
+.row a {
+	text-decoration: none;
+	color: black;
+}
+
+
 /* Add padding BETWEEN each column */
 .row,
 .row > .column {
@@ -189,37 +195,6 @@ margin: 0;
 }
 
 
-
-
-
-
-
-
-#see-more {
-	font-weight:600;
-	font-size:16px;
-	cursor:pointer;
-	transition:all 0.15s;
-	color:#101010;
-	height:2em;
-	display:inline-block;
-}
-#see-more span {
-	width:18px;
-	height:2em;
-	vertical-align:baseline;
-	font-size:14px;
-	transition: all 0.2s;
-	display:inline-block;
-}
-#see-more:hover {
-	color: rgb(183, 217, 250);
-}
-#see-more:hover span {
-	font-size:16px;
-}
-
-
 /* Loading animation */
 * {
   margin: 0;
@@ -287,7 +262,7 @@ margin: 0;
   right: -12px;
 }
 .container .box .role {
-  width: 75%;
+  width: 72%;
   position: relative;
   display: flex;
   align-items: center;
