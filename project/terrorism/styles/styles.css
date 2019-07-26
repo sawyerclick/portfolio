@@ -279,7 +279,6 @@ p.caption {
 	flex: 1;
 	height: calc(100vh - 300px);
 	overflow: scroll;
-	padding-top:2%;
 	margin-left: 10px;
 }
 

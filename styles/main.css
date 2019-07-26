@@ -174,13 +174,13 @@ width: 30%;
 
 .skills {
 text-align: left;
-font-size: 0.8em;
+font-size: 65%;
 padding-bottom: 0.5em;
 }
 
 .date {
 text-align: right;
-font-size: 0.8em;
+font-size: 65%;
 padding-bottom: 0.5em;
 }
 
@@ -367,5 +367,13 @@ margin: 0;
   }
   100% {
     opacity: 0.5;
+  }
+}
+
+
+/* Mobile */
+@media (max-width:700px) {
+  .column {
+    width: 100%;
   }
 }
