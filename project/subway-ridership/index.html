@@ -19,8 +19,8 @@
 
     <div class="header">
       <p class="kicker">Subway Ridership</p>
-      <h1 class="headline">A system in decline</h1>
-      <h2 class="subhead">New York City's subay system has had a declining ridership for the past few years.</h2>
+      <h1 class="headline">New Yorkers are raging against the (subway) machines</h1>
+      <h2 class="subhead">New York City's subway system has had a declining ridership for the past few years.</h2>
       <p class="byline">By Sawyer Click</p>
       <p class="date">Published July 29, 2019</p>
     </div>
@@ -31,14 +31,14 @@
       <p class="body-text serif">Vivamus sagittis massa urna, nec condimentum enim tristique at. Mauris a erat quis diam pretium scelerisque a vel dolor. Etiam pulvinar laoreet gravida. Quisque consectetur, arcu non tempor pharetra, tortor massa rhoncus arcu, id vulputate tellus lectus ut elit.</p>
 
       <div class="chart-section">
-        <p class="chart-title">Time for some graphics</p>
-        <p class="chart-subhead">This is a standard, single chart which fits in the same width as the story.</p>
+        <p class="chart-title">Annual ridership changes by the borough</p>
+        <p class="chart-subhead">Negative values indicate a drop in annual ridership. </p>
         <div class="chart-row">
           <div class="chart">
             <img src="images/annual_ridership_by_borough.svg"/>
           </div>
         </div>
-        <p class="chart-source">Sources: One source; another source</p>
+        <p class="chart-source">Sources: MTA</p>
       </div>
 
       <h3 class="section-head serif">This is what a section hed looks like</h3>
@@ -151,5 +151,14 @@
     <div class="footer">
       <p class="note">Note: Any end notes can go here.</p>
     </div>
+
+
+    <script> 
+        $(document).ready(function(){ 
+           $(window).scroll(function(){ 
+               $('.body-text').css("opacity", 1- $(window).scrollTop() / 700) 
+           }) 
+       }) 
+   </script> 
   </body>
 </html>
