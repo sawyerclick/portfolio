@@ -98,7 +98,7 @@ section.header a:hover {
 }
 
 .row {
-	margin: 8px -16px;
+	margin: -2px -16px;
 	text-align: center;
 }
 
@@ -126,8 +126,8 @@ section.header a:hover {
 
 .content {
 	padding: 6px 1em;
-	margin: 1em 1em 1em 1em;
-	height: auto;
+	margin: 0em 1em 1em 1em;
+	max-height: 350px;
 	border-width: 2px;
 	border-color: rgb(183, 217, 250);
 	border-style: solid;
