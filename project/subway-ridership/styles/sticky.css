@@ -1,0 +1,134 @@
+/*  Chart */
+
+.chart-section {
+  /* margin:auto; */
+  margin-left: 0px;
+  align-content: right;
+  max-width: 700px;
+  left: -3rem;
+}
+
+.chart-section.wide{
+width:100%;
+max-width:1200px;
+}
+
+.chart-section.wide p.chart-title {
+width:100%;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+}
+.chart-section.wide p.chart-subhead {
+width:100%;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.chart-section {
+width:100%;
+/* max-width:1200px; */
+/* padding:20px 0px; */
+}
+
+.story-body .chart-section {
+padding-top:0px;
+}
+
+
+.chart-row {
+display:flex;
+justify-content: space-between;
+margin-top:20px;
+}
+
+p.chart-title {
+font-size:1.5rem;
+font-weight:700;
+/* max-width:700px; */
+/* margin:0px auto 5px auto; */
+}
+p.chart-subhead {
+margin:-1px auto;
+max-width:700px;
+font-size:1rem;
+margin-bottom:15px;
+}
+
+p.chart-label {
+margin:0 0 5px 0;
+font-size:0.85rem;
+text-transform:uppercase;
+font-weight:600;
+}
+
+.chart-row .chart {
+width:100%;
+padding-right:15px;
+min-width:calc(25% - 15px);
+
+}
+
+p.chart-source {
+font-size:0.85rem;
+margin:0;
+}
+
+.chart img {
+width: 75%;
+height: auto;
+}
+
+
+section {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 5rem;
+  width: 90%;
+}
+@media screen and (min-width: 35rem) {
+  section {
+    flex-direction: row;
+  }
+}
+section > figure {
+  flex: 1.5;
+}
+section > article {
+  flex: 1;
+}
+
+article p {
+  /* font-family: Georgia; */
+  font-size: 1.1rem;
+}
+@media screen and (min-width: 35rem) {
+  article p {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 35rem) {
+  article p:not(:last-of-type) {
+    min-height: 10vh;
+  }
+}
+
+figure {
+  align-items: center;
+  align-self: flex-start;
+  display: flex;
+  height: 90%;
+  margin: auto;
+  margin-top: 0%;
+  width: 100%;
+  justify-content: center;
+  top: 3rem;
+}
+@media screen and (min-width: 35rem) {
+  figure {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}

@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,6 +8,7 @@
       
     <!-- Your CSS files -->
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/sticky.css">
     
     <!-- google fonts: Open Sans (sans-serif) and Lora (serif) -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
@@ -17,66 +19,69 @@
 
   <body class="light-theme"> <!-- all of the content on your html page goes inside the body -->
     <div class="bg_image" id="#home">
-      
-   <div class="header">
-      <p class="kicker">Subway Ridership</p>
-      <h1 class="headline">New Yorkers are raging against the (subway) machines</h1>
-      <h2 class="subhead">NYC's Summer of Hell has come and gone, but the subway system's ridership is still in a state of decline.</h2>
-      <p class="byline">By Sawyer Click</p>
-      <p class="date">Published July 29, 2019</p>
+      <div class="header">
+        <p class="kicker">Subway Ridership</p>
+        <h1 class="headline">New Yorkers are raging against the (subway) machines</h1>
+        <h2 class="subhead">NYC's Summer of Hell has come and gone, but the subway system's ridership is still in a state of decline.</h2>
+        <p class="byline">By Sawyer Click</p>
+        <p class="date">Published July 29, 2019</p>
+      </div>
     </div>
-  </div>
 
     <div class="story-body" id="story">
-      
       <h3 class="section-head serif">A NEW LOW</h3>
-      <p class="body-text serif">The ridership plummet has brought the overall ridership to its lowest point in year. The Summer of Hell has come and gone, but it doesn't seem as it service is getting better. </p>
+      <p class="body-text serif">The ridership plummet has brought the overall ridership to its lowest point in years. The Summer of Hell has come and gone, but it doesn't seem as it service is getting better. </p>
       <p class="body-text serif">Gov. Cuomo's charge to fix the MTA has been brewing for a year, with the most recent stab at the growing homeless population crowding stations and trains. Recently, the MTA announced that on-time service was above 80%, marking a milestone. Still, ridership is falling.</p>
       <p class="body-text serif">Each borough suffered a loss for the second year straight. Brooklyn and Manhattan have had a ridership dip for three years. Each, except for Queens, had a larger drop than the year before.</p>
-  
-      <div class="chart-section">
-        <p class="chart-title">Annual ridership changes</p>
-        <p class="chart-subhead">Negative values indicate a drop in annual ridership. </p>
-        <div class="chart-row">
-          <div class="chart wide">
-            <img src="images/annual_ridership_by_borough_3.svg"/>
-          </div>
+
+    <figure>
+        <div class="chart-section">
+            <!-- <div class="chart-row"> -->
+              <!-- <div class="chart"> -->
+                <img src="pretty/borough_ridership.svg"/>
+              <!-- </div> -->
+            <!-- </div> -->
         </div>
-        <p class="chart-source">Sources: MTA</p>
-      </div>
+        </figure>
+        
+    </div>
 
 
-
+  <div class="story-body" id="story">
       <h3 class="section-head serif">Borough by Borough</h3>
       <p class="body-text serif">Stations that lost riders dwarf those that gained. Manhattan was closest to breaking even with stations that lost and stations that gained riders.</p>
+  </div>
 
+  <section>
+    <figure>
       <div class="chart-section">
-          <p class="chart-title">Riders lost, riders gained</p>
-          <p class="chart-subhead">The number of stations in each borough that lost riders vs the number of stations in each borough that gained riders</p>
-          <div class="chart-row">
-            <div class="chart wide">
-              <img src="images/lost_vs_gained.svg"/>
-            </div>
-          </div>
-          <p class="chart-source">Sources: MTA</p>
-        </div>
-
-        <h3 class="section-head serif">Line by line</h3>
-        <p class="body-text serif">Nulla purus velit, ultricies sed orci nec, mollis venenatis ligula. Integer euismod urna eu nulla semper varius. Vestibulum pulvinar, velit et ornare ullamcorper, ligula libero tempus tortor, et congue libero nisi nec lorem. Etiam vestibulum molestie nibh, et pulvinar eros efficitur a. Vivamus et nisl vel est venenatis hendrerit ac non felis. Vestibulum id malesuada lectus. Praesent mi dolor, aliquam in felis id, ultricies molestie nisi.</p>
+          <!-- <div class="chart-row"> -->
+            <!-- <div class="chart"> -->
+              <img src="pretty/manhattan_fell_the_hardest.svg"/>
+            <!-- </div> -->
+          <!-- </div> -->
       </div>
+      </figure>
+
+    <article>
+        <p class='body-text serif'>Nulla purus velit, ultricies sed orci nec, mollis venenatis ligula. Integer euismod urna eu nulla semper varius. Vestibulum pulvinar, velit et ornare ullamcorper, ligula libero tempus tortor, et congue libero nisi nec lorem. Etiam vestibulum molestie nibh, et pulvinar eros efficitur a. Vivamus et nisl vel est venenatis hendrerit ac non felis. Vestibulum id malesuada lectus. Praesent mi dolor, aliquam in felis id, ultricies molestie nisi.</p>
+        <p class='body-text serif'>Nulla purus velit, ultricies sed orci nec, mollis venenatis ligula. Integer euismod urna eu nulla semper varius. Vestibulum pulvinar, velit et ornare ullamcorper, ligula libero tempus tortor, et congue libero nisi nec lorem. Etiam vestibulum molestie nibh, et pulvinar eros efficitur a. Vivamus et nisl vel est venenatis hendrerit ac non felis. Vestibulum id malesuada lectus. Praesent mi dolor, aliquam in felis id, ultricies molestie nisi.</p>
+        <p class="body-text serif">Vivamus sagittis massa urna, nec condimentum enim tristique at. Mauris a erat quis diam pretium scelerisque a vel dolor. Etiam pulvinar laoreet gravida. Quisque consectetur, arcu non tempor pharetra, tortor massa rhoncus arcu, id vulputate tellus lectus ut elit.</p>
+    </article>
+  </section>
 
       <div class="chart-section">
         <p class="chart-title">Stations that lost vs. gained riders from 2017-18</p>
         <p class="chart-subhead">The data is by the stations that run along each line, not by line ridership. The MTA does not track the ridership of individual lines.</p>
         <div class="chart-row">
           <div class="chart wide">
-            <img src="images/all_lines_performance.svg"/>
+            <img src="img/all_lines_performance.svg" width="100%"/>
           </div>
         </div>
         <p class="chart-source">Sources: MTA</p>
       </div>
 
-    <!-- <div class="story-body">
+    <div class="story-body">
       <h3 class="section-head serif">Another section head</h3>
       <p class="body-text serif">Vivamus sagittis massa urna, nec condimentum enim tristique at. Mauris a erat quis diam pretium scelerisque a vel dolor. Etiam pulvinar laoreet gravida. Quisque consectetur, arcu non tempor pharetra, tortor massa rhoncus arcu, id vulputate tellus lectus ut elit.</p>
       <p class="body-text serif">Nulla purus velit, ultricies sed orci nec, mollis venenatis ligula. Integer euismod urna eu nulla semper varius. Vestibulum pulvinar, velit et ornare ullamcorper, ligula libero tempus tortor, et congue libero nisi nec lorem. Etiam vestibulum molestie nibh, et pulvinar eros efficitur a. Vivamus et nisl vel est venenatis hendrerit ac non felis. Vestibulum id malesuada lectus. Praesent mi dolor, aliquam in felis id, ultricies molestie nisi.</p>
@@ -89,33 +94,33 @@
       <div class="chart-row">
         <div class="chart">
           <p class="chart-label">Optional chart label</p>
-          <img src="images/test-chart.png"/>
+          <img src="img/test-chart.png"/>
         </div>
         <div class="chart">
           <p class="chart-label">Optional chart label</p>
-          <img src="images/test-chart.png"/>
+          <img src="img/test-chart.png"/>
         </div>
         <div class="chart">
           <p class="chart-label">Optional chart label</p>
-          <img src="images/test-chart.png"/>
+          <img src="img/test-chart.png"/>
         </div>
         <div class="chart">
           <p class="chart-label">Optional chart label</p>
-          <img src="images/test-chart.png"/>
+          <img src="img/test-chart.png"/>
         </div>
       </div>
       <div class="chart-row">
         <div class="chart">
           <p class="chart-label">Optional chart label</p>
-          <img src="images/test-chart.png"/>
+          <img src="img/test-chart.png"/>
         </div>
         <div class="chart">
           <p class="chart-label">Optional chart label</p>
-          <img src="images/test-chart.png"/>
+          <img src="img/test-chart.png"/>
         </div>
         <div class="chart">
           <p class="chart-label">Optional chart label</p>
-          <img src="images/test-chart.png"/>
+          <img src="img/test-chart.png"/>
         </div>
       </div>
       <p class="chart-source">Sources: One source; another source</p>
@@ -126,7 +131,7 @@
       <p class="body-text serif">Maecenas pharetra quis turpis id finibus. Pellentesque nec nisi quis lectus vehicula faucibus. Morbi finibus mi sed lacus vehicula laoreet. Donec varius, nisl sed laoreet vehicula, metus justo vestibulum magna, eget vehicula diam sem vitae urna. Aliquam lobortis lorem et vestibulum viverra. Proin convallis ut ex nec accumsan. Nulla convallis bibendum eros. Integer consectetur metus eu dolor tempor elementum. Aenean porta, mi a hendrerit pretium, nunc tellus feugiat magna, a scelerisque lectus velit et neque. In nec hendrerit arcu.</p>
       <div class="photo-section">
         <div class="photo">
-          <img src="images/test-photo.jpg" alt="dog" />
+          <img src="img/test-photo.jpg" alt="dog" />
           <p class="caption">Photo captions are typically below the image and end with the photographer's credit (Firstname Lastname/AGENCYNAME)</p>
         </div>
       </div>
@@ -135,7 +140,7 @@
 
     <div class="photo-section">
       <div class="photo">
-        <img src="images/test-photo.jpg" alt="dog" />
+        <img src="img/test-photo.jpg" alt="dog" />
         <p class="caption">Photo captions are typically below the image and end with the photographer's credit (Firstname Lastname/AGENCYNAME)</p>
       </div>
     </div>
@@ -148,15 +153,15 @@
 
     <div class="photo-section">
       <div class="photo">
-        <img src="images/test-photo.jpg" alt="dog" />
+        <img src="img/test-photo.jpg" alt="dog" />
         <p class="caption">Photo captions are typically below the image and end with the photographer's credit (Firstname Lastname/AGENCYNAME)</p>
       </div>
       <div class="photo">
-        <img src="images/test-photo.jpg" alt="dog" />
+        <img src="img/test-photo.jpg" alt="dog" />
         <p class="caption">Photo captions are typically below the image and end with the photographer's credit (Firstname Lastname/AGENCYNAME)</p>
       </div>
       <div class="photo">
-        <img src="images/test-photo.jpg" alt="dog" />
+        <img src="img/test-photo.jpg" alt="dog" />
         <p class="caption">Photo captions are typically below the image and end with the photographer's credit (Firstname Lastname/AGENCYNAME)</p>
       </div>
     </div> -->
