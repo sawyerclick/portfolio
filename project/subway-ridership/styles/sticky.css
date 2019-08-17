@@ -1,7 +1,6 @@
-/*  Chart */
-
+/*  Chart */*/
 .chart-section {
-  /* margin:auto; */
+  margin-right: 5%;
   margin-left: 0px;
   align-content: right;
   max-width: 700px;
@@ -27,9 +26,9 @@ margin-right:auto;
 }
 
 .chart-section {
-width:100%;
-/* max-width:1200px; */
-/* padding:20px 0px; */
+  width:100%;
+  max-width:1200px;
+  padding:20px 0px;
 }
 
 .story-body .chart-section {
@@ -86,8 +85,9 @@ section {
   flex-direction: column;
   margin: auto;
   margin-bottom: 5rem;
-  width: 90%;
+  width: 60%;
 }
+
 @media screen and (min-width: 35rem) {
   section {
     flex-direction: row;
@@ -96,14 +96,11 @@ section {
 section > figure {
   flex: 1.5;
 }
+
 section > article {
   flex: 1;
 }
 
-article p {
-  /* font-family: Georgia; */
-  font-size: 1.1rem;
-}
 @media screen and (min-width: 35rem) {
   article p {
     margin: 0;
@@ -123,8 +120,10 @@ figure {
   margin: auto;
   margin-top: 0%;
   width: 100%;
+  max-width: 700px;
   justify-content: center;
   top: 3rem;
+  margin-right: 1rem;
 }
 @media screen and (min-width: 35rem) {
   figure {
@@ -132,3 +131,30 @@ figure {
     position: sticky;
   }
 }
+
+
+
+    .scrolly-image {
+        z-index: -1;
+    }
+    .scrolly-image img {
+        max-width: 100%;
+    }
+    .step {
+        min-height: 80vh;
+        width: 60vh;
+        margin-top: 0;
+        margin-left: 55%;
+    }
+    .scrolly-image {
+        position: sticky;
+        top: 3rem;
+        
+    }
+    .step p {
+        border: rgb(244, 214, 120) 1px solid;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 5px 10px;
+        font-family: 'Lora', serif;
+        font-size: 1.2rem;
+    }
