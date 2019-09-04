@@ -36,8 +36,9 @@
 
 <body>
 
-  <div id="container">
+  
     <section class="header">
+      <div id="container">
         <div class="container">
             <div class="box">
                 <div class="title">
@@ -51,67 +52,35 @@
             </div>
         </div>
 
-      <p class="bio">Columbia Journalism School - M.S. Data Journalism '20<br/>Texas State University - B.S. Journalism '16</p>
-      <div class="socials">
+        <p class="bio">Columbia Journalism School - M.S. Data Journalism '20<br/>Texas State University - B.S. Journalism '16</p>
+
+        <div class="socials">
           <a href="https://github.com/SawyerClick" title="Github" target="_blank"><i class="fa fa-github"></i></a>
           <a href="https://www.linkedin.com/in/sawyerclick/" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
           <a href="https://twitter.com/sawyerdabear" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
           <a href="mailto:sawyerclick@gmail.com?Subject=Hi%20Sawyer" target="_top" title="E-mail"><i class="fa fa-envelope"></i></a>
         </div>
+      </div>
     </section>
 
+  <nav class="sections sidenav" id='nav'>
+    <a href="#statics" class='btn smoothscroll'>statics</a>
+    <a href="#interactives" class='btn smoothscroll'>interactives</a>
+  </nav>
+
     <!-- Data portfolio -->
-    <section class="links">
-        <div class="row">
-          <div id="links" class="column">
-              <div class="content">
-                <a href='https://sawyerclick.github.io/project/wiretaps/index.html'>
-                <div class="info">
-                  <div class="skills left-half nomargin">Pandas,Illustrator</div>
-                  <div class="date right-half nomargin">July '19</div>
-                </div>
-          
-                <img src="project/wiretaps/images/categorical_breakdown_by_year.svg" alt="Yearly breakdown of wiretapping" style="width:100%">
-                <h3 class="title"><span class="title">state-level wiretapping</span></h3>
-                <p class="description">Looking at state-level wiretapping by charts via Matplotlib and Pandas and maps via QGIS. Cleaned up in Illustrator.</p>
-              </a>
-              </div>
-            </div>
+  <div id="container">
+    <section class="links" id='statics'>
+    
 
-          <div id="links" class="column">
-              <div class="content">
-                <a href='https://sawyerclick.github.io/project/2020-dems/index.html'>
-                <div class="info">
-                  <div class="skills left-half nomargin">Mapbox, Selenium</div>
-                  <div class="date right-half nomargin">July '19</div>
-                </div>
-            
-                <img class="itemimage" src="project/2020-dems/screengrab.png" alt="Screengrab of the Mapbox portion of the page" style="width:100%">
-                <h3 class="title"><span class="title">2020's dem. candidates</span></h3>
-                <p class="description">Tracking the Facebook events of <i>some</i> 2020 presidential candidates using Selenium and Pandas.</p>
-              </a>
-              </div>
-          </div>
-          
-          <div id="links" class="column">
-            <div class="content">
-              <a href='https://sawyerclick.github.io/project/terrorism/index.html'>
-              <div class="info">
-                <div class="skills left-half nomargin">Mapbox, QGIS</div>
-                <div class="date right-half nomargin">July '19</div>
-              </div>
-              <img class="itemimage" src="project/terrorism/images/top_groups.svg" alt="The top terrorism groups in the U.S. since 2016" style="width:100%">
-              <h3 class="title"><span class="title">"unknown" terrorism</span></h3>
-              <p class="description">Exploring the unknown terrorism incidences in the Global Terrorism Database using MapBox, QGIS, Pandas and Illustrator</p>
-            </a>
-            </div>
-          </div>
-      </div>
-
+      <!-- 1st row -->
       <div class="row">
-          <div id="links" class="column">
-            <div class="content">
-              <a href='https://sawyerclick.github.io/project/subway-ridership/index.html'>
+
+        
+      <!-- subway ridership -->
+        <div id="links" class="column">
+          <div class="content isotope-item statics">
+            <a href='https://sawyerclick.github.io/project/subway-ridership/index.html'>
               <div class="info">
                 <div class="skills left-half nomargin">Matplotlib, Pandas</div>
                 <div class="date right-half nomargin">July '19</div>   
@@ -119,17 +88,82 @@
               <img class="itemimage" src="project/subway-ridership/pretty/header_image.png" alt="The year-by-year fall of ridership" style="width:100%">
               <h3 class="title"><span class="title">subway ridership</span></h3>
               <p class="description">Tracking the differences in subway ridership from year to year, borough to borough, and line to line, using Matplotlib and Pandas, made pretty in Illustrator.</p>
-            </a>
-            </div>
+             </a>
           </div>
-          
+        </div>
+
+      <!-- wiretapping -->
+        <div id="links" class="column">
+          <div class="content">
+            <a href='https://sawyerclick.github.io/project/wiretaps/index.html'>
+              <div class="info">
+                <div class="skills left-half nomargin">Pandas,Illustrator</div>
+                <div class="date right-half nomargin">July '19</div>
+              </div>
+              <img src="project/wiretaps/images/categorical_breakdown_by_year.svg" alt="Yearly breakdown of wiretapping" style="width:100%">
+              <h3 class="title"><span class="title">state-level wiretapping</span></h3>
+              <p class="description">Looking at state-level wiretapping by charts via Matplotlib and Pandas and maps via QGIS. Cleaned up in Illustrator.</p>
+            </a>
+          </div>
+        </div>
+
+      <!-- unknown terrorism -->
+        <div id="links" class="column">
+          <div class="content">
+            <a href='https://sawyerclick.github.io/project/terrorism/index.html'>
+              <div class="info">
+                <div class="skills left-half nomargin">Mapbox, Matplotlib</div>
+                <div class="date right-half nomargin">July '19</div>
+              </div>
+              <img class="itemimage" src="project/terrorism/images/top_groups.svg" alt="The top terrorism groups in the U.S. since 2016" style="width:100%">
+              <h3 class="title"><span class="title">"unknown" terrorism</span></h3>
+              <p class="description">Exploring the unknown terrorism incidences in the Global Terrorism Database using MapBox, QGIS, Pandas and Illustrator</p>
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
+
+    <section class="links" id='interactives'>
+         <!-- 2nd row -->
+      <div class="row">
+
+        <!-- 2020 Dem's -->
+            <div id="links" class="column">
+              <div class="content">
+                <a href='https://sawyerclick.github.io/project/2020-dems/index.html'>
+                  <div class="info">
+                    <div class="skills left-half nomargin">Mapbox, Selenium</div>
+                    <div class="date right-half nomargin">July '19</div>
+                  </div>
+                  <img class="itemimage" src="project/2020-dems/screengrab.png" alt="Screengrab of the Mapbox portion of the page" style="width:100%">
+                  <h3 class="title"><span class="title">2020's dem. candidates</span></h3>
+                  <p class="description">Tracking the Facebook events of <i>some</i> 2020 presidential candidates using Selenium and Pandas.</p>
+                </a>
+              </div>
+          </div>
+          </div>
+    
+    </section>
+  </div>
 
 
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/main.js"></script>
-
+  <script>
+      // Add active class to the current button (highlight it)
+      var header = document.getElementById("nav");
+      var btns = header.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+        });
+      }
+  </script>
+  
 </body>
 </html>

@@ -38,7 +38,9 @@ body{
 }
 
 section {
-	padding:10px;
+  padding:10px;
+  /* height: 100vh; */
+  align-content: center;
 }
 
 h1 {
@@ -66,7 +68,8 @@ p {
 	line-height:1.5rem;
 }
 section.header {
-	text-align: center;
+  text-align: center;
+  /* padding: 30vh 0; */
 }
 
 section.header a{
@@ -91,6 +94,58 @@ section.header a:hover {
 
 .socials a:hover {
 	background-color: rgb(183, 217, 250);
+}
+
+/*  sections and their titles */
+.sections {
+	font-size: 1.75em;
+}
+
+.sections a:hover {
+	background-color: rgb(183, 217, 250);
+}
+
+/* The sidebar menu */
+.sidenav {
+  /* height: 100%; */
+  /* width: 160px; Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 50vh; /* Stay at the top */
+  left: 0; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: white;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active, .nav:hover {
+  background-color: #666;
+  color: white;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.section-title {
+  font-size: 3rem;
+  color: slategray;
 }
 
 .bio {
@@ -153,6 +208,16 @@ padding-bottom: 1.1em;
 	font-weight: 100;
 	line-height: 18px;
 	text-align: left;
+	text-justify: inter-character;
+	word-break: normal;
+	hyphens: auto;
+}
+
+.description-home {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 18px;
+	text-align: center;
 	text-justify: inter-character;
 	word-break: normal;
 	hyphens: auto;
