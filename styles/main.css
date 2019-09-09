@@ -177,9 +177,10 @@ ul.nav-pills {
   .sidenav a {font-size: 18px;}
 }
 
-.section-title {
+h1.section-title {
   font-size: 7vh;
   color: slategray;
+  letter-spacing: 0;
 }
 
 .bio {
