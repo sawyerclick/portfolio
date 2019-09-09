@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+    <!-- Your CSS files -->
+    <link rel="stylesheet" href="styles/styles.css">
+    
+    <!-- google fonts: Open Sans (sans) and Lora ) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
+      
+    <title>U.S. Terrorism</title>
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Turf.js/5.1.5/turf.min.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
+
+  </head>
+
+<body class="light-theme">
+
+  <div class="header">
+    <h1 class="headline">"Unknown" Terrorism Dwarfs All Else</h1>
+    <h2 class="subhead">I'm still working on it. Give me a break.</h2>
+    <p class="byline">By <a href='https://twitter.com/sawyerdabear' target='_blank'>Sawyer Click</a></p>
+    <p class="date">Published July 19, 2019</p>
+  </div>
+
+  <div class="story-body">
+    <p class="body-text">"Unknown" attackers have been plaguing the <a href='https://www.start.umd.edu/gtd/' traget='_blank'>Global Terrorism Database</a> for years. As the number of attacks on U.S. soil skyrockets, so does the unknowns.</p>
+    <p class="body-text">The database is maintained by the National Consortium for the Study of Terrorism and Responses to Terrorism, a partnership between the University of Maryland and the U.S. Department of Homeland Security. The project lost State Department funding in 2017, meaning the database has folded and won't publish any further.</p>
+    <p class="body-text">The number of attacks recorded by START has been increasing since 2011, when there were 10 attacks. In 2017, the most current year in the database, there were 65, over a 650% increase. The largest jump happened from 2015 to 2016.</p> 
+    <div class="chart-section">
+        <div class="chart-row">
+          <div class="chart">
+            <img src="images/amid_rising_attacks.svg"/>
+          </div>
+        </div>
+        <p class="chart-source">Source: Global Terrorism Database</p>
+    </div>
+    <p class='body-text'>For 2015, the most popular motive speculates the attacks were against the Muslim community. For 2016, the most popular motive speculates the attacks stem from the Islamic State of Iraq and the Levant. Both motives were carried out from unidentified groups, which more than doubled from 2015 to 2016 and made up about half of all attacks in both years.</p>
+
+    <p class='body-text'>Overall, the number of attacks from unidentified groups is up. In START's codebook, </p>
+
+    <div class="chart-section">
+        <div class="chart-row">
+          <div class="chart">
+            <img src="images/nine_year_averages.svg"/>
+          </div>
+        </div>
+        <p class="chart-source">Source: Global Terrorism Database</p>
+    </div>
+  </div>
+
+    <div id="container">
+    <!-- <div id= -->
+      <div id='map'>
+        <div id="dropdown">
+          <select id="select-menu">
+            <option value="">All Groups</option>
+          </select>
+        </div>
+        <div id='headPlace'> Rollover to get info</div>
+      </div>
+
+      <div id='articlePlace'>Click an incident to see more details.</div>
+    </div>
+
+    <div class="story-body">
+    
+
+    
+      <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur purus sapien, tincidunt ac bibendum eget, cursus vel mi. Sed cursus tincidunt rutrum. Quisque auctor ut erat ut rhoncus. Nam vel neque mauris. Sed vel ex justo. Duis et sagittis dolor. In at auctor libero. Quisque at nisi quis elit tempus placerat.</p>
+      <p class="body-text">In ut egestas velit, non porta sapien. Nam quis magna luctus, fermentum nunc quis, ullamcorper neque. Morbi eget risus neque. Integer a tellus in lorem dapibus rutrum. Sed ut sapien libero. Cras rutrum semper aliquam. Donec in dignissim velit.</p>
+
+      <div class="chart-section">
+        <p class="chart-title">Time for some graphics</p>
+        <p class="chart-subhead">This is a standard, single chart which fits in the same width as the story.</p>
+        <div class="chart-row">
+          <div class="chart">
+            <img src="images/religious_figures_and_institutions.svg"/>
+          </div>
+        </div>
+        <p class="chart-source">Sources: One source; another source</p>
+      </div>
+
+      
+    </div>
+
+<!-- Loading in Mapbox -->
+
+<!-- 
+THIS IS WHERE THE BROWSER LOADS IN YOUR GEOJSON INFORMATION
+MAKING IT A JAVASCRIPT FILE .js, RATHER THAN A GEOJSON FILE
+ALLOWS YOU TO LOAD IT LOCALLY WITHOUT DEALING WITH SETTING UP SERVERS ON YOUR MACHINE.
+ -->
+
+ <script type="text/javascript" src="geo-data.js"></script>
+
+ <!-- 
+HERE BEGINS ALL THE SCRIPT THAT SETS UP THE MAP 
+ALL THE COMMENTS FROM HERE WE'LL BE IN JAVASCRIPT COMMENTS //
+-->
+
+ <script type="text/javascript">
+// these seven lines maybe the only lines you need to edit
+// you should put in your own access token
+// you can change the style of the tiles
+// as well as the center and the zoom
+
+// but note that way down below this is a method that auto centers and zooms:
+// map.fitBounds(turf.bbox(infoData), { padding: 120, linear: true })
+//If you want to control the centering and zoom yourself, comment out that line.
+
+   mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+
+   var map = new mapboxgl.Map({
+     container: 'map', // HTML container ID
+     style: 'mapbox://styles/mapbox/light-v10', // style URL
+     center: [-98.5795, 39.8283], // starting position as [lng, lat]
+     zoom: 3
+   });
+   map.addControl(new mapboxgl.NavigationControl(), 'top-left');
+
+// all of this JavaScript manages what's displayed on hover and click
+   var popup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false });
+
+   let hoverCurrentId = null
+   var datalayer;
+
+   function updateArticle(e) {
+     let feature = e.features[0]
+     document.getElementById("articlePlace").innerHTML = feature.properties.article
+   }
+   function updateHead(e) {
+     let feature = e.features[0]
+     map.getCanvas().style.cursor = 'pointer';
+     document.getElementById("headPlace").innerHTML = feature.properties.headline
+
+   }
+   function removeHead(e) {
+     document.getElementById("headPlace").innerHTML = "&nbsp;"
+     map.getCanvas().style.cursor = '';
+
+   }
+
+   function startHover(e) {
+     let feature = e.features[0]
+
+     if (hoverCurrentId) {
+       map.setFeatureState({ source: 'datalayer', id: hoverCurrentId }, { hover: false });
+     }
+     hoverCurrentId = feature.id
+     map.setFeatureState({ source: 'datalayer', id: hoverCurrentId }, { hover: true });
+   }
+
+   function stopHover(e) {
+     if (hoverCurrentId) {
+       map.setFeatureState({ source: 'datalayer', id: hoverCurrentId }, { hover: false });
+     }
+     hoverCurrentId = null;
+   }
+
+   function drawPopup(e) {
+     let feature = e.features[0]
+     map.getCanvas().style.cursor = 'pointer';
+
+     var coordinates = feature.geometry.coordinates.slice();
+     var headline = feature.properties.headline;
+
+     while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+       coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+     }
+
+     popup.setLngLat(coordinates)
+       .setHTML(`<h4>${headline}</h4>`)
+       .addTo(map);
+   }
+
+   function removePopup(e) {
+     map.getCanvas().style.cursor = '';
+     popup.remove();
+   }
+
+   map.on('load', function () {
+     for (let i = 0; i < infoData.features.length; i++) {
+       infoData.features[i]['id'] = i + 1
+     }
+// the JavaScript below sets up the styles of the colors based on your properties
+// color, radius, and rating
+
+// Soma's explanation of 'paint': https://gist.github.com/jsoma/c91cfa7a1f4f8346d95ac2a907f0cb0c
+
+     datalayer = map.addLayer({
+       id: "datalayer",
+       type: "circle",
+       source: {
+         type: "geojson",
+         data: infoData,
+       },
+       paint: {
+         'circle-radius': 4,
+         'circle-stroke-color': 'white',
+         'circle-stroke-width': .5,
+         'circle-color': [
+           'case',
+           ['boolean', ['feature-state', 'hover'], false],
+           '#666',
+           ['get', 'color'],
+         ],
+         'circle-opacity': [
+           'case',
+           ['boolean', ['feature-state', 'hover'], false],
+           1,
+           0.5
+         ]
+       }
+     });
+// these functions control Mouse actions
+// they make the pop-up headline or update the article text
+     // When we move the mouse over, draw the popup and change the hover style
+     map.on('mouseenter', 'datalayer', function (e) {
+       startHover(e)
+// uncomment this line to get pop-ups
+// 				drawPopup(e)
+       updateHead(e)
+     });
+
+     // When we move the mouse away from a point, turn off the hovering and popup
+     map.on('mouseleave', 'datalayer', function (e) {
+       stopHover(e)
+// uncomment this line to get pop-ups
+// 				removePopup(e)
+       removeHead(e)
+     });
+
+     // When we click, update the article (the right-hand side)
+     map.on('click', 'datalayer', function (e) {
+       updateArticle(e)
+     })
+
+// very important!! this automatically centers the map and zooms it
+
+    //  map.fitBounds(turf.bbox(infoData), { padding: 120, linear: true })
+   })
+
+
+ </script>
+ <script>
+ // this part is J query / with some mapbox JavaScript
+ // it changes what is displayed based on the pulldown menu
+   var groupsObj = {};
+
+   $(document).ready(function () {
+     infoData.features.forEach(function (feature) {
+       groupsObj[feature.properties.group_id] = feature.properties.group_name;
+     })
+
+     $.each(groupsObj, function (key, value) {
+       $('#select-menu')
+         .append($("<option></option>")
+           .attr("value", value)
+           .text(value));
+     });
+
+     $('#select-menu').change(function () {
+       var selectedGroup = $('#select-menu').val();
+
+       if (!selectedGroup) {
+         map.setFilter('datalayer', null);
+       } else {
+         map.setFilter('datalayer', ['==', ['get', 'group_name'], selectedGroup]);
+       }
+     });
+   });
+ </script>
+
+  </body>
+
+</html>

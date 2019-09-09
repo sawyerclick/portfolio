@@ -24,18 +24,48 @@
    <meta name="apple-touch-fullscreen" content="yes">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+   <!-- Icons and otherwise -->
+   <link rel="shortcut icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/chart-with-upwards-trend_1f4c8.png" type="image/x-icon" />
+
    <link href="https://fonts.googleapis.com/css?family=B612+Mono&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=B612&display=swap" rel="stylesheet">
 
 
   <link rel="stylesheet" href="styles\font-awesome-4.7.0\css\font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" href="styles/main.css">
 </head>
 
 
-<body>
+<body id='home' data-spy="scroll" data-target="#myScrollspy" data-offset="20">
 
+    <nav class="col-sm-3" id="myScrollspy">
+        <ul class="nav nav-pills nav-stacked">
+          <li class="active"><a href="#home">home</a></li>
+          <li><a href="#statics">statics</a></li>
+          <li><a href="#interactives">interactives</a></li>
+          <!-- <li><button onclick="window.location.href = '#home'" class='btn smoothscroll active'>home</button></li>
+          <li> <button onclick="window.location.href = '#statics'" class='btn smoothscroll'>statics</button></li>
+          <li><button onclick="window.location.href = '#interactives'" class='btn smoothscroll'>interactives</button></li> -->
+        </ul>
+      </nav>
+
+        <script>
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("myDIV");
+        var btns = header.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+        });
+        }
+        </script>
   
     <section class="header">
       <div id="container">
@@ -63,28 +93,8 @@
       </div>
     </section>
 
-  <!-- <div class="sidenav" id='myDiv'>
-    <button href="#statics" class='btn smoothscroll'>statics</button>
-    <button href="#interactives" class='btn smoothscroll'>interactives</button>
-  </div> -->
 
-<div id="myDIV" class='sidenav'>
-  <button onclick="window.location.href = '#statics'" class='btn smoothscroll active'>statics</button>
-  <button onclick="window.location.href = '#interactives'" class='btn smoothscroll'>interactives</button>
-</div>
 
-<script>
-// Add active class to the current button (highlight it)
-var header = document.getElementById("myDIV");
-var btns = header.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-  var current = document.getElementsByClassName("active");
-  current[0].className = current[0].className.replace(" active", "");
-  this.className += " active";
-  });
-}
-</script>
 
     <!-- Data portfolio -->
   <div id="container">
@@ -97,12 +107,12 @@ for (var i = 0; i < btns.length; i++) {
       <!-- subway ridership -->
         <div id="links" class="column">
           <div class="content">
-            <a href='https://sawyerclick.github.io/project/subway-ridership/index.html'>
+            <a href='https://sawyerclick.github.io/statics/subway-ridership/index.html'>
               <div class="info">
                 <div class="skills left-half nomargin">Matplotlib, Pandas</div>
                 <div class="date right-half nomargin">July '19</div>   
               </div>
-              <img class="itemimage" src="project/subway-ridership/pretty/header_image.png" alt="The year-by-year fall of ridership" style="width:100%">
+              <img class="itemimage" src="statics/subway-ridership/pretty/header_image.png" alt="The year-by-year fall of ridership" style="width:100%">
               <h3 class="title"><span class="title">subway ridership</span></h3>
               <p class="description">Tracking the differences in subway ridership from year to year, borough to borough, and line to line, using Matplotlib and Pandas, made pretty in Illustrator.</p>
              </a>
@@ -112,12 +122,12 @@ for (var i = 0; i < btns.length; i++) {
       <!-- wiretapping -->
         <div id="links" class="column">
           <div class="content">
-            <a href='https://sawyerclick.github.io/project/wiretaps/index.html'>
+            <a href='https://sawyerclick.github.io/statics/wiretaps/index.html'>
               <div class="info">
                 <div class="skills left-half nomargin">Pandas,Illustrator</div>
                 <div class="date right-half nomargin">July '19</div>
               </div>
-              <img src="project/wiretaps/images/categorical_breakdown_by_year.svg" alt="Yearly breakdown of wiretapping" style="width:100%">
+              <img src="statics/wiretaps/images/categorical_breakdown_by_year.svg" alt="Yearly breakdown of wiretapping" style="width:100%">
               <h3 class="title"><span class="title">state-level wiretapping</span></h3>
               <p class="description">Looking at state-level wiretapping by charts via Matplotlib and Pandas and maps via QGIS. Cleaned up in Illustrator.</p>
             </a>
@@ -127,19 +137,36 @@ for (var i = 0; i < btns.length; i++) {
       <!-- unknown terrorism -->
         <div id="links" class="column">
           <div class="content">
-            <a href='https://sawyerclick.github.io/project/terrorism/index.html'>
+            <a href='https://sawyerclick.github.io/statics/terrorism/index.html'>
               <div class="info">
                 <div class="skills left-half nomargin">Mapbox, Matplotlib</div>
                 <div class="date right-half nomargin">July '19</div>
               </div>
-              <img class="itemimage" src="project/terrorism/images/top_groups.svg" alt="The top terrorism groups in the U.S. since 2016" style="width:100%">
+              <img class="itemimage" src="statics/terrorism/images/top_groups.svg" alt="The top terrorism groups in the U.S. since 2016" style="width:100%">
               <h3 class="title"><span class="title">"unknown" terrorism</span></h3>
               <p class="description">Exploring the unknown terrorism incidences in the Global Terrorism Database using MapBox, QGIS, Pandas and Illustrator</p>
             </a>
           </div>
         </div>
-
       </div>
+
+      <div class='row'>
+        <!-- subway ridership -->
+        <div id="links" class="column">
+            <div class="content">
+              <a href='https://sawyerclick.github.io/statics/ridership-loss/index.html'>
+                <div class="info">
+                  <div class="skills left-half nomargin">ai2html, Illustrator</div>
+                  <div class="date right-half nomargin">Sept. '19</div>   
+                </div>
+                <img class="itemimage" src="statics/subway-ridership/pretty/manhattan_fell_the_hardest_2.png" alt="The year-by-year fall of ridership" style="width:100%">
+                <h3 class="title"><span class="title">ai2html h/w</span></h3>
+                <p class="description">Working with Illustrator and ai2html to create a responsive graphic.</p>
+               </a>
+            </div>
+          </div>
+
+        </div>
     </section>
 
     <section class="links" id='interactives'>
@@ -161,7 +188,7 @@ for (var i = 0; i < btns.length; i++) {
                 </a>
               </div>
           </div>
-          </div>
+        </div>
     
     </section>
   </div>
