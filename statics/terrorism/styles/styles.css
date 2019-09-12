@@ -1,6 +1,6 @@
 body {
 	margin:auto;
-	padding:50px 10px;
+	padding:25px 10px;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -23,7 +23,7 @@ body {
 
 .header {
 	padding-top:20px;
-	padding-bottom:20px;
+	padding-bottom:5px;
 }
 
 .story-body, .header, .chart-section, .footer {
@@ -56,16 +56,13 @@ body {
 
 
 /* text styles */
-
 p.kicker {
 	font-size:1rem;
 	text-transform:uppercase;
 }
-
 .text-center {
 	text-align:center;
 }
-
 h1.headline {
     font-size: 3.5rem;
     line-height: 1.1;
@@ -73,7 +70,6 @@ h1.headline {
     margin-top: 1rem;
     font-weight: 800;
 }
-
 h2.subhead {
     font-size: 1.4rem;
     line-height: 2rem;
@@ -81,7 +77,6 @@ h2.subhead {
     margin-top: 15px;
     font-weight: 400;
 }
-
 p.body-text {
   font-size: 1rem;
   line-height: 1.4;
@@ -118,17 +113,15 @@ p.note {
 }
 
 /* chart styles */
-
 .chart-section {
 	width:100%;
 	max-width:1200px;
-	padding:20px 0px;
+	padding:0px 0px;
 }
 
 .story-body .chart-section {
 	padding-top:0px;
 }
-
 
 .chart-row {
 	display:flex;
@@ -163,24 +156,18 @@ p.chart-label {
 
 }
 
-
-
 p.chart-source {
 	font-size:0.85rem;
-	margin:0;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 24px;
 }
-
-
 
 .chart img {
 	width:100%;
 }
 
-
-
-
 /* photos */
-
 .photo-section {
 	padding:30px 0px;
 	width:100%;
@@ -202,8 +189,6 @@ p.caption {
 	margin:0;
 }
 
-/* Mapbox map */
-
 ::-webkit-scrollbar {
 	width: 0px;
 	/* remove scrollbar space */
@@ -211,6 +196,8 @@ p.caption {
 	/* optional: just make scrollbar invisible */
 }
 
+
+/* Mapbox map */
 .info {
 	padding: 6px 8px;
 	font: 14px/16px Arial, Helvetica, sans-serif;
@@ -258,7 +245,9 @@ p.caption {
 
 #container {
 	display: flex;
-	width: 90%;
+	width: 70%;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #map {
@@ -266,8 +255,7 @@ p.caption {
 	flex: 2;
 	height: calc(100vh - 300px);
 	width: 60%;
-	margin-bottom: 3vh;
-	margin-top: 3vh;
+	margin: 3vh 0;
 }
 
 #article_container {
@@ -279,7 +267,56 @@ p.caption {
 	flex: 1;
 	height: calc(100vh - 300px);
 	overflow: scroll;
-	margin-left: 10px;
+	margin: 3vh 0 3vh 10px;
+}
+
+@media (max-width:1000px) {
+	body {
+		padding: 0;
+	}
+	.margins  {
+		padding: 0 10px;
+	}
+	#container {
+		display: block;
+		width: 100vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#map {
+		width: 100vw;
+	}
+
+	#articlePlace {
+		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media (max-width: 700px) {
+	body {
+		padding: 0;
+	}
+	.margins  {
+		padding: 0 10px;
+	}
+	#container {
+		display: block;
+		width: 100vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#map {
+		height: 50vh;
+	}
+
+	#articlePlace {
+		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
 }
 
 
@@ -301,7 +338,6 @@ p.caption {
 	.photo {
 		padding:0;
 	}
-
 }
 
 a {
@@ -313,4 +349,49 @@ a {
 a:hover {
 	background-color: #5581b65d;
 	border-bottom: none;
+}
+
+
+/*  map classes */
+.gname {
+	font-size: 2.5rem;
+	font-weight: 600;
+	margin: 0;
+}
+
+.attacktype {
+	font-size: 1.5rem;
+	font-weight: 300;
+	margin: 0;
+}
+
+/* mobile */
+
+@media (max-width:700px) {
+
+	.chart-row {
+			display:block;
+	}
+
+	.chart-row .chart {
+			padding:0;
+	}
+
+	.photo-section {
+			display:block;
+	}
+	.photo {
+			padding:0;
+	}
+
+}
+
+
+@media (max-width: 490px) {
+	body {
+		padding: 0;
+	}
+	.margins  {
+		padding: 0 10px;
+	}
 }
