@@ -266,6 +266,8 @@ p.caption {
 	flex: 2;
 	height: calc(100vh - 300px);
 	width: 60%;
+	margin-bottom: 3vh;
+	margin-top: 3vh;
 }
 
 #article_container {

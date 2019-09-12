@@ -41,8 +41,12 @@ body{
 section {
   padding:10px;
   margin-bottom: 10vh;
-  /* height: 100vh; */
+  /* height: 75vh; */
   align-content: center;
+}
+
+section.home {
+  height: auto;
 }
 
 h1 {
@@ -100,8 +104,8 @@ section.header a:hover {
 /* nav bar */
 
 nav {
-  text-align: right;
-  font-size: .8rem;
+  text-align: left;
+  font-size: .6rem!important;
   margin: 0!important;
   z-index: 1;
   background-color: white;
@@ -111,7 +115,6 @@ nav {
   padding: 0;
   margin: 0;
   background-color: white;
-  left: 85vw;
   top: 0;
 }
 
@@ -144,7 +147,7 @@ button {
 
 li>a {
   color: slategray;
-  font-size: 1.5vw;
+  font-size: 1vw;
 }
 
 
@@ -165,10 +168,9 @@ ul.nav-pills {
 }
 
 @media screen and (max-width: 450px) {
-  .col-sm-3 {margin-left:auto;margin-right:auto;top:0;width:100vw;}
-  ul.nav-pills {margin-left:auto;margin-right:auto;left:0;top:0;display:flex;}
-  li {width: 33vw;text-align: center;}
-  li>a {font-size:3.5vw;}
+  .col-sm-3 {margin-left:auto;margin-right:auto;top:0;}
+  ul.nav-pills {display: none;}
+  h1.section-title {font-size: 26px!important;}
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */

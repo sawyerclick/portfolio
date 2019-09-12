@@ -93,26 +93,8 @@
       
     </div>
 
-<!-- Loading in Mapbox -->
-
-<!-- 
-THIS IS WHERE THE BROWSER LOADS IN YOUR GEOJSON INFORMATION
-MAKING IT A JAVASCRIPT FILE .js, RATHER THAN A GEOJSON FILE
-ALLOWS YOU TO LOAD IT LOCALLY WITHOUT DEALING WITH SETTING UP SERVERS ON YOUR MACHINE.
- -->
-
  <script type="text/javascript" src="geo-data.js"></script>
-
- <!-- 
-HERE BEGINS ALL THE SCRIPT THAT SETS UP THE MAP 
-ALL THE COMMENTS FROM HERE WE'LL BE IN JAVASCRIPT COMMENTS //
--->
-
  <script type="text/javascript">
-// these seven lines maybe the only lines you need to edit
-// you should put in your own access token
-// you can change the style of the tiles
-// as well as the center and the zoom
 
 // but note that way down below this is a method that auto centers and zooms:
 // map.fitBounds(turf.bbox(infoData), { padding: 120, linear: true })
