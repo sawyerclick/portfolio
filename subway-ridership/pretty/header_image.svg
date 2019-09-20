@@ -1,0 +1,19 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 626.4 266.18">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #e24a33;
+        stroke-linejoin: round;
+        stroke-width: 4px;
+      }
+    </style>
+    <image id="image" width="960" height="346" xlink:href="subway_car.png"/>
+  </defs>
+  <title>header_image</title>
+  <polyline class="cls-1" points="0 12.36 156.6 83.7 313.2 126.74 469.8 197.72 626.4 259.44"/>
+  <use transform="matrix(0.17, 0.08, -0.09, 0.19, 26.43, -57.01)" xlink:href="#image"/>
+  <use transform="matrix(0.17, 0.05, -0.05, 0.19, 172.99, 17.73)" xlink:href="#image"/>
+  <use transform="matrix(0.16, 0.07, -0.08, 0.17, 347.29, 67.98)" xlink:href="#image"/>
+  <use transform="matrix(0.16, 0.06, -0.07, 0.18, 494.82, 134.94)" xlink:href="#image"/>
+</svg>

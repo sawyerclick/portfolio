@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Icons and otherwise -->
+    <link rel="shortcut icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/214/tram-car_1f68b.png" type="image/x-icon" />
+
+    <!-- Your CSS files -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/sticky.css">
+    
+    <!-- google fonts: Open Sans (sans-serif) and Lora (serif) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
+      
+    <title>Subway Ridership</title>
+  </head>
+
+  <body class="light-theme">
+    <div class="bg_image" id="#home">
+      <div class="header">
+        <p class="kicker">Subway Ridership</p>
+        <h1 class="headline">New Yorkers are<br/>raging against the<br/>(subway) machines</h1>
+        <h2 class="subhead">NYC's Summer of Hell has come and gone, but the subway system's ridership is still in a state of decline.</h2>
+        <p class="byline">By Sawyer Click</p>
+        <p class="date">Published July 29, 2019</p>
+        <p class="date" style='line-height: 24px;'><a href='https://github.com/SawyerClick/SawyerClick.github.io/blob/master/project/subway-ridership/Ridership%20scraper.ipynb' target='_blank' class='effect'>code</a><a href='https://github.com/SawyerClick/SawyerClick.github.io/tree/master/project/subway-ridership/ugly' target='_blank' class='effect'>ugly graphics</a><a href='https://github.com/SawyerClick/SawyerClick.github.io/tree/master/project/subway-ridership/pretty' target='_blank' class='effect'>pretty graphics</a></p>
+      </div>
+    </div>
+
+    <div class="story-body" id="story">
+      <h3 class="section-head serif">A NEW LOW</h3>
+        <p class="body-text serif">The MTA's financial and managerial woes the past few years have culminated into a steadily decreasing ridership, painting a not-so-pretty future for the agency.</p>
+
+        <p class="body-text serif">Recently, the MTA announced that on-time service was above 80%, marking a milestone. Still, ridership is falling and the deficit is projected to hit $1 billion come 2023.</p>
+
+        <p class="body-text serif">The ridership plummet has brought the overall ridership to its lowest point in years. Twenty-seventeen's Summer of Hell has come and gone, and sure, the agency has put a ton of resources into revamping aging infrastructure, but riders have fled from stations at an alarming rate.</p>
+
+        <div class="chart-section">
+          <img src="pretty/percent_change_by_borough.svg"/>
+        </div>
+        
+        
+        <p class="body-text serif">The system hit an all-time peak in 2015, serving over 1.76 billion rides throughout the year. The loss in ridership since then has avalanched down to 2018's loss of 4%, totaling over 80 million rides.</p>
+        
+        <p class="body-text serif">In terms of ridership, each borough suffered a loss for the second year straight. Brooklyn and Manhattan have had a ridership dip for three years. Each, except for Queens, had a larger drop than the year before. When the losses are combined, the MTA is put in a harsh light.</p>
+    </div>
+
+
+    <div class="story-body" id="story">
+      <h3 class="section-head serif">They all fall down</h3>
+        <p class="body-text serif">Though each borough suffered a loss, several stations actually gained riders. One-hundred-seven stations, including those that are geographically identical, gained riders. 
+    </div>
+
+    <section>
+      <figure>
+        <div class="chart-section">
+          <img src="pretty/manhattan_fell_the_hardest_2.svg"/>
+        </div>
+      </figure>
+
+        <article>
+          <p class='body-text serif'>When taking a look at each borough's lowpoint and high point, there are a few interesting pieces to note.</p>
+
+          <p class="body-text serif">The Brooklyn-based 53 St. station, which houses the R line, had a huge bump from 2017, doubling the year prior. Well, the numbers are actually misleading, because the station, which was the only station to gain more than a million rides, was closed from March to September in 2017, cutting deep into regular ridership. As the station opened, the regular flow followed.</p>
+
+          <p class="body-text serif">On the flip side, 316 stations lost riders. Most can be attributed alongside the steady drop, which is a trend all across America, mostly because of increased rideshare services. However, the lowest of the stations that lost directly tie with those that were partially or fully closed for better parts of the year.</p>
+          
+          <p class="body-text serif">Two stations lost over 3 million rides, extreme outliers on the low end by nearly a million. Both of which were in Manhattan. For comparison, no other borough had a station lose more than 2 million rides.</p>
+
+          <p class="body-text serif">The 23 St. station, which houses the F and the M lines was the most dramatic of the group. The station was closed from late July to late November, which is the obvious reason for the drop. As a result, the station lost nearly 41% of its annual rides, dropping from 86.3 million in 2017 to 50.9 million.</p>
+
+          <p class="body-text serif">The other boroughs, Queens and The Bronx, were relatively normal, though normal means a loss of riders. Most stations lost riders, but it wasn't ever as dramatic as Manhattan.</p>
+        </article>
+    </section>
+    <div class="story-body" id="story">
+      <h3 class="section-head serif">Tracking the Lines</h3>
+      <p class="body-text serif">Line-by-line, it's a bit more obvious why some failed and others succeeded. Important to note: this is an analysis of stations along these lines that could include other lines. The MTA tracks ridership at the turnstile and is unable to determine what lines riders get on.</p>
+    </div>
+<div class="scrolly-container">
+  <div class="scrolly-image">
+      <img src="pretty/ridership_increase.svg">
+  </div>
+  <div class="scrolly-content">
+      <div class="step" data-image="pretty/ridership_increase.svg">
+          <p>Stations along only four lines saw a bump in ridership, though they were all less than 1%.</p>
+      </div>
+      <div class="step" data-image="pretty/ridership_increase.svg">
+          <p>Most of the lines, like the 1 and the A, benefit from being among the most central lines. They run through Time's Square and through several boroughs, connecting with several other lines.</p>
+      </div>
+      <div class="step" data-image="pretty/ridership_increase.svg">
+        <p>The E line, however, is an interesting point in the growing transit availability in Queens, a borough historically neglected by New York City Transit.</p>
+        <p>The line runs from Queens' eastern border to downtown Manhattan.</p>
+    </div>
+      <div class="step" data-image="pretty/ridership_increase_a_line.svg">
+          <p>The A line, however, is the only line to have across-the-board ridership increases, most likely because of its intersections with high-traffic areas.</p>
+      </div>
+      <div class="step" data-image="pretty/ridership_increase_a_line.svg">
+        <p>But it also faced a decrease in the amount of ridership it gained, putting the line as the bottom of those who gained.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="scrolly-container">
+    <div class="scrolly-image">
+        <img src="ugly/17_18_ridership_loss_top_4.png">
+    </div>
+    <div class="scrolly-content">
+        <div class="step" data-image="ugly/17_18_ridership_loss_top_4.png">
+          <p>A tumultous year on the L line plummeted it downwards, but the most dramatic drop came from the F line, which has had a sketchy history in past years with unannounced express service, station closures and heavy maintenance efforts.</p>
+      </div>
+        <div class="step" data-image="ugly/17_18_ridership_loss_all.svg">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="step" data-image="ugly/17_18_ridership_loss.svg">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="step" data-image="ugly/17_18_ridership_loss_top_4.svg">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+  </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="footer">
+      <p class="note">© Sawyer Click, 2019</p>
+    </div>
+
+  </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script> 
+    <!-- Script to change opacity when scrolling the web page -->      
+    <script> 
+      $(window).scroll(function(){
+          var scrollVar = $(window).scrollTop();
+          $('.header').css("opacity", 1 - scrollVar/300);
+      })
+    </script> 
+
+   <!-- include our scrolling library -->
+<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+<script src="https://unpkg.com/scrollama"></script>
+<script src='js/stickyfill.min.js'></script>
+
+<script type="text/javascript">
+    window.onload = function() {
+        // Allow position: sticky to work in old browsers
+        var elements = document.querySelectorAll('.scrolly-image');
+        Stickyfill.add(elements);
+
+        // instantiate the scrollama
+        var scroller = scrollama();
+
+        scroller
+        .setup({
+            offset: 0.8, // how far from the top?
+            step: '.step', // class for stepping through
+            debug: false, // shows the line
+        })
+        .onStepEnter(function(response) {
+            // look at data-image attribute
+            let imagePath = response.element.getAttribute('data-image')
+            if(imagePath) {
+                // if it exists, change the img tag to match
+                response.element.parentNode.parentNode
+                    .querySelector("img")
+                    .setAttribute("src", imagePath)
+            }
+        })
+    }
+</script>
+</html>

@@ -1,0 +1,309 @@
+
+::-webkit-scrollbar { 
+	display: none; 
+}
+
+/*  Links */
+a, a > span {
+  position: relative;
+  color: #b2584c;
+	text-decoration: none;
+}
+a:before, a:after, a > span:before, a > span:after {
+  content: '';
+  position: absolute;
+  transition: transform .5s ease;
+}
+
+a:hover {
+	color: black;
+}
+
+.effect {
+  padding-right: 10px;
+  display: inline-block;
+	overflow: hidden;
+}
+.effect:before, .effect:after {
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #E24A33;
+}
+.effect:before {
+  bottom: 0;
+  transform: translateX(-100%);
+}
+.effect:after {
+  top: 0;
+  transform: translateX(100%);
+}
+.effect:hover:before, .effect:hover:after {
+  transform: translateX(0);
+}
+
+/*  body */
+body {
+	margin: auto;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* header image */
+.bg_image {
+	background-image: url("../pretty/header_image.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+	background-size: contain;
+	/* width: 100% !important; */
+	/* height: 100%; */
+}
+
+/* fonts */
+.serif {
+	font-family: 'Lora', serif;
+}
+.sans-serif {
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* choose a light or dark theme to add to the body tag. */
+.dark-theme {
+    background-color: #151515;
+    color: #fbfbfb;
+}
+.light-theme {
+    background-color: white;
+    color: black;
+}
+
+.header {
+	margin-left: 5% !important;
+	padding-top:20%;
+	padding-bottom:20px;
+	max-width: 700px;
+}
+
+.story-body, .footer {
+	margin:auto;
+	max-width: 700px;
+}
+
+.footer {
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+.chart-section.wide{
+	width:100%;
+	max-width:1200px;
+}
+
+.chart-section.wide p.chart-title {
+	width:100%;
+	max-width:700px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.chart-section.wide p.chart-subhead {
+	width:100%;
+	max-width:700px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+/* text styles */
+
+p.kicker {
+	font-size:1rem;
+	text-transform:uppercase;
+}
+
+.text-center {
+	text-align:center;
+}
+
+h1.headline {
+    font-size: 8vh;
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+    margin-top: 1rem;
+    font-weight: 800;
+}
+
+h2.subhead {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin-bottom:0;
+    margin-top: 15px;
+    font-weight: 400;
+}
+
+p.body-text {
+  font-size: 1.2rem;
+  line-height: 1.4;
+ 	margin-top:0;
+ 	margin-bottom:15px;
+}
+
+h3.section-head {
+	font-size:3.5vh;
+	margin:40px 0 10px 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	font-weight:700;
+	line-height:1.3;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "Lora";
+	border-bottom: #E24A33 2px solid;
+	border-bottom-width: thin;
+}
+
+
+.byline {
+    font-size: 1.1rem;
+    line-height: 0.75;
+    margin-top: 1.5rem;
+    font-weight: 500;
+}
+
+.date {
+    font-size: 0.85rem;
+    line-height: 1;
+    margin-top: 10px;
+    font-weight:400;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+}
+
+
+p.note {
+	font-size:0.85rem;
+}
+
+/* chart styles */
+
+.chart-section {
+	height:100%;
+	max-width:1200px;
+	padding:20px 0px;
+	/* display: flex; */
+}
+
+.chart-row {
+	display:flex;
+	justify-content: space-between;
+	margin-top:20px;
+}
+
+p.chart-title {
+	font-size:1.3rem;
+	font-weight:700;
+	max-width:700px;
+	margin:0px auto 5px auto;
+}
+p.chart-subhead {
+	margin:0 auto;
+	max-width:700px;
+	font-size:1rem;
+	margin-bottom:15px;
+}
+
+p.chart-label {
+	margin:0 0 5px 0;
+	font-size:0.85rem;
+	text-transform:uppercase;
+	font-weight:600;
+}
+
+.chart-row .chart {
+	width:100%;
+	padding-right:15px;
+	min-width:calc(25% - 15px);
+
+}
+
+
+
+p.chart-source {
+	font-size:0.85rem;
+	margin:0;
+}
+
+
+
+.chart img {
+	width: 100%;
+	height: auto;
+}
+
+
+
+
+/* photos */
+
+.photo-section {
+	padding:30px 0px;
+	width:100%;
+	margin:auto;
+	display:flex;
+	max-width:1200px;
+}
+
+.photo {
+	width:100%;
+	padding-right:15px;
+}
+.photo img {
+	width:100%;	
+}
+
+p.caption {
+	font-size:0.9rem;
+	margin:0;
+}
+
+
+
+/* mobile */
+
+@media (max-width:750px) {
+
+	p.body-text {
+		width: 90%;
+		margin: auto;
+	}
+
+	h2 {
+		width: 90%;
+	}
+
+	.chart-row {
+		display:block;
+	}
+
+	.chart-row .chart {
+		padding:0;
+	}
+
+	.photo-section {
+		display:block;
+	}
+	.photo {
+		padding:0;
+	}
+
+	h1.headline {
+		font-size: 24px;
+	}
+
+	h2.subhead {
+		font-size: 16px;
+		line-height: 3vh;
+	}
+}
+
+
+
