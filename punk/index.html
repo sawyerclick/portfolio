@@ -39,53 +39,25 @@
       <p class='body-text'>By nature, no sustaining band can become an institution of the genre without pinning themselves to a giant board labelled "sell-out".</p>
       <p class='body-text'>When you throw 21st-century curveballs like Spotify, which don't pay homage to forefathers in terms of prominence, its damn near impossible to narrow down what exactly punk looks like in 2019. But, we can try?</p>
 
-      <!-- <div id="boombox">
-        <div class="boombox-handle"></div>
-        
-        <div class="boombox-body">
-        
-          <section class="master-controls">
-            <input type="range" id="volume" class="control-volume" min="0" max="2" value="1" list="gain-vals" step="0.01" data-action="volume" />
-            <datalist id="gain-vals">
-              <option value="0" label="min">
-              <option value="2" label="max">
-            </datalist>
-            <label for="volume">VOL</label>
-      
-            <input type="range" id="panner" class="control-panner" list="pan-vals" min="-1" max="1" value="0" step="0.01" data-action="panner" />
-            <datalist id="pan-vals">
-              <option value="-1" label="left">
-              <option value="1" label="right">
-            </datalist>
-            <label for="panner">PAN</label>
-            
-            <button class="control-power" role="switch" aria-checked="false" data-power="on">
-              <span>On/Off</span>
-            </button>
-          </section>
-      
-          <section class="tape">
-      
-            <audio src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/858/outfoxing.mp3" crossorigin="anonymous" ></audio>
-            	type="audio/mpeg"
-      <button data-playing="false" class="tape-controls-play" role="switch" aria-checked="false">
-              <span>Play/Pause</span>
-            </button>
-          </section>
-          
-        </div>boombox-body
-      </div> -->
+      <p class='body-text'>This single-axis histogram maps the energy, danceability and valence (high means cheery, low means depressing) of all of the songs in the playlists. Most tend to fall around the same place in each category.</p>
+      <div class='control'>
+        <button id='all' class='graph'>All</button>
+        <button id='explicit' class='graph'>Explicit</button>
+        <button id='notExplicit' class='graph'>Not Explicit</button>
+        <div class='songbox'>
+          <h4 class='band'></h4>
+          <h4 class='song'></h4>
+        </div>
+        <i></i>
+      </div>
+    </div>
 
-    <div class='control'>
-      <button id='all' class='graph'>All</button>
-      <button id='explicit' class='graph'>Explicit</button>
-      <button id='notExplicit' class='graph'>Not Explicit</button>
-      <i></i>
-   </div>
 
+
+  <div class='container'>
     <div id="chart1" class='center'></div>
       </div>
-    
+  </div> 
     
     <div class='container'>
       <h3 class='glitch-subhead' data-text="Most Popular Artists">Most Popular Artists</h3>

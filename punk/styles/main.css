@@ -532,7 +532,7 @@ section {
 }
 
 h4 {
-  color: lightpink;
+  color: white;
   font-size: 36px;
 }
 
@@ -588,9 +588,11 @@ button.graph:active {
 
 .control {
   margin-top: 50px;
+  height: 30px;
 }
 
 .fa-pause {
+  text-anchor: central;
   font-size: 22px;
   margin-left: 62%;
   color: whitesmoke;
@@ -602,4 +604,22 @@ button.graph:active {
   transform: scale(0.15);
   color: gray;
   cursor: pointer;
+}
+
+.songbox {
+  position: absolute;
+  display: inline-block;
+  margin-right: 5px;
+  color: #111111;
+  text-align: right;
+  text-anchor: central;
+  width: 460px;
+  /* background-color: lightgray; */
+  border-radius: 10px;
+  /* border-bottom: lightgray 2px solid; */
+}
+
+.band, .song {
+  /* padding: 0px; */
+  font-size: 18px;
 }
