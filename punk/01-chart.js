@@ -6,7 +6,7 @@
   var margin = { top: 150, right: 50, bottom: 50, left: 105 }
   var padding = { top: '25%', bottom: '25%' }
   var width = 750 - margin.left - margin.right
-  var height = 350 - margin.top - margin.bottom
+  var height = 275 - margin.top - margin.bottom
 
   var svg = d3
     .select('#chart1')
