@@ -6,7 +6,7 @@
   var margin = { top: 150, right: 50, bottom: 50, left: 105 }
   var padding = { top: '25%', bottom: '25%' }
   var width = 750 - margin.left - margin.right
-  var height = 225 - margin.top - margin.bottom
+  var height = 350 - margin.top - margin.bottom
 
   var svg = d3
     .select('#chart1')
@@ -21,6 +21,10 @@
     .scaleLinear()
     .domain([0, 1])
     .range([0, width])
+  var xPositionScale100 = d3
+    .scaleLinear()
+    .domain([0, 100])
+    .range([0, width])
   // var yPositionScale = d3
   //   .scaleLinear()
   //   .domain([0, 1])
@@ -30,12 +34,12 @@
     .domain([0, 100])
     .range([3, 9])
 
-  var keys = ['Valence', 'Danceability', 'Energy']
+  var keys = ['Valence', 'Danceability', 'Energy','Popularity']
 
   var color = d3
     .scaleOrdinal()
     .domain(keys)
-    .range(['#dbc269', '#5CDB95', '#C7493A'])
+    .range(['#dbc269', '#5CDB95', '#C7493A','#566fa3'])
 
   // Add one dot in the legend for each name.
   svg
@@ -70,33 +74,33 @@
     })
     
     d3.select('#all').on('click', function() {
-      svg.selectAll('circle').attr('fill-opacity', 0)
+      svg.selectAll('circle').attr('r', 0)
       svg
         .selectAll('circle')
         .transition()
         .duration(1000)
         .ease(d3.easeQuad)
-        .attr('fill-opacity', 0.3)
+        .attr('r', 4)
     })
 
     d3.select('#explicit').on('click', function() {
-      svg.selectAll('circle').attr('fill-opacity', 0)
+      svg.selectAll('circle').attr('r', 0)
       svg
-        .selectAll('.true')
+        .selectAll('#true')
         .transition()
         .duration(1000)
         .ease(d3.easeQuad)
-        .attr('fill-opacity', 0.3)
+        .attr('r', 4)
     })
 
     d3.select('#notExplicit').on('click', function() {
-      svg.selectAll('circle').attr('fill-opacity', 0)
+      svg.selectAll('circle').attr('r', 0)
       svg
-        .selectAll('.false')
+        .selectAll('#false')
         .transition()
         .duration(1000)
         .ease(d3.easeQuad)
-        .attr('fill-opacity', 0.3)
+        .attr('r', 4)
     })
 
     // energy
@@ -109,10 +113,26 @@
       .attr('cx', d => xPositionScale(d.energy))
       .attr('fill', '#C7493A')
       .attr('fill-opacity', 0.3)
-      .attr('r', d => radiusScale(d.song_popularity))
-      .attr('class', d => d.song_explicit.toLowerCase())
+      .attr('r', 4)
+      .attr('id', d => d.song_explicit.toLowerCase())
       .attr('class', d => "id-"+d.id)
 
+
+    // popularity
+    svg
+      .selectAll('svg')
+      .data(datapoints)
+      .enter()
+      .append('circle')
+      .attr('cy', height - 175)
+      .attr('cx', d => xPositionScale100(d.song_popularity))
+      .attr('fill', '#566fa3')
+      .attr('fill-opacity', .3)
+      .attr('r', 4)
+      .attr('id', d => d.song_explicit.toLowerCase())
+      .attr('class', d => "id-"+d.id)
+
+    // danceability
     svg
       .selectAll('svg')
       .data(datapoints)
@@ -122,11 +142,11 @@
       .attr('cx', d => xPositionScale(d.danceability))
       .attr('fill', '#5CDB95')
       .attr('fill-opacity', 0.3)
-      .attr('r', d => radiusScale(d.song_popularity))
-      .attr('class', d => d.song_explicit.toLowerCase())
+      .attr('r', 4)
+      .attr('id', d => d.song_explicit.toLowerCase())
       .attr('class', d => "id-"+d.id)
 
-    // danceability
+    // valence
     svg
       .selectAll('svg')
       .data(datapoints)
@@ -136,8 +156,8 @@
       .attr('cx', d => xPositionScale(d.valence))
       .attr('fill', '#dbc269')
       .attr('fill-opacity', 0.3)
-      .attr('r', d => radiusScale(d.song_popularity))
-      .attr('class', d => d.song_explicit.toLowerCase())
+      .attr('r', 4)
+      .attr('id', d => d.song_explicit.toLowerCase())
       .attr('class', d => "id-"+d.id)
 
     var xAxis = d3.axisBottom(xPositionScale)
@@ -165,16 +185,16 @@
         svg.selectAll('circle')
           .transition()
           .duration(200)
-          .attr('r', d => radiusScale(d.song_popularity))
-          .attr('fill-opacity', .3)})
+          .attr('r', 4)
+          .attr('fill-opacity', .3)
+        })
   
       .on('click', d => {
         if (audio) {
           audio.pause()
         }
         audio = new Audio(d.song_preview)
-        return audio.play(),
-        svg.selectAll(".id-"+d.id).transition().duration(200).attr('r', 15).attr('fill-opacity', 1)
+        return audio.play()
       })
   }
 })()

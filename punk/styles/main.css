@@ -600,7 +600,8 @@ button.graph:active {
 }
 
 .fa-pause:focus,
-.fa-pause:hover {
+.fa-pause:hover,
+.fa-pause:active {
   transform: scale(0.15);
   color: gray;
   cursor: pointer;
@@ -609,13 +610,13 @@ button.graph:active {
 .songbox {
   position: absolute;
   display: inline-block;
-  margin-right: 5px;
+  padding-right: 15px;
   color: #111111;
   text-align: right;
   text-anchor: central;
   width: 460px;
+  /* border: white 2px solid; */
   /* background-color: lightgray; */
-  border-radius: 10px;
   /* border-bottom: lightgray 2px solid; */
 }
 
