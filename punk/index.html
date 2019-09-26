@@ -12,8 +12,10 @@
 
     <link rel="shortcut icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/225/sign-of-the-horns_1f918.png" type="image/x-icon"/>
 
+    <link rel="stylesheet" href="styles\font-awesome-4.7.0\css\font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles\main.css">
+    <link rel="stylesheet" href="styles\boombox.css">
 
     <!-- google fonts: Lato (headings) and Montserrat (body) -->
     <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap" rel="stylesheet">
@@ -36,9 +38,53 @@
       <p class='body-text'>It seems like punk music has just given up on itself. Tom isn't in Blink-182 anymore. Green Day is still a band? A Day To Remember made an edm song with Marshmello.</p>
       <p class='body-text'>By nature, no sustaining band can become an institution of the genre without pinning themselves to a giant board labelled "sell-out".</p>
       <p class='body-text'>When you throw 21st-century curveballs like Spotify, which don't pay homage to forefathers in terms of prominence, its damn near impossible to narrow down what exactly punk looks like in 2019. But, we can try?</p>
-    </div>
+
+      <!-- <div id="boombox">
+        <div class="boombox-handle"></div>
+        
+        <div class="boombox-body">
+        
+          <section class="master-controls">
+            <input type="range" id="volume" class="control-volume" min="0" max="2" value="1" list="gain-vals" step="0.01" data-action="volume" />
+            <datalist id="gain-vals">
+              <option value="0" label="min">
+              <option value="2" label="max">
+            </datalist>
+            <label for="volume">VOL</label>
+      
+            <input type="range" id="panner" class="control-panner" list="pan-vals" min="-1" max="1" value="0" step="0.01" data-action="panner" />
+            <datalist id="pan-vals">
+              <option value="-1" label="left">
+              <option value="1" label="right">
+            </datalist>
+            <label for="panner">PAN</label>
+            
+            <button class="control-power" role="switch" aria-checked="false" data-power="on">
+              <span>On/Off</span>
+            </button>
+          </section>
+      
+          <section class="tape">
+      
+            <audio src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/858/outfoxing.mp3" crossorigin="anonymous" ></audio>
+            	type="audio/mpeg"
+      <button data-playing="false" class="tape-controls-play" role="switch" aria-checked="false">
+              <span>Play/Pause</span>
+            </button>
+          </section>
+          
+        </div>boombox-body
+      </div> -->
+
+    <div class='control'>
+      <button id='all' class='graph'>All</button>
+      <button id='explicit' class='graph'>Explicit</button>
+      <button id='notExplicit' class='graph'>Not Explicit</button>
+      <i></i>
+   </div>
 
     <div id="chart1" class='center'></div>
+      </div>
     
     
     <div class='container'>
@@ -64,6 +110,7 @@
   </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+  <!-- <script src="boombox.js"></script> -->
   <script src="01-chart.js"></script>
   <script src="02-chart.js"></script>
 </html>
