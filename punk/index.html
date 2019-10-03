@@ -19,6 +19,8 @@
 
     <!-- google fonts: Lato (headings) and Montserrat (body) -->
     <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
   </head>
   <body>
   <section class="container-dark active" id='home'>
@@ -31,36 +33,43 @@
     </div>
   </section>
 
-  <section id='body'>
+  <i class='fa fa-pause'></i>
+
+  <div id='body'>
+    <section id='1'>
     <div class='container'>
       <a href='#body'><h3 class='glitch-subhead' data-text="Dance, Dance, Punk is Falling">Dance, Dance, Punk is Falling</h3>
       </a>
       <p class='body-text'>It seems like punk music has just given up on itself. Tom isn't in Blink-182 anymore. Green Day is still a band? A Day To Remember made an edm song with Marshmello.</p>
-      <p class='body-text'>By nature, no sustaining band can become an institution of the genre without pinning themselves to a giant board labelled "sell-out".</p>
+
       <p class='body-text'>When you throw 21st-century curveballs like Spotify, which don't pay homage to forefathers in terms of prominence, its damn near impossible to narrow down what exactly punk looks like in 2019. But, we can try?</p>
 
-      <p class='body-text'>This single-axis histogram maps the energy, danceability and valence (high means cheery, low means depressing) of all of the songs in the playlists. Most tend to fall around the same place in each category.</p>
-      <div class='control'>
-        <button id='all' class='graph'>All</button>
-        <button id='explicit' class='graph'>Explicit</button>
-        <button id='notExplicit' class='graph'>Not Explicit</button>
-        <div class='songbox'>
-          <h4 class='band'></h4>
-          <h4 class='song'></h4>
-        </div>
-        <i></i>
-      </div>
+      <p class='body-text'>The genre is still high-energy and fast paced, proven by the Spotify data shown below. But only nineteen of the tracks in the 24 playlists have a popularity above 70%, and they're all from scene staples: four from Green Day, two from Fall Out Boy, two from blink-182, two from My Chemical Romance.</p>
+
+      <p class='body-text'>Though these artists were crucial to the 2000's era of punk music, they aren't the best representation of modern punk. All of the most popular songs were released over a decade ago. I mean, Fountain of Wayne's <em>Stacy's Mom</em> is the fourth most popular song in the playlists.</p>
     </div>
 
-
-
-  <div class='container'>
-    <div id="chart1" class='center'></div>
+    <div class='container-med graphic'>
+        <div class='control'>
+            <button id='all' class='graph'>All</button>
+            <button id='explicit' class='graph'>Explicit</button>
+            <button id='notExplicit' class='graph'>Not Explicit</button>
+            <div class='songbox'>
+              <h4 class='band'></h4>
+              <h4 class='song'></h4>
+            </div>
+          </div>
+          <div id="chart1" class='center'></div>
       </div>
-  </div> 
-    
+  </section>
+
+
+
+  <section id='2'>
     <div class='container'>
       <h3 class='glitch-subhead' data-text="Most Popular Artists">Most Popular Artists</h3>
+
+      <p class='body-text'>By nature, no sustaining band can become an institution of the genre without pinning themselves to a giant board labelled "sell-out". In the age of streaming, that still rings true. </p>
    </div>
 
     <div id="chart2" style='display: inline;'>
@@ -70,19 +79,48 @@
         <p class="genre"></p>
     </span>
   </section>
+
+
+<section id='3'>
+  <div class='container-full graphic'>
+    <div class='control'>
+      <button id='popularity' class='graph'>popularity</button>
+      <button id='energy' class='graph'>energy</button>
+      <button id='danceability' class='graph'>danceability</button>
+      <button id='valence' class='graph'>valence</button>
+    </div>
+    <div id='chart3'></div>
+    <div class='tooltip'></div>
+  </div>
+  </section>
+
+  <section id='4'>
+      <div class='container-full graphic'>
+        <div class='control'>
+          <button id='greenday' class='graph'>Green Day</button>
+          <button id='popArt' class='graph'>popular artists</button>
+        </div>
+        <div id='chart4'></div>
+        <div class='tooltip'></div>
+      </div>
+  </section>
+
   <section id='#footer'>
     <div class='container'>
     <h3 class='glitch-subhead' data-text="How Did I Make This?">How Did I Make This?</h3>
-    
+
     <p class='body-text'>I used <code>Node.js</code> to grab my <code>API</code> key. I used <code>Pandas</code> to build my dataframes and export to .csv's. I shoved everything into <code>D3.js</code> scripts to spit out each graphic.</p>
-    
+
     <p class='body-text'>I eventually want to do lyrical analysis with <code>NRC Emotional Lexicon</code> and see what emotions are being evoked over time. </p>
       <!-- I made a few graphics using <code>Matplotlib</code>, <code>Illustrator</code> and <code>AI2HTML</code> -->
-      
+
   </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
-  <!-- <script src="boombox.js"></script> -->
   <script src="01-chart.js"></script>
   <script src="02-chart.js"></script>
+  <script src="03-chart.js"></script>
+  <script src="04-chart.js"></script>
+  <script>let audio = null</script>
+</body>
 </html>

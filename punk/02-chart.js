@@ -73,11 +73,7 @@
     function handleMouseOver(d, i) {
       // Select the element by class, use .text to set the content
       d3.select('.infobox .genre').text(d.genres)
-      // .html(String)
-      // Show the infobox
       d3.select('.infobox').style('visibility', 'visible')
-      // make the mouseover'd element
-      // bigger and red
       d3.select(this)
         .transition()
         .duration(50)

@@ -30,9 +30,10 @@
 
    <link href="https://fonts.googleapis.com/css?family=B612+Mono&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=B612&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
 
-  <link rel="stylesheet" href="styles\font-awesome-4.7.0\css\font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/bc6c28426d.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -42,30 +43,9 @@
 
 
 <body id='home' data-spy="scroll" data-target="#myScrollspy" data-offset="250">
-
-    <nav class="col-xs-6" id="myScrollspy">
-        <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a href="#home">home</a></li>
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#homework">homework</a></li>
-        </ul>
-      </nav>
-
-        <script>
-        // Add active class to the current button (highlight it)
-        var header = document.getElementById("myDIV");
-        var btns = header.getElementsByClassName("btn");
-        for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function() {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-        });
-        }
-        </script>
   
     <section class="header home">
-      <div id="container">
+      <div class="header-container">
         <div class="container">
             <div class="box">
                 <div class="title">
@@ -79,13 +59,18 @@
             </div>
         </div>
 
-        <p class="bio">Columbia Journalism School - M.S. Data Journalism '20<br/>Texas State University - B.S. Journalism '16</p>
+        <div class='bio-box'>
+          <p class="bio">Columbia Journalism School - M.S. Data Journalism '20<br/>Texas State University - B.S. Journalism '16</p>
+
+          <script>console.log("Hi! I'm Sawyer Click, a New York-based data viz nerd. I have projects below that showcase my sweet skills in Python, Illustrator and D3.js, but this secret section is dedicated to how cool I am. I'm a north Texas native with an obsession over punk music. In my free time I play Overwatch, pet Chunkie, my dog, and riff hard on my guitar. Hire me!")</script>
+        </div>
 
         <div class="socials">
-          <a href="https://github.com/SawyerClick" title="Github" target="_blank"><i class="fa fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/sawyerclick/" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
-          <a href="https://twitter.com/sawyerdabear" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="https://github.com/SawyerClick" title="Github" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/sawyerclick/" title="Linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/sawyerdabear" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
           <a href="mailto:sawyerclick@gmail.com?Subject=Hi%20Sawyer" target="_top" title="E-mail"><i class="fa fa-envelope"></i></a>
+          <a href="mailto:sawyerclick@gmail.com?Subject=Hi%20Sawyer" target="_top" title="About Me"><i class="fa fa-address-card"></i></a>
         </div>
       </div>
     </section>
@@ -93,10 +78,12 @@
 
 
 
+    <div class='sticky' id='viz'>
+      <p>Data & Graphics</p>
+    </div>
     <!-- Data portfolio -->
-  <div id="container">
-    <section class="links" id='projects'>
-
+  <div class="body-container">
+    <section class="links">
       <!-- 1st row -->
       <div class="row">
 
@@ -105,8 +92,8 @@
           <div class="content">
             <a href="subway-ridership">
               <div class="info">
-                <div class="skills left-half nomargin">Matplotlib, Pandas</div>
-                <div class="date right-half nomargin">July '19</div>   
+                <div class="skills left-half nomargin">Pandas</div>
+                <div class="date right-half nomargin">Aug. '19</div>   
               </div>
               <img class="itemimage" src="subway-ridership/pretty/header_image.png" alt="The year-by-year fall of ridership" style="width:100%">
               <h3 class="title"><span class="title">subway ridership</span></h3>
@@ -115,41 +102,27 @@
           </div>
         </div>
 
-      <!-- wiretapping -->
-        <div id="links" class="column">
-          <div class="content">
-            <a href='wiretaps'>
-              <div class="info">
-                <div class="skills left-half nomargin">Pandas,Illustrator</div>
-                <div class="date right-half nomargin">July '19</div>
-              </div>
-              <img src="wiretaps/images/wiretapping_headerpng.png" alt="Yearly breakdown of wiretapping" style="width:100%">
-              <h3 class="title"><span class="title">state-level wiretapping</span></h3>
-              <p class="description">Looking at state-level wiretapping by charts via Matplotlib and Pandas and maps via QGIS. Cleaned up in Illustrator.</p>
-            </a>
-          </div>
-        </div>
 
       <!-- unknown terrorism -->
-        <div id="links" class="column">
-          <div class="content">
-            <a href='terrorism'>
-              <div class="info">
-                <div class="skills left-half nomargin">Mapbox, ai2html</div>
-                <div class="date right-half nomargin">July '19</div>
-              </div>
-              <img class="itemimage" src="terrorism/images/terrorism_header.png" alt="" style="width:100%">
-              <h3 class="title"><span class="title">"unknown" terrorism</span></h3>
-              <p class="description">Exploring the unknown terrorism attacks in the Global Terrorism Database using MapBox, Pandas, Illustrator and ai2html</p>
-            </a>
-          </div>
+      <div id="links" class="column">
+        <div class="content">
+          <a href='terrorism'>
+            <div class="info">
+              <div class="skills left-half nomargin">ai2html</div>
+              <div class="date right-half nomargin">July '19</div>
+            </div>
+            <img class="itemimage" src="terrorism/images/terrorism_header.png" alt="" style="width:100%">
+            <h3 class="title"><span class="title">"unknown" terrorism</span></h3>
+            <p class="description">Exploring the unknown terrorism attacks in the Global Terrorism Database using MapBox, Pandas, Illustrator and ai2html</p>
+          </a>
         </div>
+      </div>
 
-        <div id="links" class="column">
+      <div id="links" class="column">
           <div class="content">
             <a href='2020-dems'>
               <div class="info">
-                <div class="skills left-half nomargin">Mapbox, Selenium</div>
+                <div class="skills left-half nomargin">Mapbox</div>
                 <div class="date right-half nomargin">July '19</div>
               </div>
               <img class="itemimage" src="2020-dems/header.gif" alt="Screengrab of the Mapbox portion of the page" style="width:100%">
@@ -157,24 +130,32 @@
               <p class="description">Tracking the Facebook events of <i>some</i> 2020 presidential candidates using Selenium and Pandas.</p>
             </a>
           </div>
-      </div>
-      </div>
-    </section>
+        </div>
 
-    <section class="links" id='homework'>
-      <h1 class='section-title'>homework</h1>
-    
-      <div class='row'>
+        <!-- wiretapping -->
+        <div id="links" class="column">
+            <div class="content">
+              <a href='wiretaps'>
+                <div class="info">
+                  <div class="skills left-half nomargin">Illustrator</div>
+                  <div class="date right-half nomargin">July '19</div>
+                </div>
+                <img src="wiretaps/images/wiretapping_headerpng.png" alt="Yearly breakdown of wiretapping" style="width:100%">
+                <h3 class="title"><span class="title">wiretapping</span></h3>
+                <p class="description">Looking at state-level wiretapping by charts via Matplotlib and Pandas and maps via QGIS. Cleaned up in Illustrator.</p>
+              </a>
+            </div>
+          </div>
         
       <div id="links" class="column">
           <div class="content">
             <a href='homework/01'>
               <div class="info">
-                <div class="skills left-half nomargin">ai2html, Illustrator</div>
+                <div class="skills left-half nomargin">ai2html</div>
                 <div class="date right-half nomargin">Sept. '19</div>   
               </div>
               <img class="itemimage" src="subway-ridership/pretty/manhattan_fell_the_hardest_2.png" alt="The year-by-year fall of ridership" style="width:100%">
-              <h3 class="title"><span class="title">01:ai2html</span></h3>
+              <h3 class="title"><span class="title">ai2html practice</span></h3>
               <p class="description">Working with Illustrator and ai2html to create a responsive graphic.</p>
              </a>
           </div>
@@ -184,35 +165,31 @@
             <div class="content">
               <a href='homework/03'>
                 <div class="info">
-                  <div class="skills left-half nomargin">ai2html, Flourish</div>
+                  <div class="skills left-half nomargin">ai2html</div>
                   <div class="date right-half nomargin">Sept. '19</div>   
                 </div>
-                <img class="itemimage" src="homework/03/texas_graphic.svg" style="width:100%">
-                <h3 class="title"><span class="title">03:infodump</span></h3>
+                <img class="itemimage" src="homework/03/texas_graphic.png" style="width:100%">
+                <h3 class="title"><span class="title">infodump rework</span></h3>
                 <p class="description">Reworking a FiveThirtyEight infodump into a narrative. </p>
                </a>
             </div>
           </div>
-
       </div>
+    </section>
   </div>
+
+  <!-- <div class='sticky' id='words'>
+      <p>Words & Reporting</p>
+    </div>
+<div class='body-container'>
+  <section id='words'>
+    
+  </section>
+</div> -->
 
 
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/main.js"></script>
-  <script>
-      // Add active class to the current button (highlight it)
-      var header = document.getElementById("nav");
-      var btns = header.getElementsByClassName("btn");
-      for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function() {
-        var current = document.getElementsByClassName("active");
-          current[0].className = current[0].className.replace(" active", "");
-          this.className += " active";
-        });
-      }
-  </script>
-  
 </body>
 </html>

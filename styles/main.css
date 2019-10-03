@@ -18,6 +18,7 @@ time, mark, audio, video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar { 
@@ -25,17 +26,24 @@ time, mark, audio, video {
 }
 
 body{
-	color:#101010;
-	background:whitesmoke;
+	color:#333333;
 	font-family: 'B612 Mono', monospace;
-  background-color: #fff;
-  position: relative;
+  background-color: whitesmoke;
+  scroll-behavior: smooth;
 }
 
-#container {
+.header-container {
+	/* max-width: 1000px; */
+	margin-left: auto;
+  margin-right: auto;
+  display: absolute;
+}
+
+.body-container {
 	max-width: 1000px;
 	margin-left: auto;
-	margin-right: auto;
+  margin-right: auto;
+  display: inline-flexbox;
 }
 
 section {
@@ -47,6 +55,9 @@ section {
 
 section.home {
   height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 0;
 }
 
 h1 {
@@ -66,20 +77,25 @@ h3 {
 }
 
 p {
-	font-family: 'B612', sans-serif;
+	font-family: 'B612', monospace;
 	font-weight: 100;
 	font-size:16px;
 	margin:3px 0 10px 0;
 	line-height:1.5rem;
 }
 section.header {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
   text-align: center;
-  margin: 2vh 0;
+  /* position: fixed; */
+  /* max-width: 750px; */
 }
 
 section.header a{
 	font-weight:500;
-	padding:0px 4px 2px 0px;
+	padding:0px 4px 2px 4px;
 	text-decoration:none;
 	display:inline-block;
 	color:#000;
@@ -100,6 +116,16 @@ section.header a:hover {
 .socials a:hover {
 	background-color: rgb(183, 217, 250);
 }
+
+/* code {
+  background-color: rgb(183, 217, 250);
+  color: #333333;
+  font-size: 22px;
+  padding: 3px;
+  border-radius: 3px;
+  margin-top: 30px;
+  font-weight: 600;
+} */
 
 /* nav bar */
 
@@ -139,56 +165,18 @@ button {
   scroll-behavior: smooth;
 }
 
-/* Style the active class (and buttons on mouse-over) */
-.nav-pills>li.active>a, .nav-pills>li.active>a:hover {
-  background-color: slategray;
-  color: white;
-}
-
-li>a {
-  color: slategray;
-  font-size: 22px;
-  font-weight: 600;
-}
-
-
-/* The sidebar menu */
-.sidenav {
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1;
-  top: 5vh; /* Stay toward the top */
-  left: 100;
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
-}
-
-ul.nav-pills {
-  /* top: 15vh; */
-  position: fixed;
-  background: white;
-}
-
-@media screen and (max-width: 450px) {
-  .col-sm-3 {margin-left:auto;margin-right:auto;top:0;}
-  ul.nav-pills {display: none;}
-  h1.section-title {font-size: 26px!important;}
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media (max-height: 700px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
 h1.section-title {
   font-size: 7vh;
   color: slategray;
   letter-spacing: 0;
 }
-
 .bio {
-	line-height: 1.5em;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.5em;
+  text-align: center;
 }
+
 
 .row {
 	margin: -2px -16px;
@@ -220,20 +208,21 @@ h1.section-title {
 .content {
 	padding: 6px 1em;
 	margin: 0em 1em 1em 1em;
-	max-height: 400px;
+	/* max-height: 400px; */
 	border-width: 2px;
 	border-color: rgb(183, 217, 250);
 	border-style: solid;
 	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
 		transition: all .2s;
-	background-color: white;
+  /* background-color: white; */
 }
 
 .content:hover {
 	-webkit-filter: none; /* Safari 6.0 - 9.0 */
 		filter: none;
-		transform:scale(1.05);
+    transform:scale(1.05);
+  background-color: rgba(183, 216, 250, 0.39);
 }
 
 .info {
@@ -265,26 +254,27 @@ padding-bottom: 1.1em;
 /** background-color: #ff9e2c; **/
 position: absolute;
 left: 0px;
-width: 70%;
+width: 50%;
 }
 
 .right-half {
 /** background-color: #b6701e; **/
 position: absolute;
 right: 0px;
-width: 30%;
+width: 50%;
 }
 
 .skills {
 text-align: left;
-font-size: 65%;
+font-size: 10px;
 padding-bottom: 0.5em;
 }
 
 .date {
 text-align: right;
-font-size: 65%;
+font-size: 10px;
 padding-bottom: 0.5em;
+padding-right: 1px;
 }
 
 .nomargin {
@@ -387,12 +377,44 @@ margin: 0;
   animation-delay: 3.2s;
   opacity: 0;
   font-weight: 200;
-  font-family: 'B612', sans-serif;
+  font-family: 'B612', monospace;
   color: #000;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 6.5px;
 }
+
+.box, .socials {
+  max-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 8px;
+  margin-top: 15px;
+  width: 15%;
+  border: #333333 1px solid;
+  background: whitesmoke;
+  color: lightblue;
+  z-index: 1;
+  font-family: 'B612 Mono', monospace;
+  float: left;
+}
+
+.sticky > * {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  margin: 0 0 0 15px;
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.5rem;
+  text-align: right;
+}
+
 
 @keyframes mainBlock {
   0% {
@@ -478,5 +500,55 @@ margin: 0;
 @media (max-width:700px) {
   .column {
     width: 100%;
+  }
+
+  .sticky {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .sticky {
+    width: 100vw;
+    top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .sticky > * {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media (max-height: 700px) {
+  .sticky {
+    width: 100vw;
+    top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .sticky > * {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1400px) {
+  .sticky {
+    width: 100vw;
+    top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .sticky > * {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 }

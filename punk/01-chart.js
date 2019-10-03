@@ -4,9 +4,8 @@
   // Build your SVG here
   // using all of that cut-and-paste magic
   var margin = { top: 150, right: 50, bottom: 50, left: 105 }
-  var padding = { top: '25%', bottom: '25%' }
-  var width = 750 - margin.left - margin.right
-  var height = 275 - margin.top - margin.bottom
+  var width = 1000 - margin.left - margin.right
+  var height = 250 - margin.top - margin.bottom
 
   var svg = d3
     .select('#chart1')
@@ -25,21 +24,13 @@
     .scaleLinear()
     .domain([0, 100])
     .range([0, width])
-  // var yPositionScale = d3
-  //   .scaleLinear()
-  //   .domain([0, 1])
-  //   .range([height, 0])
-  var radiusScale = d3
-    .scaleSqrt()
-    .domain([0, 100])
-    .range([3, 9])
 
-  var keys = ['Valence', 'Danceability', 'Energy','Popularity']
+  var keys = ['Valence', 'Danceability', 'Energy', 'Popularity']
 
   var color = d3
     .scaleOrdinal()
     .domain(keys)
-    .range(['#dbc269', '#5CDB95', '#C7493A','#566fa3'])
+    .range(['#dbc269', '#5CDB95', '#C7493A', '#566fa3'])
 
   // Add one dot in the legend for each name.
   svg
@@ -62,23 +53,18 @@
     })
 
   function ready(datapoints) {
-    let audio = null
-
-    d3.select('i')
-    .attr('class', 'fa fa-pause')
-    .attr('x', 1500)
-    .on('click', d => {
+    d3.select('i').on('click', d => {
       if (audio) {
         audio.pause()
       }
     })
-    
+
     d3.select('#all').on('click', function() {
       svg.selectAll('circle').attr('r', 0)
       svg
         .selectAll('circle')
         .transition()
-        .duration(1000)
+        .duration(200)
         .ease(d3.easeQuad)
         .attr('r', 4)
     })
@@ -88,7 +74,7 @@
       svg
         .selectAll('#true')
         .transition()
-        .duration(1000)
+        .duration(200)
         .ease(d3.easeQuad)
         .attr('r', 4)
     })
@@ -98,7 +84,7 @@
       svg
         .selectAll('#false')
         .transition()
-        .duration(1000)
+        .duration(200)
         .ease(d3.easeQuad)
         .attr('r', 4)
     })
@@ -115,8 +101,7 @@
       .attr('fill-opacity', 0.3)
       .attr('r', 4)
       .attr('id', d => d.song_explicit.toLowerCase())
-      .attr('class', d => "id-"+d.id)
-
+      .attr('class', d => 'id-' + d.id)
 
     // popularity
     svg
@@ -127,10 +112,10 @@
       .attr('cy', height - 175)
       .attr('cx', d => xPositionScale100(d.song_popularity))
       .attr('fill', '#566fa3')
-      .attr('fill-opacity', .3)
+      .attr('fill-opacity', 0.3)
       .attr('r', 4)
       .attr('id', d => d.song_explicit.toLowerCase())
-      .attr('class', d => "id-"+d.id)
+      .attr('class', d => 'id-' + d.id)
 
     // danceability
     svg
@@ -144,7 +129,7 @@
       .attr('fill-opacity', 0.3)
       .attr('r', 4)
       .attr('id', d => d.song_explicit.toLowerCase())
-      .attr('class', d => "id-"+d.id)
+      .attr('class', d => 'id-' + d.id)
 
     // valence
     svg
@@ -158,7 +143,7 @@
       .attr('fill-opacity', 0.3)
       .attr('r', 4)
       .attr('id', d => d.song_explicit.toLowerCase())
-      .attr('class', d => "id-"+d.id)
+      .attr('class', d => 'id-' + d.id)
 
     var xAxis = d3.axisBottom(xPositionScale)
     svg
@@ -167,29 +152,46 @@
       .attr('transform', 'translate(0,' + height + ')')
       .call(xAxis)
 
-      svg
+    svg
       .selectAll('circle')
       .on('mouseover', function(d) {
         d3.select('.songbox .band')
           .text('')
           .append()
-          .text(d.artist_name) 
+          .text(d.artist_name)
         d3.select('.songbox .song')
           .text('')
           .append()
           .text(d.song_name)
-        svg.selectAll(".id-"+d.id).transition().duration(200).attr('r', 15).attr('fill-opacity', 1)
-       })
+        svg
+          .selectAll('.id-' + d.id)
+          .transition()
+          .duration(200)
+          .attr('r', 15)
+          .attr('fill-opacity', 1)
+      })
 
-      .on('mouseout', function(){
-        svg.selectAll('circle')
+      .on('mouseout', function() {
+        svg
+          .selectAll('circle')
           .transition()
           .duration(200)
           .attr('r', 4)
-          .attr('fill-opacity', .3)
-        })
-  
-      .on('click', d => {
+          .attr('fill-opacity', 0.3)
+      })
+
+      .on('click', function(d) {
+        svg
+          .selectAll('circle')
+          .attr('r', 4)
+          .attr('fill-opacity', 0.3)
+        svg
+          .selectAll('.id-' + d.id)
+          .transition()
+          .duration(200)
+          .attr('r', 15)
+          .attr('fill-opacity', 1)
+
         if (audio) {
           audio.pause()
         }
