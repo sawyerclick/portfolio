@@ -1,19 +1,14 @@
-/* Smooth Scrolling
-* ------------------------------------------------------ */
-   var clSmoothScroll = function() {
-        
-    $('.smoothscroll').on('click', function (e) {
-        var target = this.hash,
-        $target    = $(target);
-        
-            e.preventDefault();
-            e.stopPropagation();
-
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top+94
-        }, cfg.scrollDuration, 'swing').promise().done(function () {
-            window.location.hash = target;
-        });
-    });
-
-};
+;(function() {
+    d3.select('.fa-address-card')
+    .on('mouseover', function() {
+        d3.select('#about')
+        .style('visibility', 'visible')
+        .style('height', 'auto')
+    })
+    .on('mouseout', function() {
+        d3.select('#about')
+        .style('visibility', 'collapse')
+        .style('height', 0)
+    })
+  })()
+  

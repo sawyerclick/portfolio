@@ -47,7 +47,7 @@ body{
 }
 
 section {
-  padding:10px;
+  padding:10px 0px;
   margin-bottom: 10vh;
   /* height: 75vh; */
   align-content: center;
@@ -109,6 +109,21 @@ section.header a:hover {
 	background-color:  rgb(183, 217, 250);
 }
 
+#about {
+  padding: 5px;
+}
+
+h2 {
+  text-align: left;
+  font-size: 24px;
+  font-weight: 600;
+  border-bottom: #333333 1px solid;
+}
+
+.secret-bio {
+  margin-top: 15px;
+}
+
 .socials {
 	font-size: 1.75em;
 }
@@ -127,43 +142,6 @@ section.header a:hover {
   font-weight: 600;
 } */
 
-/* nav bar */
-
-nav {
-  text-align: left;
-  font-size: .6rem!important;
-  margin: 0!important;
-  z-index: 1;
-  background-color: white;
-}
-
-.col-sm-3 {
-  padding: 0;
-  margin: 0;
-  background-color: white;
-  top: 0;
-}
-
-button {
-  text-align: right;
-  font-size: .8rem;
-}
-/* The navigation menu links */
-.btn {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  border: none;
-  outline: none;
-  padding: 10px 16px;
-  background-color: #f1f1f1;
-  cursor: pointer;
-  text-align: right;
-  width: 10vw;
-  scroll-behavior: smooth;
-}
 
 h1.section-title {
   font-size: 7vh;
@@ -177,10 +155,14 @@ h1.section-title {
   text-align: center;
 }
 
-
 .row {
-	margin: -2px -16px;
-	text-align: center;
+	margin: 0px 0px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  width: 100%;
+  /* max-width: 900px; */
 }
 
 .row a {
@@ -192,37 +174,44 @@ h1.section-title {
 /* Add padding BETWEEN each column */
 .row,
 .row > .column {
-	padding: 8px;
+  padding: 8px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* Create four equal columns that floats next to each other */
 .column {
+  margin-left: auto;
+  margin-right: auto;
 	float: left;
 	width: 33%;
 	box-sizing: border-box;
 	-webkit-filter: none; /* Safari 6.0 - 9.0 */
 		filter: none;
-		transform:scale(1.05);
+    transform:scale(1.05);
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
 }
 
 .content {
 	padding: 6px 1em;
-	margin: 0em 1em 1em 1em;
-	/* max-height: 400px; */
+  margin: 0em 1em 1em 1em;
+  display: inline-block;
+  vertical-align: top;
 	border-width: 2px;
 	border-color: rgb(183, 217, 250);
 	border-style: solid;
 	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
-		transition: all .2s;
-  /* background-color: white; */
+    transition: all .2s;
 }
 
 .content:hover {
 	-webkit-filter: none; /* Safari 6.0 - 9.0 */
 		filter: none;
     transform:scale(1.05);
-  background-color: rgba(183, 216, 250, 0.39);
+  background-color: rgb(228, 239, 250);
 }
 
 .info {
@@ -414,7 +403,6 @@ margin: 0;
   line-height: 1.5rem;
   text-align: right;
 }
-
 
 @keyframes mainBlock {
   0% {
