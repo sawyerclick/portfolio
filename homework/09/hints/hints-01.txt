@@ -1,0 +1,204 @@
+
+First do the dots, then build the line!
+
+
+
+
+
+
+
+
+
+I created a variable like this:
+var parseTime = d3.timeParse("%Y-%m-%d")
+you won't ever have to use it (I wrote the code that does), but now you know how to parse time! String format comes from strftime.org.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Set up your scales WITHOUT a domain first - you don't know the min/max of your stock price or the min/max of your date until after you've read in your data. After you've read in your data, then you can set the domain
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+If you don't remember how to calculate min/max of a column, look at notes-transformations.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You can reset the domain of a scale using yPositionScale.domain at ANY point (like after you read in data!). but:
+yPositionScale.domain([min, max])
+vs
+yPositionScale.domain(min, max)
+...which one is the one that works?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Use console.log to inspect variables that are giving you weird or unexpected results
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Getting odd results? Remember how d3 reads everything in as a string? When getting the max for the y axis you might need to use a trick we've done a few times - instead of d.whatever, you use +d.whatever to convert it into a number. parseFloat and parseInt are other options the internet will tell you about, but using a plus symbol is the best
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+many dots = one for EACH data point, so selectAll + .data
+
+one line = one for ALL data points, so .append + .datum
+
+
+
+
+
+
+
+
+
+
+
+
+
+The svg element to draw a line is NOT called line
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+is it filled in and terrible looking? Remember there are two ways to colors things in: fill and stroke!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Your x axis doesn't know how time works! But you can make it know how time works:
+var xAxis = d3.axisBottom(xPositionScale).tickFormat(d3.timeFormat("%m/%d/%y"));
+
+
+
+
+
+
+
+
+
+Have a few too many ticks on your x axis? On your axisBottom, you can use .ticks(3) to change the ticks to be three, for example.
+
+
+
+
+
+
+
+
+
+
+Make sure your scales are going in the right direction!
+
+
+
