@@ -92,7 +92,7 @@
       <div class="step" data-image="pretty/ridership_increase.svg">
           <p>Most of the lines, like the 1 and the A, benefit from being among the most central lines. They run through Time's Square and through several boroughs, connecting with several other lines.</p>
       </div>
-      <div class="step" data-image="pretty/ridership_increase.svg">
+      <div class="step" data-image="pretty/ridership_increase_a_line.svg">
         <p>The E line, however, is an interesting point in the growing transit availability in Queens, a borough historically neglected by New York City Transit.</p>
         <p>The line runs from Queens' eastern border to downtown Manhattan.</p>
     </div>
@@ -126,12 +126,44 @@
     </div>
 
   </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script> 
-    <!-- Script to change opacity when scrolling from header -->
-    <script> 
-      $(window).scroll(function(){
-          var scrollVar = $(window).scrollTop();
-          $('.header').css("opacity", 1 - scrollVar/300);
-      })
-    </script> 
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script> 
+  <!-- Script to change opacity when scrolling the web page -->      
+  <script> 
+    $(window).scroll(function(){
+        var scrollVar = $(window).scrollTop();
+        $('.header').css("opacity", 1 - scrollVar/300);
+    })
+  </script> 
+
+  <!-- include our scrolling library -->
+  <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+  <script src="https://unpkg.com/scrollama"></script>
+  <script src='js/stickyfill.min.js'></script>
+
+  <script type="text/javascript">
+    window.onload = function() {
+        // Allow position: sticky to work in old browsers
+        var elements = document.querySelectorAll('.scrolly-image');
+        Stickyfill.add(elements);
+        // instantiate the scrollama
+        var scroller = scrollama();
+        scroller
+        .setup({
+            offset: 0.8, // how far from the top?
+            step: '.step', // class for stepping through
+            debug: false, // shows the line
+        })
+        .onStepEnter(function(response) {
+            // look at data-image attribute
+            let imagePath = response.element.getAttribute('data-image')
+            if(imagePath) {
+                // if it exists, change the img tag to match
+                response.element.parentNode.parentNode
+                    .querySelector("img")
+                    .setAttribute("src", imagePath)
+            }
+        })
+    }
+  </script>
 </html>
