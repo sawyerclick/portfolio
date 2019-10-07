@@ -80,6 +80,7 @@
       <h3 class="section-head serif">Tracking the Lines</h3>
       <p class="body-text serif">Line-by-line, it's a bit more obvious why some failed and others succeeded. Important to note: this is an analysis of stations along these lines that could include other lines. The MTA tracks ridership at the turnstile and is unable to determine what lines riders get on.</p>
     </div>
+
 <div class="scrolly-container">
   <div class="scrolly-image">
       <img src="pretty/ridership_increase.svg">
@@ -104,27 +105,21 @@
   </div>
 </div>
 
+<div class="story-body" id="story">
 
-<div class="scrolly-container">
-    <div class="scrolly-image">
-        <img src="ugly/17_18_ridership_loss_top_4.png">
-    </div>
-    <div class="scrolly-content">
-        <div class="step" data-image="ugly/17_18_ridership_loss_top_4.png">
-          <p>A tumultous year on the L line plummeted it downwards, but the most dramatic drop came from the F line, which has had a sketchy history in past years with unannounced express service, station closures and heavy maintenance efforts.</p>
-      </div>
-        <div class="step" data-image="ugly/17_18_ridership_loss_all.svg">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="step" data-image="ugly/17_18_ridership_loss.svg">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="step" data-image="ugly/17_18_ridership_loss_top_4.svg">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-    </div>
+  <h3 class="section-head serif" style='margin-top: 75px; margin-bottom:50px;'>Things Could Be Worse, but Not Really</h3>
+
+  <p class='body-text serif'>The transit system had a lot of lowpoints. The stations that did lose ridership had a dramatic drop, though they were the most suspecting lines.</p>
+
+  <p class="body-text serif">The F is crowned as the biggest loser of 2018 with the most dramatic loss from 2017-18, but other lines stand out. The 6 and the L got rocked hard. Four years of straigh lose culminated into an even bigger loss put them into the top 5 biggest losers, though the L was likely aided by the L train shutdown and slowdown panic.</p>
+
+  <p class='body-text serif'>Another worrying note: the Q line, the littlest of the losers. It had the most massive ridership increase of all the lines from 2016-17. It had a +10% ridership change following a yera of loss. But it was unsustainable, according to the data. The line had a loss, though not sharp.</p>
+
+  <p class='body-text serif'>Below is every losing line, sorted from most dramatic loss from 2017-18 to least dramatic.</p>
+  <div class="chart-section">
+      <img src="pretty/17_18_ridership_loss_all.svg"/>
   </div>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
 
     <div class="footer">
       <p class="note">© Sawyer Click, 2019</p>
@@ -132,44 +127,11 @@
 
   </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script> 
-    <!-- Script to change opacity when scrolling the web page -->      
+    <!-- Script to change opacity when scrolling from header -->
     <script> 
       $(window).scroll(function(){
           var scrollVar = $(window).scrollTop();
           $('.header').css("opacity", 1 - scrollVar/300);
       })
     </script> 
-
-   <!-- include our scrolling library -->
-<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
-<script src="https://unpkg.com/scrollama"></script>
-<script src='js/stickyfill.min.js'></script>
-
-<script type="text/javascript">
-    window.onload = function() {
-        // Allow position: sticky to work in old browsers
-        var elements = document.querySelectorAll('.scrolly-image');
-        Stickyfill.add(elements);
-
-        // instantiate the scrollama
-        var scroller = scrollama();
-
-        scroller
-        .setup({
-            offset: 0.8, // how far from the top?
-            step: '.step', // class for stepping through
-            debug: false, // shows the line
-        })
-        .onStepEnter(function(response) {
-            // look at data-image attribute
-            let imagePath = response.element.getAttribute('data-image')
-            if(imagePath) {
-                // if it exists, change the img tag to match
-                response.element.parentNode.parentNode
-                    .querySelector("img")
-                    .setAttribute("src", imagePath)
-            }
-        })
-    }
-</script>
 </html>
