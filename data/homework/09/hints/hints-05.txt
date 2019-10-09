@@ -1,0 +1,530 @@
+Things get hard now.
+
+If I need to add in additional hints, they'll go here: https://gist.github.com/jsoma/68772f64408ac19aa36219115ee618b7
+
+
+
+
+Suggested order of doing things:
+
+Draw your axes
+  - Import your data
+  - Build your scales
+  - Add your axes
+Draw your lines
+Draw the circles at the end
+Draw the text at the end
+Color in lines, circles and text
+Add the colored zone for winter - Dec through Feb
+Add a title
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+First you'll need to convert the 'month' column from a string into a real JavaScript datetime, otherwise D3 won't be bale to understand the x axis very well (kind of like matplotlib, right?).
+
+I've done it for you a few times (like in chart 1). To parse a date you need TWO THINGS:
+
+FIRST, you need a TIME PARSER. It's just like when we did pd.to_datetime in pandas, except it's d3! If your date looked like 2014-01-01, you'd do this
+
+    let parseTime = d3.timeParse('%Y-%m-%d')
+
+You get the codes from http://strftime.org/.
+
+SECOND, you need to PARSE YOUR DATES. After you've read your data in, you loop through your datapoints, using your date parser to convert your date column into a JavaScript datetime.
+
+In the example below, I'm creating a new column called 'datetime' using the 'your_date_clumon' column:
+
+    datapoints.forEach(d => {
+      d.datetime = parseTime(d.your_date_column)
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You're going to have a different time parser, though. The old one was...
+
+  var parseTime = d3.timeParse("%Y-%m-%d")
+
+Because it parses time like
+
+  2017-06-30
+
+But this dataset is different! Your dates look like
+
+  July-17
+  August-17
+  March-17
+
+Luckily http://strftime.org/ can help
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+So if we look at "August-17," it's the the FULL LENGTH NAME of the month, then a HYPHEN, then the SHORT VERSION OF THE YEAR (no century)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Add your axes before you do anything else!
+
+
+
+
+
+
+A fun trick if you want your scales to go from maximum to minimum.... Let's say I have a bunch of ages, and I want my xPositionScale to go from the smallest age to the largest age.
+
+    // Get a list of all my ages
+    let ages = datapoints.map(d => +d.age)
+
+    // d3.extent gives me the max and min at the same time
+    xPositionScale.domain(d3.extent(ages))
+
+It's like doing
+
+    xPositionScale.domain([minAge, maxAge])
+
+but way less typing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+When you're adding your axes, you'll want to use d3.tickFormat with a date format string. For example, the one from a previous graph was:
+
+    var xAxis = d3.axisBottom(xPositionScale).tickFormat(d3.timeFormat("%m/%d/%y"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You want 10 lines, but have a lot more than 10 datapoints. Sounds like a job for d3.nest!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+When binding data, remember the difference between append/datum and selectAll/data/enter/append. How many lines do we want?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You shouldn't be doing .attr("d", line). Each line is different!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+And it's nested, right? line wants a list of datapoints. Are you giving it a list of datapoints? If you're having trouble, console.log(d) to see what your d looks like.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Remember if you're binding nested data with .data(nested), you probably always end up using d.key or d.values
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You want the same number of circles/text elements as you do lines.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Circles and text need to be positioned. They should be positioned according to one of the datapoints, the one for the most recent month.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+remember cx is going to be your datetime and cy is going to be your housing prices
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+to get the last element of a list,
+
+  listname[listname.length - 1] 
+
+but maybe that isn't what you want???
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+colorbrewer2.org is good for a list of colors. Click 'qualitative' to get categorical colors. the obvious-but-hidden EXPORT tab is also useful for getting a list out!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Using d.region isn't going to work for your coloring. Why not? Use console.log to check
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+To get text to show up in a text element, use 
+
+    .text(d => d.whatever)
+
+but if you want to use console.log to inspect your data
+
+    .text(d => {
+      console.log(d)
+      return 'help'
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+dx and dy are nice ways to offset your text without math!
+
+
+
+
+
+
+
+
+
+
+
+How do you put that rectangle there to highlight winter??? Well, start by positioning it at the x position for December 2016. Use the scale to do that! But... xPositionScale("December-16") isn't going to work. Why not?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Is there a way to make December-16 into what the scale wants?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cough you gotta parse it cough
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+rectangles get an x, y, width, and height. Can't figure out the width yet? set the height and y and just give it the width of 10 or something.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+To get the width, it's kind of tricky. It goes between the december 2016 and february 2017, right? Maybe some subtraction would be useful.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+to make the rectangle go 'behind' the lines, use .lower()
+
+
+
+
+
+
+

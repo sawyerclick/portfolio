@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .margins {
+            /* margin:auto; */
+            /* padding:50px 10px; */
+        }
+
+				a {
+					text-decoration: none;
+					color: black;
+					border-bottom: 2px rgb(179, 128, 128) solid;
+				}
+
+				a:hover {
+					background-color: rgb(179, 128, 128, .322);
+					border-bottom: 2px rgb(179, 128, 128) solid;
+				}
+
+        .serif {
+            font-family: 'Lora', serif;
+        }
+        .sans-serif {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* choose a light or dark theme to add to the body tag. */
+        .dark-theme {
+            background-color: #151515;
+            color: #fbfbfb;
+        }
+        .light-theme {
+            background-color: white;
+            color: black;
+        }
+
+        .header {
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+
+        .story-body, .header, .chart-section, .footer {
+            margin:auto;
+            max-width: 700px;
+        }
+
+        .footer {
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+
+        .chart-section.wide{
+            width:100%;
+            max-width:1200px;
+        }
+
+        .chart-section.wide p.chart-title {
+            width:100%;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .chart-section.wide p.chart-subhead {
+            width:100%;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+
+        /* text styles */
+
+        p.kicker {
+            font-size:1rem;
+            text-transform:uppercase;
+        }
+
+        .text-center {
+            text-align:center;
+        }
+
+        h1.headline {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 0.25rem;
+            margin-top: 1rem;
+            font-weight: 800;
+        }
+
+        h2.subhead {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            margin-bottom:0;
+            margin-top: 15px;
+            font-weight: 400;
+        }
+
+        p.body-text {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin-top:0;
+            margin-bottom:15px;
+        }
+
+        h3.section-head {
+            font-size:2rem;
+            margin:40px 0 10px 0;
+            font-weight:700;
+            line-height:1.3;
+        }
+
+        .byline {
+            font-size: 1.1rem;
+            line-height: 0.75;
+            margin-top: 1.5rem;
+            font-weight: 500;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            line-height: 1;
+            margin-top: 10px;
+            font-weight:400;
+            text-transform:uppercase;
+            letter-spacing:0.5px;
+        }
+
+
+        p.note {
+            font-size:0.85rem;
+        }
+
+        /* chart styles */
+
+        .chart-section {
+            width:100%;
+            max-width:1200px;
+            padding:0px 0px 10px 0px;
+        }
+
+        .story-body .chart-section {
+            padding-top:0px;
+        }
+
+
+        .chart-row {
+            display:flex;
+            justify-content: space-between;
+            margin-top:20px;
+        }
+
+        p.chart-title {
+            font-size:1.3rem;
+            font-weight:700;
+            max-width:700px;
+            margin:0px auto 5px auto;
+        }
+        p.chart-subhead {
+            margin:0 auto;
+            max-width:700px;
+            font-size:1rem;
+            margin-bottom:15px;
+        }
+
+        p.chart-label {
+            margin:0 0 5px 0;
+            font-size:0.85rem;
+            text-transform:uppercase;
+            font-weight:600;
+        }
+
+        .chart-row .chart {
+            width:100%;
+            /* padding-right:15px; */
+            min-width:calc(25% - 15px);
+
+        }
+
+
+
+        p.chart-source {
+            font-size:0.85rem;
+            margin:0;
+        }
+
+
+
+
+
+        /* photos */
+
+        .photo-section {
+            padding:30px 0px;
+            width:100%;
+            margin:auto;
+            display:flex;
+            max-width:1200px;
+        }
+
+        .photo {
+            width:100%;
+            /* padding-right:15px; */
+        }
+        .photo img {
+            width:100%;	
+        }
+
+        p.caption {
+            font-size:0.9rem;
+            margin:0;
+        }
+
+
+
+        /* mobile */
+
+        @media (max-width:700px) {
+
+            .chart-row {
+                display:block;
+            }
+
+            .chart-row .chart {
+                padding:0;
+            }
+
+            .photo-section {
+                display:block;
+            }
+            .photo {
+                padding:0;
+            }
+
+        }
+
+        #g-templates-laptop, #g-templates-medium, #g-templates-mobile {
+            display: none;
+        }
+
+        @media (max-width: 490px) {
+            #g-templates-mobile {
+                display: block;
+            }
+						body {
+							margin: 0;
+							padding: 0;
+						}
+
+						body > * {
+							margin: 5px;
+							padding: 5px;
+						}
+        }
+
+        @media (min-width: 490px) and (max-width: 620px) {
+            #g-templates-laptop {
+                display: block;
+            }
+        }
+
+        @media (min-width: 620px)  {
+            #g-templates-medium {
+                display: block;
+            }
+        }
+
+    </style>
+    
+    <!-- google fonts: Open Sans (sans-serif) and Lora (serif) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
+      
+    <title>01-homework</title>
+  </head>
+
+  <body class="light-theme"> <!-- all of the content on your html page goes inside the body -->
+
+    <div class='margins'>
+
+    <div class="header">
+      <p class="kicker">Subways</p>
+      <h1 class="headline">The subway system is really struggling</h1>
+      <h2 class="subhead">With Manhattan suffering the most, each borough averaged a loss of subway rides. Some stations fell harder than others.</h2>
+      <p class="byline">By Sawyer Click</p>
+      <p class="date">Published September 9, 2019</p>
+    </div>
+
+    <div class="story-body">
+      <p class="body-text serif">After scraping the MTA's subway ridership data for a project <a href='https://sawyerclick.github.io/project/subway-ridership/index.html' target='_blank'>detailing</a> the system's extreme ridership loss, I charted out each station's ridership change from 2017 to 2018.</p>
+      <p class="body-text serif">Using ai2html and Adobe Illustrator, I tweaked this image to responsively act to browser and device size. The largest two models are relatively the same, just a different size. The smallest model breaks the boroughs apart and groups them in pairs rather than presenting them all side by side.</p>
+    </div>
+</div>
+
+    <div class="chart-section">
+        <div class="chart-row">
+          <div class="chart">
+
+
+
+
+            <!--- PASTE YOUR AI2HTML AFTER THIS LINE -->
+
+<!-- Generated by ai2html v0.89.0 - 2019-09-07 16:20 -->
+<!-- ai file: subway_station_losses.ai -->
+<style type='text/css' media='screen,print'>
+	#g-subway_station_losses-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-subway_station_losses-box p {
+		margin:0;
+	}
+	.g-aiAbs {
+		position:absolute;
+	}
+	.g-aiImg {
+		display:block;
+		width:100% !important;
+	}
+	.g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	.g-aiPointText p { white-space: nowrap; }
+	#g-subway_station_losses-medium {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-subway_station_losses-medium p {
+		font-weight:500;
+		font-size:16px;
+		line-height:19px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-subway_station_losses-medium .g-pstyle0 {
+		font-size:32px;
+		line-height:40px;
+		height:40px;
+		font-weight: 600;
+	}
+	#g-subway_station_losses-medium .g-pstyle1 {
+		height:19px;
+		color:rgb(85,85,85);
+	}
+	#g-subway_station_losses-medium .g-pstyle2 {
+		font-size:14px;
+		line-height:17px;
+		color:rgb(85,85,85);
+	}
+	#g-subway_station_losses-medium .g-pstyle3 {
+		font-size:15px;
+		height:19px;
+		color:rgb(84,84,84);
+	}
+	#g-subway_station_losses-medium .g-pstyle4 {
+		font-size:14px;
+		line-height:18px;
+		color:rgb(84,84,84);
+	}
+	#g-subway_station_losses-medium .g-pstyle5 {
+		color:rgb(84,84,84);
+	}
+	#g-subway_station_losses-medium .g-cstyle0 {
+		font-size:16px;
+		color:rgb(85,85,85);
+	}
+	#g-subway_station_losses-laptop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-subway_station_losses-laptop p {
+		font-weight:500;
+		font-size:13px;
+		line-height:15px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-subway_station_losses-laptop .g-pstyle0 {
+		font-size:24px;
+		line-height:30px;
+		height:30px;
+		font-weight: 600;
+	}
+	#g-subway_station_losses-laptop .g-pstyle1 {
+		height:15px;
+		color:rgb(85,85,85);
+	}
+	#g-subway_station_losses-laptop .g-pstyle2 {
+		font-size:11px;
+		line-height:13px;
+		color:rgb(85,85,85);
+	}
+	#g-subway_station_losses-laptop .g-pstyle3 {
+		font-size:12px;
+		height:15px;
+		color:rgb(84,84,84);
+	}
+	#g-subway_station_losses-laptop .g-pstyle4 {
+		font-size:11px;
+		line-height:14px;
+		color:rgb(84,84,84);
+	}
+	#g-subway_station_losses-laptop .g-pstyle5 {
+		color:rgb(84,84,84);
+	}
+	#g-subway_station_losses-laptop .g-cstyle0 {
+		font-size:13px;
+		color:rgb(85,85,85);
+	}
+	#g-subway_station_losses-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-subway_station_losses-mobile p {
+		font-weight:500;
+		font-size:14px;
+		line-height:17px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-subway_station_losses-mobile .g-pstyle0 {
+		font-size:24px;
+		line-height:30px;
+		height:30px;
+		font-weight: 600;
+	}
+	#g-subway_station_losses-mobile .g-pstyle1 {
+		font-size:16px;
+		line-height:19px;
+		height:19px;
+		color:rgb(85,85,85);
+	}
+	#g-subway_station_losses-mobile .g-pstyle2 {
+		font-size:12px;
+		line-height:14px;
+		color:rgb(85,85,85);
+	}
+	#g-subway_station_losses-mobile .g-pstyle3 {
+		font-size:15px;
+		line-height:19px;
+		height:19px;
+		color:rgb(84,84,84);
+	}
+	#g-subway_station_losses-mobile .g-pstyle4 {
+		font-size:12px;
+		line-height:14px;
+		color:rgb(84,84,84);
+	}
+	#g-subway_station_losses-mobile .g-pstyle5 {
+		font-size:13px;
+		line-height:15px;
+		color:rgb(84,84,84);
+	}
+	#g-subway_station_losses-mobile .g-cstyle0 {
+		font-size:16px;
+		color:rgb(85,85,85);
+	}
+
+</style>
+
+<div id="g-subway_station_losses-box" class="ai2html">
+
+	<!-- Artboard: medium -->
+	<div id="g-subway_station_losses-medium" class="g-artboard" style="width:620px; height:610px;" data-aspect-ratio="1.016" data-min-width="620">
+		<img id="g-subway_station_losses-medium-img" class="g-aiImg g-aiAbs" alt="" src="subway_station_losses-medium.png"/>
+		<div id="g-ai0-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:5.7863%;margin-top:-22.3px;left:3.3206%;width:450px;">
+			<p class="g-pstyle0">Manhattan fell the hardest</p>
+		</div>
+		<div id="g-ai0-2" class="g-ai2html-settings g-aiAbs" style="top:11.4754%;left:3.3206%;width:65.4839%;">
+			<p>A majority of stations in each borough lost riders by the millions from 2017 to 2018, with Manhattan facing the most severe losses.</p>
+		</div>
+		<div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.1514%;margin-top:-10.5px;left:11.0731%;width:104px;">
+			<p class="g-pstyle1">Manhattan</p>
+		</div>
+		<div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.1514%;margin-top:-10.5px;left:35.272%;width:89px;">
+			<p class="g-pstyle1">Brooklyn</p>
+		</div>
+		<div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.1514%;margin-top:-10.5px;left:59.0173%;width:80px;">
+			<p class="g-pstyle1">Queens</p>
+		</div>
+		<div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.1514%;margin-top:-10.5px;left:80.5173%;width:99px;">
+			<p class="g-pstyle1">The Bronx</p>
+		</div>
+		<div id="g-ai0-7" class="g-ai2html-settings g-aiAbs" style="top:28.5246%;left:38.959%;width:27.5806%;">
+			<p class="g-pstyle2">53 St: R</p>
+			<p class="g-pstyle2">Closed the year before</p>
+		</div>
+		<div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:34.1022%;margin-top:-11px;left:3.9363%;width:83px;">
+			<p class="g-pstyle3"><span class="g-cstyle0">1 </span>million</p>
+		</div>
+		<div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:46.4793%;margin-top:-10.5px;left:3.9363%;width:31px;">
+			<p class="g-pstyle1">0</p>
+		</div>
+		<div id="g-ai0-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:58.9383%;margin-top:-10.5px;left:3.0846%;width:36px;">
+			<p class="g-pstyle1">-1</p>
+		</div>
+		<div id="g-ai0-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:71.2334%;margin-top:-10.5px;left:3.0846%;width:36px;">
+			<p class="g-pstyle1">-2</p>
+		</div>
+		<div id="g-ai0-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:83.6924%;margin-top:-10.5px;left:3.0846%;width:36px;">
+			<p class="g-pstyle1">-3</p>
+		</div>
+		<div id="g-ai0-13" class="g-ai2html-settings g-aiAbs" style="top:89.1803%;left:19.6343%;width:38.0645%;">
+			<p class="g-pstyle4">23 St: F & M</p>
+			<p class="g-pstyle4">Closed from July to November</p>
+		</div>
+		<div id="g-ai0-14" class="g-ai2html-settings g-aiAbs" style="top:96.7213%;left:1.1497%;width:17.0968%;">
+			<p class="g-pstyle5">Source: MTA</p>
+		</div>
+		<div id="g-ai0-15" class="g-ai2html-settings g-aiAbs" style="top:96.7213%;left:83.5179%;width:15.4839%;">
+			<p class="g-pstyle5">Sawyer Click</p>
+		</div>
+	</div>
+
+	<!-- Artboard: laptop -->
+	<div id="g-subway_station_losses-laptop" class="g-artboard" style="width:490px; height:483px;" data-aspect-ratio="1.014" data-min-width="490" data-max-width="619">
+		<img id="g-subway_station_losses-laptop-img" class="g-aiImg g-aiAbs" alt="" src="subway_station_losses-laptop.png"/>
+		<div id="g-ai1-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:5.7896%;margin-top:-17px;left:3.2442%;width:351px;">
+			<p class="g-pstyle0">Manhattan fell the hardest</p>
+		</div>
+		<div id="g-ai1-2" class="g-ai2html-settings g-aiAbs" style="top:11.3872%;left:3.2441%;width:65.7143%;">
+			<p>A majority of stations in each borough lost riders by the millions from 2017 to 2018, with Manhattan facing the most severe losses.</p>
+		</div>
+		<div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.1204%;margin-top:-8.2px;left:11.0294%;width:87px;">
+			<p class="g-pstyle1">Manhattan</p>
+		</div>
+		<div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.1204%;margin-top:-8.2px;left:35.3302%;width:75px;">
+			<p class="g-pstyle1">Brooklyn</p>
+		</div>
+		<div id="g-ai1-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.1204%;margin-top:-8.2px;left:59.1755%;width:68px;">
+			<p class="g-pstyle1">Queens</p>
+		</div>
+		<div id="g-ai1-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.1204%;margin-top:-8.2px;left:80.7661%;width:83px;">
+			<p class="g-pstyle1">The Bronx</p>
+		</div>
+		<div id="g-ai1-7" class="g-ai2html-settings g-aiAbs" style="top:28.5714%;left:26.7878%;width:27.551%;">
+			<p class="g-pstyle2">53 St: R</p>
+			<p class="g-pstyle2">Closed the year before</p>
+		</div>
+		<div id="g-ai1-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:33.8844%;margin-top:-8.7px;left:3.8624%;width:70px;">
+			<p class="g-pstyle3"><span class="g-cstyle0">1 </span>million</p>
+		</div>
+		<div id="g-ai1-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:46.4103%;margin-top:-8.2px;left:3.8624%;width:29px;">
+			<p class="g-pstyle1">0</p>
+		</div>
+		<div id="g-ai1-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:58.8326%;margin-top:-8.2px;left:3.0072%;width:33px;">
+			<p class="g-pstyle1">-1</p>
+		</div>
+		<div id="g-ai1-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:71.255%;margin-top:-8.2px;left:3.0072%;width:33px;">
+			<p class="g-pstyle1">-2</p>
+		</div>
+		<div id="g-ai1-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:83.6774%;margin-top:-8.2px;left:3.0072%;width:33px;">
+			<p class="g-pstyle1">-3</p>
+		</div>
+		<div id="g-ai1-13" class="g-ai2html-settings g-aiAbs" style="top:89.234%;left:19.6266%;width:38.3673%;">
+			<p class="g-pstyle4">23 St: F & M</p>
+			<p class="g-pstyle4">Closed from July to November</p>
+		</div>
+		<div id="g-ai1-14" class="g-ai2html-settings g-aiAbs" style="top:96.8944%;left:1.0642%;width:17.1429%;">
+			<p class="g-pstyle5">Source: MTA</p>
+		</div>
+		<div id="g-ai1-15" class="g-ai2html-settings g-aiAbs" style="top:96.8944%;left:83.7792%;width:15.5102%;">
+			<p class="g-pstyle5">Sawyer Click</p>
+		</div>
+	</div>
+
+	<!-- Artboard: mobile -->
+	<div id="g-subway_station_losses-mobile" class="g-artboard" style="width:375px; height:901.799999999999px;" data-aspect-ratio="0.416" data-min-width="375" data-max-width="489">
+		<img id="g-subway_station_losses-mobile-img" class="g-aiImg g-aiAbs" alt="" src="subway_station_losses-mobile.png"/>
+		<div id="g-ai2-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:2.2138%;margin-top:-17px;left:5.8453%;width:351px;">
+			<p class="g-pstyle0">Manhattan fell the hardest</p>
+		</div>
+		<div id="g-ai2-2" class="g-ai2html-settings g-aiAbs" style="top:4.8791%;left:5.8453%;width:80.5333%;">
+			<p>A majority of stations in each borough lost riders by the millions from 2017 to 2018, with Manhattan facing the most severe losses.</p>
+		</div>
+		<div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:15.3701%;margin-top:-10.6px;left:18.4479%;width:105px;">
+			<p class="g-pstyle1">Manhattan</p>
+		</div>
+		<div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:15.3701%;margin-top:-10.6px;left:58.2974%;width:89px;">
+			<p class="g-pstyle1">Brooklyn</p>
+		</div>
+		<div id="g-ai2-5" class="g-ai2html-settings g-aiAbs" style="top:17.1878%;left:64.4498%;width:35.4667%;">
+			<p class="g-pstyle2">53 St: R</p>
+			<p class="g-pstyle2">Closed the year before</p>
+		</div>
+		<div id="g-ai2-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:20.7482%;margin-top:-11.1px;left:4.4047%;width:83px;">
+			<p class="g-pstyle3"><span class="g-cstyle0">1 </span>million</p>
+		</div>
+		<div id="g-ai2-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:29.2313%;margin-top:-10.6px;left:4.4047%;width:31px;">
+			<p class="g-pstyle1">0</p>
+		</div>
+		<div id="g-ai2-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.7697%;margin-top:-10.6px;left:2.9836%;width:36px;">
+			<p class="g-pstyle1">-1</p>
+		</div>
+		<div id="g-ai2-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:46.1973%;margin-top:-10.6px;left:2.9836%;width:36px;">
+			<p class="g-pstyle1">-2</p>
+		</div>
+		<div id="g-ai2-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:54.7358%;margin-top:-10.6px;left:2.9836%;width:36px;">
+			<p class="g-pstyle1">-3</p>
+		</div>
+		<div id="g-ai2-11" class="g-ai2html-settings g-aiAbs" style="top:58.5496%;left:32.7346%;width:63.7333%;">
+			<p class="g-pstyle4">23 St: F & M</p>
+			<p class="g-pstyle4">Closed from July to November</p>
+		</div>
+		<div id="g-ai2-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:69.6948%;margin-top:-10.5px;left:21.6302%;width:80px;">
+			<p class="g-pstyle1">Queens</p>
+		</div>
+		<div id="g-ai2-13" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:69.6948%;margin-top:-10.5px;left:57.2745%;width:99px;">
+			<p class="g-pstyle1">The Bronx</p>
+		</div>
+		<div id="g-ai2-14" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:74.9731%;margin-top:-11.1px;left:4.4047%;width:83px;">
+			<p class="g-pstyle3"><span class="g-cstyle0">1 </span>million</p>
+		</div>
+		<div id="g-ai2-15" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:83.4561%;margin-top:-10.6px;left:4.4047%;width:31px;">
+			<p class="g-pstyle1">0</p>
+		</div>
+		<div id="g-ai2-16" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:91.8837%;margin-top:-10.6px;left:2.9836%;width:36px;">
+			<p class="g-pstyle1">-1</p>
+		</div>
+		<div id="g-ai2-17" class="g-ai2html-settings g-aiAbs" style="top:98.2479%;left:1.0384%;width:22.4%;">
+			<p class="g-pstyle5">Source: MTA</p>
+		</div>
+		<div id="g-ai2-18" class="g-ai2html-settings g-aiAbs" style="top:98.2479%;left:78.7194%;width:20.2667%;">
+			<p class="g-pstyle5">Sawyer Click</p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2019-09-07 16:20 -->
+
+        </div>
+        </div>
+    </div>
+
+    <div class="story-body">
+        <p class="body-text serif">Manhattan suffered far more than the other boroughs, with two stations losing more than 3 million rides. No other borough crossed the -2 million threshold. The large number of stations that lost ridership can be attributed to maintenance efforts.</p>
+        <p class="body-text serif">Across the board, the pairing of Brooklyn and Manhattan makes more sense as the two had the startest contrasts. The Bronx and Queens were both lukewarm, though the boroughs still lost more rides than they gained.</p>
+    </div>
+      
+
+    <script type="text/javascript">
+        (function() {
+            // only want one resizer on the page
+            if (document.documentElement.className.indexOf("g-resizer-v3-init") > -1) return;
+            document.documentElement.className += " g-resizer-v3-init";
+            // require IE9+
+            if (!("querySelector" in document)) return;
+            function resizer() {
+                var elements = Array.prototype.slice.call(document.querySelectorAll(".g-artboard[data-min-width]")),
+                    widthById = {};
+                elements.forEach(function(el) {
+                    var parent = el.parentNode,
+                        width = widthById[parent.id] || parent.getBoundingClientRect().width,
+                        minwidth = el.getAttribute("data-min-width"),
+                        maxwidth = el.getAttribute("data-max-width");
+                    widthById[parent.id] = width;
+                    if (+minwidth <= width && (+maxwidth >= width || maxwidth === null)) {
+                        el.style.display = "block";
+                    } else {
+                        el.style.display = "none";
+                    }
+                });
+                try {
+                    if (window.parent && window.parent.$) {
+                        window.parent.$("body").trigger("resizedcontent", [window]);
+                    }
+                    if (window.require) {
+                        require(['foundation/main'], function() {
+                            require(['shared/interactive/instances/app-communicator'], function(AppCommunicator) {
+                                AppCommunicator.triggerResize();
+                            });
+                        });
+                    }
+                } catch(e) { console.log(e); }
+            }
+            document.addEventListener('DOMContentLoaded', resizer);
+            // feel free to replace throttle with _.throttle, if available
+            window.addEventListener('resize', throttle(resizer, 200));        
+            function throttle(func, wait) {
+                // from underscore.js
+                var _now = Date.now || function() { return new Date().getTime(); },
+                    context, args, result, timeout = null, previous = 0;
+                var later = function() {
+                    previous = _now();
+                    timeout = null;
+                    result = func.apply(context, args);
+                    if (!timeout) context = args = null;
+                };
+                return function() {
+                    var now = _now(), remaining = wait - (now - previous);
+                    context = this;
+                    args = arguments;
+                    if (remaining <= 0 || remaining > wait) {
+                        if (timeout) {
+                            clearTimeout(timeout);
+                            timeout = null;
+                        }
+                        previous = now;
+                        result = func.apply(context, args);
+                        if (!timeout) context = args = null;
+                    } else if (!timeout && options.trailing !== false) {
+                        timeout = setTimeout(later, remaining);
+                    }
+                    return result;
+                };
+            }
+           
+        })();
+    </script>
+
+  </body>
+</html>

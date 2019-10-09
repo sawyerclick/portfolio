@@ -1,0 +1,45 @@
+{
+  "name": "sawhorse",
+  "version": "1.0.0",
+  "description": "A sturdy base to build D3 projects on",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe chrome ./tests/acceptance/**  --app \"npm run start\"",
+    "start": "parcel src/index.hbs --no-hmr",
+    "build": "parcel build src/index.hbs --out-dir docs --public-url '.'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/littlecolumns/sawhorse.git"
+  },
+  "author": "Jonathan Soma <jonathan.soma@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/littlecolumns/sawhorse/issues"
+  },
+  "homepage": "https://github.com/littlecolumns/sawhorse#readme",
+  "devDependencies": {
+    "@native_finance/parcel-plugin-handlebars": "^0.6.0",
+    "acorn": "^7.1.0",
+    "d3": "^5.12.0",
+    "enter-view": "^2.0.0",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "handlebars": "^4.3.0",
+    "http-server": "^0.11.1",
+    "inline-source": "^7.1.0",
+    "jest": "^24.9.0",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-json-url-loader": "^0.1.2",
+    "prettier": "^1.18.2",
+    "testcafe": "^1.5.0",
+    "topojson": "^3.0.2"
+  },
+  "dependencies": {}
+}
