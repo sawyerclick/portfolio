@@ -45,10 +45,17 @@
       .rollup(values => d3.max(values, v => +v.song_popularity))
       .entries(datapoints)
 
-    const sorted = nested.sort(function(d) {
-      return +d.key.sort(d3.ascending)
-    })
+    // const sorted = nested.sort(function(a, b) {
+    //   if (+a.value > +b.value) {
+    //     return 1
+    //   } else if (+b.value < +a.value) {
+    //     return -1
+    //   } else {
+    //     return 0
+    //   }
+    // })
 
+    // console.log(sorted)
     const allDates = datapoints.map(d => d.song_release_date)
     xPositionScale.domain(d3.extent(allDates))
 
