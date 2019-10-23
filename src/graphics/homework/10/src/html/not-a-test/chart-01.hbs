@@ -1,0 +1,31 @@
+<div class="row mt-3">
+  <div class="col-12">
+    <h3>Chart 1: Scatter plot</h3>
+    <div class="alert alert-warning">
+      If you find something especially hard, or your code keeps breaking, just hit undo until your graph kind of works and skip to the next part or problem.
+    </div>
+    <p>Use <code>player_stats.csv</code> to make a scatterplot of NBA players.</p>
+    <ul>
+      <li>Height goes across the bottom, weight goes up and down</li>
+      <li>Color each point based on the player's position</li>
+      <li>Size each point should be related to the average points scored per game</li>
+      <li>Since the points will be overlapping, make each point a little transparent</li>
+      <li>Graphic should be 600 pixels wide, 300 pixels tall. Margins are up to you.</li>
+    </ul>
+    <div id="chart-01">
+    </div>
+    <div class="hints">
+      <p><strong>Hints:</strong></p>
+      <ul>
+        <li>Cut and paste all of the margin/height/width/inserting svg code from other work you've done</li>
+        <li>Honestly cutting and pasting an entire scatterplot might not be a bad idea. Then just change the scales and the column names.</li>
+        <li>Make sure you have <code>import * as d3 from 'd3'</code> at the top to pull in D3</li>
+        <li>The <code>Pos</code> column is position, <code>Height</code> and <code>Weight</code> are what you'd expect. Points per game is <code>PPG</code>.</li>
+        <li>Pay attention to capitalization, it matters!</li>
+        <li>Set the bounds of your scales to be something that makes sense visually.</li>
+        <li>Maybe start with 0-260 on height and 0-200 on weight, then work on centering</li>
+        <li>No player averages more than 30 points per game</li>
+      </ul>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+
+
+h1 { margin-bottom: 2rem; }
+
+body {
+padding-top: 2rem;
+padding-bottom: 2rem;
+}
+
+h3 { 
+margin-top: 3rem; 
+margin-bottom: 1rem;
+}
+
+.container {
+max-width: 46rem;
+}
+
+img.block {
+display: block;
+border: solid #333 1p;
+margin: 0 auto;
+}
+
+.axis line, .axis path {
+stroke-width: 0.5;
+stroke: #999;
+}

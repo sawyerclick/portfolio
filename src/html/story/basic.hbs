@@ -1,0 +1,31 @@
+<section id='viz'>
+  <div class='sticky'>
+    <p>Data & Graphics</p>
+  </div>
+
+  <div class="body-container">
+    <div class="row">
+      {{!-- for loop running here to implement graphics --}}
+      {{!-- find the projects in metadata/graphics.json --}}
+      {{#each graphics}}
+        {{> base/project }}
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+<section id='words'>
+  <div class='sticky'>
+      <p>Words & Reporting</p>
+  </div>
+
+  <div class='body-container'>
+    <div class="row">
+      {{!-- for loop running here to implement words --}}
+      {{!-- find the projects in metadata/words.json --}}
+      {{#each words}}
+        {{> base/project }}
+      {{/each}}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,61 @@
+[
+	{
+	"title": "road to recovery",
+	"description": "A freelance feature piece covering a college student's road to recovery after a deadly apartment firer",
+	"publishedDate": "Aug '18",
+	"skills": "Feature",
+	"site": "https://www.inforney.com/education/north-forney-alum-starts-over-after-deadly-san-marcos-fire/article_361315a0-9e7d-11e8-8a72-4fd307f74c0c.html",
+	"img": "words/branson-fairbrother/branson_fairbrother.jpg",
+  "imgAlt": "Branson Fairbrother in his new home."
+	},
+
+	{
+		"title": "save the church",
+		"description": "Profiling the community of San Marcos' fight to get funding for a historic black church facing destruction and gentrification",
+		"publishedDate": "Oct '18",
+		"skills": "Community",
+		"site": "https://universitystar.com/26501/news/community-rallies-to-save-historic-old-first-baptist-church/",
+		"img": "words/church/church.jpg",
+		"imgAlt": "The Old First Baptist Church in San Marcos, Texas"
+	},
+
+	{
+		"title": "tpusa allegations",
+		"description": "An investigation I led uncovering TXST student government's ties to Turning Point USA. The president later resigned because of the story",
+		"publishedDate": "Aug '18",
+		"skills": "Investigation",
+		"site": "https://universitystar.com/25470/news/allegations-against-president-boreing-reveal-student-government-trend-of-tpusa-affiliation/",
+		"img": "words/tpusa-allegations/tpusa-allegations.jpg",
+		"imgAlt": "Sen. Eli Miller alleging Pres. Brooklyn Boreing's connections."
+	},
+
+	{
+		"title": "iconic village fire",
+		"description": "Covering the deadly Iconic Village fire in San Marcos. Ranked 17th nationally for a breaking news Hearst Award",
+		"publishedDate": "July '18",
+		"skills": "Breaking News",
+		"site": "https://universitystar.com/25269/news/fire-at-iconic-village-apartments/",
+		"img": "words/san-marcos-fire/fire.jpg",
+		"imgAlt": "San Marcos' Iconic Village apartments burning in July 2018."
+	},
+
+	{
+		"title": "student service fee",
+		"description": "Detailing the ballooning student service fee revenue at Texas State and it's refusal to fund student services",
+		"publishedDate": "Oct '18",
+		"skills": "Financial",
+		"site": "https://universitystar.com/26231/news/student-service-fee-balloons-to-all-time-high/",
+		"img": "words/student-service-fee/jck.jpg",
+		"imgAlt": "The J.C. Kellam Administration Building at Texas State University"
+	},
+
+	{
+		"title": "white supremacists at txst",
+		"description": "An investigation I led uncovering the white supremacist group haunting Texas State University",
+		"publishedDate": "Oct '19",
+		"skills": "d3",
+		"site": "https://universitystar.com/24796/news/former-student-found-with-ties-to-white-supremacy-flyers-on-campus/",
+		"img": "words/white-supremacy-on-campus/campusFlyers.gif",
+		"imgAlt": "Twitter screenshot of a former TXST student posting white supremacist flyers on campus"
+	}
+]

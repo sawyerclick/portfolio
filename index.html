@@ -35,7 +35,7 @@
 </head>
 
 
-<body id='home' data-spy="scroll" data-target="#myScrollspy" data-offset="250">
+<body id='home'>
   
     <section class="header home">
       <div class="header-container">
@@ -59,7 +59,7 @@
         </div>
 
         <div class="socials">
-          <a href="https://github.com/SawyerClick" title="Github" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://github.com/SawyerClick" title="Github" target="_blank"></a><i class="fab fa-github"></i></a>
           <a href="https://www.linkedin.com/in/sawyerclick/" title="Linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
           <a href="https://twitter.com/sawyerdabear" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
           <a href="mailto:sawyerclick@gmail.com?Subject=Hi%20Sawyer" target="_top" title="E-mail"><i class="fa fa-envelope"></i></a>
@@ -67,15 +67,16 @@
           <a href="" target="_top" title="About Me"></a><i class="fa fa-address-card"></i></a>
         </div>
       </div>
+
+      <div class='body-container'>
+        <div id='about' style='visibility: collapse; height: 0;'>
+          <h2>About Me</h2>
+          <p class='secret-bio'>Hi! I'm Sawyer Click, a New York-based data viz nerd. I have projects below that showcase my sweet skills in Python, Illustrator and D3.js, but this secret section is dedicated to how cool I am. I'm a north Texas native with an obsession over punk music, which I played a lot of during my undergrad career at Texas State University, which I graduated from in 2019 with a B.S. in journalism and a minor in music. In my free time I play Overwatch, pet Chunkie, my dog, and riff hard on my guitar.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <div class='body-container'>
-      <div id='about' style='visibility: collapse; height: 0;'>
-      <h2>About Me</h2>
-      <p class='secret-bio'>Hi! I'm Sawyer Click, a New York-based data viz nerd. I have projects below that showcase my sweet skills in Python, Illustrator and D3.js, but this secret section is dedicated to how cool I am. I'm a north Texas native with an obsession over punk music, which I played a lot of during my undergrad career at Texas State University, which I graduated from in 2019 with a B.S. in journalism and a minor in music. In my free time I play Overwatch, pet Chunkie, my dog, and riff hard on my guitar.
-      </p>
-    </div>
-  </div>
 
 
 
@@ -112,12 +113,12 @@
       <!-- unknown terrorism -->
       <div  class="column">
         <div class="content">
-          <a href='graphics/terrorism'>
+          <a href='data/terrorism'>
             <div class="info">
               <div class="skills left-half nomargin">ai2html</div>
               <div class="date right-half nomargin">July '19</div>
             </div>
-            <img class="itemimage" src="graphics/terrorism/images/terrorism_header.png" alt="" style="width:100%">
+            <img class="itemimage" src="data/terrorism/images/terrorism_header.png" alt="" style="width:100%">
             <h3 class="title"><span class="title">"unknown" terrorism</span></h3>
             <p class="description">Exploring the unknown terrorism attacks in the Global Terrorism Database using MapBox, Pandas, Illustrator and ai2html</p>
           </a>
@@ -127,12 +128,12 @@
       <!-- Some d3 homework showing off my skills -->
       <div  class="column">
         <div class="content">
-          <a href='graphics/homework/09/docs'>
+          <a href='data/homework/09/docs'>
             <div class="info">
               <div class="skills left-half nomargin">d3</div>
               <div class="date right-half nomargin">Oct '19</div>
             </div>
-            <img class="itemimage" src="graphics/homework/09/d3_homework9_header.png" alt="A static remake of an NYT interactive." style="width:100%">
+            <img class="itemimage" src="data/homework/09/d3_homework9_header.png" alt="A static remake of an NYT interactive." style="width:100%">
             <h3 class="title"><span class="title">d3 graphs</span></h3>
             <p class="description">Using d3 to create scatterplots, bar charts, and a frequency chart that nearly killed me.</p>
           </a>
@@ -146,12 +147,12 @@
       <!-- infodump rework of 538 -->
       <div  class="column">
         <div class="content">
-          <a href='graphics/homework/03'>
+          <a href='data/homework/03'>
             <div class="info">
               <div class="skills left-half nomargin">ai2html</div>
               <div class="date right-half nomargin">Sept '19</div>   
             </div>
-            <img class="itemimage" src="graphics/homework/03/texas_graphic.png" style="width:100%">
+            <img class="itemimage" src="data/homework/03/texas_graphic.png" style="width:100%">
             <h3 class="title"><span class="title">infodump rework</span></h3>
             <p class="description">Reworking a FiveThirtyEight infodump into a narrative. </p>
            </a>
@@ -161,12 +162,12 @@
       <!-- Mapping some of the 2020 Dems -->
       <div  class="column">
         <div class="content">
-          <a href='graphics/2020-dems'>
+          <a href='data/2020-dems'>
             <div class="info">
               <div class="skills left-half nomargin">Mapbox</div>
               <div class="date right-half nomargin">July '19</div>
             </div>
-            <img class="itemimage" src="graphics/2020-dems/header.gif" alt="Screengrab of the Mapbox portion of the page" style="width:100%">
+            <img class="itemimage" src="data/2020-dems/header.gif" alt="Screengrab of the Mapbox portion of the page" style="width:100%">
             <h3 class="title"><span class="title">2020's dem. candidates</span></h3>
             <p class="description">Tracking the Facebook events of <i>some</i> 2020 presidential candidates using Selenium and Pandas.</p>
           </a>
@@ -176,12 +177,12 @@
       <!-- more d3 graphs -->
       <div  class="column">
         <div class="content">
-          <a href='graphics/homework/10/docs'>
+          <a href='data/homework/10/docs'>
             <div class="info">
               <div class="skills left-half nomargin">d3</div>
               <div class="date right-half nomargin">Oct '19</div>
             </div>
-            <img class="itemimage" src="graphics/homework/10/header.png" alt="NBA players' weight and height measured against points per game." style="width:100%">
+            <img class="itemimage" src="data/homework/10/header.png" alt="NBA players' weight and height measured against points per game." style="width:100%">
             <h3 class="title"><span class="title">speedy d3 graphs</span></h3>
             <p class="description">I created all of these in less than an hour-and-a-half for a test in my Storytelling class at CJS.</p>
           </a>
@@ -194,12 +195,12 @@
         <!-- wiretapping -->
       <div  class="column">
         <div class="content">
-          <a href='graphics/wiretaps'>
+          <a href='data/wiretaps'>
             <div class="info">
               <div class="skills left-half nomargin">Illustrator</div>
               <div class="date right-half nomargin">July '19</div>
             </div>
-            <img src="graphics/wiretaps/images/wiretapping_headerpng.png" alt="Yearly breakdown of wiretapping" style="width:100%">
+            <img src="data/wiretaps/images/wiretapping_headerpng.png" alt="Yearly breakdown of wiretapping" style="width:100%">
             <h3 class="title"><span class="title">wiretapping</span></h3>
             <p class="description">Looking at state-level wiretapping by charts via Matplotlib and Pandas and maps via QGIS. Cleaned up in Illustrator.</p>
           </a>

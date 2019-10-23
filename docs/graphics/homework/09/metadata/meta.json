@@ -1,0 +1,16 @@
+{
+	"headline": "We are learning about D3 events",
+	"subhead": "Subhead goes here. Edit these in metadata/meta.json.",
+	"published_date": "January 1, 1970",
+	"site": "http://www.littlecolumns.com",
+	"siteName": "Little Columns",
+	"url": "http://littlecolumns.com/learn/d3-javascript-tooling/",
+	"kicker": "Little Columns Project Template",
+	"author": {
+		"name": "Jonathan Soma",
+		"url": "http://jonathansoma.com/",
+		"twitterHandle": "@dangerscarf"
+	},
+	"analytics": "",
+	"lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis neque sit amet sollicitudin vehicula. Maecenas fringilla mi non lacus mattis elementum. Curabitur dignissim faucibus justo."
+}

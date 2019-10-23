@@ -1,0 +1,181 @@
+month,region,price
+July-17,U.S.,255.5
+June-17,U.S.,255.0
+May-17,U.S.,253.6
+April-17,U.S.,250.5
+March-17,U.S.,247.1
+February-17,U.S.,242.9
+January-17,U.S.,240.2
+December-16,U.S.,241.5
+November-16,U.S.,241.9
+October-16,U.S.,241.0
+September-16,U.S.,241.3
+August-16,U.S.,240.8
+July-16,U.S.,240.5
+June-16,U.S.,239.2
+May-16,U.S.,237.0
+April-16,U.S.,234.1
+March-16,U.S.,231.6
+February-16,U.S.,227.8
+July-17,Pacific ,292.3
+June-17,Pacific ,293.0
+May-17,Pacific ,291.6
+April-17,Pacific ,286.9
+March-17,Pacific ,283.4
+February-17,Pacific ,276.4
+January-17,Pacific ,273.8
+December-16,Pacific ,273.4
+November-16,Pacific ,274.2
+October-16,Pacific ,271.6
+September-16,Pacific ,272.6
+August-16,Pacific ,269.8
+July-16,Pacific ,270.5
+June-16,Pacific ,267.5
+May-16,Pacific ,267.2
+April-16,Pacific ,265.4
+March-16,Pacific ,261.9
+February-16,Pacific ,256.4
+July-17,Mountain,334.3
+June-17,Mountain,332.8
+May-17,Mountain,330.5
+April-17,Mountain,327.4
+March-17,Mountain,321.7
+February-17,Mountain,318.3
+January-17,Mountain,313.0
+December-16,Mountain,311.9
+November-16,Mountain,312.6
+October-16,Mountain,311.4
+September-16,Mountain,309.9
+August-16,Mountain,309.8
+July-16,Mountain,308.8
+June-16,Mountain,307.3
+May-16,Mountain,304.6
+April-16,Mountain,299.8
+March-16,Mountain,297.5
+February-16,Mountain,291.6
+July-17,West North Central,253.7
+June-17,West North Central,254.7
+May-17,West North Central,252.6
+April-17,West North Central,248.9
+March-17,West North Central,246.1
+February-17,West North Central,241.0
+January-17,West North Central,240.3
+December-16,West North Central,241.7
+November-16,West North Central,242.7
+October-16,West North Central,241.5
+September-16,West North Central,241.9
+August-16,West North Central,242.2
+July-16,West North Central,243.6
+June-16,West North Central,240.3
+May-16,West North Central,237.8
+April-16,West North Central,236.3
+March-16,West North Central,231.7
+February-16,West North Central,229.4
+July-17,West South Central,270.4
+June-17,West South Central,269.8
+May-17,West South Central,271.9
+April-17,West South Central,267.1
+March-17,West South Central,262.6
+February-17,West South Central,259.7
+January-17,West South Central,256.3
+December-16,West South Central,256.5
+November-16,West South Central,257.7
+October-16,West South Central,256.3
+September-16,West South Central,257.3
+August-16,West South Central,255.5
+July-16,West South Central,256.1
+June-16,West South Central,253.9
+May-16,West South Central,252.8
+April-16,West South Central,249.8
+March-16,West South Central,248.4
+February-16,West South Central,243.8
+July-17,East North Central,213.1
+June-17,East North Central,212.4
+May-17,East North Central,210.4
+April-17,East North Central,207.4
+March-17,East North Central,205.5
+February-17,East North Central,200.1
+January-17,East North Central,198.5
+December-16,East North Central,200.4
+November-16,East North Central,200.8
+October-16,East North Central,201.2
+September-16,East North Central,201.7
+August-16,East North Central,202.6
+July-16,East North Central,201.3
+June-16,East North Central,200.9
+May-16,East North Central,197.6
+April-16,East North Central,194.9
+March-16,East North Central,192.5
+February-16,East North Central,188.8
+July-17,East South Central,235.5
+June-17,East South Central,233.8
+May-17,East South Central,230.6
+April-17,East South Central,229.2
+March-17,East South Central,228.5
+February-17,East South Central,225.3
+January-17,East South Central,220.5
+December-16,East South Central,225.1
+November-16,East South Central,223.1
+October-16,East South Central,220.1
+September-16,East South Central,222.6
+August-16,East South Central,223.1
+July-16,East South Central,221.2
+June-16,East South Central,219.1
+May-16,East South Central,218.7
+April-16,East South Central,217.0
+March-16,East South Central,213.7
+February-16,East South Central,210.4
+July-17,New England,246.0
+June-17,New England,244.5
+May-17,New England,242.7
+April-17,New England,240.2
+March-17,New England,236.1
+February-17,New England,234.1
+January-17,New England,230.4
+December-16,New England,230.8
+November-16,New England,232.7
+October-16,New England,232.0
+September-16,New England,231.5
+August-16,New England,232.3
+July-16,New England,231.9
+June-16,New England,230.4
+May-16,New England,229.2
+April-16,New England,226.1
+March-16,New England,221.5
+February-16,New England,219.2
+July-17,Middle Atlantic,231.2
+June-17,Middle Atlantic,230.1
+May-17,Middle Atlantic,227.9
+April-17,Middle Atlantic,225.4
+March-17,Middle Atlantic,222.1
+February-17,Middle Atlantic,222.6
+January-17,Middle Atlantic,219.2
+December-16,Middle Atlantic,219.9
+November-16,Middle Atlantic,222.9
+October-16,Middle Atlantic,220.9
+September-16,Middle Atlantic,221.1
+August-16,Middle Atlantic,221.8
+July-16,Middle Atlantic,221.4
+June-16,Middle Atlantic,220.9
+May-16,Middle Atlantic,219.1
+April-16,Middle Atlantic,213.7
+March-16,Middle Atlantic,212.4
+February-16,Middle Atlantic,212.2
+July-17,South Atlantic,258.2
+June-17,South Atlantic,257.5
+May-17,South Atlantic,256.4
+April-17,South Atlantic,254.9
+March-17,South Atlantic,250.3
+February-17,South Atlantic,245.0
+January-17,South Atlantic,243.2
+December-16,South Atlantic,245.6
+November-16,South Atlantic,244.0
+October-16,South Atlantic,244.5
+September-16,South Atlantic,243.7
+August-16,South Atlantic,242.4
+July-16,South Atlantic,242.1
+June-16,South Atlantic,242.1
+May-16,South Atlantic,238.7
+April-16,South Atlantic,235.9
+March-16,South Atlantic,234.1
+February-16,South Atlantic,229.5

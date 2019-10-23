@@ -1,0 +1,193 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Transformations</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <style>
+      svg { 
+        background: #f9f9f9;
+        display: block;
+        margin: 0 auto;
+      }
+
+      h1 { margin-bottom: 2rem; }
+
+      body {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      h3 { 
+        margin-top: 3rem; 
+        margin-bottom: 1rem;
+      }
+
+      .container {
+        max-width: 46rem;
+      }
+
+      img.block {
+        display: block;
+        border: solid #333 1p;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+</head>
+<body>
+<div class="container">
+  <h1>A Transformations Cheat Sheet</h1>
+  <p>Your data isn't always set up the way it needs to be. Let's see the different ways we can transform it.</p>
+
+  <h3>Turn 100 datapoints into... 100 visual elements</h3>
+  <ul>
+      <li>Bind the datapoints with <code>selectAll</code> + <code>data</code></li>
+      <li>Add an element for every lonely data point with <code>enter</code> + <code>append</code></li>
+  </ul>
+  <pre><code class="javascript">// Add a circle for every data point
+svg.selectAll("circle")
+  .data(datapoints)
+  .enter().append("circle")</code></pre>
+
+  <div id="chart-1"></div>
+
+  <h3>Turn 100 datapoints into... 1 visual element</h3>
+  <ul>
+      <li>Add your visual element</li>
+      <li>Attach every single datapoint to that <em>one single element</em></li>
+  </ul>
+  <pre><code class="javascript"> // Add one path, attach all data to it
+svg.append("path")
+  .datum(datapoints)</code></pre>
+
+  <h3>Turn 100 datapoints into... 2+ visual elements, based on a column</h3>
+  <ul>
+    <li>Use <code>d3.nest</code> to, put our data into groups.</li>
+    <li>Then add a <code>path</code> for each one of those groups.</li>
+  </ul>
+  <pre><code class="javascript">// Group by the company column
+var nested = d3.nest()
+  .key(function(d) { return d.company })
+  .entries(datapoints)
+
+// Add a path for each group
+svg.selectAll("path")
+  .data(nested)
+  .enter().append("path")</code></pre>
+
+  <h3>Turn 100 datapoints into... 100 column values</h3>
+  <ul>
+    <li>Use <code>map</code> and the column name</li>
+  </ul>
+<pre><code class="javascript">// Pluck out the 'country' column
+var countries = datapoints.map(function(d) {
+  return d.country
+})</code></pre>
+
+  <h3>Turn 100 datapoints into... 100 column values that are numbers</h3>
+  <ul>
+    <li>Use <code>map</code>, the column name, and `+`</li>
+  </ul>
+<pre><code class="javascript">// Pluck out the 'temperature' column, convert to number
+var temps = datapoints.map(function(d) {
+  return +d.temperature
+})</code></pre>
+
+  <h3>Turn 100 datapoints into... 100 sorted datapoints</h3>
+  <ul>
+      <li>Use <code>sort</code> and the subtraction trick (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">more</a>)</li>
+  </ul>
+  <pre><code class="javascript">// Sort by height, ascending
+datapoints.sort(function(a, b) {
+  return a.population - b.population
+})</code></pre>
+
+  <h3>Turn 100 datapoints into... 1 max/min/mean/median</h3>
+  <p><strong>METHOD ONE:</strong> Make a list, then get the aggregate</p>
+  <ul>
+    <li>Use <code>map</code> to make a list of values</li>
+    <li><strong>BE SURE TO USE THE <code>+</code> TRICK TO CONVERT TO NUMBERS</strong></li>
+    <li>Use <code>d3.max</code>, <code>d3.min</code>, <code>d3.mean</code>, <code>d3.median</code></li>
+  </ul>
+<pre><code class="javascript">// Make a list of ages
+var ages = datapoints.map(function(d) {
+  return +d.age
+})
+
+// Calculate max from that list
+var maxAge = d3.max(ages)</code></pre>
+
+    <p><strong>METHOD TWO:</strong>  Use D3 to do it all at once.</p>
+    <ul>
+      <li>Use <code>d3.max</code>/etc + accessor</li>
+      <li><strong>BE SURE TO USE THE <code>+</code> TRICK TO CONVERT TO NUMBERS</strong></li>
+  </ul>
+<pre><code class="javascript">// Mean age
+var meanAge = d3.mean(datapoints, function(d) {
+  return +d.age
+})</code></pre>
+
+  <h3>Turn 100 datapoints into... 1 datapoint associated with the most/last of some value</h3>
+  <p>You usually use this with time + line graphs, or to find the max/min points to highlight.</p>
+  <ul>
+    <li>Sort</li>
+    <li>Get the first/last element</li>
+  </ul>
+  <p><em>For example, you have 100 years of summer temperatures. This gets you the most recent datapoint.</em></p>
+    <pre><code class="javascript">// Sort by year (ascending), then get the last element
+datapoints.sort(function(a, b) {
+  return b.year - a.year
+})
+var latest = datapoints[datapoints.length - 1]
+</code></pre>
+
+  <h3>Turn 100 datapoints into... a new list of datapoints that pass a test</h3>
+  <pre><code class="javascript">// Everyone over 56
+var filtered = datapoints.filter(function(d) {
+  return d.age > 56
+})</code></pre>
+  <pre><code class="javascript">// Everywhere in Africa
+var filtered = datapoints.filter(function(d) {
+  return d.country === 'Africa'
+})</code></pre>
+  <div id="chart-6"></div>
+
+  <h3>Turn 100 datapoints into... 1 datapoint that passes a test</h3>
+  <p>If you want a specific month or country or value or whatever, but only <strong>one</strong>. You usually use this datapoint to line up an annotation, similar to the "last data point" technique.</p>
+    <pre><code class="javascript">// The one datapoint for November
+var novemberData = datapoints.find(function(d) {
+  return d.month == 'November'
+})
+</code></pre>
+
+  <h3>Turn 100 datapoints into... 100 visual elements, but then get a little crazy and filter those visual elements and only change something about the subset</h3>
+  <pre><code class="javascript">// Add a circle for every datapoint
+svg.selectAll("circle")
+  .data(datapoints)
+  .enter().append("circle")
+  .attr("r", 3)
+  ...etc...
+
+// But later, change something about the Europe ones
+svg.selectAll("circle")
+  .filter(function(d) { return d.country === 'Europe' })
+  .attr("fill", "red")
+</code></pre>
+  <div id="chart-7"></div>
+
+  <!-- This is D3, our graphing library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+
+  <!-- and highlight.js, for syntax highlighting above in HTML -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow-night.min.css">
+
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+  <!-- Now we include our actual visualization -->
+  </div>
+</body>
+</html>

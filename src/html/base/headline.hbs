@@ -1,0 +1,36 @@
+<section class="header home">
+  <div class="header-container">
+    <div class="container">
+      <div class="box">
+        <div class="title">
+          <span class="block"></span>
+          <h1 class='headline'>{{ meta.headline }}<span></span></h1>
+        </div>
+        <div class="role">
+          <div class="block"></div>
+          <p>data journalist</p>
+        </div>
+      </div>
+    </div>
+
+      <p class="currently">Currently: Columbia Journalism School - M.S. Data Journalism '20</p>
+
+    <div class="socials">
+      <a href={{meta.author.github}} title="Github" target="_blank"><i class="fab fa-github"></i></a>
+      <a href={{meta.author.linkedin}} title="Linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href={{meta.author.twitter}} title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href={{meta.author.email}} target="_top" title="E-mail"><i class="fa fa-envelope"></i></a>
+      <a><i class="fa fa-address-card" title="About Me"></i></a>
+      <!-- <a href="sawyerclick_resume.pdf" target="_blank" title="Resume"><i class="fas fa-file"></i></a> -->
+      
+    </div>
+  </div>
+
+  <script src="scripts/main.js"></script>
+  <div class='body-container'>
+    <div id='about' style='visibility: collapse; height: 0;'>
+      <h2>About Me</h2>
+      <p class='secret-bio'>{{meta.bio}}</p>
+    </div>
+  </div>
+</section>

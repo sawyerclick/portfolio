@@ -1,0 +1,13 @@
+<div class="header">
+    <p class="kicker">{{ meta.kicker }}</p>
+    <h1 class="headline">{{ meta.headline }}</h1>
+    <h2 class="subhead">{{ meta.subhead }}</h2>
+    <p class="byline">
+        {{#if meta.author.url }}
+            <a href="{{ meta.author.url }}">{{ meta.author.name }}</a>
+        {{else}}
+            {{ meta.author.name }}
+        {{/if}}
+    </p>
+    <p class="date">Published {{ meta.published_date }}</p>
+</div>
