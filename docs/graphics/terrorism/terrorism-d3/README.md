@@ -1,1 +1,0 @@
-Maybe the Hey Mercedes to [The Pudding's starter template](https://github.com/the-pudding/starter)'s Braid? One can only hope I update this.
