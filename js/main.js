@@ -1,5 +1,5 @@
 ;(function() {
-    d3.select('.fa-angellist')
+    d3.select('.fa-address-card')
     .on('mouseover', function() {
         d3.select('#about')
         .style('visibility', 'visible')

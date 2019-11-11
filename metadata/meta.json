@@ -1,0 +1,22 @@
+{
+	"headline": "sawyer click",
+	"role": "data journalist",
+	"subhead": "Hi! I'm Sawyer Click, a New York-based data journalist and graphics reporter currently getting my M.S. in data journalism from Columbia University.",
+	"bio": "Hi! I'm Sawyer Click, a New York-based data viz nerd. I have projects below that showcase my sweet skills in Python, Illustrator and D3.js, but this secret section is dedicated to how cool I am. I'm a north Texas native with an obsession over punk music. In my free time I play Overwatch, pet Chunkie, my dog, and riff hard on my guitar. Hire me!",
+	"published_date": "January 1, 1970",
+	"site": "http://sawyerclick.github.io",
+	"siteName": "Sawyer Click",
+	"url": "http://sawyerclick.github.io",
+	"kicker": "",
+	"author": {
+		"name": "Sawyer Click",
+		"twitter": "https://twitter.com/sawyerdabear",
+		"twitterHandle": "@sawyerdabear",
+		"linkedin": "https://www.linkedin.com/in/sawyerclick/",
+		"github": "https://github.com/SawyerClick",
+		"email": "mailto:sawyerclick@gmail.com?Subject=Hi%20Sawyer",
+		"resume": "https://sawyerclick.github.io/Sawyer-Click.pdf"
+	},
+	"analytics": "",
+	"lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis neque sit amet sollicitudin vehicula. Maecenas fringilla mi non lacus mattis elementum. Curabitur dignissim faucibus justo."
+}

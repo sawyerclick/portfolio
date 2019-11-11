@@ -1,0 +1,88 @@
+[
+	{"title": "is punk dead?",
+		"description": "Analyzing how Spotify's portrayal of punk music leaves genre legends in the dust.",
+		"publishedDate": "Nov. '19",
+		"skills": "d3",
+		"site": "https://sawyerclick.github.io/punk/",
+		"img": "images/punk-header.gif",
+		"imgAlt": "Gif of my punk project"
+		},
+		
+	{
+	"title": "subway ridership",
+	"description": "Tracking the subway ridership's death spiral using Matplotlib and Pandas, made pretty in Illustrator",
+	"publishedDate": "Aug '19",
+	"skills": "Pandas",
+	"site": "subway-ridership/",
+	"img": "https://github.com/SawyerClick/subway-ridership/blob/master/pretty/percent_change_by_borough.png?raw=true",
+  "imgAlt": "The year-by-year fall of ridership"
+	},
+
+	{
+		"title": "2020's dem candidates",
+		"description": "Tracking the Facebook events of some 2020 presidential candidates using Selenium and Pandas",
+		"publishedDate": "July '19",
+		"skills": "Selenium",
+		"site": "2020-dems/",
+		"img": "images/2020-dems.gif",
+		"imgAlt": "Screengrab of the Mapbox portion of the page"
+	},
+
+	{
+		"title": "unknown terrorism",
+		"description": "Dubunking the usefulness of the Global Terrorism Datasbase using MapBox, Pandas, and ai2html",
+		"publishedDate": "July '19",
+		"skills": "ai2html",
+		"site": "terrorism/",
+		"img": "images/terrorism_header.png",
+		"imgAlt": "Places of Worship have consistently been the most targeted in terrorism attacks"
+	},
+
+	{
+		"title": "d3 maps",
+		"description": "Election choropleths, bubble maps, a rotating globe and a hex-map",
+		"publishedDate": "Nov. '19",
+		"skills": "d3",
+		"site": "radial-charts/",
+		"img": "images/maps.gif"
+	},
+
+	{
+		"title": "radial charts",
+		"description": "Radial area and line charts, as well as some pie charts, cooked up via d3.js for my Storytelling class. Also, some fancy small multiples",
+		"publishedDate": "Oct. '19",
+		"skills": "d3",
+		"site": "radial-charts/",
+		"img": "images/radial-charts.png"
+	},
+
+	{
+		"title": "small multiples",
+		"description": "Scatterplots, bar charts, and a frequency chart from the NYTimes",
+		"publishedDate": "Oct '19",
+		"skills": "ai2html",
+		"site": "09",
+		"img": "images/homework9.png",
+		"imgAlt": "A static remake of a NYT interactive on climate change"
+	},
+	
+	{
+		"title": "wiretapping",
+		"description": "Looking at state-level wiretapping by charts via Matplotlib and Pandas and maps via QGIS. Cleaned up in Illustrator",
+		"publishedDate": "July '19",
+		"skills": "Illustrator",
+		"site": "wiretaps",
+		"img": "images/wiretapping.png",
+		"imgAlt": "Yearly breakdown of wiretapping."
+	},
+	
+	{
+		"title": "speedy d3 graphs",
+		"description": "I created all of these in less than an hour-and-a-half for a test in my Storytelling class at CJS",
+		"publishedDate": "Oct '19",
+		"skills": "d3",
+		"site": "10",
+		"img": "images/homework10.png",
+		"imgAlt": "NBA players' weight and height measured against points per game."
+	}
+]
