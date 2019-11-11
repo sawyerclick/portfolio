@@ -313,7 +313,7 @@ margin: 0;
   height: 50px;
 }
 .container .box .title .block {
-  width: 0%;
+  width: 10%;
   height: inherit;
   background: rgb(183, 217, 250);
   position: absolute;
@@ -350,7 +350,7 @@ margin: 0;
   right: -12px;
 }
 .container .box .role {
-  width: 72%;
+  width: 90%;
   position: relative;
   display: flex;
   align-items: center;
@@ -374,9 +374,10 @@ margin: 0;
   font-weight: 200;
   font-family: 'B612', monospace;
   color: #000;
-  font-size: 14px;
+  font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 6.5px;
+  letter-spacing: 6px;
+  margin-top: 0px;
 }
 
 .box, .socials {
