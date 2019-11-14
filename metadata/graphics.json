@@ -1,10 +1,10 @@
 [
 	{"title": "is punk dead?",
-		"description": "Analyzing how Spotify's portrayal of punk music leaves genre legends in the dust.",
+		"description": "Analyzing how Spotify's portrayal of punk music leaves genre legends in the dust with the use of scrollytelling, d3 and d3-force.",
 		"publishedDate": "Nov. '19",
-		"skills": "d3",
+		"skills": "scrollytelling",
 		"site": "https://sawyerclick.github.io/punk/",
-		"img": "images/punk-header.gif",
+		"img": "images/punk-force-header.gif",
 		"imgAlt": "Gif of my punk project"
 		},
 		
