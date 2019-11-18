@@ -43,7 +43,7 @@
 		"description": "Election choropleths, bubble maps, a rotating globe and a hex-map",
 		"publishedDate": "Nov. '19",
 		"skills": "d3",
-		"site": "radial-charts/",
+		"site": "d3-maps/",
 		"img": "images/maps.gif"
 	},
 
