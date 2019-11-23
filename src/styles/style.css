@@ -51,6 +51,7 @@ section {
   margin-bottom: 10vh;
   /* height: 75vh; */
   align-content: center;
+  background: whitesmoke;
 }
 
 section.home {
@@ -83,6 +84,8 @@ p {
 	margin:3px 0 10px 0;
 	line-height:1.5rem;
 }
+
+
 section.header {
   margin-left: auto;
   margin-right: auto;
@@ -93,7 +96,7 @@ section.header {
   /* max-width: 750px; */
 }
 
-section.header a{
+section.header, a{
 	font-weight:500;
 	padding:0px 4px 2px 4px;
 	text-decoration:none;
@@ -105,12 +108,13 @@ section.header a{
 	opacity:1;
 }
 
-section.header a:hover {
+section.header, a.socials:hover {
 	background-color:  rgb(183, 217, 250);
 }
 
 #about {
   padding: 5px;
+  background: rgba(245, 245, 245, 0.788);
 }
 
 h2 {
@@ -290,7 +294,7 @@ margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
+  padding-top: 5%;
 }
 .container .box {
   width: auto;
@@ -391,6 +395,13 @@ margin: 0;
   font-size: 16px;
   line-height: 1.5rem;
   text-align: right;
+}
+
+.doodle {
+	position: absolute;
+  z-index: -10;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 @keyframes mainBlock {

@@ -4,10 +4,22 @@
   {{> base/meta}}
   {{> base/fonts }}
   {{> base/analytics }}
-  <title>Sawyer Click | Data Journalist</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+  <css-doodle class='doodle'>
+    :doodle {
+            @grid: 30 / 100vw;
+            grid-gap: 50x;
+          }
+    
+    transition: .2s cubic-bezier(.175, .885, .32, 1.275) @rand(300ms);
+    background: hsla(@r(360), 85%, @r(70%, 90%), @r(.9));
+    opacity: @rand(0.1, .8);
+    @shape: square;
+    @size: @rand(50px);
+    @place-cell: @rand(100%) @rand(100%);
+  </css-doodle>
   {{> base/headline }}
   <main id='content'>
     {{> story/basic }}

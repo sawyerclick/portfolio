@@ -48,15 +48,6 @@
 	},
 
 	{
-		"title": "radial charts",
-		"description": "Radial area and line charts, as well as some pie charts, cooked up via d3.js for my Storytelling class. Also, some fancy small multiples",
-		"publishedDate": "Oct. '19",
-		"skills": "d3",
-		"site": "radial-charts/",
-		"img": "images/radial-charts.png"
-	},
-
-	{
 		"title": "small multiples",
 		"description": "Scatterplots, bar charts, and a frequency chart from the NYTimes",
 		"publishedDate": "Oct '19",
@@ -74,6 +65,15 @@
 		"site": "wiretaps",
 		"img": "images/wiretapping.png",
 		"imgAlt": "Yearly breakdown of wiretapping."
+	},
+
+	{
+		"title": "radial charts",
+		"description": "Radial area and line charts, as well as some pie charts, cooked up via d3.js for my Storytelling class. Also, some fancy small multiples",
+		"publishedDate": "Oct. '19",
+		"skills": "d3",
+		"site": "radial-charts/",
+		"img": "images/radial-charts.png"
 	},
 	
 	{
