@@ -1,6 +1,6 @@
 [
 	{"title": "is punk dead?",
-		"description": "Analyzing how Spotify's portrayal of punk music leaves genre legends in the dust with the use of scrollytelling, d3 and d3-force.",
+		"description": "Analyzing how Spotify's portrayal of punk music leaves genre legends in the dust using d3. Honorable mention in The Pudding's 2019 Pudding Cup.",
 		"publishedDate": "Nov. '19",
 		"skills": "scrollytelling",
 		"site": "https://sawyerclick.github.io/punk/",
