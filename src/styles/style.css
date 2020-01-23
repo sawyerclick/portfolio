@@ -404,6 +404,19 @@ margin: 0;
   overflow: hidden;
 }
 
+a.currently-link {
+  padding:none;
+  margin:none;
+  background-image:linear-gradient(180deg,transparent 55%,rgb(183, 217, 250, .5) 0);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-decoration: none;
+}
+a.currently-link:hover {
+  text-decoration: none;
+  background-image:linear-gradient(180deg,transparent 55%,rgb(183, 217, 250, 1) 0);
+  color: #333333;
+}
 
 /* Mobile */
 @media (max-width:700px) {
