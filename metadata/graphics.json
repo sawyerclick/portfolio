@@ -13,7 +13,7 @@
 	"description": "Tracking the subway ridership's death spiral using Matplotlib and Pandas, made pretty in Illustrator",
 	"publishedDate": "Aug '19",
 	"skills": "Pandas",
-	"site": "subway-ridership/",
+	"site": "https://sawyerclick.github.io/subway-ridership/",
 	"img": "https://github.com/SawyerClick/subway-ridership/blob/master/pretty/percent_change_by_borough.png?raw=true",
   "imgAlt": "The year-by-year fall of ridership"
 	},
@@ -23,7 +23,7 @@
 		"description": "Tracking the Facebook events of some 2020 presidential candidates using Selenium and Pandas",
 		"publishedDate": "July '19",
 		"skills": "Selenium",
-		"site": "2020-dems/",
+		"site": "https://sawyerclick.github.io/2020-dems/",
 		"img": "images/2020-dems.gif",
 		"imgAlt": "Screengrab of the Mapbox portion of the page"
 	},
@@ -33,7 +33,7 @@
 		"description": "Dubunking the usefulness of the Global Terrorism Datasbase using MapBox, Pandas, and ai2html",
 		"publishedDate": "July '19",
 		"skills": "ai2html",
-		"site": "terrorism/",
+		"site": "https://sawyerclick.github.io/terrorism/",
 		"img": "images/terrorism_header.png",
 		"imgAlt": "Places of Worship have consistently been the most targeted in terrorism attacks"
 	},
@@ -43,7 +43,7 @@
 		"description": "Election choropleths, bubble maps, a rotating globe and a hex-map",
 		"publishedDate": "Nov. '19",
 		"skills": "d3",
-		"site": "d3-maps/",
+		"site": "https://sawyerclick.github.io/d3-maps/",
 		"img": "images/maps.gif"
 	},
 
@@ -52,7 +52,7 @@
 		"description": "Scatterplots, bar charts, and a frequency chart from the NYTimes",
 		"publishedDate": "Oct '19",
 		"skills": "ai2html",
-		"site": "09",
+		"site": "https://sawyerclick.github.io/09",
 		"img": "images/homework9.png",
 		"imgAlt": "A static remake of a NYT interactive on climate change"
 	},
@@ -62,7 +62,7 @@
 		"description": "Looking at state-level wiretapping by charts via Matplotlib and Pandas and maps via QGIS. Cleaned up in Illustrator",
 		"publishedDate": "July '19",
 		"skills": "Illustrator",
-		"site": "wiretaps",
+		"site": "https://sawyerclick.github.io/wiretaps",
 		"img": "images/wiretapping.png",
 		"imgAlt": "Yearly breakdown of wiretapping."
 	},
@@ -72,7 +72,7 @@
 		"description": "Radial area and line charts, as well as some pie charts, cooked up via d3.js for my Storytelling class. Also, some fancy small multiples",
 		"publishedDate": "Oct. '19",
 		"skills": "d3",
-		"site": "radial-charts/",
+		"site": "https://sawyerclick.github.io/radial-charts/",
 		"img": "images/radial-charts.png"
 	},
 	
@@ -81,7 +81,7 @@
 		"description": "I created all of these in less than an hour-and-a-half for a test in my Storytelling class at CJS",
 		"publishedDate": "Oct '19",
 		"skills": "d3",
-		"site": "10",
+		"site": "https://sawyerclick.github.io/10",
 		"img": "images/homework10.png",
 		"imgAlt": "NBA players' weight and height measured against points per game."
 	}
