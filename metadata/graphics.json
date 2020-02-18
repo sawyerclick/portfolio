@@ -1,13 +1,22 @@
 [
-	{"title": "is punk dead?",
-		"description": "Analyzing how Spotify's portrayal of punk music leaves genre legends in the dust using d3. Honorable mention in The Pudding's 2019 Pudding Cup.",
+	{
+		"title": "immigration court",
+		"description": "Breaking down the court's mediums by hearing type",
+		"publishedDate": "Feb. '20",
+		"skills": "d3",
+		"site": "https://observablehq.com/@sawyerclick/hearing-types-in-immigration-courts-for-fy2020s-1st-quarte",
+		"img": "images/immigration-court-hearings.gif",
+		"imgAlt": "Gif of my immigration court hearings"
+	},
+	{
+		"title": "is punk dead?",
+		"description": "Analyzing how Spotify's punk playlists disrespect the genre",
 		"publishedDate": "Nov. '19",
 		"skills": "scrollytelling",
 		"site": "https://sawyerclick.github.io/punk/",
-		"img": "images/punk-force-header.gif",
+		"img": "images/punk-header.gif",
 		"imgAlt": "Gif of my punk project"
-		},
-		
+	},
 	{
 	"title": "subway ridership",
 	"description": "Tracking the subway ridership's death spiral using Matplotlib and Pandas, made pretty in Illustrator",
@@ -20,7 +29,7 @@
 
 	{
 		"title": "2020's dem candidates",
-		"description": "Tracking the Facebook events of some 2020 presidential candidates using Selenium and Pandas",
+		"description": "Following some 2020 candidates around the country via their Facebook",
 		"publishedDate": "July '19",
 		"skills": "Selenium",
 		"site": "https://sawyerclick.github.io/2020-dems/",
@@ -30,7 +39,7 @@
 
 	{
 		"title": "unknown terrorism",
-		"description": "Dubunking the usefulness of the Global Terrorism Datasbase using MapBox, Pandas, and ai2html",
+		"description": "Dubunking the usefulness of the Global Terrorism Database",
 		"publishedDate": "July '19",
 		"skills": "ai2html",
 		"site": "https://sawyerclick.github.io/terrorism/",
@@ -40,7 +49,7 @@
 
 	{
 		"title": "d3 maps",
-		"description": "Election choropleths, bubble maps, a rotating globe and a hex-map",
+		"description": "Election choropleths, bubble maps, a rotating globe and a hex-map made",
 		"publishedDate": "Nov. '19",
 		"skills": "d3",
 		"site": "https://sawyerclick.github.io/d3-maps/",
@@ -49,7 +58,7 @@
 
 	{
 		"title": "small multiples",
-		"description": "Scatterplots, bar charts, and a frequency chart from the NYTimes",
+		"description": "Scatterplots, bar charts, and a frequency chart",
 		"publishedDate": "Oct '19",
 		"skills": "ai2html",
 		"site": "https://sawyerclick.github.io/09",
@@ -59,7 +68,7 @@
 	
 	{
 		"title": "wiretapping",
-		"description": "Looking at state-level wiretapping by charts via Matplotlib and Pandas and maps via QGIS. Cleaned up in Illustrator",
+		"description": "Looking at state-level wiretapping by charts via Matplotlib and Pandas and maps via QGIS",
 		"publishedDate": "July '19",
 		"skills": "Illustrator",
 		"site": "https://sawyerclick.github.io/wiretaps",
@@ -69,7 +78,7 @@
 
 	{
 		"title": "radial charts",
-		"description": "Radial area and line charts, as well as some pie charts, cooked up via d3.js for my Storytelling class. Also, some fancy small multiples",
+		"description": "Radial area, line charts, pie charts, and small multiples cooked using d3",
 		"publishedDate": "Oct. '19",
 		"skills": "d3",
 		"site": "https://sawyerclick.github.io/radial-charts/",
@@ -78,7 +87,7 @@
 	
 	{
 		"title": "speedy d3 graphs",
-		"description": "I created all of these in less than an hour-and-a-half for a test in my Storytelling class at CJS",
+		"description": "Charts made in less than an hour-and-a-half for a test in my Storytelling class at CJS",
 		"publishedDate": "Oct '19",
 		"skills": "d3",
 		"site": "https://sawyerclick.github.io/10",

@@ -71,7 +71,7 @@ h1 {
 
 h3 {
 	text-align: center;
-	font-size:1.5em;
+	font-size:1.1rem;
 	font-weight: bold;
 	letter-spacing:0.5px;
 	margin:0 0 5px 0;
@@ -127,6 +127,7 @@ h2 {
 .secret-bio {
   margin-top: 15px;
   text-align: left;
+  padding: 15px;
 }
 
 .socials {
@@ -150,6 +151,7 @@ h1.section-title {
   margin-left: auto;
   line-height: 1.5em;
   text-align: center;
+  padding: 10px;
 }
 
 .row {
@@ -227,11 +229,9 @@ padding-bottom: 1.1em;
 .description {
 	font-size: 14px;
 	font-weight: 100;
-	line-height: 18px;
+	/* line-height: 20px; */
 	text-align: left;
 	text-justify: inter-character;
-	word-break: normal;
-	hyphens: auto;
 }
 
 .description-home {
@@ -404,7 +404,7 @@ margin: 0;
   overflow: hidden;
 }
 
-a.currently-link {
+#nbc.currently-link {
   padding:none;
   margin:none;
   background-image:linear-gradient(180deg,transparent 55%,rgb(183, 217, 250, .5) 0);
@@ -412,10 +412,30 @@ a.currently-link {
   background-repeat: no-repeat;
   text-decoration: none;
 }
-a.currently-link:hover {
+#nbc.currently-link:hover {
   text-decoration: none;
   background-image:linear-gradient(180deg,transparent 55%,rgb(183, 217, 250, 1) 0);
   color: #333333;
+}
+
+#nbc-clips {
+  display: none;
+  max-width: 350px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.nbcTitle {
+  font-size: 16px;
+  text-align: left;
+}
+
+#nbc-clips > * {
+  padding: 10px 50px;
+}
+
+#nbc-close {
+  cursor: pointer;
 }
 
 /* Mobile */

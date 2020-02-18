@@ -13,7 +13,17 @@
       </div>
     </div>
 
-      <p class="currently">is currently doing<br>Columbia Journalism School - M.S. Data Journalism '20,<br>Data/Graphics Intern at <a href='https://www.nbcnews.com/search?q=%22Sawyer+Click%22' target='_blank' class='currently-link'>NBCNews.com</a></p>
+      <p class="currently">is currently doing<br>Data Journalism at Columbia University,<br>Data and Graphics at <span id='nbc' class='currently-link'>NBCNews.com</span></p>
+
+    <div id='nbc-clips' class='about'>
+      <h3>NBC Clips <span id='nbc-close' style='float:right;right:0;'>&#215;</span></h3>
+      {{#each nbc}}
+            <a href="{{ story }}">
+              <h3 class="nbcTitle"> {{ headline }}</h3>
+              <p class="description"> {{ description }} </p>
+            </a>
+      {{/each}}
+    </div>
 
     <div class="socials">
       <a href={{meta.author.github}} title="Github" target="_blank"><i class="fab fa-github"></i></a>
@@ -23,7 +33,6 @@
       <a href={{meta.author.resume}} target="_blank" title="Resume"><i class="fas fa-file-alt"></i></a>
       <a target="_top" title="About Me"><i class='fab fa-angellist'></i></a>
       <!-- <a href="sawyerclick_resume.pdf" target="_blank" title="Resume"><i class="fas fa-file"></i></a> -->
-      
     </div>
   </div>
 
