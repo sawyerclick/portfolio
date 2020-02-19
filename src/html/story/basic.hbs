@@ -1,7 +1,41 @@
 <section id='viz'>
   <div class='sticky'>
-    <p>Data & Graphics</p>
+    <p id='reset'>Data & Graphics</p>
+    <div id='sideProj' style='background:rgb(212, 234, 255);'>
+      <p  class='key noselect'>side project</p>
+    </div>
+    <div id='nbcProj'  style='background:rgba(207, 206, 252, 0.3);'>
+      <p class='key noselect'>nbc news</p>
+    </div>
   </div>
+
+  <script>
+    ;(function() {
+       d3.select('#sideProj')
+        .on('click', function() {
+          d3.selectAll('.side-project')
+          .style('background', 'rgb(212, 234, 255)')
+          d3.selectAll('.nbc')
+          .style('background', 'none')
+        })
+        .on('dblclick', function() {
+          d3.selectAll('.side-project')
+          .style('background', 'none')
+        })
+
+        d3.select('#nbcProj')
+        .on('click', function() {
+          d3.selectAll('.nbc')
+          .style('background', 'rgba(207, 206, 252, 0.3)')
+          d3.selectAll('.side-project')
+          .style('background', 'none')
+        }).on('dblclick', function() {
+          d3.selectAll('.nbc')
+          .style('background', 'none')
+        })
+      })()
+
+  </script>
 
   <div class="body-container">
     <div class="row">
@@ -16,6 +50,9 @@
 <section id='words'>
   <div class='sticky'>
       <p>Words & Reporting</p>
+      <div id='sideProj' style='background:rgb(212, 234, 255);'>
+      <p class='key noselect'>side project</p>
+    </div>
   </div>
 
   <div class='body-container'>
