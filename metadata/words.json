@@ -1,5 +1,15 @@
 [
 	{
+		"title": "debate live blog",
+		"description": "Live blogging interesting attack stats from the ninth Dem. debate",
+		"publishedDate": "Feb '20",
+		"skills": "live blog",
+		"site": "https://www.nbcnews.com/politics/2020-election/live-blog/south-carolina-democratic-debate-live-updates-candidates-face-charleston-n1141666/ncrd1143231#liveBlogHeader",
+		"img": "images/bernie-battered.png",
+		"imgAlt": "chart showing how much bernie was attacked during the ninth dem debate",
+		"affiliation": "nbc"
+	},
+	{
 		"title": "fare court",
 		"description": "A day spent with those trapped at fare evasion court in Brooklyn",
 		"publishedDate": "Aug '19",
@@ -7,9 +17,8 @@
 		"site": "https://medium.com/transit-new-york/an-afternoon-at-the-fare-beaters-court-720ee694e757",
 		"img": "https://miro.medium.com/max/4398/1*w-WS6VsYFkx4XyeVXnRCYg.jpeg",
 		"imgAlt": "Alfonso Washington at fare evasion court",
-		"affiliation": "words"
+		"affiliation": "transit"
 	},
-
 	{
 		"title": "rogue trains",
 		"description": "Covering the rogue F train's controversial schedule",
@@ -18,7 +27,7 @@
 		"site": "https://medium.com/transit-new-york/mta-makes-rogue-f-express-official-871c948952f8",
 		"img": "https://miro.medium.com/max/2560/1*6XNq2ygwa4uEcLkWRRCZ2Q.jpeg",
 		"imgAlt": "An F train pulls into Smith-9th Street station, which will be skipped during the train’s express route",
-		"affiliation": "words"
+		"affiliation": "transit"
 	},
 
 	{
