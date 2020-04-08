@@ -1,5 +1,15 @@
 [
 	{
+		"title": "coronavirus spread",
+		"description": "Visualizing the spread of confirmed cases and deaths",
+		"publishedDate": "March '20",
+		"skills": "d3",
+		"site": "https://observablehq.com/@sawyerclick/coronavirus-cases-per-county",
+		"img": "images/coronavirus-animated-map.gif",
+		"imgAlt": "Gif of a map of the us cases",
+		"affiliation": "side-project"
+	},
+	{
 		"title": "nyc recycling",
 		"description": "Why NYC's zero-waste-by-2030 dreams won't come true",
 		"publishedDate": "March '20",
