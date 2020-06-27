@@ -1,6 +1,36 @@
 [
 	{
-		"title": "coronavirus spread",
+		"title": "Protest Data",
+		"description": "Simplifying how political groups serve protestors ads based on geofencing.",
+		"publishedDate": "June '20",
+		"skills": "ai2html",
+		"site": "https://www.wsj.com/articles/how-political-groups-are-harvesting-data-from-protesters-11592156142?mod=mhp",
+		"img": "images/protestdata.png",
+		"imgAlt": "Flow chart of how political groups serve protestors ads based on geoencing.",
+		"affiliation": "wsj"
+	},
+	{
+		"title": "Quake Swarm",
+		"description": "How A.I. uncovered secrets about a flurry of earthquakes.",
+		"publishedDate": "June '20",
+		"skills": "QGIS/D3",
+		"site": "https://www.wsj.com/articles/artificial-intelligence-helps-to-decode-mysterious-earthquake-swarms-11592998200",
+		"img": "images/quakeswarm-map.png",
+		"imgAlt": "Map of earthquakes in southern California.",
+		"affiliation": "wsj"
+	},
+	{
+		"title": "Superyachts",
+		"description": "Mapping how superyachts fled back to the U.S. after ports closed.",
+		"publishedDate": "May '20",
+		"skills": "d3",
+		"site": "https://www.nbcnews.com/news/us-news/yachting-crowd-was-gearing-booming-2020-sailing-season-then-coronavirus-n1202231",
+		"img": "images/superyachts-animated-map.gif",
+		"imgAlt": "Animated map of boats moving from the Caribbean to mainland USA.",
+		"affiliation": "nbc"
+	},
+	{
+		"title": "Coronavirus Spread",
 		"description": "Visualizing the spread of confirmed cases and deaths",
 		"publishedDate": "March '20",
 		"skills": "d3",
@@ -10,7 +40,7 @@
 		"affiliation": "side-project"
 	},
 	{
-		"title": "nyc recycling",
+		"title": "NYC Recycling",
 		"description": "Why NYC's zero-waste-by-2030 dreams won't come true",
 		"publishedDate": "March '20",
 		"skills": "d3",
@@ -20,7 +50,7 @@
 		"affiliation": "side-project"
 	},
 	{
-		"title": "domestic surveillance",
+		"title": "Domestic Surveillance",
 		"description": "The spread of law partnerships between law enforcement agency and Amazon Ring",
 		"publishedDate": "Feb. '20",
 		"skills": "leaflet",
@@ -30,7 +60,7 @@
 		"affiliation": "nbc"
 	},
 	{
-		"title": "u.s. coronavirus cases per day",
+		"title": "U.S. Coronavirus Cases per Day",
 		"description": "Auto-updating histogram tracking new coronavirus cases in the U.S. per day",
 		"publishedDate": "March '20",
 		"skills": "d3",
@@ -40,7 +70,7 @@
 		"affiliation": "nbc"
 	},
 	{
-		"title": "is punk dead?",
+		"title": "Is Punk Dead?",
 		"description": "How Spotify's punk playlists forget the genre's forefathers",
 		"publishedDate": "Nov. '19",
 		"skills": "scrollytelling",
@@ -50,7 +80,7 @@
 		"affiliation": "side-project"
 	},
 	{
-		"title": "quarantine streaming",
+		"title": "Quarantine Streaming",
 		"description": "Visualizing the coronavirus streaming bump for Netflix, Amazon and more",
 		"publishedDate": "March '20",
 		"skills": "d3",
@@ -60,7 +90,7 @@
 		"affiliation": "nbc"
 	},
 	{
-		"title": "2020's dem candidates",
+		"title": "2020's Dem. candidates",
 		"description": "Following some 2020 Dem. candidates around the country via their Facebook events",
 		"publishedDate": "July '19",
 		"skills": "Selenium",
@@ -70,7 +100,7 @@
 		"affiliation": "side-project"
 	},
 	{
-		"title": "dem debates",
+		"title": "Dem. Debates",
 		"description": "Tracking how long each Dem. presidential candidate spoke at the ninth debate with a live Node script",
 		"publishedDate": "March '20",
 		"skills": "Node",
@@ -80,7 +110,7 @@
 		"affiliation": "nbc"
 	},
 	{
-		"title": "immigration court",
+		"title": "Immigration Court",
 		"description": "Immigration court's hearings by the medium through which they are presided over",
 		"publishedDate": "Feb. '20",
 		"skills": "d3",
@@ -90,7 +120,7 @@
 		"affiliation": "side-project"
 	},
 	{
-		"title": "state of the union",
+		"title": "State of the Union",
 		"description": "How long President Trump spent on topics during 2020's State of the Union address",
 		"publishedDate": "Feb. '20",
 		"skills": "d3",
@@ -100,17 +130,7 @@
 		"affiliation": "nbc"
 	},
 	{
-		"title": "unknown terrorism",
-		"description": "Debunking the usefulness of the Global Terrorism Database with ai2html and Mapbox",
-		"publishedDate": "July '19",
-		"skills": "ai2html",
-		"site": "https://sawyerclick.github.io/terrorism/",
-		"img": "images/terrorism_header.png",
-		"imgAlt": "Places of Worship have consistently been the most targeted in terrorism attacks",
-		"affiliation": "side-project"
-	},
-	{
-		"title": "polls vs. reality",
+		"title": "Polls vs. Reality",
 		"description": "Some candidates can't catch a break in polls, no matter the votes",
 		"publishedDate": "Feb. '20",
 		"skills": "ai2html",
@@ -120,7 +140,7 @@
 		"affiliation": "nbc"
 	},
 	{
-		"title": "d3 maps",
+		"title": "d3 Maps",
 		"description": "Election choropleths, bubble maps, a rotating globe and a hex-map made",
 		"publishedDate": "Nov. '19",
 		"skills": "d3",

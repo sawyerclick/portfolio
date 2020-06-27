@@ -279,6 +279,10 @@ figure.transit {
   border-color: #C8E1CC;
 }
 
+figure.wsj {
+  border-color: rgb(255,105,99, .7);
+}
+
 figure.nbc {
 	border-color: rgb(212, 212, 247);
 }
