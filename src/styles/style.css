@@ -222,6 +222,10 @@ h1.section-title {
   background: transparent url("/images/dots-side-project.svg") repeat bottom right;
 }
 
+.background.wsj::before {
+  background: transparent url("/images/dots-wsj.svg") repeat bottom right;
+}
+
 .background.nbc::before {
   background: transparent url("/images/dots-nbc.svg") repeat bottom right;
 }
