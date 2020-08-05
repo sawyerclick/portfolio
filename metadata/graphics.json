@@ -1,5 +1,25 @@
 [
 	{
+		"title": "Warming Up",
+		"description": "Projected CO2 emissions and how the coronavirus could change things.",
+		"publishedDate": "July '20",
+		"skills": "D3/Illustrator",
+		"site": "https://www.wsj.com/articles/covid-19s-environmental-benefits-evaporate-as-world-reopens-11594290145",
+		"img": "images/green-businesses.png",
+		"imgAlt": "Projected CO2 emissions.",
+		"affiliation": "wsj"
+	},
+	{
+		"title": "Small Slice",
+		"description": "How the world is funding sustainable enterprises",
+		"publishedDate": "July '20",
+		"skills": "Illustrator",
+		"site": "https://www.wsj.com/articles/governments-eye-a-green-economic-recovery-some-industries-arent-convinced-11594113028",
+		"img": "images/emissions.png",
+		"imgAlt": "How the world's top 50 economies are funding green enterprises",
+		"affiliation": "wsj"
+	},
+	{
 		"title": "Protest Data",
 		"description": "Simplifying how political groups serve protestors ads based on geofencing.",
 		"publishedDate": "June '20",
@@ -23,7 +43,7 @@
 		"title": "Superyachts",
 		"description": "Mapping how superyachts fled back to the U.S. after ports closed.",
 		"publishedDate": "May '20",
-		"skills": "d3",
+		"skills": "D3",
 		"site": "https://www.nbcnews.com/news/us-news/yachting-crowd-was-gearing-booming-2020-sailing-season-then-coronavirus-n1202231",
 		"img": "images/superyachts-animated-map.gif",
 		"imgAlt": "Animated map of boats moving from the Caribbean to mainland USA.",
