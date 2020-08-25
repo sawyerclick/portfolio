@@ -1,5 +1,35 @@
 [
 	{
+		"title": "Internet Usage",
+		"description": "Scrollytelling radial-chart clocks to show how we use the internet.",
+		"publishedDate": "August '20",
+		"skills": "D3",
+		"site": "https://www.wsj.com/articles/coronavirus-lockdown-tested-internets-backbone-11597503600",
+		"img": "images/wsj_clocks.gif",
+		"imgAlt": "Internet usage skyrocketed during the pandemic.",
+		"affiliation": "wsj"
+	},
+	{
+		"title": "Home Improvement",
+		"description": "A small-multiple cartogram that showcases Home Depot's boom in foot traffic.",
+		"publishedDate": "August '20",
+		"skills": "D3",
+		"site": "https://www.wsj.com/articles/home-depot-covid-coronavirus-home-improvement-lockdowns-stimulus-check-remodel-11597426959",
+		"img": "images/wsj_homedepot.png",
+		"imgAlt": "Home Depot had a boom in foot traffic as stay-at-home orders went into effect.",
+		"affiliation": "wsj"
+	},
+	{
+		"title": "Quake Swarm",
+		"description": "How A.I. uncovered secrets about a flurry of earthquakes.",
+		"publishedDate": "June '20",
+		"skills": "QGIS/D3",
+		"site": "https://www.wsj.com/articles/artificial-intelligence-helps-to-decode-mysterious-earthquake-swarms-11592998200",
+		"img": "images/quakeswarm-map.png",
+		"imgAlt": "Map of earthquakes in southern California.",
+		"affiliation": "wsj"
+	},
+	{
 		"title": "Warming Up",
 		"description": "Projected CO2 emissions and how the coronavirus could change things.",
 		"publishedDate": "July '20",
@@ -27,16 +57,6 @@
 		"site": "https://www.wsj.com/articles/how-political-groups-are-harvesting-data-from-protesters-11592156142?mod=mhp",
 		"img": "images/protestdata.png",
 		"imgAlt": "Flow chart of how political groups serve protestors ads based on geoencing.",
-		"affiliation": "wsj"
-	},
-	{
-		"title": "Quake Swarm",
-		"description": "How A.I. uncovered secrets about a flurry of earthquakes.",
-		"publishedDate": "June '20",
-		"skills": "QGIS/D3",
-		"site": "https://www.wsj.com/articles/artificial-intelligence-helps-to-decode-mysterious-earthquake-swarms-11592998200",
-		"img": "images/quakeswarm-map.png",
-		"imgAlt": "Map of earthquakes in southern California.",
 		"affiliation": "wsj"
 	},
 	{
