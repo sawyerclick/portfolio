@@ -1,50 +1,6 @@
 <section id='viz'>
-  <div class='sticky'>
-    <p class='key-hed'>Data & Graphics</p>
-    <div id='nbcProj'  style='background:rgba(255,105,99,.3);'>
-      <p class='key noselect'>WSJ</p>
-    </div>
-
-    <div id='nbcProj'  style='background:rgba(207, 206, 252, 0.3);'>
-      <p class='key noselect'>NBC News</p>
-    </div>
-
-    <div id='sideProj' style='background:rgb(212, 234, 255);'>
-      <p  class='key noselect'>side project</p>
-    </div>
-  </div>
-
-  <!-- <script>
-    ;(function() {
-       d3.select('#sideProj')
-        .on('click', function() {
-          d3.selectAll('.side-project')
-          .style('background', 'rgb(212, 234, 255)')
-          d3.selectAll('.nbc')
-          .style('background', 'none')
-        })
-        .on('dblclick', function() {
-          d3.selectAll('.side-project')
-          .style('background', 'none')
-        })
-
-        d3.select('#nbcProj')
-        .on('click', function() {
-          d3.selectAll('.nbc')
-          .style('background', 'rgba(207, 206, 252, 0.3)')
-          d3.selectAll('.side-project')
-          .style('background', 'none')
-        }).on('dblclick', function() {
-          d3.selectAll('.nbc')
-          .style('background', 'none')
-        })
-      })()
-
-  </script> -->
-
   <div class="body-container">
     <div class="row">
-      {{!-- find the projects in metadata/graphics.json --}}
       {{#each graphics}}
         {{> base/project }}
       {{/each}}
@@ -52,7 +8,7 @@
   </div>
 </section>
 
-<section id='words'>
+{{!-- <section id='words'>
   <div class='sticky'>
       <p class='key-hed'>Words & Reporting</p>
       <div id='nbcProj'  style='background:rgba(207, 206, 252, 0.3);'>
@@ -64,18 +20,13 @@
       <div id='sideProj' style='background:#FCC6B3;'>
         <p  class='key noselect'>University Star</p>
       </div>
-
-      {{!-- <div id='sideProj' style='background:rgb(212, 234, 255);'>
-      <p class='key noselect'>side project</p> --}}
-    {{!-- </div> --}}
   </div>
 
   <div class='body-container'>
     <div class="row">
-      {{!-- find the projects in metadata/words.json --}}
       {{#each words}}
         {{> base/project }}
       {{/each}}
     </div>
   </div>
-</section>
+</section> --}}

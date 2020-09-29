@@ -1,32 +1,24 @@
 ;(function() {
-  d3.select('.fa-angellist')
-    .on('mouseover', function() {
-      d3.select('#about')
-        .style('visibility', 'visible')
-        .style('height', 'auto')
-    })
-    .on('mouseout', function() {
-      d3.select('#about')
-        .style('visibility', 'collapse')
-        .style('height', 0)
-    })
+  //this is where we apply opacity to the arrow
+$(window).scroll( function(){
 
-  // d3.select('#nbc').on('mouseover', function() {
-  //   d3.select('#nbc-clips').style('display', 'inline-block')
-  // })
+  //get scroll position
+  var topWindow = $(window).scrollTop();
+  //multipl by 1.5 so the arrow will become transparent half-way up the page
+  var topWindow = topWindow * 2;
+  
+  //get height of window
+  var windowHeight = $(window).height();
+      
+  //set position as percentage of how far the user has scrolled 
+  var position = topWindow / windowHeight;
+  //invert the percentage
+  position = 1 - position;
 
-  // d3.select('#nbc-close').on('click', function() {
-  //   d3.select('#nbc-clips').style('display', 'none')
-  // // })
+  //define arrow opacity as based on how far up the page the user has scrolled
+  //no scrolling = 1, half-way up the page = 0
+  $('.arrow').css('opacity', position);
 
-  // d3.select('#nbcProj').on('mouseover', function() {
-  //   d3.selectAll('.column').style('visibility', 'collapse')
-  // })
+});
 
-  // d3.select('#sideProj').on('mouseover', function() {
-  //   console.log('hi')
-  //   d3.selectAll('.nbc')
-  //     .style('visibility', 'collapse')
-  //     .style('height', 0)
-  // })
 })()

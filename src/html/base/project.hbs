@@ -2,13 +2,13 @@
   <div class='background {{ affiliation }}'>
     <a href="{{ site }}">
      <figure class="content {{ affiliation }} block">
-        <div class="info">
-          <div class="skills left-half nomargin"> {{ skills }} </div>
-          <div class="date right-half nomargin"> {{ publishedDate }} </div>   
-        </div>
-        <img class="itemimage" src="{{ img }}" style="width:100%;">
-        <h3 class="title"><span class="title"> {{ title }} </span></h3>
-        <p class="description"> {{ description }} </p>
+      <div class='{{ affiliation }} affilationBackground info'>
+        <p class='affiliation left-half'>{{ affiliationProper }}</p>
+        <p class="affiliation right-half">{{ publishedDate }}</p>
+      </div>
+      <h3 class="title">{{ title }}</h3>
+      <p class="description">{{ description }}</p>
+      <img class="itemimage" src="{{ img }}" style="width:100%;">
       </figure>
     </a>
   </div>

@@ -1,9 +1,9 @@
 {
-	"headline": "sawyer click",
+	"headline": "Sawyer Click",
 	"role": "data journalist",
-	"subhead": "Hi! I'm Sawyer Click, a New York-based data journalist and graphics reporter currently getting my M.S. in data journalism from Columbia University.",
-	"bio": "Hi! I'm Sawyer Click, a New York-based data viz nerd. I have projects below that showcase my sweet skills in Python, Illustrator and D3.js, but this secret section is dedicated to how cool I am. I'm a north Texas native with an obsession over punk and jazz music. In my free time I play Overwatch, pet my dog Chunkie, and riff hard on my guitar. Hire me!",
-	"published_date": "January 1, 1970",
+	"subhead": "I use code to bring news stories to life. In my spare time, I enjoy running, making music, building mechanical keyboards and playing with my dog, Chunkie.",
+	"bio": "I use code to bring news stories to life. In my spare time, I enjoy running, making music, building mechanical keyboards and playing with my dog, Chunkie.",
+	"published_date": "September 28, 2020",
 	"site": "http://sawyerclick.github.io",
 	"siteName": "Sawyer Click",
 	"url": "http://sawyerclick.github.io",
