@@ -456,7 +456,7 @@ margin: 0;
     font-size: 1.65rem;
   }
   .header-container {
-    bottom: 20%;
+    bottom: 10%;
   }
   .header {
     max-width: 100%;
@@ -465,7 +465,7 @@ margin: 0;
 
 @media (max-width: 350px) {
   .header-container {
-    bottom: 10%;
+    bottom: 0%;
   }
 }
 
