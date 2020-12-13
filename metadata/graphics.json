@@ -1,7 +1,84 @@
 [
 	{
+		"title": "Joe's Cabinet",
+		"description": "A visual database of Joe Biden's cabinet picks",
+		"publishedDate": "Dec. '20",
+		"skills": "D3",
+		"site": "https://www.businessinsider.com/joe-biden-cabinet-white-house-staff-transition-president-elect-administration-2020-11",
+		"img": "images/joes-cabinet.png",
+		"imgAlt": "A visual database of Joe Biden's cabinet picks",
+		"affiliation": "bi",
+		"affiliationProper": "Business Insider"
+	},
+	{
+		"title": "Influencer Agents",
+		"description": "A database of influencer agents and managers",
+		"publishedDate": "Nov. '20",
+		"skills": "D3",
+		"site": "https://www.businessinsider.com/top-influencer-agents-managers-database-youtube-instagram-tiktok-2020-6",
+		"img": "images/influencer-database.gif",
+		"imgAlt": "A database of influencer agents and managers",
+		"affiliation": "bi",
+		"affiliationProper": "Business Insider"
+	},
+	{
+		"title": "Q Drops",
+		"description": "A timeline of Q's first 5,000 drops",
+		"publishedDate": "Nov. '20",
+		"skills": "D3",
+		"site": "https://www.businessinsider.com/every-qanon-message-q-drop-analyzed-2020-10",
+		"img": "images/q-drops.gif",
+		"imgAlt": "A timeline chart of Q's first 5,000 drops.",
+		"affiliation": "bi",
+		"affiliationProper": "Business Insider"
+	},
+	{
+		"title": "COVID Condegram",
+		"description": "A radial bar chart with COVID-19 data",
+		"publishedDate": "Dec. '20",
+		"skills": "D3",
+		"site": "https://observablehq.com/@sawyerclick/condegram",
+		"img": "images/condegram.svg",
+		"imgAlt": "A spiral histogram showing the rise in COVID-19 cases.",
+		"affiliation": "side-project",
+		"affiliationProper": "Observable"
+	},
+	{
+		"title": "Biotech Sell Offs",
+		"description": "Packed bubble chart showing stock sold from biotech executives",
+		"publishedDate": "Oct. '20",
+		"skills": "D3",
+		"site": "https://www.businessinsider.com/pharma-executives-selling-company-stock-amid-covid-19-pandemic-2020-10",
+		"img": "images/biotech-execs.png",
+		"imgAlt": "A packed bubble chart showing biotech executives who have sold off steck.",
+		"affiliation": "bi",
+		"affiliationProper": "Business Insider"
+	},
+	{
+		"title": "Izzy's Orbit",
+		"description": "A force-directed chart on the influence of hedge-fun behemoth Millennium",
+		"publishedDate": "Oct. '20",
+		"skills": "D3",
+		"site": "https://www.businessinsider.com/millennium-israel-izzy-englander-network-family-tree-alumni-hedge-fund-2020-10",
+		"img": "images/izzys-orbit.png",
+		"imgAlt": "A force-directed chart on the influence of Millennium",
+		"affiliation": "bi",
+		"affiliationProper": "Business Insider"
+	},
+	{
+		"title": "The GOP & QAnon",
+		"description": "Visualizing QAnon-related tweets from GOP and conservative personalities",
+		"publishedDate": "Oct. '20",
+		"skills": "D3",
+		"site": "https://www.businessinsider.com/how-qanon-infiltrated-the-gop-2020-10",
+		"img": "images/gop_love-qanon.png",
+		"imgAlt": "A bubble timeline chart showing tweets sized by the number of retweets around the time of Trump's impeachment.",
+		"affiliation": "bi",
+		"affiliationProper": "Business Insider"
+	},
+	{
 		"title": "Joppa",
-		"description": "A special from The Dallas Morning News on how Dallas has neglected a freedman's town",
+		"description": "A special on how Dallas has neglected a freedman's town",
 		"publishedDate": "Sept. '20",
 		"skills": "Web dev.",
 		"site": "https://www.dallasnews.com/joppa",
@@ -27,7 +104,7 @@
 		"publishedDate": "Aug. '20",
 		"skills": "D3",
 		"site": "https://www.wsj.com/articles/coronavirus-lockdown-tested-internets-backbone-11597503600",
-		"img": "images/wsj_clocks.gif",
+		"img": "images/wsj-clocks.gif",
 		"imgAlt": "Internet usage skyrocketed during the pandemic.",
 		"affiliation": "wsj",
 		"affiliationProper": "The Wall Street Journal"
@@ -99,6 +176,17 @@
 		"affiliationProper": "NBC News"
 	},
 	{
+		"title": "Contour Density Maps",
+		"description": "A walkthrough on how to create a contour density map",
+		"publishedDate": "May. '20",
+		"skills": "D3",
+		"site": "https://observablehq.com/@sawyerclick/contour-density-map-walkthrough",
+		"img": "images/contour-map.png",
+		"imgAlt": "A walkthrough on how to create a contour density map",
+		"affiliation": "side-project",
+		"affiliationProper": "Observable"
+	},
+	{
 		"title": "COVID's Spread",
 		"description": "Visualizing the spread of confirmed cases and deaths using a choropleth",
 		"publishedDate": "March '20",
@@ -107,11 +195,11 @@
 		"img": "images/coronavirus-animated-map.gif",
 		"imgAlt": "Gif of a map of the us cases",
 		"affiliation": "side-project",
-		"affiliationProper": "Columbia University"
+		"affiliationProper": "Observable"
 	},
 	{
 		"title": "Zero Waste",
-		"description": "Why NYC's dreams to cut its waste to nil by 2030 won't come true",
+		"description": "Data on why NYC's dreams to cut its waste to nil by 2030 won't come true",
 		"publishedDate": "March '20",
 		"skills": "D3",
 		"site": "https://nyc-recycling.netlify.com",
@@ -165,15 +253,15 @@
 		"affiliationProper": "NBC News"
 	},
 	{
-		"title": "Polls vs. Reality",
-		"description": "Some candidates can't catch a break in polls, no matter the votes",
-		"publishedDate": "Feb. '20",
-		"skills": "ai2html",
-		"site": "https://www.nbcnews.com/politics/2020-election/some-candidates-do-better-polls-others-worse-we-break-it-n1141646",
-		"img": "images/polls.png",
-		"imgAlt": "small multiple bar charts of poll numbers vs vote numbers",
-		"affiliation": "nbc",
-		"affiliationProper": "NBC News"
+		"title": "Tax Loophole",
+		"description": "The projected revenue loss from a century-old tax loophole",
+		"publishedDate": "March '20",
+		"skills": "D3",
+		"site": "https://observablehq.com/@sawyerclick/stepped-up-loophole-predictions",
+		"img": "images/stepped-up-loophole.png",
+		"imgAlt": "The projected revenue loss from a century-old tax loophole",
+		"affiliation": "side-project",
+		"affiliationProper": "Observable"
 	},
 	{
 		"title": "2020's Dem. candidates",
@@ -195,7 +283,7 @@
 		"img": "images/immigration-court-hearings.gif",
 		"imgAlt": "Gif of my immigration court hearings",
 		"affiliation": "side-project",
-		"affiliationProper": "Columbia University"
+		"affiliationProper": "Observable"
 	},
 	{
 		"title": "State of the Union",

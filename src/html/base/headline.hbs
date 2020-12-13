@@ -1,7 +1,17 @@
 <div class="header home">
+
+  {{!-- <div class="canvas"></div> --}}
+  {{!-- <script type="module">
+  // import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  // import define from "https://api.observablehq.com/@sawyerclick/circle-wave.js?v=3";
+  // (new Runtime).module(define, name => {
+  //   if (name === "canvas") return Inspector.into(".canvas")();
+  // });
+   </script> --}}
+
   <div class="header-container">
     <h1 class='headline'>{{ meta.headline }}</h1>
-    <p class="currently">develops interactive graphics at Business Insider</p>
+    <p class="currently">develops interactive graphics at <a href='https://www.businessinsider.com/category/sawyer-click' target='_blank'>Business Insider</a></p>
     <p class='secret-bio' id='about'>{{meta.bio}}</p>
     <div class="socials">
       <a href={{meta.author.github}} title="Github" target="_blank"><i class="fab fa-github"></i></a>
