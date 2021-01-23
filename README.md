@@ -1,2 +1,0 @@
-# Hi, I'm Sawyer
-I'm a New York-based data viz nerd. I have projects below that showcase my sweet skills in Python, Illustrator and D3.js, but this secret section is dedicated to how cool I am. I'm a north Texas native with an obsession over punk music, which I played a lot of during my undergrad career at Texas State University, which I graduated from in 2019 with a B.S. in journalism and a minor in music. In my free time I play Overwatch, pet Chunkie, my dog, and riff hard on my guitar.    

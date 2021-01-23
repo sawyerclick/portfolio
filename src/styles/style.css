@@ -110,9 +110,9 @@ body {
 }
 
 body {
-  color: #333333;
+  color: hsla(0, 0%, 20%, 1);
   font-family: 'Montserrat', sans-serif;
-  background-color: #f8f8f8;
+  background-color: hsla(0, 0%, 97%, 1);
   scroll-behavior: smooth;
   /* position: relative; */
 }
@@ -140,8 +140,8 @@ section {
   padding: 10px 0px;
   margin-bottom: 10vh;
   align-content: center;
-  background: #f8f8f8;
-  /* background: rgb(252, 226, 203); */
+  background: hsla(0, 0%, 97%, 1);
+  /* background: hsla(28, 89%, 89%, 1); */
 }
 
 section.home {
@@ -158,7 +158,7 @@ h1 {
   text-align: left;
   /*font-family: 'Raleway', sans-serif;*/
   font-family: 'Roboto Mono', monospace;
-  color: #333;
+  color: hsla(0, 0%, 20%, 1);
 }
 
 h3 {
@@ -167,7 +167,7 @@ h3 {
   font-size: 1.5em;
   letter-spacing: 1.5px;
   font-family: 'Roboto Mono', monospace;
-  color: #333;
+  color: hsla(0, 0%, 20%, 1);
   font-weight: 400;
   hyphens: auto;
 }
@@ -178,7 +178,7 @@ p {
   font-size: 18px;
   /*margin:3px 0 10px 0;*/
   line-height: 1.5rem;
-  color: #333;
+  color: hsla(0, 0%, 20%, 1);
 }
 
 section.header {
@@ -194,7 +194,7 @@ a {
   font-weight: 500;
   text-decoration: none;
   display: inline-block;
-  color: #000;
+  color: hsla(0, 0%, 0%, 1);
   border-bottom: none;
   background: none;
   transition: all 0.2s;
@@ -213,21 +213,13 @@ h2 {
   text-align: center;
   font-size: 24px;
   font-weight: 600;
-  border-bottom: #333333 1px solid;
-}
-
-.row {
-  margin: 0px 0px;
-  /*text-align: center;*/
-  margin-left: auto;
-  margin-right: auto;
-  display: flexbox;
-  width: 100%;
+  border-bottom: hsla(0, 0%, 20%, 1) 1px solid;
 }
 
 .row a {
   text-decoration: none;
   color: black;
+  width: 100%;
 }
 
 /* Add padding BETWEEN each column */
@@ -291,8 +283,7 @@ h2 {
 }
 
 .content {
-  width: 100%;
-  /*padding: .75em 1em;*/
+  min-width: 100%;
   margin: 1em 0em 1em 0em;
   display: inline-block;
   overflow: hidden;
@@ -300,10 +291,7 @@ h2 {
   vertical-align: top;
   z-index: 2;
   box-sizing: border-box;
-  background-color: #f8f8f8;
-  /*  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👾</text></svg>")
-      16 0,
-    auto;*/
+  background-color: hsla(0, 0%, 97%, 1);
   transition: transform 0.2s linear;
 }
 
@@ -312,8 +300,6 @@ h2 {
   filter: grayscale(60%);
   transition: all 0.2;
   margin-top: 0.5rem;
-  /*height: 250px;*/
-  /*object-fit: cover;*/
 }
 
 .content:hover > img {
@@ -331,7 +317,7 @@ figure {
   border-width: 1px;
   border-style: solid;
   border-radius: 3px;
-  border-color: #333;
+  border-color: hsla(0, 0%, 20%, 1);
 }
 
 .info {
@@ -343,9 +329,6 @@ figure {
   margin-left: auto;
   margin-right: auto;
   text-align: left;
-  /*  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;*/
 }
 
 .description-home {
@@ -395,13 +378,11 @@ figure {
 }
 
 .headline {
-  color: #333;
+  color: hsla(0, 0%, 20%, 1);
   font-size: 8vw;
   font-weight: 400;
   display: flex;
   position: relative;
-
-  /*margin-bottom: 1rem;*/
 }
 
 .currently {
@@ -410,28 +391,21 @@ figure {
   line-height: 1.2;
   font-weight: 300;
   font-size: 2.5vw;
-  /*text-align: center;*/
   text-align: left;
-  /*padding: 10px;*/
 }
 
 .socials {
   font-size: 28px;
   margin-top: 1rem;
-  /*text-align: center;*/
-  /*vertical-align: middle;*/
-  /*  position: absolute;
-  bottom: 15px;
-  left: 15px;*/
 }
 
 .socials > a {
-  color: #333333;
+  color: hsla(0, 0%, 20%, 1);
   padding: 0px 6px 2px 6px;
 }
 
 .socials > a:hover {
-  color: rgb(183, 217, 250);
+  color: hsla(210, 87%, 85%, 1);
 }
 
 @-moz-keyframes bounce {
@@ -497,7 +471,7 @@ figure {
 
 .arrow > i {
   display: block;
-  color: #333;
+  color: hsla(0, 0%, 20%, 1);
 }
 .arrow {
   position: absolute;
@@ -505,9 +479,7 @@ figure {
   right: 5%;
   margin-left: -20px;
   width: 40px;
-  height: 40px; /*change with size of arrow to make sit on bottom */
-  /*   background-image: url(); */
-  /*   background-size: contain; */
+  height: 40px;
 }
 
 .bounce {
@@ -601,23 +573,23 @@ figure {
 }
 
 figure > div.wsj {
-  background: rgba(255, 105, 99, 0.3);
+  background: hsla(2, 100%, 69%, 0.3);
   border-radius: 2px;
   height: 25px;
 }
 figure > div.side-project {
-  background: rgba(212, 234, 255, 0.6);
+  background: hsla(0, 0%, 85%, 0.6);
   border-radius: 2px;
   height: 25px;
 }
 figure > div.nbc {
-  background: rgba(207, 206, 252, 0.3);
+  background: hsla(241, 88%, 90%, 0.3);
   border-radius: 2px;
   height: 25px;
 }
 
 figure > div.bi {
-  background: rgba(200, 225, 204, 0.6);
+  background: hsla(209, 100%, 92%, 0.6);
   border-radius: 2px;
   height: 25px;
 }
@@ -640,7 +612,7 @@ footer {
 p.currently a[href] {
   padding: 0;
   position: relative;
-  color: #000;
+  color: hsla(0, 0%, 0%, 1);
   font-weight: 300;
 }
 
@@ -651,7 +623,7 @@ p.currently a[href]:after {
   left: 0;
   width: 100%;
   height: 40%;
-  background-color: #e2effc;
+  background-color: hsla(210, 81%, 94%, 1);
   z-index: -10;
   -webkit-transition: all 0.1s linear;
   -moz-transition: all 0.1s linear;
@@ -663,7 +635,7 @@ p.currently a[href]:hover {
 }
 
 p.currently a[href]:hover:after {
-  background-color: #d3dfeb;
+  background-color: hsla(210, 37%, 87%, 1);
 }
 
 .canvas {
@@ -674,7 +646,6 @@ p.currently a[href]:hover:after {
   position: absolute;
   left: 0vw;
   top: 0;
-  /*transform: rotate(180deg);*/
   opacity: 0.1;
 }
 .canvas canvas {

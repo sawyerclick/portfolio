@@ -1,12 +1,56 @@
 [
 	{
+		"title": "Ghost Kitchens",
+		"description": "Mapping out CloudKitchens and REEF locations",
+		"publishedDate": "Jan. '21",
+		"skills": "D3",
+		"site": "https://www.businessinsider.com/map-where-travis-kalanicks-cloudkitchen-and-reef-have-ghost-kitchens-2020-12",
+		"img": "images/cloudkitchens-map.png",
+		"imgAlt": "Mapping out CloudKitchens and REEF locations",
+		"affiliation": "bi",
+		"affiliationProper": "Business Insider"
+	},
+	{
+		"title": "Board Gender Diversity",
+		"description": "Gender diversity on the boards of pre-IPO companies",
+		"publishedDate": "Jan. '21",
+		"skills": "D3",
+		"site": "https://www.businessinsider.com/board-diversity-biggest-private-companies-unicorns-ipos-gender-women-2020-12",
+		"img": "images/board-genders.png",
+		"imgAlt": "A visual database of Joe Biden's cabinet picks",
+		"affiliation": "bi",
+		"affiliationProper": "Business Insider"
+	},
+	{
+		"title": "Georgia's Run-off",
+		"description": "Legislative issues to be determined by Georgia's Senate race",
+		"publishedDate": "Jan. '21",
+		"skills": "D3",
+		"site": "https://www.businessinsider.com/congress-georgia-runoffs-senate-majority-mcconnell-schumer-legislation2020-12",
+		"img": "images/georgia-legislative-roadmap.gif",
+		"imgAlt": "Legislative issues that will be determined by Georgia's Senate race",
+		"affiliation": "bi",
+		"affiliationProper": "Business Insider"
+	},
+	{
 		"title": "Joe's Cabinet",
-		"description": "A visual database of Joe Biden's cabinet picks",
+		"description": "A visual database of Joe Biden's cabinet",
+		"publishedDate": "Jan. '21",
+		"skills": "Svelte",
+		"site": "https://www.businessinsider.com/joe-biden-cabinet-white-house-staff-transition-president-elect-administration-2020-11",
+		"img": "images/cabinet.png",
+		"imgAlt": "A visual database of Joe Biden's cabinet picks",
+		"affiliation": "bi",
+		"affiliationProper": "Business Insider"
+	},
+	{
+		"title": "Q's Supporters",
+		"description": "A visual database of QAnon supporters",
 		"publishedDate": "Dec. '20",
 		"skills": "D3",
-		"site": "https://www.businessinsider.com/joe-biden-cabinet-white-house-staff-transition-president-elect-administration-2020-11",
-		"img": "images/joes-cabinet.png",
-		"imgAlt": "A visual database of Joe Biden's cabinet picks",
+		"site": "https://www.businessinsider.com/qanon-searchable-database-people-2020-12",
+		"img": "images/q-database.gif",
+		"imgAlt": "A visual database of QAnon supporters",
 		"affiliation": "bi",
 		"affiliationProper": "Business Insider"
 	},
@@ -56,7 +100,7 @@
 	},
 	{
 		"title": "Izzy's Orbit",
-		"description": "A force-directed chart on the influence of hedge-fun behemoth Millennium",
+		"description": "A force-directed chart on the influence of hedge-fund behemoth Millennium",
 		"publishedDate": "Oct. '20",
 		"skills": "D3",
 		"site": "https://www.businessinsider.com/millennium-israel-izzy-englander-network-family-tree-alumni-hedge-fund-2020-10",
