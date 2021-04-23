@@ -38,7 +38,7 @@
 	"scripts": {
 		"dev": "rollup -c -w",
 		"build": "rollup -c rollup.config-ssr.js",
-		"deploy": "npm run build",
+		"deploy": "npm run build && git add . && git commit -m 'update' && git push",
 		"start": "sirv public"
 	}
 }
