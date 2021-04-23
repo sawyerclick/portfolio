@@ -17,7 +17,7 @@ html {
 body { 
 	font-family: var(--serif);
 	color: var(--blue);
-	padding: 0 1rem;
+	padding: 0;
 }
 a {
 	border-bottom: 1px solid var(--pink);
