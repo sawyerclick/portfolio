@@ -1,0 +1,37 @@
+[
+  {
+    "headline": "The final numbers on candidate attacks on Donald Trump in tonight's debate",
+    "date": "Jan. 2020",
+    "story": "https://www.nbcnews.com/politics/2020-election/live-blog/january-democratic-debate-live-updates-six-candidates-face-des-moines-n1114686/ncrd1116001#liveBlogHeader",
+    "graphic": "https://dataviz.nbcnews.com/projects/20191120-trump-attacked-rollup/",
+    "description": "Updated the previously created graphic while watching the January Dem. presidential candidate debate."
+  },
+  {
+    "headline": "The most-talked about topics in President Donald Trump’s 2020 State of the Union address",
+    "date": "Feb. 2020",
+    "story": "https://www.nbcnews.com/politics/donald-trump/state-union-visualized-graphics-donald-trump-2020-n1130451",
+    "graphic": "https://dataviz.nbcnews.com/projects/20200129-sotu-topic-tracker/",
+    "description": "Created node.js web app to record how long President Trump spoke about different topics during 2020's State of the Union. The data was fed to a force-directed bubble chart I also coded."
+  },
+  {
+    "headline": "The fast spread of Amazon Ring and law enforcement partnerships",
+    "date": "Feb. 2020",
+    "story": "https://www.nbcnews.com/news/all/cute-videos-little-evidence-police-say-amazon-ring-isn-t-n1136026",
+    "graphic": "https://dataviz.nbcnews.com/projects/20200128-ring-neighbors/",
+    "description": "Used Leaflet to create an animated cluster map showing law enforcement agencies that have teamed up with Amazon Ring since its inception."
+  },
+  {
+    "headline": "Inconsistencies in Des Moines’ 62nd precinct caucus results",
+    "date": "Feb. 2020",
+    "story": "https://www.nbcnews.com/politics/2020-election/nbc-news-review-iowa-caucus-vote-finds-potential-errors-inconsistencies-n1132011",
+    "graphic": "https://dataviz.nbcnews.com/projects/20200206-iowa-delagates/",
+    "description": "Created an interactive data table using JS under deadline pressure. Git init to deploy in 15 minutes."
+  },
+  {
+    "headline": "What the president talked about at the State of the Union, in visualizations",
+    "date": "Feb. 2020",
+    "story": "https://www.nbcnews.com/politics/donald-trump/state-union-visualized-graphics-donald-trump-2020-n1130451",
+    "graphic": "https://dataviz.nbcnews.com/projects/20200128-ring-neighbors/",
+    "description": "Helped create a back-end Node.js app to track topic speaking time. Coded the visualization bones."
+  }
+]

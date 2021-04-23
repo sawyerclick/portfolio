@@ -1,0 +1,43 @@
+:root {
+	--sans: 'Inconsolata',monospace;
+	--serif: 'Recoleta-Regular',Georgia,Times,serif;
+	--blue: #34657F;
+	--pink: #CC6C8F;
+	--peach: #F6BD9D;
+	--gray: #f8f8f8;
+}
+
+html {
+  cursor: url('../images/site/chunkie_cursor.png'), auto;
+	scroll-behavior: smooth;
+	background-color: var(--gray);
+	font-size: 16px;
+	overflow-x: hidden;
+}
+body { 
+	font-family: var(--serif);
+	color: var(--blue);
+	padding: 0 1rem;
+}
+a {
+	border-bottom: 1px solid var(--pink);
+	color: unset;
+	transition: all .2s linear;
+}
+
+a:hover {
+	box-shadow: 0px 2px 0px 0 var(--pink);
+}
+
+.serif {
+	font-family: var(--serif);
+}
+.sans {
+	font-family: var(--sans);
+}
+.light {
+	font-weight: 300;
+}
+.bold {
+	font-weight: 800;
+}

@@ -1,0 +1,36 @@
+{
+	"meta": {
+		"paywall": false,
+		"masthead": false,
+		"url": "",
+		"googleAnalytics": "",
+		"socialImage": "",
+		"KeyWords": ""
+	},
+	"header": {
+		"hed": "This is a hed",
+		"subhed": "Meta info can be edited in src/meta.json",
+		"legend": false
+	},
+	"footer": {
+		"visible": true,
+		"byline": "Firstname Lastname",
+		"notes": false,
+		"source": false
+	},
+	"google": {
+		"sheet": [
+			{
+				"id": "",
+				"gid": "",
+				"filepath": "src/data/data.csv"
+			}
+		],
+		"doc": [
+			{
+				"id": "",
+				"filepath": "src/data/copy.json"
+			}
+		]
+	}
+}
