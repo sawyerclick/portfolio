@@ -36,9 +36,13 @@
 		"svelte-preprocess": "^4.7.0"
 	},
 	"scripts": {
-		"dev": "rollup -c -w",
-		"build": "rollup -c rollup.config-ssr.js",
-		"deploy": "npm run build && git add . && git commit -m 'update' && git push",
-		"start": "sirv public"
+		"build": "rollup -c",
+    "dev:rollup": "rollup -c -w",
+    "dev:livereload": "rollup -c -w --environment LIVERELOAD",
+    "gdoc": "node scripts/fetch-google.js",
+    "dev": "npm run dev:rollup",
+    "predeploy": "npm run build",
+    "start": "sirv public",
+		"deploy": "rollup -c rollup.config-ssr.js && git add . && git commit -m 'update' && git push"
 	}
 }
