@@ -8,7 +8,7 @@
 		<div class="img-wrapper" bind:clientWidth={imgHeight}>
 			<img
 				alt="A screenshot of {project.title}"
-				src="assets/images/portfolio/assets/images/portfolio/{project.img}"
+				src="assets/images/portfolio/{project.img}"
 				style="height:{imgHeight}px;"
 			/>
 		</div>
