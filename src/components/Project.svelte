@@ -13,11 +13,13 @@
 			/>
 		</div>
 		<h3 class="serif hed">{project.title}</h3>
-
 		<div class="strip {project.affiliation}">
-			<span>{project.affiliationProper}</span>
-			<span>//</span>
-			<span>{project.publishedDate.replace(' ', '')}</span>
+			<span
+				>{project.affiliationProper} // {project.publishedDate.replace(
+					' ',
+					''
+				)}</span
+			>
 		</div>
 		<p class="sans desc">{project.description}</p>
 	</div>
@@ -52,10 +54,15 @@
 			width: 100%;
 			display: flex;
 			justify-content: space-between;
-			padding: 0;
+			align-items: center;
+			padding: 2px 0;
 			margin: 0;
 			line-height: 1;
 			width: 100%;
+			color: var(--blue);
+			// background-color: rgba(52, 101, 127, 0.7);
+			border-top: 1px solid var(--blue);
+			border-bottom: 1px solid var(--blue);
 		}
 		.hed-wrapper {
 			display: flex;
@@ -77,9 +84,8 @@
 		.hed {
 			font-size: 1.5rem;
 			width: 100%;
-			margin: 0.5rem 0;
+			margin: 0.5rem 0 0;
 			transition: all 0.2s;
-			border-bottom: 0.15rem solid var(--blue);
 		}
 		.desc {
 			font-size: 1rem;
