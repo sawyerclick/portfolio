@@ -15,14 +15,9 @@
 		<h3 class="serif hed">{project.title}</h3>
 
 		<div class="strip {project.affiliation}">
-			<div class="outlet">
-				<span
-					>{project.affiliationProper} // {project.publishedDate.replace(
-						' ',
-						''
-					)} // {project.skills}</span
-				>
-			</div>
+			<span>{project.affiliationProper}</span>
+			<span>//</span>
+			<span>{project.publishedDate.replace(' ', '')}</span>
 		</div>
 		<p class="sans desc">{project.description}</p>
 	</div>
@@ -56,19 +51,11 @@
 			font-size: 12px;
 			width: 100%;
 			display: flex;
-			justify-content: flex-start;
+			justify-content: space-between;
 			padding: 0;
 			margin: 0;
 			line-height: 1;
 			width: 100%;
-			div {
-				&.outlet {
-					margin-right: 0.25rem;
-				}
-				&.date {
-					margin-left: 0.25rem;
-				}
-			}
 		}
 		.hed-wrapper {
 			display: flex;
@@ -81,7 +68,7 @@
 			overflow: hidden;
 			width: 100%;
 			z-index: -1;
-			filter: grayscale(0.6);
+			filter: grayscale(0.7);
 			transition: all 0.3s;
 			img {
 				object-fit: contain;
@@ -97,7 +84,8 @@
 		.desc {
 			font-size: 1rem;
 			line-height: 1.2;
-			margin: 0;
+			margin: 0.25rem 0 0;
+			width: 100%;
 		}
 	}
 </style>
