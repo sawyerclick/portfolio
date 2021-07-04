@@ -15,7 +15,7 @@
 
 <Meta />
 
-<nav class:invisible={y < landingHeight}>
+<nav class:visible={y > landingHeight}>
 	<a href="#">
 		<h1>Sawyer Click</h1>
 	</a>
@@ -47,11 +47,9 @@
 	}
 	nav {
 		position: fixed;
-		top: 0;
+		top: -60px;
 		left: 0;
 		right: 0;
-		height: 60px;
-		opacity: 1;
 		background-color: var(--gray);
 		border-bottom: 1px solid var(--blue);
 		z-index: 1;
@@ -59,11 +57,14 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		transition: all 0.3s ease-in;
-		&.invisible {
-			height: 0;
-			opacity: 0;
-			pointer-events: none;
+		height: 60px;
+		opacity: 0;
+		pointer-events: none;
+		transition: all 0.2s;
+		&.visible {
+			top: 0px;
+			opacity: 1;
+			pointer-events: all;
 		}
 		a {
 			text-decoration: none;

@@ -22,7 +22,10 @@ export default {
   },
   plugins: [
     svelte({
-      compilerOptions: { generate: 'ssr' },
+      compilerOptions: {
+        generate: 'ssr',
+        hydratable: true
+      },
       emitCss: false,
       preprocess: autoPreprocess(),
       onwarn: function (warning, warn) {

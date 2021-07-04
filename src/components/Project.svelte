@@ -1,4 +1,5 @@
 <script>
+	import IntersectionObserver from './helpers/IntersectionObserver.svelte';
 	export let project;
 	let imgHeight = 0;
 </script>
@@ -6,11 +7,16 @@
 <a class="project" href={project.site} target="_blank" title={project.title}>
 	<div class="hed-wrapper">
 		<div class="img-wrapper" bind:clientWidth={imgHeight}>
-			<img
-				alt="A screenshot of {project.title}"
-				src="assets/images/portfolio/{project.img}"
-				style="height:{imgHeight}px;"
-			/>
+			<IntersectionObserver once={true} let:intersecting>
+				{#if intersecting}
+					<img
+						alt="A screenshot of {project.title}"
+						src="assets/images/portfolio/{project.img}"
+						style="height:{imgHeight}px;"
+						loading="lazy"
+					/>
+				{/if}
+			</IntersectionObserver>
 		</div>
 		<h3 class="serif hed">{project.title}</h3>
 		<div class="strip {project.affiliation}">

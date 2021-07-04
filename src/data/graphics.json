@@ -1,5 +1,60 @@
 [
 	{
+		"title": "LGBTQ+ Representation",
+		"description": "Queer representation in kids cartoons",
+		"publishedDate": "June '21",
+		"skills": "Svelte",
+		"site": "https://www.insider.com/lgbtq-cartoon-characters-kids-database-2021-06?page=explore-database",
+		"img": "lgbtq-database.png",
+		"imgAlt": "Screencap of a portion of the grid of cartoon shows with LGBTQ+ characters",
+		"affiliation": "bi",
+		"affiliationProper": "Business Insider"
+	},
+	{
+		"title": "SoftBank's Web",
+		"description": "Connecting the dots on SoftBanks interconnected tech empire",
+		"publishedDate": "March '21",
+		"skills": "JavaScript, D3",
+		"site": "https://www.businessinsider.com/how-softbank-companies-work-together-what-could-go-wrong-2021-3",
+		"img": "softbank-web.gif",
+		"imgAlt": "Screencap of a scrollytelly connecting the dots on SoftBank's interconnected tech empire",
+		"affiliation": "bi",
+		"affiliationProper": "Business Insider"
+	},
+	{
+		"title": "Governor vaccinations",
+		"description": "Tracking when governors got vaccinated and how it impact COVID-19 rates",
+		"publishedDate": "March '21",
+		"skills": "Svelte",
+		"site": "https://www.businessinsider.com/governors-vaccinated-vaccine-hesitancy-free-beer-2021-5",
+		"img": "vax-carto.png",
+		"imgAlt": "Screencap of a small-multiple cartogram of the US with every state featuring a needle, indicating all governors are vaccinated",
+		"affiliation": "bi",
+		"affiliationProper": "Business Insider"
+	},
+	{
+		"title": "CEO Advice",
+		"description": "CEOs on how the pandemic changed business",
+		"publishedDate": "March '21",
+		"skills": "Svelte",
+		"site": "https://www.businessinsider.com/whats-next-ceos-tell-insider-how-they-are-approaching-the-return-to-the-office-2021-04",
+		"img": "whats-next.png",
+		"imgAlt": "Screencap of the landing page for Whats Next featuring a the title and a carousel of CEO portraits",
+		"affiliation": "bi",
+		"affiliationProper": "Business Insider"
+	},
+	{
+		"title": "An Ode to Title Fight",
+		"description": "How Title Fight's sound evolved",
+		"publishedDate": "Jan. '21",
+		"skills": "JavaScript, D3",
+		"site": "https://like-a-ritual.netlify.app/",
+		"img": "like-a-ritual.gif",
+		"imgAlt": "Screencap of the site which features a by-screen walkthrough featuring graphics and album art",
+		"affiliation": "side-project",
+		"affiliationProper": "For Fun!"
+	},
+	{
 		"title": "Ghost Kitchens",
 		"description": "Mapping out CloudKitchens and REEF locations",
 		"publishedDate": "Jan. '21",

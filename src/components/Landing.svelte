@@ -1,12 +1,14 @@
 <script>
 	import Icon from './helpers/Icon.svelte';
 	import Chart from './chart/Chart.svelte';
+	import ForceWrapper from './chart/ForceWrapper.svelte';
 	import Icons from './Icons.svelte';
 </script>
 
 <div id="landing">
 	<div class="chart">
-		<Chart />
+		<!-- <Chart /> -->
+		<ForceWrapper />
 	</div>
 
 	<div class="header">
@@ -33,7 +35,7 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		height: 100vh;
+		height: calc(var(--vh), 1vh * 100);
 		width: 100vw;
 		z-index: -1;
 		overflow-y: hidden;
