@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"$lib/*": ["src/lib/*"],
+			"$Icon": ["src/lib/helpers/Icon.svelte"],
+			"$data/*": ["src/data/*"],
+			"$actions/*": ["src/actions/*"],
+			"$stores": ["src/stores.js"]
+		}
+	},
+	"include": ["src/**/*.js", "src/**/*.svelte"],
+	"exclude": ["scripts/*.js"]
+}

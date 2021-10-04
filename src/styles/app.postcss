@@ -1,0 +1,75 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--sans: monospace;
+	--serif: 'Recoleta-Regular', Georgia, Times, serif;
+	--blue: #34657f;
+	--pink: #cc6c8f;
+	--peach: #f6bd9d;
+	--gray: #f8f8f8;
+}
+
+* {
+	@apply text-blue;
+}
+
+a:hover {
+	@apply text-pink;
+}
+
+h1 {
+	@apply font-serif md:text-9xl text-7xl  text-blue;
+}
+h2 {
+	@apply font-mono;
+}
+
+.all-0 {
+	@apply top-0 right-0 bottom-0 left-0;
+}
+.text-shadow {
+	text-shadow: -1px -1px var(--gray), 1px 1px var(--gray), 1px -1px var(--gray),
+		-1px 1px var(--gray);
+}
+
+html {
+	cursor: url('images/site/chunkie_cursor.png'), auto;
+	scroll-behavior: smooth;
+	font-size: 1rem;
+	overflow-x: hidden;
+	background-color: var(--gray);
+}
+
+::-moz-selection {
+	@apply bg-blue;
+}
+::selection {
+	@apply bg-blue;
+}
+
+button:disabled {
+	cursor: not-allowed;
+	opacity: 0.4;
+}
+
+a.skip-to-main {
+	display: block;
+	border: none;
+	width: 1px;
+	height: 1px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	position: absolute;
+}
+a.skip-to-main:focus {
+	background-color: black;
+	color: white;
+	width: auto;
+	height: auto;
+	padding: 0.5em;
+	z-index: 999;
+}
