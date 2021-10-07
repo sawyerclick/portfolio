@@ -1,4 +1,4 @@
-import projects from '$data/projects.js';
+import projects from '$data/projects';
 
 export const get = async ({ params }) => {
 	const { projectType } = params;

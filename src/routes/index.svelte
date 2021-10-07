@@ -1,6 +1,6 @@
 <script context="module">
 	export async function load({ fetch }) {
-		const url = '/api/graphics.json';
+		const url = '/api/work/graphics.json';
 		const res = await fetch(url);
 		if (res.ok) {
 			const projects = await res.json();
