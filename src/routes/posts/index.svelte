@@ -1,10 +1,12 @@
 <script context="module">
-	export async function load({ fetch }) {
+	export async function load({ page, fetch }) {
 		const res = await fetch('/api/posts.json');
 		const { posts } = await res.json();
+		const slug = page.path;
 		return {
 			props: {
-				posts
+				posts,
+				slug
 			}
 		};
 	}
@@ -12,9 +14,19 @@
 
 <script>
 	import { timeFormat, timeParse } from 'd3-time-format';
+	import Meta from '$lib/Meta.svelte';
 	const parse = (time) => timeFormat('%Y-%m-%d')(timeParse('%Y-%m-%dT%H:%M:%S.%LZ')(time));
-	export let posts = [];
+	export let posts = [],
+		slug;
 </script>
+
+<Meta
+	meta={{
+		title: 'Posts',
+		description: "Thoughts, musings and otherwise dumb ideas I've had.",
+		slug
+	}}
+/>
 
 <main class="max-w-md mx-auto px-6">
 	<div class="sm:fixed sm:mt-0 left-2 top-2 static block text-center mt-12">

@@ -1,5 +1,5 @@
 <script context="module">
-	export async function load({ fetch }) {
+	export async function load({ page, fetch }) {
 		const urls = ['/api/meta.json', '/api/clips/graphics.json'];
 		const [meta, graphics] = await Promise.all(
 			urls.map(async (url) => {
@@ -8,8 +8,9 @@
 				else throw new Error(apiRes);
 			})
 		);
+		const slug = page.path;
 		return {
-			props: { meta, graphics }
+			props: { meta, graphics, slug }
 		};
 	}
 </script>
@@ -23,9 +24,10 @@
 
 	export let meta;
 	export let graphics;
+	export let slug;
 </script>
 
-<Meta {meta} />
+<Meta meta={{ ...meta, slug }} />
 
 <main class="z-10">
 	<div id="landing" class="h-screen min-h-screen flex justify-start items-end overflow-x-hidden">

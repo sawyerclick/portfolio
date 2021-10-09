@@ -1,24 +1,35 @@
+<script context="module">
+	export async function load({ page }) {
+		const slug = page.path;
+		return {
+			props: {
+				slug
+			}
+		};
+	}
+</script>
+
 <script>
 	import '$styles/app.postcss';
 	import '$styles/font.css';
 	import '$styles/blog.postcss';
 	import { timeFormat, timeParse } from 'd3-time-format';
 	import Breadcrumbs from '$lib/Breadcrumbs.svelte';
+	import Meta from '$lib/Meta.svelte';
 	import Nav from '$lib/Nav.svelte';
 	import Icon from '$lib/helpers/Icon.svelte';
 	export let title;
 	export let created;
 	export let updated;
-	export let summary;
+	export let description;
 	export let coverImagesUrl;
 	export let relatedProjects;
+	export let slug;
 
 	const parse = (time) => timeFormat('%B %e, %Y')(timeParse('%Y-%m-%dT%H:%M:%S.%LZ')(time));
 </script>
 
-<svelte:head>
-	<title>{title} - Blog - Sawyer Click</title>
-</svelte:head>
+<Meta meta={{ title, description, slug }} />
 
 <Nav />
 
