@@ -1,3 +1,7 @@
 [build]
   command = "npm run build"
   publish = "build/"
+  functions = "functions/"
+
+[functions]
+  external_node_modules = []
