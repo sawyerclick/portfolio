@@ -17,7 +17,7 @@ const config = {
 		})
 	],
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({ pages: 'docs', assets: 'docs' }),
 		target: '#svelte',
 		vite: {
 			resolve: {
@@ -28,7 +28,7 @@ const config = {
 					$actions: path.resolve('./src/actions'),
 					$utils: path.resolve('./src/utils'),
 					$stores: path.resolve('./src/stores.js'),
-					$styles: path.resolve('./src/styles'),
+					$styles: path.resolve('./src/styles')
 				}
 			},
 			plugins: [dsv(), svg()]
