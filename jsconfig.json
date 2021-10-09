@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"$posts/*": ["src/posts/*"],
+			"$lib/*": ["src/lib/*"],
+			"$data/*": ["src/data/*"],
+			"$actions/*": ["src/actions/*"],
+			"$utils/*": ["src/utils/*"],
+			"$stores": ["src/stores.js"],
+			"$styles": ["src/styles/*"]
+		}
+	},
+	"include": ["src/**/*.js", "src/**/*.svelte", "src/lib/markdown.cjs"],
+	"exclude": ["scripts/*.js"]
+}
