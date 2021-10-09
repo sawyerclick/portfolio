@@ -2,7 +2,7 @@
 import path from 'path';
 import svg from 'vite-plugin-svgstring';
 import dsv from '@rollup/plugin-dsv';
-import adapter from '@sveltejs/adapter-netlify';
+import adapter from '@sveltejs/adapter-static';
 import sveltePreprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex';
 
