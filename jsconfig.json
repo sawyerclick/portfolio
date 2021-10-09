@@ -4,7 +4,6 @@
 		"paths": {
 			"$posts/*": ["src/posts/*"],
 			"$lib/*": ["src/lib/*"],
-			"$Icon": ["src/lib/helpers/Icon.svelte"],
 			"$data/*": ["src/data/*"],
 			"$actions/*": ["src/actions/*"],
 			"$utils/*": ["src/utils/*"],

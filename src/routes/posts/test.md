@@ -5,10 +5,6 @@ summary: Is it love? It just might be...
 relatedProjectSlugs: [portfolio-site]
 ---
 
-<script context="module">
-  export const prerender = true;
-</script>
-
 <!-- <script context="module">
   import { load } from "./_load"
   export { load }
@@ -19,7 +15,7 @@ relatedProjectSlugs: [portfolio-site]
 </script> -->
 
 A few weeks ago, I replaced the markdown-based blog setup that was [previously
-written about](/blog/portfolio-site-2021). It was due for a make-over with the
+written about](/posts/cancer). It was due for a make-over with the
 upgrade from Sapper to Svelte Kit. Some of the dependencies was used to make
 that setup work, like [the code highlighter](https://prismjs.com/), is poorly
 modularized. It exists in the global scope, making it a bad fit for Svelte Kit

@@ -8,7 +8,7 @@
 	export let dots = [];
 	// an array of [name, force] pairs
 	export let forces = [];
-	export let height, r, projects;
+	export let height, r, graphics;
 
 	let width;
 	let usedForceNames = [];
@@ -44,7 +44,7 @@
 <figure class="c" bind:clientWidth={width}>
 	<svg {width} {height}>
 		<defs>
-			{#each projects as point, i}
+			{#each graphics as point, i}
 				<pattern id="img-{i}" height="100%" width="100%" patternContentUnits="objectBoundingBox">
 					<image
 						preserveAspectRatio="xMidYMid slice"

@@ -1,31 +1,38 @@
 <script context="module">
 	export async function load({ fetch }) {
-		const url = '/api/work/graphics.json';
-		const res = await fetch(url);
-		if (res.ok) {
-			const projects = await res.json();
-			return {
-				props: { projects }
-			};
-		}
+		const urls = ['/api/meta.json', '/api/clips/graphics.json'];
+		const [meta, graphics] = await Promise.all(
+			urls.map(async (url) => {
+				const apiRes = await fetch(url);
+				if (apiRes.ok) return apiRes.json();
+				else throw new Error(apiRes);
+			})
+		);
+		return {
+			props: { meta, graphics }
+		};
 	}
 </script>
 
 <script>
-	import Icon from '$Icon';
+	import Icon from '$lib/helpers/Icon.svelte';
 	import Icons from '$lib/Icons.svelte';
 	import Project from '$lib/Project.svelte';
+	import Meta from '$lib/Meta.svelte';
 	import ForceWrapper from '$lib/chart/ForceWrapper.svelte';
 
-	export let projects;
+	export let meta;
+	export let graphics;
 </script>
+
+<Meta {meta} />
 
 <main class="z-10">
 	<div id="landing" class="h-screen min-h-screen flex justify-start items-end overflow-x-hidden">
 		<div
 			class="chart absolute all-0 h-screen min-h-screen w-full overflow-y-hidden pointer-events-none -z-1"
 		>
-			<ForceWrapper {projects} />
+			<ForceWrapper {graphics} />
 		</div>
 
 		<div class="sm:ml-8 header mt-8 mr-2 mb-16 ml-4">
@@ -54,7 +61,7 @@
 		id="graphics"
 		class="w-full grid px-2 mt-16 gap-4 place-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
 	>
-		{#each projects as project}
+		{#each graphics as project}
 			<Project {project} />
 		{/each}
 	</div>

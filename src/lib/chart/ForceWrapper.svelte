@@ -2,7 +2,7 @@
 	import { forceX, forceY, forceCollide, forceCenter, forceManyBody } from 'd3-force';
 	import Force from './Force.svelte';
 
-	export let projects = [];
+	export let graphics = [];
 
 	// create data and handle update
 	$: data = [];
@@ -12,18 +12,18 @@
 		data = [
 			...data,
 			{
-				img: projects[counter].img
+				img: graphics[counter].img
 			}
 		];
 		counter++;
-		if (counter >= projects.length) clearInterval(interval);
+		if (counter >= graphics.length) clearInterval(interval);
 	}, 1000);
 
 	let vh;
 	let el;
 	let width;
 
-	$: numberOfDots = projects.length;
+	$: numberOfDots = graphics.length;
 	$: height = vh;
 	$: centerPosition = [width / 2, height / 2];
 	let useForceCollide = true; // true = collision detection
@@ -50,5 +50,5 @@
 <svelte:window bind:innerHeight={vh} />
 
 <div bind:this={el} bind:clientWidth={width}>
-	<Force {forces} {dots} {height} {r} {colors} {projects} />
+	<Force {forces} {dots} {height} {r} {colors} {graphics} />
 </div>

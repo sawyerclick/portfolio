@@ -5,7 +5,7 @@
 	import { timeFormat, timeParse } from 'd3-time-format';
 	import Breadcrumbs from '$lib/Breadcrumbs.svelte';
 	import Nav from '$lib/Nav.svelte';
-	import Icon from '$Icon';
+	import Icon from '$lib/helpers/Icon.svelte';
 	export let title;
 	export let created;
 	export let updated;
@@ -22,7 +22,7 @@
 
 <Nav />
 
-<main class="blog p-8 mt-4 max-w-2xl m-auto">
+<main id="blog" class="blog p-8 mt-4 max-w-2xl m-auto">
 	<article>
 		<section class="mb-8">
 			<Breadcrumbs />
@@ -33,14 +33,10 @@
 				<time datetime={created}>
 					{parse(created)}
 				</time>
-				<!-- <span class="float-right leading-snug hover:text-peach">
-					<Icon name="share" width=".875rem" height=".875rem" stroke="var(--blue)" />
-				</span> -->
 			</div>
 		</section>
 		<section>
 			<slot />
 		</section>
 	</article>
-	<hr />
 </main>

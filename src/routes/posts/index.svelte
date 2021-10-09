@@ -1,39 +1,47 @@
 <script context="module">
-	const mdFiles = import.meta.glob('./*.md');
-	let body = [];
-
-	for (const path in mdFiles) body.push(mdFiles[path]().then(({ metadata }) => metadata));
-
-	export async function load() {
-		const posts = await Promise.all(body);
+	export async function load({ fetch }) {
+		const res = await fetch('/api/posts.json');
+		const { posts } = await res.json();
 		return {
 			props: {
 				posts
 			}
 		};
 	}
-
-	// 	export async function load({ fetch }) {
-	// 	const url = '/api/work/graphics.json';
-	// 	const res = await fetch(url);
-	// 	if (res.ok) {
-	// 		const projects = await res.json();
-	// 		return {
-	// 			props: { projects }
-	// 		};
-	// 	}
-	// }
 </script>
 
 <script>
+	import { timeFormat, timeParse } from 'd3-time-format';
+	const parse = (time) => timeFormat('%Y-%m-%d')(timeParse('%Y-%m-%dT%H:%M:%S.%LZ')(time));
 	export let posts = [];
-	console.log(posts);
 </script>
 
-<h1 class="font-serif text-3xl">✍️ Sawyer's posts ✍️</h1>
+<main class="max-w-md mx-auto px-6">
+	<div class="sm:fixed sm:mt-0 left-2 top-2 static block text-center mt-12">
+		<a href="/" sveltekit:prefetch class="mx-auto font-mono text-lg"><b>🏠 home</b></a>
+	</div>
+	<h1 class="font-serif text-4xl text-center mt-2 sm:mt-16">✍️ Sawyer's musings ✍️</h1>
 
-<ul class="font-mono">
-	{#each posts as post}
-		<p>{JSON.stringify(post)}</p>
-	{/each}
-</ul>
+	<ul class="font-mono mt-4 w-full">
+		{#each posts as { slug, created }}
+			<li class="text-lg w-full">
+				<a href="/posts/{slug}" class="w-full flex justify-between">
+					<span>> <b>{slug}</b></span>
+					<span>{parse(created)}</span>
+				</a>
+			</li>
+		{/each}
+	</ul>
+</main>
+
+<style lang="postcss">
+	a {
+		@apply border-b-1 border-transparent;
+	}
+	a:hover {
+		@apply no-underline border-pink;
+	}
+	a:hover * {
+		color: var(--pink);
+	}
+</style>

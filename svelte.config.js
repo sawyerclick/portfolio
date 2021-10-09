@@ -24,12 +24,11 @@ const config = {
 				alias: {
 					$posts: path.resolve('./src/posts'),
 					$lib: path.resolve('./src/lib'),
-					$Icon: path.resolve('./src/lib/helpers/Icon.svelte'),
 					$data: path.resolve('./src/data'),
 					$actions: path.resolve('./src/actions'),
 					$utils: path.resolve('./src/utils'),
 					$stores: path.resolve('./src/stores.js'),
-					$styles: path.resolve('./src/styles')
+					$styles: path.resolve('./src/styles'),
 				}
 			},
 			plugins: [dsv(), svg()]
