@@ -17,7 +17,7 @@ const config = {
 		})
 	],
 	kit: {
-		adapter: adapter({ pages: 'docs', assets: 'docs' }),
+		adapter: adapter({ pages: 'docs' }),
 		target: '#svelte',
 		vite: {
 			resolve: {
