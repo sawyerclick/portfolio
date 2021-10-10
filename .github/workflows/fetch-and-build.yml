@@ -1,6 +1,9 @@
 name: Fetch & build
 
 on:
+  push:
+    branches:
+      - master
   workflow_dispatch:
 
 jobs:
@@ -20,7 +23,7 @@ jobs:
       - run: npm run google
       - name: Build static site
       - run: npm run build
-      - name: Commit & push
+      - name: Commit files
         run: |
           git config user.name "Automated"
           git config user.email "actions@users.noreply.github.com"
