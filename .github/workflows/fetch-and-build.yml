@@ -18,7 +18,6 @@ jobs:
       - run: |
           npm install
           npm run google
-          npm run build
       - name: Commit files
         run: |
           git config user.name "Automated"
@@ -27,3 +26,5 @@ jobs:
           timestamp=$(date -u)
           git commit -m "Latest build: ${timestamp}" || exit 0
           git push
+      - name: Trigger Netlify build
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/6169084111a3855de5c05ccb
