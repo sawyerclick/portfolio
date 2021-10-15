@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    name: 'Fetch & build'
+    name: Fetch & build
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
