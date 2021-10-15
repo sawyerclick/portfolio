@@ -1,6 +1,5 @@
 /** @type {import('@sveltejs/kit').Config} */
 import path from 'path';
-import svg from 'vite-plugin-svgstring';
 import dsv from '@rollup/plugin-dsv';
 import adapter from '@sveltejs/adapter-static';
 import sveltePreprocess from 'svelte-preprocess';
@@ -17,7 +16,7 @@ const config = {
 		})
 	],
 	kit: {
-		adapter: adapter({ pages: 'docs' }),
+		adapter: adapter(),
 		target: '#svelte',
 		vite: {
 			resolve: {
@@ -31,7 +30,7 @@ const config = {
 					$styles: path.resolve('./src/styles')
 				}
 			},
-			plugins: [dsv(), svg()]
+			plugins: [dsv()]
 		}
 	}
 };

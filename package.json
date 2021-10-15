@@ -44,7 +44,6 @@
 		"svelte-preprocess": "^4.9.5",
 		"tailwindcss": "^2.2.16",
 		"unist-util-visit": "^4.1.0",
-		"url": "^0.11.0",
-		"vite-plugin-svgstring": "^1.0.0"
+		"url": "^0.11.0"
 	}
 }
