@@ -18,11 +18,14 @@ jobs:
           node-version: '16'
           cache: 'npm'
       - name: Install deps
-      - run: npm install
+      - run: |
+          npm install
       - name: Fetch Google sheet data
-      - run: npm run google
+      - run: |
+          npm run google
       - name: Build static site
-      - run: npm run build
+      - run: |
+          npm run build
       - name: Commit files
         run: |
           git config user.name "Automated"
