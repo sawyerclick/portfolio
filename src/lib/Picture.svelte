@@ -2,10 +2,10 @@
 	export let alt = 'hello world';
 	export let name = 'cloudkitchens-map';
 
-	const imgSizes = [200, 400, 600, 800];
+	const imgSizes = [200, 400];
 	const formats = ['png', 'webp'];
 
-	const sizes = '(min-width: 1280px) 800px';
+	const sizes = '(min-width: 1280px) 400px';
 
 	const sources = formats.map((format) => ({
 		format,
