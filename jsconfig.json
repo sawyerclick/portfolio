@@ -8,7 +8,8 @@
 			"$actions/*": ["src/actions/*"],
 			"$utils/*": ["src/utils/*"],
 			"$stores": ["src/stores.js"],
-			"$styles": ["src/styles/*"]
+			"$styles": ["src/styles/*"],
+			"$assets": ["src/assets/*"]
 		}
 	},
 	"include": ["src/**/*.js", "src/**/*.svelte", "src/lib/markdown.cjs"],

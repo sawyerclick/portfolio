@@ -1,5 +1,19 @@
+import { writable } from 'svelte/store';
 import { readable } from 'svelte/store';
-import {onMount} from 'svelte'
+import debounce from 'lodash.debounce';
+
+export const viewport = readable({ width: 0, height: 0 }, (set) => {
+	const onResize = () => set({ width: window.innerWidth, height: window.innerHeight });
+
+	if (typeof window !== 'undefined') {
+		onResize();
+		window.addEventListener('resize', debounce(onResize, 250));
+	}
+
+	return () => {
+		if (typeof window !== 'undefined') window.removeEventListener('resize', onResize);
+	};
+});
 
 export const scrollY = readable(0, (set) => {
 	let ticking = false;
@@ -25,28 +39,19 @@ export const scrollY = readable(0, (set) => {
 	};
 });
 
-export const innerHeight = readable(0, (set) => {
-	let ticking = false;
-	let lastInnerHeight = 0;
+// prefers reduced motion
+export const prefersReducedMotion = readable(false, (set) => {
+	const query = '(prefers-reduced-motion: no-preference)';
+	const mediaQueryList = typeof window !== 'undefined' ? window.matchMedia(query) : {};
 
-	const updateInnerHeight = () => {
-		set(lastInnerHeight);
-		ticking = false;
-	};
+	const onChange = () => set(!mediaQueryList.matches);
 
-	const onResize = () => {
-		lastInnerHeight = window.innerHeight;
-		if (!ticking) {
-			requestAnimationFrame(updateInnerHeight);
-			ticking = true;
-		}
-  };
-  
-  onMount(onResize)
-
-	if (typeof document !== 'undefined') document.addEventListener('resize', onResize);
+	if (typeof window !== 'undefined') {
+		mediaQueryList.addListener(onChange);
+		onChange();
+	}
 
 	return () => {
-		if (typeof document !== 'undefined') document.removeEventListener('resize', onResize);
+		if (typeof window !== 'undefined') mediaQueryList.removeListener(onChange);
 	};
 });

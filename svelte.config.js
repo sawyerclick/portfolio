@@ -1,9 +1,10 @@
 /** @type {import('@sveltejs/kit').Config} */
+import { mdsvex } from 'mdsvex';
+import { imagetools } from 'vite-imagetools';
 import path from 'path';
 import dsv from '@rollup/plugin-dsv';
 import adapter from '@sveltejs/adapter-static';
 import sveltePreprocess from 'svelte-preprocess';
-import { mdsvex } from 'mdsvex';
 
 import mdsvexConfig from './mdsvex.config.js';
 
@@ -21,16 +22,17 @@ const config = {
 		vite: {
 			resolve: {
 				alias: {
-					$posts: path.resolve('./src/posts'),
-					$lib: path.resolve('./src/lib'),
-					$data: path.resolve('./src/data'),
 					$actions: path.resolve('./src/actions'),
+					$assets: path.resolve('./src/assets'),
+					$data: path.resolve('./src/data'),
+					$lib: path.resolve('./src/lib'),
+					$posts: path.resolve('./src/posts'),
 					$utils: path.resolve('./src/utils'),
 					$stores: path.resolve('./src/stores.js'),
 					$styles: path.resolve('./src/styles')
 				}
 			},
-			plugins: [dsv()]
+			plugins: [dsv(), imagetools({ force: true })]
 		}
 	}
 };

@@ -1,10 +1,10 @@
 <script>
 	import { fly } from 'svelte/transition';
 	import Icons from '$lib/Icons.svelte';
-	import { scrollY, innerHeight } from '$stores';
+	import { scrollY, viewport } from '$stores';
 </script>
 
-{#if $scrollY > $innerHeight / 2}
+{#if $scrollY > $viewport.height / 1.15}
 	<nav
 		in:fly={{ duration: 400, y: -100 }}
 		out:fly={{ duration: 600, y: -100 }}

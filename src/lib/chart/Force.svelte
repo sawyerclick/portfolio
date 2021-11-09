@@ -4,35 +4,27 @@
 	// utility function for translating elements
 	const move = (mx, my) => `transform: translate(${mx}px, ${my}px`;
 
-	// an array of our particles
-	export let dots = [];
 	// an array of [name, force] pairs
+	export let width, height;
 	export let forces = [];
-	export let height, r, graphics;
+	export let graphics = [];
+	export let dots = [];
 
-	let width;
 	let usedForceNames = [];
 	let renderedDots = [];
 
 	$: simulation = forceSimulation()
 		.nodes(dots)
-		.on('tick', () => {
-			// update the renderedDots reference to trigger an update
-			renderedDots = [...dots];
-		});
+		.on('tick', () => (renderedDots = [...dots]));
 
 	$: {
 		// re-initialize forces when they change
-		forces.forEach(([name, force]) => {
-			simulation.force(name, force);
-		});
+		forces.forEach(([name, force]) => simulation.force(name, force));
 
 		// remove old forces
 		const newForceNames = forces.map(([name]) => name);
 		let oldForceNames = usedForceNames.filter((force) => !newForceNames.includes(force));
-		oldForceNames.forEach((name) => {
-			simulation.force(name, null);
-		});
+		oldForceNames.forEach((name) => simulation.force(name, null));
 		usedForceNames = newForceNames;
 
 		// kick our simulation into high gear
@@ -41,25 +33,27 @@
 	}
 </script>
 
-<figure class="c" bind:clientWidth={width}>
+<figure class="c">
 	<svg {width} {height}>
 		<defs>
-			{#each graphics as point, i}
+			{#each graphics as { img }, i}
 				<pattern id="img-{i}" height="100%" width="100%" patternContentUnits="objectBoundingBox">
 					<image
 						preserveAspectRatio="xMidYMid slice"
 						width="1"
 						height="1"
 						xmlns:xlink
-						href="/images/portfolio/{point.img}"
+						href={img.includes('https://')
+							? img + '&width=200&'
+							: `/images/portfolio/resized/${img.split('.')[0]}/200.png`}
 					/>
 				</pattern>
 			{/each}
 		</defs>
 
-		{#each renderedDots as dot, i}
-			<g style={move(dot.x, dot.y)}>
-				<circle r={r[i]} fill="url(#img-{i})" />
+		{#each renderedDots as { x, y, r }, i}
+			<g style={move(x, y)}>
+				<circle {r} fill="url(#img-{i})" />
 			</g>
 		{/each}
 	</svg>

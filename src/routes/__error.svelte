@@ -5,10 +5,10 @@
 <Meta meta={{ title: 'Error', description: 'Whoops... something went wrong', slug: '' }} />
 
 <picture class="w-screen h-screen fixed pointer-events-none -z-1">
-	<source srcset="/static/images/rickroll.webp" type="image/webp" />
-	<source srcset="/static/images/rickroll.gif" type="image/gif" />
+	<source srcset="/images/rickroll.webp" type="image/webp" />
+	<source srcset="/images/rickroll.gif" type="image/gif" />
 	<img
-		src="/static/images/rickroll.gif"
+		src="/images/rickroll.gif"
 		alt="Rick Roll gif"
 		class="w-full h-full object-center object-cover"
 	/>

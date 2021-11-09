@@ -1,54 +1,39 @@
 <script>
 	import { forceX, forceY, forceCollide, forceCenter, forceManyBody } from 'd3-force';
+	import forceBoundary from 'd3-force-boundary';
+	import { randomUniform } from 'd3-random';
 	import Force from './Force.svelte';
+	import { viewport } from '$stores';
 
 	export let graphics = [];
+	graphics.forEach((d) => (d.r = Math.floor(randomUniform(40, 100)())));
 
-	// create data and handle update
-	$: data = [];
-	let counter = 0;
+	$: counter = 0;
 	const interval = setInterval(() => {
-		// can't normally push bc of $:
-		data = [
-			...data,
-			{
-				img: graphics[counter].img
-			}
-		];
 		counter++;
 		if (counter >= graphics.length) clearInterval(interval);
 	}, 1000);
 
-	let vh;
-	let el;
-	let width;
-
-	$: numberOfDots = graphics.length;
-	$: height = vh;
-	$: centerPosition = [width / 2, height / 2];
-	let useForceCollide = true; // true = collision detection
+	$: centerPosition = [$viewport.width / 2, $viewport.height / 2];
 
 	$: activeForceX = forceX().x(centerPosition[0]).strength(0.01);
 	$: activeForceY = forceY().y(centerPosition[1]).strength(0.01);
-	$: activeForceCenter = forceCenter(centerPosition[0], centerPosition[1]);
+	$: activeForceCenter = forceCenter(...centerPosition);
 	$: activeForceCollide = forceCollide()
-		.radius((d, i) => r[i] + 5)
+		.radius((d) => d.r + 5)
 		.iterations(1);
-	$: activeForceManyBody = forceManyBody().strength(0);
+	$: activeForceManyBody = forceManyBody().strength(-200);
+	$: activeForceBoundary = forceBoundary(0, 0, $viewport.width, $viewport.height);
 	$: forces = [
 		['x', activeForceX],
 		['y', activeForceY],
 		['charge', activeForceManyBody],
 		['center', activeForceCenter],
-		useForceCollide && ['collide', activeForceCollide]
-	].filter((d) => d);
-	$: r = data.map((d) => 80);
-	$: colors = data.map((d) => d.color);
-	$: dots = new Array(numberOfDots).fill(0).map((_) => ({}));
+		// ['boundary', activeForceBoundary],
+		['collide', activeForceCollide]
+	];
 </script>
 
-<svelte:window bind:innerHeight={vh} />
-
-<div bind:this={el} bind:clientWidth={width}>
-	<Force {forces} {dots} {height} {r} {colors} {graphics} />
+<div class="w-full h-screen">
+	<Force {forces} dots={graphics} height={$viewport.height} {graphics} />
 </div>
