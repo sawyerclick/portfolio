@@ -15,7 +15,7 @@
 <script>
 	import { timeFormat, timeParse } from 'd3-time-format';
 	import Meta from '$lib/Meta.svelte';
-	const parse = (time) => timeFormat('%Y-%m-%d')(timeParse('%Y-%m-%dT%H:%M:%S.%LZ')(time));
+	const parse = (time) => timeFormat('%Y-%m')(timeParse('%Y-%m-%dT%H:%M:%S.%LZ')(time));
 	export let posts = [],
 		slug;
 </script>
@@ -30,15 +30,23 @@
 
 <main class="max-w-md mx-auto px-6">
 	<div class="sm:fixed sm:mt-0 left-2 top-2 static block text-center mt-12">
-		<a href="/" sveltekit:prefetch class="mx-auto font-mono text-lg"><b>🏠 home</b></a>
+		<a
+			href="/"
+			sveltekit:prefetch
+			class="mx-auto font-mono inline-block text-lg leading-none font-light border-blue border rounded-sm p-1"
+		>
+			🏠 home
+		</a>
 	</div>
-	<h1 class="font-serif text-4xl text-center mt-2 sm:mt-16">✍️ Sawyer's musings ✍️</h1>
+	<h1 class="font-serif text-4xl text-center mt-4 sm:mt-16 font-black tracking-wider">
+		Sawyer's musings
+	</h1>
 
 	<ul class="font-mono mt-4 w-full">
 		{#each posts as { slug, created }}
-			<li class="text-lg w-full">
+			<li class="text-lg w-full font-light">
 				<a href="/posts/{slug}" class="w-full flex justify-between">
-					<span>> <b>{slug}</b></span>
+					<span>&gt; <b>{slug}</b></span>
 					<span>{parse(created)}</span>
 				</a>
 			</li>
@@ -47,7 +55,7 @@
 </main>
 
 <style lang="postcss">
-	a {
+	li a {
 		@apply border-b-1 border-transparent;
 	}
 	a:hover {

@@ -11,9 +11,11 @@
 	<meta property="og:title" content={meta.title} />
 	<meta property="og:description" content={meta.description} />
 
-	<!-- <meta property="og:image" content="{meta.Image}" />
+	{#if meta.img}
+		<meta property="og:image" content={meta.img} />
+		<meta name="twitter:image" content={meta.img} />
+	{/if}
 
-<meta name="twitter:image" content="{meta.Image}" /> -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:creator" content="@sawyerdabear" />
 	<meta name="twitter:title" content={meta.title} />

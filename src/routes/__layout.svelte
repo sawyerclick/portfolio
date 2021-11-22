@@ -1,16 +1,10 @@
 <script>
 	import '$styles/app.postcss';
 	import '$styles/font.css';
-	import Nav from '$lib/Nav.svelte';
+
+	import FollowMouse from '$lib/FollowMouse.svelte';
 </script>
 
-<Nav />
+<!-- <FollowMouse /> -->
 
 <slot />
-
-<footer class="text-center mt-6 mb-2 mx-auto">
-	<p class="font-serif">
-		Made with 🖤 by <a href="https://www.twitter.com/sawyerdabear">Sawyer Click</a> in Dripping Springs,
-		Texas
-	</p>
-</footer>

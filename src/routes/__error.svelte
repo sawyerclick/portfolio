@@ -2,7 +2,7 @@
 	import Meta from '$lib/Meta.svelte';
 </script>
 
-<Meta meta={{ title: 'Error', description: 'Whoops... something went wrong', slug: '' }} />
+<Meta meta={{ title: 'Whoops...', description: 'Something went wrong.', slug: '' }} />
 
 <picture class="w-screen h-screen fixed pointer-events-none -z-1">
 	<source srcset="/images/rickroll.webp" type="image/webp" />
@@ -15,18 +15,14 @@
 </picture>
 
 <main class="flex flex-nowrap flex-col justify-center items-center h-screen p-12 text-center">
-	<h1 class="font-serif mt-8 text-gray">Whoops...</h1>
-	<h2 class="font-serif mt-6 text-5xl text-gray">something went wrong</h2>
-	<a
-		href="/"
-		class="font-serif mt-8 text-2xl bg-blue text-gray px-3 py-1 rounded-lg transition hover:bg-pink hover:text-gray"
-		>Go back home?</a
+	<h1 class="font-serif mt-8 text-grey">Whoops...</h1>
+	<h2 class="font-serif mt-6 text-5xl text-grey">something went wrong</h2>
+	<button
+		on:click={() => window.location.reload()}
+		class="font-serif mt-8 px-3 py-1 text-2xl text-blue border-blue bg-grey rounded-tl-lg rounded-br-lg transition-all duration-300 hover:border-pink 
+		hover:text-pink
+		hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-xl hover:rounded-bl-xl"
 	>
+		Try again?
+	</button>
 </main>
-
-<style>
-	iframe * {
-		object-fit: cover;
-		object-position: center;
-	}
-</style>

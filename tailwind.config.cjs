@@ -1,6 +1,7 @@
 const config = {
 	mode: 'jit',
 	purge: ['./src/**/*.{html,js,svelte,ts}'],
+	// darkMode: 'class',
 	theme: {
 		fontFamily: {
 			serif: ['recoleta', 'ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
@@ -37,7 +38,7 @@ const config = {
 				blue: '#34657F',
 				pink: '#CC6C8F',
 				peach: '#F6BD9D',
-				gray: '#f8f8f8',
+				grey: '#f8f8f8',
 			},
 			fontSize: {
 				'8xl': '5.15rem'
