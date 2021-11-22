@@ -1,43 +1,45 @@
 <script>
-	import Icon from '$lib/helpers/Icon.svelte';
-	const size = '1.5rem';
-	const width = size;
-	const height = size;
-	const strokeWidth = '2px';
-	const stroke = 'var(--blue)';
+	import { GithubIcon, TwitterIcon, MailIcon } from 'svelte-feather-icons';
 
-	const props = {
-		width,
-		height,
-		strokeWidth,
-		stroke
-	};
+	export let size = '26';
 </script>
 
-<a href="https://www.github.com/SawyerClick" title="Github">
-	<Icon name="github" {...props} />
-</a>
-<a href="https://www.twitter.com/sawyerdabear" title="Twitter">
-	<Icon name="twitter" {...props} />
-</a>
-<a href="mailto:sawyer@hey.com?Subject=Hi%20Sawyer" title="Email">
-	<Icon name="mail" {...props} />
-</a>
+<ul class="inline">
+	<li>
+		<a class="profile-icon" href="https://www.github.com/SawyerClick" title="Github">
+			<GithubIcon {size} />
+		</a>
+	</li>
+	<li>
+		<a class="profile-icon" href="https://www.twitter.com/sawyerdabear" title="Twitter">
+			<TwitterIcon {size} />
+		</a>
+	</li>
+	<li>
+		<a class="profile-icon" href="mailto:sawyer@hey.com?Subject=Hi%20Sawyer" title="Email">
+			<MailIcon {size} />
+		</a>
+	</li>
+</ul>
 
 <!-- <a href="/posts" sveltekit:prefetch title="Posts">
 	<Icon name="edit-3" {...props} />
 </a> -->
 <style lang="postcss">
-	a {
-		@apply no-underline border-none inline-block transition-all mx-1 last-of-type:mr-0 first-of-type:ml-0;
+	li {
+		@apply inline-block mx-1 last-of-type:mr-0 first-of-type:ml-0;
+	}
+	a.profile-icon {
+		@apply no-underline border 
+		py-2 px-3 border-blue bg-grey rounded-tl-lg rounded-br-lg transition-all duration-300 hover:border-pink hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-xl hover:rounded-bl-xl;
+	}
+	a.profile-icon:hover :global(svg.feather:not(.feather-chevron-down)) {
+		stroke: var(--pink);
 	}
 	:global(svg.feather) {
-		margin: 0 0.5rem;
+		@apply m-0 mb-2 transition-all duration-500;
 	}
 	:global(svg.feather:first-of-type) {
 		margin-left: 0;
-	}
-	:global(svg.feather:not(.feather-chevron-down):hover) {
-		stroke: var(--pink);
 	}
 </style>

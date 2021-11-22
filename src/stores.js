@@ -1,43 +1,25 @@
 import { writable } from 'svelte/store';
 import { readable } from 'svelte/store';
-import debounce from 'lodash.debounce';
 
-export const viewport = readable({ width: 0, height: 0 }, (set) => {
-	const onResize = () => set({ width: window.innerWidth, height: window.innerHeight });
+export const lazy = writable(false);
 
-	if (typeof window !== 'undefined') {
-		onResize();
-		window.addEventListener('resize', debounce(onResize, 250));
-	}
-
-	return () => {
-		if (typeof window !== 'undefined') window.removeEventListener('resize', onResize);
-	};
-});
-
-export const scrollY = readable(0, (set) => {
-	let ticking = false;
-	let lastScrollY = 0;
-
-	const updateScrollY = () => {
-		set(lastScrollY);
-		ticking = false;
-	};
-
-	const onScroll = () => {
-		lastScrollY = window.scrollY;
-		if (!ticking) {
-			requestAnimationFrame(updateScrollY);
-			ticking = true;
+// lazyload images
+export const lazyLoad = (entries, observer) => {
+	entries.forEach((entry) => {
+		if (entry.target.tagName === 'IMG') {
+			if (entry.isIntersecting && entry.target.src !== entry.target.dataset.src) {
+				entry.target.src = entry.target.dataset.src;
+				observer.unobserve(entry.target);
+			}
+		} else if (entry.target.tagName === 'PICTURE') {
+			console.log(entry.target);
+			if (entry.isIntersecting && entry.target.srcset !== entry.target.dataset.srcset) {
+				entry.target.srcset = entry.target.dataset.srcset;
+				observer.unobserve(entry.target);
+			}
 		}
-	};
-
-	if (typeof document !== 'undefined') document.addEventListener('scroll', onScroll);
-
-	return () => {
-		if (typeof document !== 'undefined') document.removeEventListener('scroll', onScroll);
-	};
-});
+	});
+};
 
 // prefers reduced motion
 export const prefersReducedMotion = readable(false, (set) => {

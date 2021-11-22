@@ -1,8 +1,6 @@
 <script>
 	import { forceSimulation } from 'd3-force';
-
-	// utility function for translating elements
-	const move = (mx, my) => `transform: translate(${mx}px, ${my}px`;
+	import { move } from '$utils/utils';
 
 	// an array of [name, force] pairs
 	export let width, height;
