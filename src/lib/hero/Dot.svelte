@@ -11,30 +11,20 @@
 	export let delay = 0;
 	export let contextName = 'canvas';
 
-	let imgEl;
+	const { register, deregister, invalidate } = getContext(contextName);
+
+	const diameter = r * 2;
+
 	let innerHeight;
 	let innerWidth;
 
-	const image = new Image(r, r);
-	const imgSrc =
+	const image = new Image(diameter, diameter);
+	image.src =
 		img === 'me.jpeg'
 			? `/images/${img}`
 			: img.includes('https://')
 			? img + '?width=200&format=jpeg?auto=webp'
 			: `/images/portfolio/resized/${img.split('.')[0]}/200.png`;
-
-	image.src = imgSrc;
-
-	function scaleToFill(img) {
-		// get the scale
-		var scale = Math.max(canvas.width / img.width, canvas.height / img.height);
-		// get the top left position of the image
-		var x = canvas.width / 2 - (img.width / 2) * scale;
-		var y = canvas.height / 2 - (img.height / 2) * scale;
-		ctx.drawImage(img, x, y, img.width * scale, img.height * scale);
-	}
-
-	const { register, deregister, invalidate } = getContext(contextName);
 
 	const tX = tweened(null, tweenParameters);
 	const tY = tweened(null, tweenParameters);
@@ -53,7 +43,7 @@
 		ctx.fill();
 		ctx.clip();
 
-		ctx.drawImage(image, -r, -r, image.width * 2, image.height * 2);
+		ctx.drawImage(image, -r, -r, diameter, diameter);
 		ctx.restore();
 		ctx.stroke();
 	};
@@ -82,12 +72,3 @@
 </script>
 
 <svelte:window bind:innerHeight bind:innerWidth />
-
-<img
-	bind:this={imgEl}
-	class="hidden object-center object-contain"
-	src={imgSrc}
-	alt="This is hidden, how did you see it!"
-	height="100px"
-	width="100px"
-/>

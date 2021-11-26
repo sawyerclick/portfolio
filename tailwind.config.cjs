@@ -38,7 +38,7 @@ const config = {
 				blue: '#34657F',
 				pink: '#CC6C8F',
 				peach: '#F6BD9D',
-				grey: '#f8f8f8',
+				grey: '#f8f8f8'
 			},
 			fontSize: {
 				'8xl': '5.15rem'
