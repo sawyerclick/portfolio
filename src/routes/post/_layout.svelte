@@ -1,23 +1,23 @@
 <script context="module">
 	export async function load({ page }) {
-		const slug = page.path;
 		return {
 			props: {
-				slug
+				slug: page.path
 			}
 		};
 	}
 </script>
 
 <script>
-	import '$styles/app.postcss';
-	import '$styles/font.css';
-	import '$styles/blog.postcss';
 	import { timeFormat, timeParse } from 'd3-time-format';
 	import Breadcrumbs from '$lib/Breadcrumbs.svelte';
 	import Meta from '$lib/Meta.svelte';
 	import Nav from '$lib/Nav.svelte';
-	import Icon from '$lib/helpers/Icon.svelte';
+
+	import '$styles/font.css';
+	import '$styles/app.postcss';
+	import '$styles/post.postcss';
+
 	export let title;
 	export let created;
 	export let updated;
@@ -33,7 +33,7 @@
 
 <Nav />
 
-<main id="blog" class="blog p-8 mt-4 max-w-2xl m-auto">
+<main id="post" class="blog p-8 mt-4 max-w-2xl m-auto">
 	<article>
 		<section class="mb-8">
 			<Breadcrumbs />

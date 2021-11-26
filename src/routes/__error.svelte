@@ -19,9 +19,7 @@
 	<h2 class="font-serif mt-6 text-5xl text-grey">something went wrong</h2>
 	<button
 		on:click={() => window.location.reload()}
-		class="font-serif mt-8 px-3 py-1 text-2xl text-blue border-blue bg-grey rounded-tl-lg rounded-br-lg transition-all duration-300 hover:border-pink 
-		hover:text-pink
-		hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-xl hover:rounded-bl-xl"
+		class="styled-border font-serif mt-8 px-3 py-1 text-2xl"
 	>
 		Try again?
 	</button>

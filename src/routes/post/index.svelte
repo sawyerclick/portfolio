@@ -1,6 +1,6 @@
 <script context="module">
 	export async function load({ page, fetch }) {
-		const res = await fetch('/api/posts.json');
+		const res = await fetch('/api/post.json');
 		const { posts } = await res.json();
 		const slug = page.path;
 		return {

@@ -1,13 +1,14 @@
 <script>
 	export let meta;
+	// console.log(meta);
 </script>
 
 <svelte:head>
 	<title>{meta.title}</title>
-
 	<meta name="description" content={meta.description} />
+
 	<meta property="og:type" content="article" />
-	<meta property="og:url" content="https://www.sawyer.codes{meta.slug}" />
+	<meta property="og:url" content="https://sawyer.codes{meta.slug}" />
 	<meta property="og:title" content={meta.title} />
 	<meta property="og:description" content={meta.description} />
 

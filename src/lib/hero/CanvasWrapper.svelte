@@ -52,7 +52,7 @@
 		['x', activeForceX],
 		['y', activeForceY],
 		['charge', activeForceManyBody],
-		['boundary', activeForceBoundary],
+		['boundary', width > 600 ? activeForceBoundary : null],
 		['collide', activeForceCollide]
 	];
 
@@ -77,8 +77,6 @@
 		simulation.restart();
 	}
 </script>
-
-<!-- <svelte:window on:mousemove={mousemove} /> -->
 
 <div class="wrapper z-0 opacity-40 flex flex-col w-full h-full">
 	<div class="flex-1 overflow-hidden" bind:clientWidth={width} bind:clientHeight={height}>

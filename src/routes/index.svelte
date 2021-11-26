@@ -50,7 +50,7 @@
 	>
 		{#each graphics as project}
 			<li
-				class="project relative w-full p-4 text-blue shadow-none border border-blue bg-grey rounded-tl-3xl rounded-br-3xl transition-all duration-300 hover:border-pink hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl hover:-translate-y-2 hover:shadow-md hover:z-0"
+				class="styled-border project relative w-full p-4 text-blue shadow-none sm:hover:-translate-y-2 hover:shadow-md hover:z-0"
 			>
 				<Project {project} />
 			</li>

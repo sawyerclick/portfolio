@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
-	import { ChevronDownIcon } from 'svelte-feather-icons';
+	import { ChevronDownIcon, ExternalLinkIcon } from 'svelte-feather-icons';
 	import Icons from './Icons.svelte';
 	import gsap from 'gsap';
 
@@ -32,16 +32,14 @@
 
 	{#if !isScrolled}
 		<div transition:slide|local>
-			<h2 class="md:text-3xl sm:w-full text-2xl w-3/4 font-medium m-0 text-shadow leading-none">
-				develops interactive graphics at
-				<a
-					href="https://www.businessinsider.com/category/sawyer-click"
-					target="_blank"
-					class="border-b-2 border-pink hover:border-b-4"
-				>
-					Business Insider
-				</a>
-			</h2>
+			<a
+				href="https://www.businessinsider.com/category/sawyer-click"
+				target="_blank"
+				class="styled-border block md:text-3xl text-2xl w-3/5 font-medium leading-none bg-grey m-0"
+			>
+				develops interactive graphics at Business Insider
+				<ExternalLinkIcon size="14" />
+			</a>
 
 			<div class="py-3 flex items-center justify-between">
 				<Icons />

@@ -41,7 +41,7 @@ h2 {
 }
 
 html {
-	cursor: url('images/site/chunkie_cursor.png'), auto;
+	cursor: url('/images/site/chunkie_cursor.png'), auto;
 	scroll-behavior: smooth;
 	font-size: 1rem;
 	overflow-x: hidden;
@@ -77,4 +77,15 @@ a.skip-to-main:focus {
 	height: auto;
 	padding: 0.5em;
 	z-index: 999;
+}
+
+.styled-border {
+	@apply font-serif text-blue no-underline border py-2 px-3 border-blue bg-grey rounded-tl-xl rounded-br-xl transition-all duration-300  hover:rounded-tl-none hover:border-pink hover:rounded-br-none hover:rounded-tr-xl hover:rounded-bl-xl;
+}
+
+a.styled-border, button.styled-border {
+	@apply cursor-pointer hover:text-pink;
+}
+a.styled-border:hover > * , button.styled-border:hover > * {
+	stroke: var(--pink);
 }
