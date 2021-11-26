@@ -45,7 +45,7 @@
 	<ul class="font-mono mt-4 w-full">
 		{#each posts as { slug, created }}
 			<li class="text-lg w-full font-light">
-				<a href="/posts/{slug}" class="w-full flex justify-between">
+				<a href="/post/{slug}" class="w-full flex justify-between">
 					<span>&gt; <b>{slug}</b></span>
 					<span>{parse(created)}</span>
 				</a>
