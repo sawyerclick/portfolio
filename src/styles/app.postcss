@@ -80,12 +80,23 @@ a.skip-to-main:focus {
 }
 
 .styled-border {
-	@apply font-serif text-blue no-underline border py-2 px-3 border-blue bg-grey rounded-tl-xl rounded-br-xl transition-all duration-300  hover:rounded-tl-none hover:border-pink hover:rounded-br-none hover:rounded-tr-xl hover:rounded-bl-xl;
+	@apply font-serif text-blue no-underline border py-2 px-4 border-blue bg-grey rounded-tl-xl rounded-br-xl transition-all duration-300;
+	border-top-left-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+	overflow: hidden;
+}
+.styled-border:hover {
+	@apply border-pink rounded-br-none rounded-tl-none;
+	border-top-right-radius: 1rem;
+	border-bottom-left-radius: 1rem;
 }
 
-a.styled-border, button.styled-border {
+a.styled-border,
+button.styled-border {
 	@apply cursor-pointer hover:text-pink;
 }
-a.styled-border:hover > * , button.styled-border:hover > * {
+a.styled-border:hover > *,
+button.styled-border:hover > * {
 	stroke: var(--pink);
+	color: var(--pink);
 }

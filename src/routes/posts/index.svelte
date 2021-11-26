@@ -1,6 +1,6 @@
 <script context="module">
 	export async function load({ page, fetch }) {
-		const res = await fetch('/api/post.json');
+		const res = await fetch('/api/posts.json');
 		const { posts } = await res.json();
 		const slug = page.path;
 		return {
@@ -28,25 +28,18 @@
 	}}
 />
 
-<main class="max-w-md mx-auto px-6">
-	<div class="sm:fixed sm:mt-0 left-2 top-2 static block text-center mt-12">
-		<a
-			href="/"
-			sveltekit:prefetch
-			class="mx-auto font-mono inline-block text-lg leading-none font-light border-blue border rounded-sm p-1"
-		>
-			🏠 home
-		</a>
-	</div>
-	<h1 class="font-serif text-4xl text-center mt-4 sm:mt-16 font-black tracking-wider">
-		Sawyer's musings
-	</h1>
+<main class="max-w-lg mx-auto px-6">
+	<nav class="left-2 top-2 static block text-center mt-12">
+		<a class="styled-border text-lg" href="/" sveltekit:prefetch>home</a>
+	</nav>
+
+	<h1 class="font-serif text-5xl text-center mt-6 font-black tracking-wider">Sawyer's musings</h1>
 
 	<ul class="font-mono mt-4 w-full">
 		{#each posts as { slug, created }}
-			<li class="text-lg w-full font-light">
-				<a href="/post/{slug}" class="w-full flex justify-between">
-					<span>&gt; <b>{slug}</b></span>
+			<li class="text-lg w-full font-light ">
+				<a href="/posts/{slug}" class="styled-border w-full flex justify-between">
+					<span>&gt;&nbsp;<b>{slug}</b></span>
 					<span>{parse(created)}</span>
 				</a>
 			</li>
@@ -55,12 +48,6 @@
 </main>
 
 <style lang="postcss">
-	li a {
-		@apply border-b-1 border-transparent;
-	}
-	a:hover {
-		@apply no-underline border-pink;
-	}
 	a:hover * {
 		color: var(--pink);
 	}

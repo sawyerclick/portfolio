@@ -4,7 +4,7 @@
 </script>
 
 <nav class="text-blue align-middle" aria-label="Breadcrumbs">
-	<a href="/" sveltekit:prefetch>home</a>
+	<a sveltekit:prefetch href="/">Sawyer Click</a>
 	<span>/</span>
 	{#each segments as segment, i}
 		<a href={'/' + segments.slice(0, i + 1).join('/')} sveltekit:prefetch>{segment}</a>

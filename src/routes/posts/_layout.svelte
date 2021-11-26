@@ -16,7 +16,7 @@
 
 	import '$styles/font.css';
 	import '$styles/app.postcss';
-	import '$styles/post.postcss';
+	import '$styles/posts.postcss';
 
 	export let title;
 	export let created;
@@ -31,23 +31,21 @@
 
 <Meta meta={{ title, description, slug }} />
 
-<Nav />
+<!-- <Nav /> -->
 
 <main id="post" class="blog p-8 mt-4 max-w-2xl m-auto">
+	<section class="mb-8">
+		<Breadcrumbs />
+		<h1 class="text-5xl my-4">{title}</h1>
+		<div class="font-mono relative border-t-1 border-b-1 border-blue">
+			<a href="https://twitter.com/sawyerdabear">Sawyer Click</a>
+			<span class="pointer-events-none">\\</span>
+			<time datetime={created}>
+				{parse(created)}
+			</time>
+		</div>
+	</section>
 	<article>
-		<section class="mb-8">
-			<Breadcrumbs />
-			<h1 class="text-5xl my-4">{title}</h1>
-			<div class="font-mono relative border-t-1 border-b-1 border-blue">
-				<a href="https://twitter.com/sawyerdabear">Sawyer Click</a>
-				<span class="pointer-events-none">\\</span>
-				<time datetime={created}>
-					{parse(created)}
-				</time>
-			</div>
-		</section>
-		<section>
-			<slot />
-		</section>
+		<slot />
 	</article>
 </main>

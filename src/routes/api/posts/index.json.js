@@ -2,7 +2,7 @@ import pMap from "p-map"
 import { basename } from "path"
 
 export async function get() {
-	const modules = Object.entries(import.meta.glob("../../post/*.svelte.md"))
+	const modules = Object.entries(import.meta.glob("../../posts/*.svelte.md"))
 
 	const posts = await pMap(
 		modules,

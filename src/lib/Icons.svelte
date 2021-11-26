@@ -30,7 +30,7 @@
 	</li>
 </ul>
 
-<!-- <a href="/post" sveltekit:prefetch title="Posts">
+<!-- <a href="/posts" sveltekit:prefetch title="Posts">
 	<Icon name="edit-3" {...props} />
 </a> -->
 <style lang="postcss">
