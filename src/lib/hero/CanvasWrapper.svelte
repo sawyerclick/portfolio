@@ -44,7 +44,7 @@
 	$: activeForceCenter = forceCenter(...centerPosition);
 	$: activeForceCollide = forceCollide().radius((d) => d.r + 10);
 	$: activeForceManyBody = forceManyBody().strength(-100);
-	$: activeForceBoundary = forceBoundary(0, 0, width, height).strength(0.8);
+	$: activeForceBoundary = forceBoundary(0, 0, width, height).strength(1);
 
 	// an array of forces to pass
 	$: forces = [

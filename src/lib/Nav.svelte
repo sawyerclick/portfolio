@@ -1,18 +1,19 @@
 <script>
 	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
+	import gsap from 'gsap';
 	import { ChevronDownIcon, ExternalLinkIcon } from 'svelte-feather-icons';
 	import Icons from './Icons.svelte';
-	import gsap from 'gsap';
 
-	let scrollY = 0,
-		chevronDownEl = null;
+	let scrollY = 0;
+	let chevronDownEl = null;
 
 	onMount(() => {
 		gsap.to(chevronDownEl, { y: -10, repeat: -1, yoyo: true, ease: 'power1.out' });
 	});
 
-	$: isScrolled = scrollY > 25;
+	$: isScrolled = scrollY > 0;
 </script>
 
 <svelte:window bind:scrollY />
@@ -31,11 +32,11 @@
 	</h1>
 
 	{#if !isScrolled}
-		<div transition:slide|local>
+		<div transition:slide|local={{ easing: quintOut, duration: 400 }}>
 			<a
 				href="https://www.businessinsider.com/category/sawyer-click"
 				target="_blank"
-				class="styled-border block md:text-3xl text-2xl w-3/5 font-medium leading-none bg-grey m-0"
+				class="styled-border block md:text-3xl text-2xl w-3/5 font-medium leading-none bg-bg m-0"
 			>
 				develops interactive graphics at Business Insider
 				<ExternalLinkIcon size="14" />

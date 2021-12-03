@@ -26,7 +26,7 @@ const config = {
 					$assets: path.resolve('./src/assets'),
 					$data: path.resolve('./src/data'),
 					$lib: path.resolve('./src/lib'),
-					$posts: path.resolve('./src/posts'),
+					$blog: path.resolve('./src/blog'),
 					$utils: path.resolve('./src/utils'),
 					$stores: path.resolve('./src/stores.js'),
 					$styles: path.resolve('./src/styles')

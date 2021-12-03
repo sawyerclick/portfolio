@@ -53,7 +53,7 @@ function processUrl(url, node) {
 const config = {
 	extensions: ['.svelte.md'],
 	layout: {
-		posts: path.join(dirname, './src/routes/posts/_layout.svelte')
+		blog: path.join(dirname, './src/routes/blog/_layout.svelte')
 	},
 	smartypants: true,
 	remarkPlugins: [abbr], // adds support for footnote-like abbreviations

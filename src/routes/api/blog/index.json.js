@@ -2,9 +2,9 @@ import pMap from "p-map"
 import { basename } from "path"
 
 export async function get() {
-	const modules = Object.entries(import.meta.glob("../../posts/*.svelte.md"))
+	const modules = Object.entries(import.meta.glob("../../blog/*.svelte.md"))
 
-	const posts = await pMap(
+	const blogs = await pMap(
 		modules,
 		async ([filename, module]) => {
 			const { metadata } = await module()
@@ -16,9 +16,9 @@ export async function get() {
 		}
 	)
 
-	posts.sort((a, b) => (new Date(a.created) > new Date(b.created) ? -1 : 1))
+	blogs.sort((a, b) => (new Date(a.created) > new Date(b.created) ? -1 : 1))
 
   return {
-		body: { posts }
+		body: { blogs }
 	}
 }

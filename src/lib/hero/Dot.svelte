@@ -32,7 +32,7 @@
 	const draw = (ctx) => {
 		ctx.translate($tX, $tY);
 
-		ctx.fillStyle = 'transparent';
+		ctx.fillStyle = '#f8f8f8';
 		ctx.strokeStyle = '#666'; // by scale ord use color
 		ctx.backgroundColor = '#f7f7f7';
 

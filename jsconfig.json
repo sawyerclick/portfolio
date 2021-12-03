@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
-			"$posts/*": ["src/posts/*"],
+			"$blog/*": ["src/blog/*"],
 			"$lib/*": ["src/lib/*"],
 			"$data/*": ["src/data/*"],
 			"$actions/*": ["src/actions/*"],

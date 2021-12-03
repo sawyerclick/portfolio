@@ -1,9 +1,11 @@
 import projects from '$data/projects';
 
 export const get = async () => {
-	const body = projects.filter(
-		({ lead, img, type }) => type === 'graphics' && lead === 'TRUE' && img
+	const pinned = projects.filter(({ pinned }) => pinned === 'TRUE');
+	const recent = projects.filter(
+		({ lead, img, type, pinned }) =>
+			pinned === 'FALSE' && type === 'graphics' && lead === 'TRUE' && img
 	);
 
-	return { body };
+	return { body: { pinned, recent } };
 };

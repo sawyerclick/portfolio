@@ -1,7 +1,7 @@
 <script context="module">
 	export async function load({ page, fetch }) {
 		const urls = ['/api/meta.json', '/api/lead-graphics.json'];
-		const [meta, graphics] = await Promise.all(
+		const [meta, projects] = await Promise.all(
 			urls.map(async (url) => {
 				const apiRes = await fetch(url);
 				if (apiRes.ok) return apiRes.json();
@@ -9,7 +9,7 @@
 			})
 		);
 		return {
-			props: { meta, graphics, slug: page.path }
+			props: { meta, ...projects, slug: page.path }
 		};
 	}
 </script>
@@ -18,14 +18,18 @@
 	import { setContext } from 'svelte';
 	import Nav from '$lib/Nav.svelte';
 	import Meta from '$lib/Meta.svelte';
-	import Project from '$lib/Project.svelte';
+	import Grid from '$lib/Grid.svelte';
 	import CanvasWrapper from '$lib/hero/CanvasWrapper.svelte';
+	import Footer from '$lib/Footer.svelte';
 
 	export let meta;
-	export let graphics;
+	export let pinned;
+	export let recent;
 	export let slug;
 
-	setContext('graphics', graphics);
+	console.log(recent);
+
+	setContext('graphics', recent);
 
 	let scrollY;
 </script>
@@ -37,35 +41,33 @@
 <Nav />
 
 <main class="z-10">
-	<div id="home" class="h-screen min-h-screen flex justify-start items-end overflow-hidden ">
-		<div class="chart absolute all-0 h-screen min-h-screen w-full overflow-y-hidden">
-			<!-- <ForceWrapper {graphics} /> -->
+	<div id="home" class="h-screen min-h-screen flex justify-start items-end overflow-hidden">
+		<div class="chart absolute all-0 h-full min-h-screen w-full">
 			<CanvasWrapper />
 		</div>
 	</div>
 
-	<ul
-		id="graphics"
-		class="w-full mx-auto grid px-6 mt-24 gap-12 sm:gap-8 lg:gap-12 place-items-start grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-	>
-		{#each graphics as project}
-			<li
-				class="styled-border project relative w-full p-4 text-blue shadow-none sm:hover:-translate-y-2 hover:shadow-md hover:z-0"
-			>
-				<Project {project} />
-			</li>
-		{/each}
-	</ul>
+	<section id="pinned">
+		<h2 class="styled-border">📌 Selected work</h2>
+		<Grid gridItems={pinned} />
+	</section>
+
+	<section id="recent">
+		<h2 class="styled-border">👀 Recent work</h2>
+		<Grid gridItems={recent} />
+	</section>
 </main>
 
-<footer class="text-center mt-12 mb-20 mx-auto">
-	<p class="font-serif">
-		Made with 🖤 by <a href="https://www.twitter.com/sawyerdabear">Sawyer Click</a> in Dripping Springs,
-		Texas
-	</p>
-</footer>
+<Footer />
 
-<style global>
+<style lang="postcss" global>
+	section {
+		@apply my-24;
+	}
+	h2 {
+		@apply max-w-xs py-2 mx-auto mt-16 mb-12 text-4xl shadow-md text-center;
+	}
+
 	.chart::before {
 		content: '';
 		z-index: 1;

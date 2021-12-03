@@ -10,6 +10,7 @@
 	--pink: #cc6c8f;
 	--peach: #f6bd9d;
 	--gray: #f8f8f8;
+	--bg: var(--gray);
 }
 
 svg.feather {
@@ -36,8 +37,7 @@ h2 {
 	@apply top-0 right-0 bottom-0 left-0;
 }
 .text-shadow {
-	text-shadow: -1px -1px var(--gray), 1px 1px var(--gray), 1px -1px var(--gray),
-		-1px 1px var(--gray);
+	text-shadow: -1px -1px var(--bg), 1px 1px var(--bg), 1px -1px var(--bg), -1px 1px var(--bg);
 }
 
 html {
@@ -45,14 +45,16 @@ html {
 	scroll-behavior: smooth;
 	font-size: 1rem;
 	overflow-x: hidden;
-	background-color: var(--gray);
+	background-color: var(--bg);
 }
 
 ::-moz-selection {
-	background: rgb(242, 217, 203);
+	background: var(--blue);
+	color: var(--bg);
 }
 ::selection {
-	background: rgb(242, 217, 203);
+	background: var(--blue);
+	color: var(--bg);
 }
 
 button:disabled {
@@ -85,12 +87,12 @@ a.skip-to-main:focus {
 	border-bottom-right-radius: 1rem;
 	overflow: hidden;
 }
-.styled-border:hover {
+a.styled-border:hover,
+button.styled-border:hover {
 	@apply border-pink rounded-br-none rounded-tl-none;
 	border-top-right-radius: 1rem;
 	border-bottom-left-radius: 1rem;
 }
-
 a.styled-border,
 button.styled-border {
 	@apply cursor-pointer hover:text-pink;

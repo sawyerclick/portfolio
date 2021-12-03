@@ -15,8 +15,8 @@
 </picture>
 
 <main class="flex flex-nowrap flex-col justify-center items-center h-screen p-12 text-center">
-	<h1 class="font-serif mt-8 text-grey">Whoops...</h1>
-	<h2 class="font-serif mt-6 text-5xl text-grey">something went wrong</h2>
+	<h1 class="font-serif mt-8 text-bg">Whoops...</h1>
+	<h2 class="font-serif mt-6 text-5xl text-bg">something went wrong</h2>
 	<button
 		on:click={() => window.location.reload()}
 		class="styled-border font-serif mt-8 px-3 py-1 text-2xl"
