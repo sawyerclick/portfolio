@@ -65,7 +65,7 @@
 		@apply my-24;
 	}
 	h2 {
-		@apply max-w-xs py-2 mx-auto mt-16 mb-12 text-4xl shadow-md text-center;
+		@apply max-w-xs py-2 mx-auto mt-16 mb-12 text-4xl shadow-md text-center normal-case;
 	}
 
 	.chart::before {

@@ -36,11 +36,11 @@
 	<article>
 		<header class="mb-8">
 			<Breadcrumbs />
-			<h1 class="text-5xl my-4">{title}</h1>
+			<h1 class="text-5xl mt-4 mb-2">{title}</h1>
 			<hr class="bg-blue" />
-			<div class="font-mono relative border-t-1 border-blue">
+			<div class="font-mono relative pt-2 border-t-1 border-blue">
 				<a href="https://twitter.com/sawyerdabear">Sawyer Click</a>
-				<span class="pointer-events-none">\\</span>
+				<span class="pointer-events-none">&times;&times;&times;</span>
 				<time datetime={created}>
 					{parse(created)}
 				</time>
@@ -73,7 +73,7 @@
 	}
 	p.body:first-of-type::first-letter {
 		font-size: 280%;
-		@apply font-serif bg-blue text-bg px-1 mr-2 leading-none float-left;
+		@apply font-serif bg-blue text-grey px-1 mr-2 leading-none float-left;
 	}
 
 	a:hover {
