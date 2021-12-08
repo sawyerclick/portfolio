@@ -16,7 +16,7 @@
 		<div
 			class="h-60 w-full border-b border-blue object-center object-cover overflow-hidden z-0 transition-all duration-300"
 		>
-			<Picture name={img.includes('https://') ? img : img.split('.')[0]} {alt} />
+			<Picture slug={img} {alt} />
 		</div>
 		<span transition:slide|local class="text-left w-full px-4 my-2 pt-1.5">
 			<ul>

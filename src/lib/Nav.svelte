@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
-	import gsap from 'gsap';
+	import { gsap } from 'gsap';
 	import { ChevronDownIcon, ExternalLinkIcon } from 'svelte-feather-icons';
 	import Icons from './Icons.svelte';
 
