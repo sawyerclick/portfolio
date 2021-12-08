@@ -39,7 +39,7 @@
 
 <Nav />
 
-<main class="z-10">
+<main class="z-10 min-h-screen">
 	<div id="home" class="h-screen min-h-screen flex justify-start items-end overflow-hidden">
 		<div class="chart absolute all-0 h-full min-h-screen w-full">
 			<CanvasWrapper />
@@ -84,9 +84,5 @@
 	}
 	li.project img {
 		filter: grayscale(0.7);
-	}
-
-	footer {
-		@apply mb-20;
 	}
 </style>

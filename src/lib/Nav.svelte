@@ -1,5 +1,5 @@
 <script>
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 	import { gsap } from 'gsap';
@@ -11,6 +11,12 @@
 
 	onMount(() => {
 		gsap.to(chevronDownEl, { y: -10, repeat: -1, yoyo: true, ease: 'power1.out' });
+
+		document.body.classList.add('has-nav');
+	});
+
+	onDestroy(() => {
+		document.body.classList.remove('has-nav');
 	});
 
 	$: isScrolled = scrollY > 0;

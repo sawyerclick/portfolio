@@ -29,10 +29,10 @@
 	}}
 />
 
-<main class="max-w-lg mx-auto px-6">
+<main class="max-w-lg mx-auto px-6 pt-12 min-h-screen">
 	<article>
 		<header>
-			<nav class="left-2 top-2 static block text-center mt-12">
+			<nav class="left-2 top-2 static block text-center">
 				<a class="styled-border text-lg" href="/" sveltekit:prefetch>home</a>
 			</nav>
 
@@ -51,10 +51,10 @@
 				</li>
 			{/each}
 		</ul>
-
-		<Footer />
 	</article>
 </main>
+
+<Footer />
 
 <style lang="postcss">
 	a:hover * {
