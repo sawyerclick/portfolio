@@ -1,7 +1,7 @@
 <script context="module">
 	export async function load({ page, fetch }) {
-		const urls = ['/api/meta.json', '/api/lead-graphics.json', '/api/awards.json'];
-		const [meta, projects, awards] = await Promise.all(
+		const urls = ['/api/meta.json', '/api/lead-graphics.json'];
+		const [meta, projects] = await Promise.all(
 			urls.map(async (url) => {
 				const apiRes = await fetch(url);
 				if (apiRes.ok) return apiRes.json();
@@ -9,7 +9,7 @@
 			})
 		);
 		return {
-			props: { meta, ...projects, awards, slug: page.path }
+			props: { meta, ...projects, slug: page.path }
 		};
 	}
 </script>
@@ -25,10 +25,9 @@
 	export let meta;
 	export let pinned;
 	export let recent;
-	export let awards;
 	export let slug;
 
-	setContext('graphics', recent);
+	setContext('graphics', [...pinned, ...recent]);
 
 	let scrollY;
 </script>

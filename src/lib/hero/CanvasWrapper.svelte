@@ -43,7 +43,7 @@
 	$: activeForceY = forceY(centerPosition[1]).strength((d) => gravityStrengthScale(d.r));
 	$: activeForceCenter = forceCenter(...centerPosition);
 	$: activeForceCollide = forceCollide().radius((d) => d.r + 10);
-	$: activeForceManyBody = forceManyBody().strength(-100);
+	$: activeForceManyBody = forceManyBody().strength(-500);
 	$: activeForceBoundary = forceBoundary(0, 0, width, height).strength(1);
 
 	// an array of forces to pass
