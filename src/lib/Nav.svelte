@@ -3,6 +3,7 @@
 	import { slide } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 	import { gsap } from 'gsap';
+	import { hasNav } from '$stores';
 	import { ChevronDownIcon, ExternalLinkIcon } from 'svelte-feather-icons';
 	import Icons from './Icons.svelte';
 
@@ -11,12 +12,10 @@
 
 	onMount(() => {
 		gsap.to(chevronDownEl, { y: -10, repeat: -1, yoyo: true, ease: 'power1.out' });
-
-		document.body.classList.add('has-nav');
+		hasNav.set(true);
 	});
-
 	onDestroy(() => {
-		document.body.classList.remove('has-nav');
+		hasNav.set(false);
 	});
 
 	$: isScrolled = scrollY > 0;

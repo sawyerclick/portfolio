@@ -7,14 +7,14 @@
 </script>
 
 <a
-	class="styled-border block h-full text-blue shadow-md hover:shadow-lg hover:z-0"
+	class="styled-border block h-full text-blue shadow-md relative z-100 hover:shadow-lg"
 	href={link}
 	target="_blank"
 	{title}
 >
 	<div class="flex justify-center items-end flex-row flex-wrap">
 		<div
-			class="h-60 w-full border-b border-blue object-center object-cover overflow-hidden z-0 transition-all duration-300"
+			class="picture-wrapper h-60 w-full border-b border-blue object-center object-cover overflow-hidden z-0 transition-all duration-300"
 		>
 			<Picture slug={img} {alt} />
 		</div>
@@ -47,6 +47,15 @@
 <style lang="postcss">
 	a {
 		padding: 0 !important;
+	}
+	a:hover .picture-wrapper {
+		@apply border-pink;
+	}
+	a .picture-wrapper :global(img) {
+		@apply transition-transform duration-300 ease-out;
+	}
+	a:hover .picture-wrapper :global(img) {
+		@apply scale-105;
 	}
 	li {
 		@apply inline-block px-1.5 py-0.5 leading-none mr-1.5 rounded-sm font-mono text-sm text-blue border-1 border-blue;

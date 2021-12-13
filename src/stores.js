@@ -1,6 +1,8 @@
 import { writable } from 'svelte/store';
 import { readable } from 'svelte/store';
 
+export const hasNav = writable(false)
+
 // a lazy load store that, once the window is available, kicks up an IntersectionObserver instance and watches inputted images, video and iframes. Use in coordination with Image.svelte.
 export const lazyloader = writable(null, (set) => {
 	// lazyload callback function that handles images iframes and videos, uses common data-src pattern
