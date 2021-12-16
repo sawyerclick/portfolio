@@ -1,7 +1,16 @@
 import { writable } from 'svelte/store';
 import { readable } from 'svelte/store';
 
-export const hasNav = writable(false)
+export const hasNav = writable(false);
+export const theme = writable(null, (set) => {
+	if (typeof window !== 'undefined') {
+		set(localStorage.theme);
+	}
+
+	// return () => {
+	// 	if (typeof window !== 'undefined') set(localStorage.theme);
+	// };
+});
 
 // a lazy load store that, once the window is available, kicks up an IntersectionObserver instance and watches inputted images, video and iframes. Use in coordination with Image.svelte.
 export const lazyloader = writable(null, (set) => {

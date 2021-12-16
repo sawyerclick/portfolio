@@ -7,23 +7,27 @@
 </script>
 
 <a
-	class="styled-border block h-full text-blue shadow-md relative z-100 hover:shadow-lg"
+	class="group styled-border block h-full text-blue shadow-md relative z-100 hover:shadow-xl hover:-rotate-2 hover:-translate-y-4"
 	href={link}
 	target="_blank"
 	{title}
 >
 	<div class="flex justify-center items-end flex-row flex-wrap">
 		<div
-			class="picture-wrapper h-60 w-full border-b border-blue object-center object-cover overflow-hidden z-0 transition-all duration-300"
+			class="picture-wrapper h-60 w-full border-b border-blue object-center object-cover overflow-hidden z-0 transition-all duration-300 group-hover:border-pink"
 		>
 			<Picture slug={img} {alt} />
 		</div>
 		<span transition:slide|local class="text-left w-full px-4 my-2 pt-1.5">
 			<ul>
-				<li class="publication">
+				<li
+					class="publication inline-block px-1.5 py-0.5 leading-none mr-1.5 rounded-sm font-mono text-sm text-blue border-1 border-blue"
+				>
 					{publication}
 				</li>
-				<li class="date">
+				<li
+					class="date inline-block px-1.5 py-0.5 leading-none mr-1.5 rounded-sm font-mono text-sm text-blue border-1 border-blue"
+				>
 					{date}
 				</li>
 			</ul>
@@ -48,16 +52,10 @@
 	a {
 		padding: 0 !important;
 	}
-	a:hover .picture-wrapper {
-		@apply border-pink;
-	}
 	a .picture-wrapper :global(img) {
 		@apply transition-transform duration-300 ease-out;
 	}
 	a:hover .picture-wrapper :global(img) {
 		@apply scale-105;
-	}
-	li {
-		@apply inline-block px-1.5 py-0.5 leading-none mr-1.5 rounded-sm font-mono text-sm text-blue border-1 border-blue;
 	}
 </style>

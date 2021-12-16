@@ -1,7 +1,7 @@
 const config = {
 	mode: 'jit',
-	purge: ['./src/**/*.{html,js,svelte,ts}'],
-	// darkMode: 'class',
+	content: ['./src/**/*.{html,js,svelte,ts}'],
+	darkMode: 'class',
 	theme: {
 		fontFamily: {
 			serif: ['recoleta', 'ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],

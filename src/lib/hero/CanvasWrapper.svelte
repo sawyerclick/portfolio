@@ -52,7 +52,7 @@
 		['x', activeForceX],
 		['y', activeForceY],
 		['charge', activeForceManyBody],
-		['boundary', width > 600 ? activeForceBoundary : null],
+		['boundary', width < 600 ? null : activeForceBoundary],
 		['collide', activeForceCollide]
 	];
 
@@ -79,9 +79,9 @@
 </script>
 
 <div class="wrapper z-0 opacity-40 flex flex-col w-full h-full">
-	<div class="flex-1 overflow-hidden" bind:clientWidth={width} bind:clientHeight={height}>
+	<div class="flex-1" bind:clientWidth={width} bind:clientHeight={height}>
 		<Canvas {width} {height}>
-			{#if mounted}r
+			{#if mounted}
 				{#each renderedDots as { x, y, r, publication, img }}
 					<Person {x} {y} {r} {img} color={colorScale(publication)} delay={0} />
 				{/each}

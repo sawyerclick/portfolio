@@ -1,6 +1,5 @@
 /** @type {import('@sveltejs/kit').Config} */
 import { mdsvex } from 'mdsvex';
-import { imagetools } from 'vite-imagetools';
 import path from 'path';
 import dsv from '@rollup/plugin-dsv';
 import adapter from '@sveltejs/adapter-static';
@@ -18,7 +17,7 @@ const config = {
 	],
 	kit: {
 		adapter: adapter(),
-		target: '#svelte',
+		target: '#content',
 		vite: {
 			resolve: {
 				alias: {
@@ -32,7 +31,7 @@ const config = {
 					$styles: path.resolve('./src/styles')
 				}
 			},
-			plugins: [dsv(), imagetools({ force: true })]
+			plugins: [dsv()]
 		}
 	}
 };

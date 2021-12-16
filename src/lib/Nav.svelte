@@ -28,7 +28,7 @@
 	class:border-t={isScrolled}
 	class:bg-grey={isScrolled}
 >
-	<h1 class="text-shadow py-2 leading-none font-extralight" class:text-4xl={isScrolled}>
+	<h1 class="text-shadow py-2 leading-none font-light" class:text-4xl={isScrolled}>
 		{#if isScrolled}
 			<a sveltekit:prefetch href="/#home">Sawyer Click</a>
 		{:else}
@@ -41,7 +41,7 @@
 			<a
 				href="https://www.businessinsider.com/category/sawyer-click"
 				target="_blank"
-				class="styled-border block md:text-3xl text-2xl w-3/5 font-medium leading-none bg-bg m-0"
+				class="styled-border block md:text-3xl text-2xl w-3/5 font-medium leading-none m-0"
 			>
 				develops interactive graphics at Business Insider
 				<ExternalLinkIcon size="14" />

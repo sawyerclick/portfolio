@@ -28,19 +28,17 @@
 	export let slug;
 
 	setContext('graphics', [...pinned, ...recent]);
-
-	let scrollY;
 </script>
-
-<svelte:window bind:scrollY />
 
 <Meta meta={{ ...meta, slug }} />
 
 <Nav />
 
 <main class="z-10 min-h-screen">
-	<div id="home" class="h-screen min-h-screen flex justify-start items-end overflow-hidden">
-		<div class="chart absolute all-0 h-full min-h-screen w-full">
+	<div id="home" class="h-screen min-h-screen flex justify-start items-end relative">
+		<div
+			class="absolute all-0 h-full min-h-screen w-full after:absolute after:z-1 after:right-0 after:bottom-0 after:left-0 after:h-16 after:w-full after:bg-gradient-to-b after:from-transparent after:to-grey"
+		>
 			<CanvasWrapper />
 		</div>
 	</div>
@@ -64,18 +62,6 @@
 	}
 	h2 {
 		@apply max-w-xs py-2 mx-auto mt-16 mb-12 text-4xl shadow-md text-center normal-case;
-	}
-
-	.chart::before {
-		content: '';
-		z-index: 1;
-		position: absolute;
-		bottom: 0px;
-		left: 0;
-		right: 0;
-		height: 30px;
-		background: rgb(248, 248, 248);
-		background: linear-gradient(0deg, rgba(248, 248, 248, 1) 20%, rgba(248, 248, 248, 0) 100%);
 	}
 
 	li.project:hover img {

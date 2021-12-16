@@ -3,6 +3,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	.all-0 {
+		@apply top-0 right-0 bottom-0 left-0;
+	}
+	.styled-border {
+		@apply font-serif text-blue no-underline border py-2 px-4 border-blue bg-grey rounded-tl-xl rounded-br-xl transition-all duration-300 overflow-hidden;
+		border-top-left-radius: 1rem;
+		border-bottom-right-radius: 1rem;
+	}
+}
+
 :root {
 	--sans: monospace;
 	--serif: 'Recoleta-Regular', Georgia, Times, serif;
@@ -33,9 +44,6 @@ h2 {
 	@apply font-mono md:text-7xl text-5xl;
 }
 
-.all-0 {
-	@apply top-0 right-0 bottom-0 left-0;
-}
 .text-shadow {
 	text-shadow: -1px -1px var(--bg), 1px 1px var(--bg), 1px -1px var(--bg), -1px 1px var(--bg);
 }
@@ -86,22 +94,12 @@ a.skip-to-main:focus {
 	z-index: 999;
 }
 
-.styled-border {
-	@apply font-serif text-blue no-underline border py-2 px-4 border-blue bg-grey rounded-tl-xl rounded-br-xl transition-all duration-300;
-	border-top-left-radius: 1rem;
-	border-bottom-right-radius: 1rem;
-	overflow: hidden;
-}
-
 a.styled-border:hover,
-button.styled-border:hover {
-	@apply border-pink rounded-br-none rounded-tl-none;
+button.styled-border:hover,
+label.styled-border:hover {
+	@apply border-pink rounded-br-none rounded-tl-none text-pink cursor-pointer;
 	border-top-right-radius: 1rem;
 	border-bottom-left-radius: 1rem;
-}
-a.styled-border,
-button.styled-border {
-	@apply cursor-pointer hover:text-pink;
 }
 a.styled-border:hover > *,
 button.styled-border:hover > * {
