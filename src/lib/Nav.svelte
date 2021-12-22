@@ -13,9 +13,11 @@
 	onMount(() => {
 		gsap.to(chevronDownEl, { y: -10, repeat: -1, yoyo: true, ease: 'power1.out' });
 		hasNav.set(true);
+		document.body.classList.add('has-nav');
 	});
 	onDestroy(() => {
 		hasNav.set(false);
+		// document.body.classList.remove('has-nav');
 	});
 
 	$: isScrolled = scrollY > 0;
