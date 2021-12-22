@@ -2,12 +2,18 @@
 	"name": "sawyerclick.github.io",
 	"version": "0.0.1",
 	"type": "module",
+	"contributors": [
+		"Sawyer Click"
+	],
 	"engines": {
 		"node": ">= 14.17.3"
 	},
+	"browserslist": [
+		"defaults and supports es6-module and supports es6-module-dynamic-import, not opera > 0, not samsung > 0, not and_qq > 0"
+	],
 	"scripts": {
-		"google": "node scripts/fetch.cjs",
-		"thumbnails": "node scripts/thumbs.cjs",
+		"google": "node scripts/fetch.js",
+		"thumbnails": "node scripts/thumbs.js",
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
 		"preview": "svelte-kit preview",

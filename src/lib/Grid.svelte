@@ -5,7 +5,7 @@
 
 <ul
 	id="graphics"
-	class="w-full mx-auto grid px-6 gap-12 sm:gap-8 lg:gap-12 place-items-start grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+	class="w-full mx-auto grid px-6 gap-12 sm:gap-8 lg:gap-12 place-items-start grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4"
 >
 	{#each gridItems as project}
 		<li class="project relative w-full h-full">

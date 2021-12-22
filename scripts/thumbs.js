@@ -1,6 +1,6 @@
-const fs = require('fs');
-const sharp = require('sharp');
-const shell = require('shelljs');
+import fs from 'fs'
+import sharp from 'sharp'
+import shell from 'shelljs'
 
 const sizes = [200, 400, 600, 800];
 const formats = ['png', 'webp'];

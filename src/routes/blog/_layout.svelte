@@ -37,8 +37,8 @@
 		<header class="mb-8">
 			<Breadcrumbs />
 			<h1 class="text-5xl mt-4 mb-2">{title}</h1>
-			<hr class="bg-blue" />
-			<div class="font-mono relative pt-2 border-t-1 border-blue">
+			<hr class="bg-primary" />
+			<div class="font-mono relative pt-2 border-t-1 border-primary">
 				<a href="https://twitter.com/sawyerdabear">Sawyer Click</a>
 				<span class="pointer-events-none">&times;&times;&times;</span>
 				<time datetime={created}>
@@ -59,7 +59,7 @@
 	h4,
 	h5,
 	h6 {
-		@apply font-serif text-blue leading-none mt-8 mb-4 pt-6;
+		@apply font-serif text-primary leading-none mt-8 mb-4 pt-6;
 	}
 	h2 {
 		@apply text-3xl uppercase;
@@ -73,10 +73,10 @@
 	}
 	p.body:first-of-type::first-letter {
 		font-size: 280%;
-		@apply font-serif bg-blue text-grey px-1 mr-2 leading-none float-left;
+		@apply font-serif bg-primary text-accent px-1 mr-2 leading-none float-left;
 	}
 
 	a:hover {
-		color: var(--pink);
+		color: var(--secondary);
 	}
 </style>

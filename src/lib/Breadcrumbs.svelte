@@ -3,7 +3,7 @@
 	$: segments = $page.path.slice(1).split('/').slice(0, -1);
 </script>
 
-<nav class="text-blue align-middle" aria-label="Breadcrumbs">
+<nav class="text-primary align-middle" aria-label="Breadcrumbs">
 	<a sveltekit:prefetch href="/">Sawyer Click</a>
 	<span>/</span>
 	{#each segments as segment, i}

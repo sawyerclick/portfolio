@@ -27,7 +27,7 @@
 			// 	startCoords: () => ({ x: -size, y: -size, xPercent: -25, yPercent: -25 })
 			// },
 			{
-				color: 'bg-blue',
+				color: 'bg-primary',
 				duration: 0.4,
 				rotation: 270,
 				triangleCursor: { xPercent: -50, yPercent: -50 },

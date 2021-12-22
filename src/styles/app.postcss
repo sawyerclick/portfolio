@@ -8,7 +8,7 @@
 		@apply top-0 right-0 bottom-0 left-0;
 	}
 	.styled-border {
-		@apply font-serif text-blue no-underline border py-2 px-4 border-blue bg-grey rounded-tl-xl rounded-br-xl transition-all duration-300 overflow-hidden;
+		@apply font-serif text-primary no-underline border py-2 px-4 border-primary bg-accent rounded-tl-xl rounded-br-xl transition-all duration-300 overflow-hidden;
 		border-top-left-radius: 1rem;
 		border-bottom-right-radius: 1rem;
 	}
@@ -17,9 +17,9 @@
 :root {
 	--sans: monospace;
 	--serif: 'Recoleta-Regular', Georgia, Times, serif;
-	--blue: #34657f;
-	--pink: #cc6c8f;
-	--peach: #f6bd9d;
+	--primary: #34657f;
+	--secondary: #cc6c8f;
+	--tertiary: #f6bd9d;
 	--gray: #f8f8f8;
 	--bg: var(--gray);
 }
@@ -30,15 +30,15 @@ svg.feather {
 }
 
 * {
-	@apply text-blue;
+	@apply text-primary;
 }
 
 a:hover {
-	@apply text-pink;
+	@apply text-secondary;
 }
 
 h1 {
-	@apply font-serif md:text-9xl text-7xl  text-blue;
+	@apply font-serif md:text-9xl text-7xl  text-primary;
 }
 h2 {
 	@apply font-mono md:text-7xl text-5xl;
@@ -62,11 +62,11 @@ html {
 }
 
 ::-moz-selection {
-	background: var(--blue);
+	background: var(--primary);
 	color: var(--bg);
 }
 ::selection {
-	background: var(--blue);
+	background: var(--primary);
 	color: var(--bg);
 }
 
@@ -97,12 +97,12 @@ a.skip-to-main:focus {
 a.styled-border:hover,
 button.styled-border:hover,
 label.styled-border:hover {
-	@apply border-pink rounded-br-none rounded-tl-none text-pink cursor-pointer;
+	@apply border-secondary rounded-br-none rounded-tl-none text-secondary cursor-pointer;
 	border-top-right-radius: 1rem;
 	border-bottom-left-radius: 1rem;
 }
 a.styled-border:hover > *,
 button.styled-border:hover > * {
-	stroke: var(--pink);
-	color: var(--pink);
+	stroke: var(--secondary);
+	color: var(--secondary);
 }

@@ -35,11 +35,10 @@ const config = {
 		},
 		extend: {
 			colors: {
-				blue: '#34657F',
-				pink: '#CC6C8F',
-				peach: '#F6BD9D',
-				grey: '#f8f8f8',
-				bg: '#FAECDE'
+				primary: '#34657F',
+				secondary: '#CC6C8F',
+				tertiary: '#F6BD9D',
+				accent: '#f8f8f8'
 			},
 			fontSize: {
 				'8xl': '5.15rem'

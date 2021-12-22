@@ -12,7 +12,7 @@
 	} from 'd3-force';
 	import forceBoundary from 'd3-force-boundary';
 	import Canvas from './Canvas.svelte';
-	import Person from './Dot.svelte';
+	import Dot from './Dot.svelte';
 
 	let width = 0;
 	let height = 0;
@@ -26,6 +26,8 @@
 	const uniquePublications = [...new Set(dots.map((d) => d.publication))];
 
 	onMount(() => (mounted = true));
+
+	const mousemove = ({ clientX, clientY }) => (coords = [x(clientX), y(clientY)]);
 
 	$: renderedDots = [];
 
@@ -43,7 +45,7 @@
 	$: activeForceY = forceY(centerPosition[1]).strength((d) => gravityStrengthScale(d.r));
 	$: activeForceCenter = forceCenter(...centerPosition);
 	$: activeForceCollide = forceCollide().radius((d) => d.r + 10);
-	$: activeForceManyBody = forceManyBody().strength(-500);
+	$: activeForceManyBody = forceManyBody().strength(-200);
 	$: activeForceBoundary = forceBoundary(0, 0, width, height).strength(1);
 
 	// an array of forces to pass
@@ -52,7 +54,7 @@
 		['x', activeForceX],
 		['y', activeForceY],
 		['charge', activeForceManyBody],
-		['boundary', width < 600 ? null : activeForceBoundary],
+		['boundary', null],
 		['collide', activeForceCollide]
 	];
 
@@ -79,13 +81,13 @@
 </script>
 
 <div class="wrapper z-0 opacity-40 flex flex-col w-full h-full">
-	<div class="flex-1" bind:clientWidth={width} bind:clientHeight={height}>
+	<figure class="flex-1" bind:clientWidth={width} bind:clientHeight={height}>
 		<Canvas {width} {height}>
 			{#if mounted}
-				{#each renderedDots as { x, y, r, publication, img }}
-					<Person {x} {y} {r} {img} color={colorScale(publication)} delay={0} />
+				{#each renderedDots as { x, y, r, publication, img }, i}
+					<Dot {x} {y} {r} {img} color={colorScale(publication)} delay={i} />
 				{/each}
 			{/if}
 		</Canvas>
-	</div>
+	</figure>
 </div>

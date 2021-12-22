@@ -40,7 +40,7 @@
 					<a href={awardLink} class="block font-sans leading-tight py-1 max-w-sm mx-auto">
 						<b>{awardName}</b>
 					</a>
-					<hr class="my-2 border-blue opacity-40" />
+					<hr class="my-2 border-primary opacity-40" />
 					<a href={projectLink} class="block font-serif leading-tight py-1 max-w-sm mx-auto">
 						{projectName}
 					</a>

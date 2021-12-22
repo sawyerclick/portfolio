@@ -1,12 +1,9 @@
-const CWD = process.cwd();
-
-const fs = require('fs');
-const fetch = require('node-fetch');
-
-const docs = require(`${CWD}/google.config.cjs`);
+import docs from '../google.config.cjs';
+import fetch from 'node-fetch';
+import fs from 'fs';
 
 const fetchGoogle = async ({ id, gid, filepath }) => {
-	console.log(`fetching: ${filepath}`);
+	console.log(`\x1b[34mfetching: \x1b[32m${filepath}\x1b[0m`);
 
 	const base = 'https://docs.google.com';
 	const post = `spreadsheets/u/1/d/${id}/export?format=csv&id=${id}&gid=${gid}`;
@@ -25,7 +22,7 @@ const fetchGoogle = async ({ id, gid, filepath }) => {
 	for (let d of docs) {
 		try {
 			const str = await fetchGoogle(d);
-			const file = `${CWD}/${d.filepath}`;
+			const file = `./${d.filepath}`;
 			fs.writeFileSync(file, str);
 		} catch (err) {
 			console.log(err);

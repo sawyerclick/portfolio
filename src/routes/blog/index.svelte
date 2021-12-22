@@ -58,6 +58,6 @@
 
 <style lang="postcss">
 	a:hover * {
-		color: var(--pink);
+		color: var(--secondary);
 	}
 </style>

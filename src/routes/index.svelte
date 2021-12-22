@@ -37,19 +37,27 @@
 <main class="z-10 min-h-screen">
 	<div id="home" class="h-screen min-h-screen flex justify-start items-end relative">
 		<div
-			class="absolute all-0 h-full min-h-screen w-full after:absolute after:z-1 after:right-0 after:bottom-0 after:left-0 after:h-16 after:w-full after:bg-gradient-to-b after:from-transparent after:to-grey"
+			class="absolute all-0 h-full min-h-screen w-full after:absolute after:z-1 after:right-0 after:bottom-0 after:left-0 after:h-16 after:w-full after:bg-gradient-to-b after:from-transparent after:to-accent"
 		>
 			<CanvasWrapper />
 		</div>
 	</div>
 
-	<section id="pinned">
-		<h2 class="styled-border">📌 Selected work</h2>
+	<section id="pinned" class="my-24">
+		<h2
+			class="px-6 pb-2 mt-16 mb-8 text-6xl normal-case font-serif border-b border-primary text-center md:text-left"
+		>
+			Selected work
+		</h2>
 		<Grid gridItems={pinned} />
 	</section>
 
-	<section id="recent">
-		<h2 class="styled-border">👀 Recent work</h2>
+	<section id="recent" class="my-24">
+		<h2
+			class="px-6 pb-2 mt-16 mb-8 text-6xl normal-case font-serif border-b border-primary text-center md:text-left"
+		>
+			Recent work
+		</h2>
 		<Grid gridItems={recent} />
 	</section>
 </main>
@@ -57,13 +65,6 @@
 <Footer />
 
 <style lang="postcss" global>
-	section {
-		@apply my-24;
-	}
-	h2 {
-		@apply max-w-xs py-2 mx-auto mt-16 mb-12 text-4xl shadow-md text-center normal-case;
-	}
-
 	li.project:hover img {
 		filter: grayscale(0);
 	}

@@ -20,11 +20,7 @@
 
 	const image = new Image(diameter, diameter);
 	image.src =
-		img === 'me.jpeg'
-			? `/images/${img}`
-			: img.includes('https://')
-			? img + '?width=200&format=jpeg?auto=webp'
-			: `/images/portfolio/resized/${img.split('.')[0]}/200.png`;
+		img === 'me.jpeg' ? `/images/${img}` : `/images/portfolio/resized/${img.split('.')[0]}/200.png`;
 
 	const tX = tweened(null, tweenParameters);
 	const tY = tweened(null, tweenParameters);
@@ -51,20 +47,16 @@
 	onMount(() => {
 		register(draw);
 		invalidate();
-
-		return () => {
-			deregister(draw);
-		};
+		return () => deregister(draw);
 	});
 
 	afterUpdate(invalidate);
-
 	onDestroy(invalidate);
 
 	$: tweenParameters = {
 		duration: 400,
 		easing: cubicOut,
-		delay
+		delay: delay * 5
 	};
 
 	$: tX.set(x, tweenParameters);
