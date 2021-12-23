@@ -35,9 +35,9 @@ const config = {
 		},
 		extend: {
 			colors: {
-				primary: '#34657F',
-				secondary: '#CC6C8F',
-				tertiary: '#F6BD9D',
+				primary: '#323232',
+				secondary: '#ff00ff',
+				tertiary: '#00ffff',
 				accent: '#f8f8f8'
 			},
 			fontSize: {

@@ -13,19 +13,20 @@
 	import Breadcrumbs from '$lib/Breadcrumbs.svelte';
 	import Meta from '$lib/Meta.svelte';
 	import Footer from '$lib/Footer.svelte';
-
 	import '$styles/font.css';
 	import '$styles/app.postcss';
 
+	export let slug;
 	export let title;
 	export let created;
 	export let updated;
 	export let description;
 	export let coverImagesUrl;
-	export let relatedProjects;
-	export let slug;
+	export let related;
 
 	const parse = (time) => timeFormat('%B %e, %Y')(timeParse('%Y-%m-%dT%H:%M:%S.%LZ')(time));
+
+	const splitter = '<span class="pointer-events-none">&times;&times;&times;</span>';
 </script>
 
 <Meta meta={{ title, description, slug }} />
@@ -39,11 +40,17 @@
 			<h1 class="text-5xl mt-4 mb-2">{title}</h1>
 			<hr class="bg-primary" />
 			<div class="font-mono relative pt-2 border-t-1 border-primary">
-				<a href="https://twitter.com/sawyerdabear">Sawyer Click</a>
-				<span class="pointer-events-none">&times;&times;&times;</span>
+				<a target="_blank" href="https://twitter.com/sawyerdabear"> Sawyer Click </a>
+				{@html splitter}
 				<time datetime={created}>
 					{parse(created)}
 				</time>
+				{#if updated}
+					{@html splitter}
+					<time datetime={updated}>
+						Updated: {parse(updated)}
+					</time>
+				{/if}
 			</div>
 		</header>
 		<section>

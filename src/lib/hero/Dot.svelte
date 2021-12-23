@@ -8,7 +8,6 @@
 	export let r = 4;
 	export let img = 'images/me.jpeg';
 	export let color = '#000000';
-	export let delay = 0;
 	export let contextName = 'canvas';
 
 	const { register, deregister, invalidate } = getContext(contextName);
@@ -55,8 +54,7 @@
 
 	$: tweenParameters = {
 		duration: 400,
-		easing: cubicOut,
-		delay: delay * 5
+		easing: cubicOut
 	};
 
 	$: tX.set(x, tweenParameters);

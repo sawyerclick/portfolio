@@ -37,7 +37,7 @@
 <main class="z-10 min-h-screen">
 	<div id="home" class="h-screen min-h-screen flex justify-start items-end relative">
 		<div
-			class="absolute all-0 h-full min-h-screen w-full after:absolute after:z-1 after:right-0 after:bottom-0 after:left-0 after:h-16 after:w-full after:bg-gradient-to-b after:from-transparent after:to-accent"
+			class="absolute all-0 h-full min-h-screen w-full after:absolute after:z-1 after:right-0 after:bottom-0 after:left-0 after:h-24 after:w-full after:bg-gradient-to-b after:from-transparent after:to-accent dark:after:to-primary"
 		>
 			<CanvasWrapper />
 		</div>
@@ -45,7 +45,7 @@
 
 	<section id="pinned" class="my-24">
 		<h2
-			class="px-6 pb-2 mt-16 mb-8 text-6xl normal-case font-serif border-b border-primary text-center md:text-left"
+			class="px-6 pb-2 mt-16 mb-8 text-6xl normal-case font-serif border-b border-secondary text-center md:text-left"
 		>
 			Selected work
 		</h2>
@@ -54,7 +54,7 @@
 
 	<section id="recent" class="my-24">
 		<h2
-			class="px-6 pb-2 mt-16 mb-8 text-6xl normal-case font-serif border-b border-primary text-center md:text-left"
+			class="px-6 pb-2 mt-16 mb-8 text-6xl normal-case font-serif border-b  border-secondary shadow-secondary-lg text-center md:text-left"
 		>
 			Recent work
 		</h2>

@@ -4,7 +4,7 @@
 
 <Meta meta={{ title: 'Whoops...', description: 'Something went wrong.', slug: '' }} />
 
-<picture class="w-screen h-screen fixed pointer-events-none -z-1">
+<picture class="w-screen h-screen fixed pointer-events-none z-10">
 	<source srcset="/images/rickroll.webp" type="image/webp" />
 	<source srcset="/images/rickroll.gif" type="image/gif" />
 	<img
@@ -14,7 +14,9 @@
 	/>
 </picture>
 
-<main class="flex flex-nowrap flex-col justify-center items-center h-screen p-12 text-center">
+<main
+	class="absolute flex flex-nowrap flex-col justify-center items-center w-screen h-screen p-12 text-center z-20"
+>
 	<h1 class="font-serif mt-8 text-bg">Whoops...</h1>
 	<h2 class="font-serif mt-6 text-5xl text-bg">something went wrong</h2>
 	<button

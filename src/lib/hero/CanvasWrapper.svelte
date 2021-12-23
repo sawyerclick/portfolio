@@ -54,7 +54,7 @@
 		['x', activeForceX],
 		['y', activeForceY],
 		['charge', activeForceManyBody],
-		['boundary', null],
+		['boundary', width > 500 ? activeForceBoundary : null],
 		['collide', activeForceCollide]
 	];
 
@@ -80,12 +80,12 @@
 	}
 </script>
 
-<div class="wrapper z-0 opacity-40 flex flex-col w-full h-full">
+<div class="wrapper z-0 opacity-40 flex flex-col w-full h-full dark:mix-blend-lighten">
 	<figure class="flex-1" bind:clientWidth={width} bind:clientHeight={height}>
 		<Canvas {width} {height}>
 			{#if mounted}
-				{#each renderedDots as { x, y, r, publication, img }, i}
-					<Dot {x} {y} {r} {img} color={colorScale(publication)} delay={i} />
+				{#each renderedDots as { x, y, r, publication, img }}
+					<Dot {x} {y} {r} {img} color={colorScale(publication)} />
 				{/each}
 			{/if}
 		</Canvas>

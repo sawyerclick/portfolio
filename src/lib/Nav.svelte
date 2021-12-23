@@ -26,11 +26,11 @@
 <svelte:window bind:scrollY />
 
 <div
-	class="sm:pl-4 header pr-2 pl-2 w-full fixed bottom-0 z-10 border-primary"
-	class:border-t={isScrolled}
-	class:bg-accent={isScrolled}
+	class="sm:pl-4 header pr-2 pl-2 w-full fixed bottom-0 z-10 border-transparent border-t  {isScrolled
+		? 'dark:bg-primary bg-accent border-primary dark:border-accent'
+		: ''}"
 >
-	<h1 class="text-shadow py-2 leading-none font-light" class:text-4xl={isScrolled}>
+	<h1 class="text-shadow py-1 leading-none font-light dark:text-accent" class:text-4xl={isScrolled}>
 		{#if isScrolled}
 			<a sveltekit:prefetch href="/#home">Sawyer Click</a>
 		{:else}

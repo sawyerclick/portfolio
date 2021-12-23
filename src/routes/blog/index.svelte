@@ -33,7 +33,7 @@
 	<article>
 		<header>
 			<nav class="left-2 top-2 static block text-center">
-				<a class="styled-border text-lg" href="/" sveltekit:prefetch>home</a>
+				<a class="font-mono text-lg" href="/">🏠 home</a>
 			</nav>
 
 			<h1 class="font-serif text-5xl text-center mt-6 font-black tracking-wider">
