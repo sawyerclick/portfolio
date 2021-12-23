@@ -33,6 +33,7 @@
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^3.2.1",
 		"feather-icons": "^4.28.0",
+		"fitty": "^2.3.5",
 		"gsap": "^3.9.0",
 		"hastscript": "^7.0.2",
 		"layercake": "^5.0.3",

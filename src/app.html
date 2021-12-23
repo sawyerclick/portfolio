@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class='bg-accent dark:bg-primary overflow-x-hidden min-h-screen text-base scroll-smooth'>
 	<head>
 		<meta charset="utf-8" />
 		<meta
@@ -65,8 +65,8 @@
 
 		%svelte.head%
 	</head>
-	<body>
-		<a href="#content" class="skip-to-main">Skip to main content</a>
+	<body class='bg-accent dark:bg-primary'>
+		<a href="#content" class="sr-only focus:not-sr-only fixed top-0 left-0 bg-primary text-accent">Skip to main content</a>
 		<div id="content">%svelte.body%</div>
 	</body>
 </html>

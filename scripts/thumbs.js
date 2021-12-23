@@ -1,6 +1,6 @@
-import fs from 'fs'
-import sharp from 'sharp'
-import shell from 'shelljs'
+import fs from 'fs';
+import sharp from 'sharp';
+import shell from 'shelljs';
 
 const sizes = [200, 400, 600, 800];
 const formats = ['png', 'webp'];
@@ -28,6 +28,7 @@ const makeThumb = async (fileName) => {
 					width: size,
 					background: { r: 248, g: 248, b: 248, alpha: 1 }
 				})
+				.flatten({ background: { r: 248, g: 248, b: 248 } })
 				.toFormat(format)
 				.toFile(`${dest}/${size}.${format}`)
 				.then(() => console.log('\x1b[32m', `${fileName} | ${size} - ${format}`));

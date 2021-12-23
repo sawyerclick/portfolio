@@ -7,26 +7,26 @@
 </script>
 
 <a
-	class="group styled-border block h-full text-primary shadow-md relative z-100 hover:shadow-xl hover:-rotate-2"
+	class="group styled-border block h-full text-primary shadow-md relative z-100"
 	href={link}
 	target="_blank"
 	{title}
 >
 	<div class="flex justify-center items-end flex-row flex-wrap">
 		<div
-			class="picture-wrapper h-60 w-full border-b border-primary object-center object-cover overflow-hidden z-0 transition-all duration-300 group-hover:border-secondary"
+			class="picture-wrapper h-60 w-full border-b border-primary object-center object-cover overflow-hidden z-0 transition-all duration-150 group-hover:border-secondary dark:group-hover:border-secondary dark:border-accent"
 		>
 			<Picture slug={img} {alt} />
 		</div>
 		<span transition:slide|local class="text-left w-full px-4 my-2 pt-1.5">
 			<ul>
 				<li
-					class="publication inline-block px-1.5 py-0.5 leading-none mr-1.5 rounded-sm font-mono text-sm text-primary border-1 border-primary"
+					class="publication inline-block px-1.5 py-0.5 leading-none mr-1.5 rounded-sm font-mono text-sm border-1 border-primary dark:border-accent"
 				>
 					{publication}
 				</li>
 				<li
-					class="date inline-block px-1.5 py-0.5 leading-none mr-1.5 rounded-sm font-mono text-sm text-primary border-1 border-primary"
+					class="date inline-block px-1.5 py-0.5 leading-none mr-1.5 rounded-sm font-mono text-sm text-primary border-1 border-primary dark:border-accent"
 				>
 					{date}
 				</li>
@@ -53,7 +53,7 @@
 		padding: 0 !important;
 	}
 	a .picture-wrapper :global(img) {
-		@apply transition-transform duration-300 ease-out;
+		@apply transition-transform duration-150 ease-out;
 	}
 	a:hover .picture-wrapper :global(img) {
 		@apply scale-105;

@@ -1,15 +1,23 @@
+import { browser } from '$app/env';
 import { writable } from 'svelte/store';
 import { readable } from 'svelte/store';
 
 export const hasNav = writable(false);
-export const theme = writable(null, (set) => {
-	if (typeof window !== 'undefined') {
-		set(localStorage.theme);
-	}
 
-	// return () => {
-	// 	if (typeof window !== 'undefined') set(localStorage.theme);
-	// };
+// theme tracker, default to dark
+export const theme = writable(browser ? window.localStorage.getItem('theme') : 'dark');
+theme.subscribe((value) => {
+	if (browser) {
+		// change classes and settings
+		window.localStorage.setItem('theme', value);
+		if (value === 'dark') {
+			document.documentElement.classList.add('dark');
+			document.documentElement.classList.remove('light');
+		} else {
+			document.documentElement.classList.remove('dark');
+			document.documentElement.classList.add('light');
+		}
+	}
 });
 
 // a lazy load store that, once the window is available, kicks up an IntersectionObserver instance and watches inputted images, video and iframes. Use in coordination with Image.svelte.

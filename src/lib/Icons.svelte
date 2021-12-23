@@ -37,10 +37,10 @@
 	li {
 		@apply inline-block mx-1 last-of-type:mr-0 first-of-type:ml-0;
 	}
-	:global(svg.feather) {
-		@apply m-0 mb-2 transition-all duration-500;
+	li :global(svg.feather) {
+		@apply mb-0.5 !important;
 	}
-	:global(svg.feather:first-of-type) {
-		margin-left: 0;
+	li :global(svg.feather:first-of-type) {
+		@apply ml-0;
 	}
 </style>
