@@ -30,7 +30,7 @@
 		? 'dark:bg-primary bg-accent border-primary dark:border-accent'
 		: ''}"
 >
-	<h1 class="text-shadow py-1 leading-none font-light dark:text-accent" class:text-4xl={isScrolled}>
+	<h1 class="text-shadow py-3 leading-none font-light dark:text-accent" class:text-4xl={isScrolled}>
 		{#if isScrolled}
 			<a sveltekit:prefetch href="/#home">Sawyer Click</a>
 		{:else}

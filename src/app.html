@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" class='bg-accent dark:bg-primary overflow-x-hidden min-h-screen text-base scroll-smooth'>
+<html
+	lang="en"
+	class="bg-accent dark:bg-primary overflow-x-hidden min-h-screen text-base scroll-smooth"
+>
 	<head>
 		<meta charset="utf-8" />
 		<meta
@@ -56,17 +59,19 @@
 				(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
 			) {
 				document.documentElement.classList.add('dark');
-				localStorage.theme = 'dark'
+				localStorage.theme = 'dark';
 			} else {
 				document.documentElement.classList.remove('dark');
-				localStorage.theme = 'light'
+				localStorage.theme = 'light';
 			}
 		</script>
 
 		%svelte.head%
 	</head>
-	<body class='bg-accent dark:bg-primary'>
-		<a href="#content" class="sr-only focus:not-sr-only fixed top-0 left-0 bg-primary text-accent">Skip to main content</a>
+	<body class="bg-accent dark:bg-primary">
+		<a href="#content" class="sr-only focus:not-sr-only fixed top-0 left-0 bg-primary text-accent"
+			>Skip to main content</a
+		>
 		<div id="content">%svelte.body%</div>
 	</body>
 </html>
