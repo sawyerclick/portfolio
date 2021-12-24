@@ -2,14 +2,7 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
-			"$blog/*": ["src/blog/*"],
-			"$lib/*": ["src/lib/*"],
-			"$data/*": ["src/data/*"],
-			"$actions/*": ["src/actions/*"],
-			"$utils/*": ["src/utils/*"],
-			"$stores": ["src/stores.js"],
-			"$styles": ["src/styles/*"],
-			"$assets": ["src/assets/*"]
+			"$lib/*": ["src/lib/*"]
 		}
 	},
 	"include": ["src/**/*.js", "src/**/*.svelte", "src/lib/markdown.cjs"],

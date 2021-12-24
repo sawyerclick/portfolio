@@ -1,5 +1,3 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
 import abbr from 'remark-abbr';
 import urls from 'rehype-urls';
 import slug from 'rehype-slug';
@@ -7,8 +5,6 @@ import autoLinkHeadings from 'rehype-autolink-headings';
 import addClasses from 'rehype-add-classes';
 import { visit } from 'unist-util-visit';
 import { h } from 'hastscript';
-
-const dirname = path.resolve(fileURLToPath(import.meta.url), '../');
 
 /**
  * Modified from https://github.com/josestg/rehype-figure
@@ -24,14 +20,11 @@ function figure() {
 
 	return function (tree) {
 		visit(tree, { tagName: 'p' }, (node, index) => {
-			const images = node.children
-				.filter((n) => n.tagName === 'img')
-				.map((img) => buildFigure(img));
+			const images = node.children.filter((n) => n.tagName === 'img').map((img) => buildFigure(img));
 
 			if (images.length === 0) return;
 
-			tree.children[index] =
-				images.length === 1 ? images[0] : (tree.children[index] = h('div', null, images));
+			tree.children[index] = images.length === 1 ? images[0] : (tree.children[index] = h('div', null, images));
 		});
 	};
 }
@@ -53,7 +46,7 @@ function processUrl(url, node) {
 const config = {
 	extensions: ['.svelte.md'],
 	layout: {
-		blog: path.join(dirname, './src/routes/blog/_layout.svelte')
+		post: './src/routes/post/_layout.svelte'
 	},
 	smartypants: true,
 	remarkPlugins: [abbr], // adds support for footnote-like abbreviations

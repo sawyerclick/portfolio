@@ -1,4 +1,4 @@
-import projects from '$data/projects';
+import projects from '$lib/data/projects';
 
 export const get = async () => {
 	const pinned = projects.filter(({ pinned }) => pinned === 'TRUE');

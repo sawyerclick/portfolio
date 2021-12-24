@@ -1,4 +1,4 @@
-import meta from '$data/meta';
+import meta from '$lib/data/meta';
 
 export const get = async () => {
 	return {

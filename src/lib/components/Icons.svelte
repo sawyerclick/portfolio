@@ -1,0 +1,43 @@
+<script>
+	import { GithubIcon, TwitterIcon, MailIcon, Edit3Icon } from 'svelte-feather-icons';
+
+	export let size = '26';
+</script>
+
+<ul class="inline">
+	<li>
+		<a class="styled-border profile-icon" href="https://www.github.com/SawyerClick" title="Github">
+			<GithubIcon {size} />
+		</a>
+	</li>
+	<li>
+		<a
+			class="styled-border profile-icon"
+			href="https://www.twitter.com/sawyerdabear"
+			title="Twitter"
+		>
+			<TwitterIcon {size} />
+		</a>
+	</li>
+	<li>
+		<a
+			class="styled-border profile-icon"
+			href="mailto:sawyer@hey.com?Subject=Hi%20Sawyer"
+			title="Email"
+		>
+			<MailIcon {size} />
+		</a>
+	</li>
+</ul>
+
+<style lang="postcss">
+	li {
+		@apply inline-block mx-1 last-of-type:mr-0 first-of-type:ml-0;
+	}
+	li :global(svg.feather) {
+		@apply mb-0.5 !important;
+	}
+	li :global(svg.feather:first-of-type) {
+		@apply ml-0;
+	}
+</style>

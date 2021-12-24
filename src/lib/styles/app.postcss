@@ -1,0 +1,90 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	.all-0 {
+		@apply top-0 right-0 bottom-0 left-0;
+	}
+	.styled-border {
+		@apply font-serif text-primary no-underline border py-2 px-4 border-primary bg-accent rounded-tl-xl rounded-br-xl hover:transition-all duration-150 overflow-hidden dark:text-accent dark:border-accent dark:bg-primary;
+		border-top-left-radius: 1rem;
+		border-bottom-right-radius: 1rem;
+	}
+}
+
+:root {
+	--sans: monospace;
+	--serif: 'Recoleta-Regular', Georgia, Times, serif;
+	--primary: #323232;
+	--secondary: #ff00ff;
+	--tertiary: #00ffff;
+	--accent: #f8f8f8;
+	--neon: 0 0 36px -12px var(--secondary);
+}
+
+svg.feather {
+	display: unset;
+	margin: 0 !important;
+}
+
+* {
+	@apply text-primary dark:text-accent ;
+}
+
+a:hover {
+	@apply text-secondary dark:text-secondary;
+}
+
+h1 {
+	@apply font-serif md:text-9xl text-7xl  text-primary;
+}
+h2 {
+	@apply font-mono md:text-7xl text-5xl;
+}
+
+html.light .text-shadow {
+	text-shadow: -1px -1px var(--accent), 1px 1px var(--accent), 1px -1px var(--accent),
+		-1px 1px var(--accent);
+}
+html.dark .text-shadow {
+	text-shadow: -1px -1px var(--primary), 1px 1px var(--primary), 1px -1px var(--primary),
+		-1px 1px var(--primary);
+}
+
+html {
+	cursor: url('/images/site/chunkie_cursor.png'), auto;
+}
+
+body.has-nav footer {
+	@apply pb-20 leading-tight !important;
+}
+
+::-moz-selection {
+	@apply bg-secondary text-accent;
+}
+::selection {
+	@apply bg-secondary text-accent;
+}
+
+a {
+	@apply hover:text-secondary focus:text-secondary;
+}
+
+button:disabled {
+	@apply cursor-not-allowed opacity-40;
+}
+
+a.styled-border:hover,
+button.styled-border:hover,
+label.styled-border:hover {
+	@apply border-secondary rounded-br-none rounded-tl-none text-secondary cursor-pointer dark:text-secondary dark:border-secondary;
+	border-top-right-radius: 1rem;
+	border-bottom-left-radius: 1rem;
+	box-shadow: var(--neon);
+}
+a.styled-border:hover > *,
+button.styled-border:hover > * {
+	@apply stroke-secondary text-secondary dark:stroke-secondary dark:text-secondary;
+}
