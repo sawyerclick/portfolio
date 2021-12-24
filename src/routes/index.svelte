@@ -35,7 +35,11 @@
 <Nav />
 
 <main class="z-10 min-h-screen">
-	<div id="home" class="h-screen min-h-screen flex justify-start items-end relative">
+	<div
+		id="home"
+		class="h-screen min-h-screen flex justify-start items-end relative"
+		style="height:100vh;"
+	>
 		<div
 			class="absolute all-0 h-full min-h-screen w-full after:absolute after:z-1 after:right-0 after:bottom-0 after:left-0 after:h-24 after:w-full after:bg-gradient-to-b after:from-transparent after:to-accent dark:after:to-primary"
 		>
