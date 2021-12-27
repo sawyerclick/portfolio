@@ -17,10 +17,10 @@
 <script>
 	import { setContext } from 'svelte';
 	import Nav from '$lib/components/Nav.svelte';
-	import Meta from '$lib/components/Meta.svelte';
+	import Meta from '$lib/components/furniture/Meta.svelte';
 	import Grid from '$lib/components/Grid.svelte';
 	import CanvasWrapper from '$lib/components/hero/CanvasWrapper.svelte';
-	import Footer from '$lib/components/Footer.svelte';
+	import Footer from '$lib/components/furniture/Footer.svelte';
 
 	export let meta;
 	export let pinned;
@@ -35,7 +35,11 @@
 <Nav />
 
 <main class="z-10 min-h-screen">
-	<div id="home" class="h-screen min-h-screen flex justify-start items-end relative" style="height:100vh;">
+	<div
+		id="home"
+		class="h-screen min-h-screen flex justify-start items-end relative"
+		style="height:100vh;"
+	>
 		<div
 			class="absolute all-0 h-full min-h-screen w-full after:absolute after:z-1 after:right-0 after:bottom-0 after:left-0 after:h-24 after:w-full after:bg-gradient-to-b after:from-transparent after:to-accent dark:after:to-primary"
 		>
@@ -44,19 +48,21 @@
 	</div>
 
 	<section id="pinned" class="my-24">
-		<h2 class="px-6 pb-2 mt-16 mb-8 text-6xl normal-case font-serif border-b border-secondary text-center md:text-left">
+		<h2
+			class="px-6 pb-2 pt-4 mt-16 mb-8 text-2xl normal-case leading-none font-sans font-bold border-b-1 border-primary text-center md:text-left md:text-6xl dark:border-accent"
+		>
 			Selected work
 		</h2>
-		<Grid gridItems={pinned} />
+		<Grid items={pinned} />
 	</section>
 
 	<section id="recent" class="my-24">
 		<h2
-			class="px-6 pb-2 mt-16 mb-8 text-6xl normal-case font-serif border-b  border-secondary shadow-secondary-lg text-center md:text-left"
+			class="px-6 pb-2 pt-4 mt-16 mb-8 text-2xl normal-case leading-none font-sans font-bold border-b-1 border-primary text-center md:text-left md:text-6xl dark:border-accent"
 		>
 			Recent work
 		</h2>
-		<Grid gridItems={recent} />
+		<Grid items={recent} />
 	</section>
 </main>
 

@@ -9,8 +9,8 @@
 </script>
 
 <script>
-	import Meta from '$lib/components/Meta.svelte';
-	import Footer from '$lib/components/Footer.svelte';
+	import Meta from '$lib/components/furniture/Meta.svelte';
+	import Footer from '$lib/components/furniture/Footer.svelte';
 
 	export let awards = [];
 </script>
@@ -31,7 +31,7 @@
 
 		<header class="mt-8">
 			<figure class="text-center text-3xl">🏆</figure>
-			<h1 class="text-center font-serif mt-2 mb-4 px-2 text-5xl">Awards & such</h1>
+			<h1 class="text-center font-sans mt-2 mb-4 px-2 text-5xl">Awards & such</h1>
 		</header>
 
 		<ul class="w-full mx-auto px-6">
@@ -41,7 +41,7 @@
 						<b>{awardName}</b>
 					</a>
 					<hr class="my-2 border-primary opacity-40" />
-					<a href={projectLink} class="block font-serif leading-tight py-1 max-w-sm mx-auto">
+					<a href={projectLink} class="block font-sans leading-tight py-1 max-w-sm mx-auto">
 						{projectName}
 					</a>
 				</li>

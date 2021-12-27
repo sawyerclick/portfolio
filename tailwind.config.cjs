@@ -1,11 +1,12 @@
 const config = {
 	mode: 'jit',
-	content: ['./src/**/*.{html,js,svelte,ts}'],
+	content: ['./src/**/*.{html,js,svelte,ts}', './mdsvex.config.js'],
 	darkMode: 'class',
 	theme: {
 		fontFamily: {
 			serif: ['recoleta', 'ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
 			sans: [
+				'Monument',
 				'ui-sans-serif',
 				'system-ui',
 				'-apple-system',
@@ -32,6 +33,10 @@ const config = {
 				'Courier New',
 				'monospace'
 			]
+		},
+		listStyleType: {
+			none: 'none',
+			chevron: '"› "'
 		},
 		extend: {
 			colors: {

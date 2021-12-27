@@ -16,7 +16,7 @@ export async function get() {
 		}
 	)
 
-	posts.sort((a, b) => (new Date(a.created) > new Date(b.created) ? -1 : 1))
+	posts.sort((a, b) => (new Date(a.date) > new Date(b.date) ? -1 : 1))
 
   return {
 		body: { posts }

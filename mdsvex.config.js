@@ -20,11 +20,14 @@ function figure() {
 
 	return function (tree) {
 		visit(tree, { tagName: 'p' }, (node, index) => {
-			const images = node.children.filter((n) => n.tagName === 'img').map((img) => buildFigure(img));
+			const images = node.children
+				.filter((n) => n.tagName === 'img')
+				.map((img) => buildFigure(img));
 
 			if (images.length === 0) return;
 
-			tree.children[index] = images.length === 1 ? images[0] : (tree.children[index] = h('div', null, images));
+			tree.children[index] =
+				images.length === 1 ? images[0] : (tree.children[index] = h('div', null, images));
 		});
 	};
 }
@@ -55,7 +58,17 @@ const config = {
 		[urls, processUrl], // adds rel and target to <a> elements
 		slug, // adds slug to <h1>-<h6> elements
 		[autoLinkHeadings, { behavior: 'wrap' }], // adds a <a> around slugged <h1>-<h6> elements
-		[addClasses, { 'ul,ol': 'list', p: 'body' }] // add classes to these elements
+		[
+			addClasses,
+			{
+				h1: 'font-semibold',
+				h2: 'text-3xl',
+				'h2,h3,h4,h5,h6': 'font-sans font-bold tracking-wider leading-none mt-8 mb-4 pt-6',
+				'ul,ol': 'list-chevron marker:text-secondary',
+				li: '',
+				p: 'body'
+			}
+		] // add classes to these elements
 	]
 };
 

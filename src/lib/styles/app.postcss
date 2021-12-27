@@ -7,10 +7,11 @@
 	.all-0 {
 		@apply top-0 right-0 bottom-0 left-0;
 	}
+	.neon {
+		box-shadow: var(--neon)
+	}
 	.styled-border {
-		@apply font-serif text-primary no-underline border py-2 px-4 border-primary bg-accent rounded-tl-xl rounded-br-xl hover:transition-all duration-150 overflow-hidden dark:text-accent dark:border-accent dark:bg-primary;
-		border-top-left-radius: 1rem;
-		border-bottom-right-radius: 1rem;
+		@apply font-sans text-primary no-underline py-2 px-4 border-primary bg-accent border-2 hover:transition-all duration-150 overflow-hidden dark:text-accent dark:border-accent dark:bg-primary -skew-x-2;
 	}
 }
 
@@ -21,7 +22,7 @@
 	--secondary: #ff00ff;
 	--tertiary: #00ffff;
 	--accent: #f8f8f8;
-	--neon: 0 0 36px -12px var(--secondary);
+	--neon: 0 0 12px var(--secondary);
 }
 
 svg.feather {
@@ -30,7 +31,7 @@ svg.feather {
 }
 
 * {
-	@apply text-primary dark:text-accent ;
+	@apply text-primary dark:text-accent;
 }
 
 a:hover {
@@ -38,13 +39,13 @@ a:hover {
 }
 
 h1 {
-	@apply font-serif md:text-9xl text-7xl  text-primary;
+	@apply font-sans text-5xl sm:text-5xl lg:text-7xl text-primary;
 }
 h2 {
 	@apply font-mono md:text-7xl text-5xl;
 }
 
-html.light .text-shadow {
+html .text-shadow {
 	text-shadow: -1px -1px var(--accent), 1px 1px var(--accent), 1px -1px var(--accent),
 		-1px 1px var(--accent);
 }
@@ -79,10 +80,7 @@ button:disabled {
 a.styled-border:hover,
 button.styled-border:hover,
 label.styled-border:hover {
-	@apply border-secondary rounded-br-none rounded-tl-none text-secondary cursor-pointer dark:text-secondary dark:border-secondary;
-	border-top-right-radius: 1rem;
-	border-bottom-left-radius: 1rem;
-	box-shadow: var(--neon);
+	@apply border-secondary text-secondary cursor-pointer dark:text-secondary dark:border-secondary hover:neon;
 }
 a.styled-border:hover > *,
 button.styled-border:hover > * {

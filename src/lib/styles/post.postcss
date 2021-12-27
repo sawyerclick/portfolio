@@ -1,0 +1,23 @@
+#post p.body,
+#post ul,
+#post ol {
+	@apply font-mono text-xl tracking-tight;
+}
+
+#post p.body {
+	@apply my-8 first-of-type:mt-12 first-of-type:first-letter:mt-1 first-of-type:first-letter:pr-2
+	first-of-type:first-letter:py-0 first-of-type:first-letter:mr-1
+	first-of-type:first-letter:leading-[.6] first-of-type:first-letter:float-left  first-of-type:first-letter:font-sans 
+	first-of-type:first-letter:font-bold
+	first-of-type:first-letter:text-accent 
+dark:first-of-type:first-letter:text-primary first-of-type:first-letter:text-[400%]
+first-of-type:first-letter:[text-shadow:-1px_-1px_0_var(--secondary),1px_-1px_0_var(--secondary),-1px_1px_0_var(--secondary),1px_1px_0_var(--secondary),4px_-4px_1px_var(--secondary)];
+}
+
+#post .text-link {
+	@apply no-underline decoration-secondary decoration-2 underline-offset-4 duration-150 ease-out relative hover:transition-all hover:bg-secondary hover:text-white hover:px-2 hover:-skew-x-12 hover:font-black hover:tracking-widest hover:z-40;
+	box-shadow: 0 2px var(--secondary) 
+}
+::marker {
+	@apply text-2xl;
+}

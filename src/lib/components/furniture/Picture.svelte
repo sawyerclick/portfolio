@@ -16,7 +16,9 @@
 	const sizes = '(min-width: 1280px) 600px';
 	const srcsets = formats.map((format) => ({
 		format,
-		srcset: imgSizes.map((size) => `/images/portfolio/resized/${slug}/${size}.${format} ${size}w`).join(', ')
+		srcset: imgSizes
+			.map((size) => `/images/portfolio/resized/${slug}/${size}.${format} ${size}w`)
+			.join(', ')
 	}));
 
 	// blurs up image after it's lazy loaded
@@ -52,6 +54,7 @@
 		width="100%"
 		loading="lazy"
 		decoding="async"
+		draggable="false"
 		bind:this={imgEl}
 		on:load={imgBlurUp}
 	/>

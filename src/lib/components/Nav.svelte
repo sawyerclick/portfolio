@@ -1,61 +1,84 @@
 <script>
 	import { onDestroy, onMount } from 'svelte';
-	import { slide } from 'svelte/transition';
+	import { slide, fly } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
-	import { gsap } from 'gsap';
+	import { page } from '$app/stores';
 	import { hasNav } from '$lib/stores';
-	import { ChevronDownIcon, ExternalLinkIcon } from 'svelte-feather-icons';
-	import Icons from './Icons.svelte';
+	import { ExternalLinkIcon, SunIcon, MoonIcon, MenuIcon } from 'svelte-feather-icons';
+	import { theme } from '$lib/stores';
+	import Icons from './furniture/Icons.svelte';
 
 	let scrollY = 0;
-	let chevronDownEl = null;
-
 	onMount(() => {
-		gsap.to(chevronDownEl, { y: -10, repeat: -1, yoyo: true, ease: 'power1.out' });
 		hasNav.set(true);
 		document.body.classList.add('has-nav');
 	});
+
 	onDestroy(() => {
 		hasNav.set(false);
-		// document.body.classList.remove('has-nav');
 	});
 
-	$: isScrolled = scrollY > 0;
+	$: showExpanded = scrollY === 0 && $page.path === '/';
 </script>
 
 <svelte:window bind:scrollY />
 
-<div
-	class="sm:pl-4 header pr-2 pl-2 w-full fixed bottom-0 z-10 border-transparent border-t  {isScrolled
-		? 'dark:bg-primary bg-accent border-primary dark:border-accent'
-		: ''}"
->
-	<h1 class="text-shadow py-3 leading-none font-light dark:text-accent" class:text-4xl={isScrolled}>
-		{#if isScrolled}
-			<a sveltekit:prefetch href="/#home">Sawyer Click</a>
-		{:else}
-			Sawyer Click
-		{/if}
-	</h1>
+<nav class="sm:px-4 header pr-2 px-2 w-full fixed bottom-0 z-50">
+	<a
+		sveltekit:prefetch
+		href="/#home"
+		class="inline-block uppercase text-shadow py-2 leading-none font-semibold tracking-tighter font-sans text-5xl text-primary -skew-x-12 duration-150 ease-out dark:text-accent hover:transition-all hover:tracking-widest"
+		class:text-xl={!showExpanded}
+	>
+		Sawyer Click
+	</a>
 
-	{#if !isScrolled}
+	{#if showExpanded}
 		<div transition:slide|local={{ easing: quintOut, duration: 400 }}>
 			<a
 				href="https://www.businessinsider.com/category/sawyer-click"
 				target="_blank"
-				class="styled-border block md:text-3xl text-2xl w-3/5 font-medium leading-none m-0"
+				rel="external"
+				class="styled-border inline-block text-lg w-full font-light leading-tight m-0 md:w-2/5"
 			>
-				develops interactive graphics at Business Insider
+				develops data viz at Business Insider
 				<ExternalLinkIcon size="14" />
 			</a>
 
-			<div class="py-3 flex items-center justify-between">
+			<div class="flex justify-between items-center">
 				<Icons />
 
-				<div class="inline" bind:this={chevronDownEl}>
-					<ChevronDownIcon size="42" />
-				</div>
+				<button
+					class="styled-border inline-block z-50 text-xl mb-2"
+					aria-label="{$theme === 'dark' ? 'light' : 'dark'} mode"
+					on:click={() => theme.set($theme === 'dark' ? 'light' : 'dark')}
+				>
+					{#if $theme === 'dark'}
+						<SunIcon size="26" />
+					{:else}
+						<MoonIcon size="26" />
+					{/if}
+				</button>
 			</div>
 		</div>
+	{:else}
+		<!-- <button
+			class="block fixed right-4 bottom-2 -skew-x-12"
+			in:fly={{ x: 50, delay: 300, easing: quintOut }}
+		>
+			<MenuIcon size="26" />
+		</button> -->
+		<button
+			class="styled-border block fixed right-4 bottom-2 z-50 text-xl leading-none px-1 py-0.5"
+			aria-label="{$theme === 'dark' ? 'light' : 'dark'} mode"
+			on:click={() => theme.set($theme === 'dark' ? 'light' : 'dark')}
+			in:fly={{ x: 50, delay: 300, easing: quintOut }}
+		>
+			{#if $theme === 'dark'}
+				<SunIcon size="16" />
+			{:else}
+				<MoonIcon size="16" />
+			{/if}
+		</button>
 	{/if}
-</div>
+</nav>
