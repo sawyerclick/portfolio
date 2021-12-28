@@ -21,6 +21,7 @@
 	import Grid from '$lib/components/Grid.svelte';
 	import CanvasWrapper from '$lib/components/hero/CanvasWrapper.svelte';
 	import Footer from '$lib/components/furniture/Footer.svelte';
+	import Carousel from '$lib/components/Carousel.svelte';
 
 	export let meta;
 	export let pinned;
@@ -49,7 +50,7 @@
 
 	<section id="pinned" class="my-24">
 		<h2
-			class="px-6 pb-2 pt-4 mt-16 mb-8 text-2xl normal-case leading-none font-sans font-bold border-b-1 border-primary text-center md:text-left md:text-6xl dark:border-accent"
+			class="px-6 pb-2 pt-4 mt-16 mb-8 text-2xl normal-case leading-none font-sans font-bold border-b-1 border-primary md:text-left md:text-6xl dark:border-accent"
 		>
 			Selected work
 		</h2>
@@ -58,11 +59,12 @@
 
 	<section id="recent" class="my-24">
 		<h2
-			class="px-6 pb-2 pt-4 mt-16 mb-8 text-2xl normal-case leading-none font-sans font-bold border-b-1 border-primary text-center md:text-left md:text-6xl dark:border-accent"
+			class="px-6 pb-2 pt-4 mt-16 mb-8 text-2xl normal-case leading-none font-sans font-bold border-b-1 border-primary md:text-left md:text-6xl dark:border-accent"
 		>
 			Recent work
 		</h2>
-		<Grid items={recent} />
+		<!-- <Grid items={recent} /> -->
+		<Carousel items={recent} />
 	</section>
 </main>
 
