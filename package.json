@@ -6,7 +6,7 @@
 		"Sawyer Click"
 	],
 	"engines": {
-		"node": ">= 14.17.3"
+		"node": ">= 16.10.0"
 	},
 	"browserslist": [
 		"defaults and supports es6-module and supports es6-module-dynamic-import, not opera > 0, not samsung > 0, not and_qq > 0"
