@@ -11,7 +11,6 @@
 <script>
 	import Breadcrumbs from '$lib/components/furniture/Breadcrumbs.svelte';
 	import Meta from '$lib/components/furniture/Meta.svelte';
-	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/furniture/Footer.svelte';
 
 	// post-specific styles
@@ -27,8 +26,6 @@
 </script>
 
 <Meta meta={{ title, description, slug }} />
-
-<Nav />
 
 <main id="post" class="post p-8 mt-0 max-w-2xl m-auto min-h-screen">
 	<article>

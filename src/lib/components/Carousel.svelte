@@ -7,10 +7,13 @@
 <div class="w-full text-center overflow-x-hidden">
 	<ul
 		id="graphics"
-		class="w-full mx-auto flex px-6 py-5 gap-4 lg:gap-6 place-items-start overflow-x-auto scroll-smooth snap-mandatory snap-x scroll-pl-6 [-webkit-overflow-scrolling:touch]"
+		class="w-full mx-auto flex px-6 py-4 gap-4 place-items-start overflow-x-auto scroll-smooth snap-mandatory snap-x scroll-pl-2 sm:scroll-pl-6 [-webkit-overflow-scrolling:touch]"
 	>
 		{#each items as project (project.title)}
-			<li class="project snap-start shrink-0" animate:flip>
+			<li
+				class="project snap-center shrink-0 max-w-[88vw] min-w-[150px] sm:snap-start"
+				animate:flip
+			>
 				<Project {project} />
 			</li>
 		{/each}
@@ -28,6 +31,6 @@
 		@apply bg-accent;
 	}
 	ul::-webkit-scrollbar-track {
-		@apply bg-transparent mx-6;
+		@apply bg-transparent mx-2 sm:mx-6;
 	}
 </style>

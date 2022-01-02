@@ -4,9 +4,15 @@
 	import { quintOut } from 'svelte/easing';
 	import { page } from '$app/stores';
 	import { hasNav } from '$lib/stores';
-	import { ExternalLinkIcon, SunIcon, MoonIcon, MenuIcon } from 'svelte-feather-icons';
+	import {
+		GithubIcon,
+		TwitterIcon,
+		MailIcon,
+		ExternalLinkIcon,
+		SunIcon,
+		MoonIcon
+	} from 'svelte-feather-icons';
 	import { theme } from '$lib/stores';
-	import Icons from './furniture/Icons.svelte';
 
 	let scrollY = 0;
 	onMount(() => {
@@ -17,6 +23,26 @@
 	onDestroy(() => {
 		hasNav.set(false);
 	});
+
+	const links = [
+		{
+			title: 'Github',
+			url: 'https://www.github.com/SawyerClick',
+			icon: GithubIcon
+		},
+		{
+			title: 'Twitter',
+			url: 'https://www.twitter.com/sawyerdabear',
+			icon: TwitterIcon
+		},
+		{
+			title: 'Email',
+			url: 'mailto:sawyer@hey.com',
+			icon: MailIcon
+		}
+	];
+
+	export let size = '26';
 
 	$: showExpanded = scrollY === 0 && $page.path === '/';
 </script>
@@ -39,14 +65,22 @@
 				href="https://www.businessinsider.com/category/sawyer-click"
 				target="_blank"
 				rel="external"
-				class="styled-border inline-block text-lg w-full font-light leading-tight m-0 md:w-2/5"
+				class="styled-border inline-block text-base sm:text-lg w-full font-light leading-tight m-0 md:w-2/5"
 			>
 				develops data viz at Business Insider
 				<ExternalLinkIcon size="14" />
 			</a>
 
 			<div class="flex justify-between items-center">
-				<Icons />
+				<ul class="inline-block">
+					{#each links as { title, url, icon }}
+						<li class="inline-block mx-1 last-of-type:mr-0 first-of-type:ml-0">
+							<a class="inline-block styled-border leading-none px-2.5 py-1.5" href={url} {title}>
+								<svelte:component this={icon} {size} />
+							</a>
+						</li>
+					{/each}
+				</ul>
 
 				<button
 					class="styled-border inline-block z-50 text-xl mb-2"

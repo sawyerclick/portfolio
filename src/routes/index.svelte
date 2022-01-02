@@ -16,7 +16,7 @@
 
 <script>
 	import { setContext } from 'svelte';
-	import Nav from '$lib/components/Nav.svelte';
+	import { ArrowRightIcon } from 'svelte-feather-icons';
 	import Meta from '$lib/components/furniture/Meta.svelte';
 	import Grid from '$lib/components/Grid.svelte';
 	import CanvasWrapper from '$lib/components/hero/CanvasWrapper.svelte';
@@ -33,8 +33,6 @@
 
 <Meta meta={{ ...meta, slug }} />
 
-<Nav />
-
 <main class="z-10 min-h-screen">
 	<div
 		id="home"
@@ -49,32 +47,30 @@
 	</div>
 
 	<section id="pinned" class="my-24">
-		<h2
-			class="px-6 pb-2 pt-4 mt-16 mb-8 text-2xl normal-case leading-none font-sans font-bold border-b-1 border-primary md:text-left md:text-6xl dark:border-accent"
+		<div
+			class="sm:flex justify-between items-end px-6 pb-2 pt-4 mt-16 mb-8 border-b-1 border-primary dark:border-accent text-center md:text-left"
 		>
-			Selected work
-		</h2>
+			<h1 class="text-2xl normal-case leading-none font-sans font-bold  md:text-left md:text-6xl">
+				Selected works
+			</h1>
+		</div>
 		<Grid items={pinned} />
 	</section>
 
 	<section id="recent" class="my-24">
-		<h2
-			class="px-6 pb-2 pt-4 mt-16 mb-8 text-2xl normal-case leading-none font-sans font-bold border-b-1 border-primary md:text-left md:text-6xl dark:border-accent"
+		<div
+			class="sm:flex justify-between items-end px-6 pb-2 pt-4 mt-16 mb-8 border-b-1 border-primary dark:border-accent text-center md:text-left"
 		>
-			Recent work
-		</h2>
-		<!-- <Grid items={recent} /> -->
+			<h1 class="text-2xl normal-case leading-none font-sans font-bold  md:text-left md:text-6xl">
+				Recent works
+			</h1>
+			<span class="sm:w-50 font-light text-right italic text-xs leading-none -skew-x-12">
+				scroll for more
+				<ArrowRightIcon size="14" />
+			</span>
+		</div>
 		<Carousel items={recent} />
 	</section>
 </main>
 
 <Footer />
-
-<style lang="postcss" global>
-	li.project:hover img {
-		filter: grayscale(0);
-	}
-	li.project img {
-		filter: grayscale(0.7);
-	}
-</style>
