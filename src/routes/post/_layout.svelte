@@ -34,7 +34,7 @@
 			<h1 class="text-xl font-semibold font-sans mt-0 leading-none text-shadow sm:text-6xl">
 				{title}
 			</h1>
-			<hr class="border-secondary my-1.5 neon" />
+			<hr class="border-secondary mt-2 mb-3 neon" />
 			<div class="font-mono flex flex-wrap sm:flex-nowrap justify-between leading-none">
 				<a
 					class="group mr-3"
