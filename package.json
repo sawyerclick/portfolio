@@ -36,7 +36,7 @@
 		"layercake": "^5.0.3",
 		"lodash.debounce": "^4.0.8",
 		"mdsvex": "^0.9.8",
-		"node-fetch": "^3.1.0",
+		"node-fetch": "^3.1.1",
 		"p-map": "^5.3.0",
 		"path": "^0.12.7",
 		"postcss": "^8.4.5",
