@@ -16,7 +16,6 @@ const config = {
 	],
 	kit: {
 		adapter: adapter(),
-		target: '#content',
 		trailingSlash: 'never',
 		vite: {
 			plugins: [dsv()]

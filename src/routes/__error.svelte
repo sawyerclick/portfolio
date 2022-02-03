@@ -1,5 +1,18 @@
+<script context="module">
+	/** @type {import('@sveltejs/kit').ErrorLoad} */
+	export function load({ error, status }) {
+		return {
+			props: {
+				err: `${status}: ${error.message}`
+			}
+		};
+	}
+</script>
+
 <script>
+	import { dev } from '$app/env';
 	import Meta from '$lib/components/furniture/Meta.svelte';
+	export let err = 'Error loading page';
 </script>
 
 <Meta meta={{ title: 'Whoops...', description: 'Something went wrong.', slug: '' }} />
@@ -25,3 +38,10 @@
 		Go home?
 	</a>
 </main>
+
+{#if dev}
+	<pre
+		class="w-full p-2 leading-tight font-mono text-lg whitespace-pre-wrap text-accent font-bold bg-red-600 z-50 fixed top-0">
+		{err}
+	</pre>
+{/if}

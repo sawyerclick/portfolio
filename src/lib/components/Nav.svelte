@@ -62,12 +62,12 @@
 	{#if showExpanded}
 		<div transition:slide|local={{ easing: quintOut, duration: 400 }}>
 			<a
-				href="https://www.businessinsider.com/category/sawyer-click"
+				href="https://thedataface.com/"
 				target="_blank"
 				rel="external"
 				class="styled-border inline-block text-base sm:text-lg w-full font-light leading-tight m-0 md:w-2/5"
 			>
-				develops data viz at Business Insider
+				develops data viz at The DataFace
 				<ExternalLinkIcon size="14" />
 			</a>
 

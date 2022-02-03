@@ -29,14 +29,14 @@
 				"@context": "https://schema.org/",
 				"@type": "Person",
 				"name": "Sawyer Click",
-				"description": "Sawyer Click is a newsroom developer working on data-driven visual and interactive storytelling",
-				"image": "https://avatars.githubusercontent.com/u/50996762"
+				"description": "Sawyer Click is a data viz developer working on data-driven visual and interactive storytelling",
+				"image": "https://avatars.githubusercontent.com/u/50996762",
 				"email": "sawyer@hey.com",
 				"alumniOf": "Columbia University",
 				"jobTitle": "Newsroom developer",
 			  "worksFor": {
 			    "@type": "Organization",
-			    "name": "Business Insider"
+			    "name": "The DataFace"
 			  }
 				"address": {
 					"@type": "PostalAddress",
@@ -69,9 +69,6 @@
 		%svelte.head%
 	</head>
 	<body class="bg-accent dark:bg-primary min-h-screen antialiased">
-		<a href="#content" class="sr-only focus:not-sr-only fixed top-0 left-0 bg-primary text-accent"
-			>Skip to main content</a
-		>
-		<div id="content">%svelte.body%</div>
+		<div>%svelte.body%</div>
 	</body>
 </html>
