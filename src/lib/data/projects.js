@@ -2,7 +2,7 @@ import data from '$lib/data/projects.csv';
 import slugify from 'slugify';
 
 const affiliations = new Map([
-	['Business Insider', 'bi'],
+	['The DataFace', 'tdf'][('Business Insider', 'bi')],
 	['NBC News', 'nbc'],
 	['The Wall Street Journal', 'wsj']
 ]);
