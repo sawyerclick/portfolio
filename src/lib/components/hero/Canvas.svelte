@@ -17,11 +17,8 @@
 	const update = () => {
 		if (!ctx) return;
 
-		if (center) {
-			ctx.clearRect(-width / 2, -height / 2, width, height);
-		} else {
-			ctx.clearRect(0, 0, width, height);
-		}
+		if (center) ctx.clearRect(-width / 2, -height / 2, width, height);
+		else ctx.clearRect(0, 0, width, height);
 
 		drawFunctions.forEach((fn) => {
 			ctx.save();
@@ -32,14 +29,10 @@
 		pendingInvalidation = false;
 	};
 
-	onMount(() => {
-		ctx = canvas.getContext('2d');
-	});
+	onMount(() => (ctx = canvas.getContext('2d')));
 
 	onDestroy(() => {
-		if (frameId) {
-			cancelAnimationFrame(frameId);
-		}
+		if (frameId) cancelAnimationFrame(frameId);
 	});
 
 	$: setContext(contextName, {

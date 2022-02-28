@@ -20,12 +20,12 @@
 @import url('//hello.myfonts.net/count/3daa84');
 @font-face {
 	font-family: 'recoleta';
-	src: url('/fonts/RecoletaRegular.woff2') format('woff2')
+	src: url('/fonts/RecoletaRegular.woff2') format('woff2');
 }
 
 @font-face {
-	font-family: 'Inconsolata';
-	src: url('/fonts/Inconsolata.ttf');
+	font-family: 'Fira Code';
+	src: url('/fonts/firacode.ttf');
 	font-weight: 1 999;
 }
 

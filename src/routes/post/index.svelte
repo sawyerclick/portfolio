@@ -38,18 +38,22 @@
 			</h1>
 		</header>
 
-		<ul class="font-mono w-full flex flex-wrap gap-4">
-			{#each posts as { slug, date }}
-				<li class="text-lg w-full font-light">
-					<a href="/post/{slug}" class="styled-border w-full flex justify-between">
-						<span>&gt;&nbsp;<b>{slug}</b></span>
-						<time datetime={date}>
-							{date.slice(0, 10)}
-						</time>
-					</a>
-				</li>
-			{/each}
-		</ul>
+		{#if posts.length > 0}
+			<ul class="font-mono w-full flex flex-wrap gap-4">
+				{#each posts as { slug, date }}
+					<li class="text-lg w-full font-light">
+						<a href="/post/{slug}" class="styled-border w-full flex justify-between">
+							<span>&gt;&nbsp;<b>{slug}</b></span>
+							<time datetime={date}>
+								{date.slice(0, 10)}
+							</time>
+						</a>
+					</li>
+				{/each}
+			</ul>
+		{:else}
+			<p class="text-center">Nothing to see here. Move along.</p>
+		{/if}
 	</article>
 </main>
 

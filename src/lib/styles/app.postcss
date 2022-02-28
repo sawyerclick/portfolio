@@ -1,4 +1,5 @@
 /* Write your global styles here, in PostCSS syntax */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,7 +9,7 @@
 		@apply top-0 right-0 bottom-0 left-0;
 	}
 	.neon {
-		box-shadow: var(--neon)
+		box-shadow: var(--neon);
 	}
 	.styled-border {
 		@apply font-sans text-primary no-underline py-2 px-4 border-primary bg-accent border-2 hover:transition-all duration-150 overflow-hidden dark:text-accent dark:border-accent dark:bg-primary -skew-x-2;
@@ -22,7 +23,7 @@
 	--secondary: #ff00ff;
 	--tertiary: #00ffff;
 	--accent: #f8f8f8;
-	--neon: 0 0 .5rem var(--secondary);
+	--neon: 0 0 0.5rem var(--secondary);
 }
 
 svg.feather {

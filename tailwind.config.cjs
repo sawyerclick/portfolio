@@ -4,7 +4,7 @@ const config = {
 	darkMode: 'class',
 	theme: {
 		fontFamily: {
-			serif: ['recoleta', 'ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
+			serif: ['ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
 			sans: [
 				'Monument',
 				'ui-sans-serif',
@@ -23,7 +23,7 @@ const config = {
 				'Noto Color Emoji'
 			],
 			mono: [
-				'Inconsolata',
+				'Fira Code',
 				'ui-monospace',
 				'SFMono-Regular',
 				'Menlo',

@@ -1,17 +1,15 @@
 import data from '$lib/data/projects.csv';
 import slugify from 'slugify';
 
-const affiliations = new Map([
-	['The DataFace', 'tdf'],
-	['Business Insider', 'bi'],
-	['NBC News', 'nbc'],
-	['The Wall Street Journal', 'wsj']
-]);
+data.forEach((d) => {
+	d.slug = slugify(d.title, { lowercase: true });
+});
 
-const formatted = data.map((d) => ({
-	slug: slugify(d.title, { lowercase: true }),
-	affiliation: affiliations.get(d.publication) || 'side-project',
-	...d
-}));
+const pinned = data.filter(({ pinned }) => pinned === 'TRUE');
 
-export default formatted;
+const recent = data.filter(
+	({ lead, img, type, pinned }) =>
+		pinned === 'FALSE' && type === 'graphics' && lead === 'TRUE' && img
+);
+
+export default { pinned, recent };

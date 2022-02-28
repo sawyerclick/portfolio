@@ -1,13 +1,11 @@
 <script>
 	import { getContext, onMount, onDestroy, afterUpdate } from 'svelte';
-	import { tweened } from 'svelte/motion';
-	import { cubicOut } from 'svelte/easing';
+	import { spring } from 'svelte/motion';
 
 	export let x = 0;
 	export let y = 0;
 	export let r = 4;
-	export let img = 'images/me.jpeg';
-	export let color = '#000000';
+	export let img = 'me.jpeg';
 	export let contextName = 'canvas';
 
 	const { register, deregister, invalidate } = getContext(contextName);
@@ -19,16 +17,18 @@
 
 	const image = new Image(diameter, diameter);
 	image.src =
-		img === 'me.jpeg' ? `/images/${img}` : `/images/portfolio/resized/${img.split('.')[0]}/200.png`;
+		img === 'me.jpeg'
+			? `images/me.jpeg`
+			: `/images/portfolio/resized/${img.split('.')[0]}/200.jpeg`;
 
-	const tX = tweened(null, tweenParameters);
-	const tY = tweened(null, tweenParameters);
+	const tX = spring(null);
+	const tY = spring(null);
 
 	const draw = (ctx) => {
 		ctx.translate($tX, $tY);
 
 		ctx.fillStyle = '#f8f8f8';
-		ctx.strokeStyle = '#666'; // by scale ord use color
+		ctx.strokeStyle = '#666';
 		ctx.backgroundColor = '#f7f7f7';
 
 		ctx.save();
@@ -52,13 +52,8 @@
 	afterUpdate(invalidate);
 	onDestroy(invalidate);
 
-	$: tweenParameters = {
-		duration: 400,
-		easing: cubicOut
-	};
-
-	$: tX.set(x, tweenParameters);
-	$: tY.set(y, tweenParameters);
+	$: tX.set(x);
+	$: tY.set(y);
 </script>
 
 <svelte:window bind:innerHeight bind:innerWidth />

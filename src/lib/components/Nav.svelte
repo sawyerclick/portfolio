@@ -53,7 +53,7 @@
 	<a
 		sveltekit:prefetch
 		href="/#home"
-		class="inline-block uppercase text-shadow py-2 leading-none font-semibold tracking-tighter font-sans text-5xl text-primary -skew-x-12 duration-150 ease-out dark:text-accent hover:transition-all hover:tracking-widest"
+		class="inline-block uppercase text-shadow py-2 leading-none font-semibold tracking-tighter font-sans text-5xl text-primary -skew-x-12 duration-150 ease-out dark:text-accent hover:transition-all hover:skew-x-12"
 		class:text-xl={!showExpanded}
 	>
 		Sawyer Click

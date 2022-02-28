@@ -3,7 +3,7 @@ import sharp from 'sharp';
 import shell from 'shelljs';
 
 const sizes = [200, 400, 600, 800];
-const formats = ['png', 'webp'];
+const formats = ['jpeg'];
 const acceptedTypes = ['png', 'gif', 'jpeg', 'jpg'];
 
 const baseDir = './static/images/portfolio';
@@ -41,7 +41,7 @@ const makeThumb = async (fileName) => {
 		.blur(2)
 		.toFormat('jpeg')
 		.toFile(`${dest}/blurred.jpeg`)
-		.then(() => console.log('\x1b[32m', `${fileName} | BLURRED`));
+		.then(() => console.log('\x1b[32m', `${fileName} | BLURRED.jpeg`));
 };
 
 // find all img files and run makeThumb on them

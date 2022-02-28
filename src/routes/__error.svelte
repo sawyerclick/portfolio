@@ -12,29 +12,35 @@
 <script>
 	import { dev } from '$app/env';
 	import Meta from '$lib/components/furniture/Meta.svelte';
+	import { Image } from 'svelte-lazy-loader';
 	export let err = 'Error loading page';
 </script>
 
 <Meta meta={{ title: 'Whoops...', description: 'Something went wrong.', slug: '' }} />
 
-<picture class="w-screen h-screen fixed pointer-events-none z-10">
-	<source srcset="/images/rickroll.webp" type="image/webp" />
-	<source srcset="/images/rickroll.gif" type="image/gif" />
-	<img
+<div class="w-screen h-screen fixed pointer-events-none z-10">
+	<Image
 		src="/images/rickroll.gif"
-		alt="Rick Roll gif"
-		class="w-full h-full object-center object-cover"
+		alt="A gif of the iconic Rick Astley dancing to his song 'Never Gonna Give You Up' in the titular music video"
+		loading="eager"
+		classes="w-full h-full object-center object-cover"
 	/>
-</picture>
+</div>
 
 <main
 	class="absolute flex flex-nowrap flex-col justify-center items-center w-screen h-screen p-12 text-center z-20"
 >
-	<h1 class="font-sans font-bold mt-8 text-bg text-accent -skew-x-12">Whoops...</h1>
-	<h2 class="font-sans font-bold mt-6 text-5xl text-bg text-accent -skew-x-12">
+	<h1 class="font-sans text-3xl sm:text-5xl font-bold mt-8 text-bg text-accent -skew-x-12">
+		Whoops...
+	</h1>
+	<h2 class="font-sans font-bold mt-6 text-2xl sm:text-5xl text-bg text-accent -skew-x-12">
 		something went wrong
 	</h2>
-	<a sveltekit:prefetch href="/" class="styled-border font-sans mt-8 px-3 py-1 text-2xl -skew-x-12">
+	<a
+		sveltekit:prefetch
+		href="/"
+		class="styled-border font-sans mt-8 px-3 py-1 sm:text-2xl -skew-x-12"
+	>
 		Go home?
 	</a>
 </main>

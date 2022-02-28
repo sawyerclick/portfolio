@@ -1,4 +1,3 @@
-import abbr from 'remark-abbr';
 import urls from 'rehype-urls';
 import slug from 'rehype-slug';
 import autoLinkHeadings from 'rehype-autolink-headings';
@@ -52,7 +51,6 @@ const config = {
 		post: './src/routes/post/_layout.svelte'
 	},
 	smartypants: true,
-	remarkPlugins: [abbr], // adds support for footnote-like abbreviations
 	rehypePlugins: [
 		figure, // convert images into <figure> elements
 		[urls, processUrl], // adds rel and target to <a> elements
