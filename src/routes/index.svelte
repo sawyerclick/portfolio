@@ -12,7 +12,11 @@
 	import awards from '$lib/data/awards.csv';
 
 	setContext('graphics', [...projects.pinned, ...projects.recent]);
+
+	let pageWidth = 300;
 </script>
+
+<svelte:window bind:innerWidth={pageWidth} />
 
 <Meta meta={{ ...meta, slug: '' }} />
 
@@ -63,38 +67,37 @@
 				Awards & more
 			</h1>
 		</div>
-		<table class="px-6 border-collapse border-spacing-[15px] table-auto max-w-4xl mx-auto">
-			<thead class="table-header-group">
-				<th>Project</th>
-				<th />
-				<th>Award || Event</th>
-			</thead>
-			<tbody class="font-mono tracking-wide">
-				{#each awards as { awardLink, awardName, projectLink, projectName }}
-					<tr>
-						<td class="p-4">
-							<a
-								class="styled-border block font-mono leading-tight"
-								href={projectLink}
-								target="_blank"
-							>
-								{projectName}
-							</a>
-						</td>
-						<td class="font-bold text-2xl -skew-x-12 text-primary">&#8594;</td>
-						<td class="p-4">
-							<a
-								class="styled-border block font-mono leading-tight"
-								href={awardLink}
-								target="_blank"
-							>
-								{awardName}
-							</a>
-						</td>
-					</tr>
-				{/each}
-			</tbody>
-		</table>
+		<div class="flex flex-col max-w-2xl mx-auto px-6">
+			{#each awards as { awardLink, awardName, projectLink, projectName }, i}
+				<article class="mt-6 flex flex-col sm:flex-row items-center">
+					<div class="p-2">
+						<a
+							class="styled-border block font-mono leading-tight text-center sm:text-left"
+							href={projectLink}
+							target="_blank"
+						>
+							{projectName}
+						</a>
+					</div>
+					<span class="font-bold text-2xl -skew-x-12 text-primary"
+						>{@html pageWidth <= 640 ? '&#8595;' : '&#8594;'}</span
+					>
+					<div class="p-2">
+						<a
+							class="styled-border block font-mono leading-tight text-center sm:text-left"
+							href={awardLink}
+							target="_blank"
+						>
+							{awardName}
+						</a>
+					</div>
+
+					{#if i < awards.length - 1 && pageWidth < 640}
+						<hr class="mt-6 w-64 max-w-[90%] m-auto border-primary dark:border-accent" />
+					{/if}
+				</article>
+			{/each}
+		</div>
 	</section>
 </main>
 

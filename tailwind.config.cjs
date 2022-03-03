@@ -39,6 +39,9 @@ const config = {
 			chevron: '"› "'
 		},
 		extend: {
+			screens: {
+				xs: '400px'
+			},
 			colors: {
 				primary: '#323232',
 				secondary: '#ff00ff',

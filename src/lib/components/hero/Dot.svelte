@@ -17,9 +17,7 @@
 
 	const image = new Image(diameter, diameter);
 	image.src =
-		img === 'me.jpeg'
-			? `images/me.jpeg`
-			: `/images/portfolio/resized/${img.split('.')[0]}/200.jpeg`;
+		img === 'me.jpeg' ? `images/me.jpeg` : `/images/thumbnails/${img.split('.')[0]}/200.jpeg`;
 
 	const tX = spring(null);
 	const tY = spring(null);

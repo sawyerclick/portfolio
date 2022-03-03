@@ -13,6 +13,8 @@
 	import { dev } from '$app/env';
 	import Meta from '$lib/components/furniture/Meta.svelte';
 	import { Image } from 'svelte-lazy-loader';
+	import RickRollPlaceholder from '$lib/assets/rickroll.gif?format=jpg&width=400&blur=3';
+	import RickRollGif from '$lib/assets/rickroll.gif?quality=75';
 	export let err = 'Error loading page';
 </script>
 
@@ -20,9 +22,9 @@
 
 <div class="w-screen h-screen fixed pointer-events-none z-10">
 	<Image
-		src="/images/rickroll.gif"
+		placeholder={RickRollPlaceholder}
+		src={RickRollGif}
 		alt="A gif of the iconic Rick Astley dancing to his song 'Never Gonna Give You Up' in the titular music video"
-		loading="eager"
 		classes="w-full h-full object-center object-cover"
 	/>
 </div>

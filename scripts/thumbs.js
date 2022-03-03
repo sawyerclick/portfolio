@@ -2,20 +2,19 @@ import fs from 'fs';
 import sharp from 'sharp';
 import shell from 'shelljs';
 
-const sizes = [200, 400, 600, 800];
-const formats = ['jpeg'];
-const acceptedTypes = ['png', 'gif', 'jpeg', 'jpg'];
+const sizes = [200, 400, 600, 800, 1000];
+const formats = ['avif', 'webp', 'jpeg'];
+const acceptedTypes = ['png', 'gif', 'jpeg', 'jpg', 'avif', 'webp'];
 
-const baseDir = './static/images/portfolio';
-const unsizedDir = `${baseDir}/unsized`;
-const resizedDir = `${baseDir}/resized`;
+const inDir = `./thumbnails`;
+const outDir = `./static/images/thumbnails`;
 
 // make resized dir if doesn't exist
-shell.mkdir('-p', resizedDir);
+shell.mkdir('-p', outDir);
 
 const makeThumb = async (fileName) => {
 	const strippedName = fileName.split('.')[0];
-	const dest = `${resizedDir}/${strippedName}`;
+	const dest = `${outDir}/${strippedName}`;
 
 	// make dest dir
 	shell.mkdir('-p', dest);
@@ -23,7 +22,7 @@ const makeThumb = async (fileName) => {
 	// iterate over sizes and formats
 	for (let size of sizes) {
 		for (let format of formats) {
-			sharp(`${unsizedDir}/${fileName}`)
+			sharp(`${inDir}/${fileName}`)
 				.resize({
 					width: size,
 					background: { r: 248, g: 248, b: 248, alpha: 1 }
@@ -31,12 +30,12 @@ const makeThumb = async (fileName) => {
 				.flatten({ background: { r: 248, g: 248, b: 248 } })
 				.toFormat(format)
 				.toFile(`${dest}/${size}.${format}`)
-				.then(() => console.log('\x1b[32m', `${fileName} | ${size} - ${format}`));
+				.then(() => console.log('\x1b[32m', `${dest}/${size}.${format}`));
 		}
 	}
 
 	// create jpeg blur as placeholder
-	sharp(`${unsizedDir}/${fileName}`)
+	sharp(`${inDir}/${fileName}`)
 		.resize(50)
 		.blur(2)
 		.toFormat('jpeg')
@@ -45,6 +44,6 @@ const makeThumb = async (fileName) => {
 };
 
 // find all img files and run makeThumb on them
-fs.readdirSync(unsizedDir)
+fs.readdirSync(inDir)
 	.filter((d) => acceptedTypes.includes(d.split('.')[1]))
 	.forEach((fileName) => makeThumb(fileName));
