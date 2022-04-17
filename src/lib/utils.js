@@ -1,9 +1,12 @@
 import { linear } from 'svelte/easing';
 import { interpolateTransformSvg } from 'd3-interpolate';
 
-const move = (x, y) => `transform: translate(${x}px, ${y}px)`;
+export const move = (x, y) => `transform: translate(${x}px, ${y}px)`;
 
-const transformSvg = (node, params) => {
+export const serializeSchema = (schema) =>
+	`<script type="application/ld+json">${JSON.stringify(schema)}</script>`;
+
+export const transformSvg = (node, params) => {
 	const a = node.getAttribute('transform');
 	const b = `${params.relative ? a : ''} ${params.target}`;
 	const interpolator = interpolateTransformSvg(a, b);
@@ -21,7 +24,7 @@ const transformSvg = (node, params) => {
 };
 
 // adapted from https://github.com/Wattenberger/svelte-recipes/blob/master/src/components/examples/scale-canvas.js
-const scaleCanvas = (canvas, ctx, width, height, center = true) => {
+export const scaleCanvas = (canvas, ctx, width, height, center = true) => {
 	// assume the device pixel ratio is 1 if the browser doesn't specify it
 	const devicePixelRatio = window.devicePixelRatio || 1;
 
@@ -59,7 +62,7 @@ const scaleCanvas = (canvas, ctx, width, height, center = true) => {
 	if (center) ctx.translate(width / 2, height / 2);
 };
 
-const layoutHistogram = (
+export const layoutHistogram = (
 	data,
 	{ r = 1, x = (d) => d, xCategory = 'x', fy = 0, offset = r * 2 + 1 }
 ) => {
@@ -90,5 +93,3 @@ const layoutHistogram = (
 
 	return result;
 };
-
-export { move, transformSvg, scaleCanvas, layoutHistogram };

@@ -5,9 +5,6 @@
 @tailwind utilities;
 
 @layer base {
-	.all-0 {
-		@apply top-0 right-0 bottom-0 left-0;
-	}
 	.neon {
 		box-shadow: var(--neon);
 	}
@@ -28,28 +25,37 @@
 		@apply text-secondary dark:text-secondary;
 	}
 
-	h1 {
+	h2 {
 		@apply font-sans text-5xl sm:text-5xl lg:text-7xl text-primary;
 	}
-	h2 {
+	h3 {
 		@apply font-mono md:text-7xl text-5xl;
 	}
 
-	html .text-shadow {
-		text-shadow: -1px -1px var(--accent), 1px 1px var(--accent), 1px -1px var(--accent),
-			-1px 1px var(--accent);
+	.body {
+		@apply text-base font-mono leading-tight;
+	}
+
+	.text-shadow {
+		--color: var(--accent);
+		text-shadow: -2px -2px var(--color), -2px -1px var(--color), -2px 0px var(--color),
+			-2px 1px var(--color), -2px 2px var(--color), -1px -2px var(--color), -1px -1px var(--color),
+			-1px 0px var(--color), -1px 1px var(--color), -1px 2px var(--color), 0px -2px var(--color),
+			0px -1px var(--color), 0px 1px var(--color), 0px 2px var(--color), 1px -2px var(--color),
+			1px -1px var(--color), 1px 0px var(--color), 1px 1px var(--color), 1px 2px var(--color),
+			2px -2px var(--color), 2px -1px var(--color), 2px 0px var(--color), 2px 1px var(--color),
+			2px 2px var(--color);
 	}
 	html.dark .text-shadow {
-		text-shadow: -1px -1px var(--primary), 1px 1px var(--primary), 1px -1px var(--primary),
-			-1px 1px var(--primary);
+		--color: var(--primary);
 	}
 
 	html {
 		cursor: url('/images/cursor.png'), auto;
 	}
 
-	body.has-nav footer {
-		@apply pb-20 leading-tight !important;
+	body.has-nav footer div {
+		@apply pb-12 leading-tight !important;
 	}
 
 	::-moz-selection {
@@ -72,8 +78,8 @@
 	label.styled-border:hover {
 		@apply border-secondary text-secondary cursor-pointer dark:text-secondary dark:border-secondary hover:neon;
 	}
-	a.styled-border:hover > *,
-	button.styled-border:hover > * {
+	a.styled-border:hover *,
+	button.styled-border:hover * {
 		@apply stroke-secondary text-secondary dark:stroke-secondary dark:text-secondary;
 	}
 }

@@ -1,79 +1,56 @@
 <script>
+	import { page } from '$app/stores';
 	import { onDestroy, onMount } from 'svelte';
 	import { slide, fly } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
-	import { page } from '$app/stores';
-	import { hasNav } from '$lib/stores';
-	import {
-		GithubIcon,
-		TwitterIcon,
-		MailIcon,
-		ExternalLinkIcon,
-		SunIcon,
-		MoonIcon
-	} from 'svelte-feather-icons';
-	import { theme } from '$lib/stores';
+	import { ExternalLinkIcon, SunIcon, MoonIcon } from 'svelte-feather-icons';
+	import { hasNav, theme } from '$lib/stores';
+	import site from '$lib/data/site.js';
+
+	export let size = '26';
 
 	let scrollY = 0;
+
 	onMount(() => {
 		hasNav.set(true);
 		document.body.classList.add('has-nav');
 	});
 
-	onDestroy(() => {
-		hasNav.set(false);
-	});
+	onDestroy(() => hasNav.set(false));
 
-	const links = [
-		{
-			title: 'Github',
-			url: 'https://www.github.com/SawyerClick',
-			icon: GithubIcon
-		},
-		{
-			title: 'Twitter',
-			url: 'https://www.twitter.com/sawyerdabear',
-			icon: TwitterIcon
-		},
-		{
-			title: 'Email',
-			url: 'mailto:sawyer@hey.com',
-			icon: MailIcon
-		}
-	];
-
-	export let size = '26';
-
-	$: showExpanded = scrollY === 0 && $page.path === '/';
+	$: scrolledOnHome = !scrollY && !!$page.url.pathname;
 </script>
 
 <svelte:window bind:scrollY />
 
 <nav class="sm:px-4 header pr-2 px-2 w-full fixed bottom-0 z-50">
-	<a
-		sveltekit:prefetch
-		href="/#home"
-		class="inline-block uppercase text-shadow py-2 leading-none font-semibold tracking-tighter font-sans text-3xl xs:text-5xl text-primary -skew-x-12 duration-150 ease-out dark:text-accent hover:transition-all hover:skew-x-12"
-		class:text-xl={!showExpanded}
-	>
-		Sawyer Click
-	</a>
+	<h1>
+		<a
+			sveltekit:prefetch
+			href="/#home"
+			class="inline-block uppercase text-shadow pt-2 leading-none font-semibold tracking-tighter font-sans text-3xl xs:text-5xl text-primary -skew-x-12 duration-150 ease-out dark:text-accent hover:transition-all hover:skew-x-12"
+			class:text-xl={!scrolledOnHome}
+			class:pb-2={scrolledOnHome}
+		>
+			Sawyer Click
+		</a>
+	</h1>
 
-	{#if showExpanded}
+	{#if scrolledOnHome}
 		<div transition:slide|local={{ easing: quintOut, duration: 400 }}>
 			<a
-				href="https://thedataface.com/"
+				href={site.job.link}
 				target="_blank"
 				rel="external"
 				class="styled-border inline-block text-base sm:text-lg w-full font-light leading-tight m-0 md:w-2/5"
 			>
-				develops data viz at The DataFace
+				develops data viz at {site.job.company}
 				<ExternalLinkIcon size="14" />
 			</a>
 
 			<div class="flex justify-between items-center">
 				<ul class="inline-block">
-					{#each links as { title, url, icon }}
+					{#each Object.values(site.socials) as { title, url, icon }}
 						<li class="inline-block mx-1 last-of-type:mr-0 first-of-type:ml-0">
 							<a class="inline-block styled-border leading-none px-2.5 py-1.5" href={url} {title}>
 								<svelte:component this={icon} {size} />

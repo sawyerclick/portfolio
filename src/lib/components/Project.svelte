@@ -2,7 +2,7 @@
 	import Picture from './furniture/Picture.svelte';
 	export let project;
 
-	let { link, img, alt, title, publication, date, description } = project;
+	const { link, img, alt, title, description } = project;
 </script>
 
 <a
@@ -19,12 +19,10 @@
 			<Picture slug={img} {alt} />
 		</div>
 		<div
-			class="absolute pointer-events-none h-full w-full flex justify-start items-end translate-x-2 p-3 opacity-0 will-change-transform transition-all duration-150 ease-out  group-hover:opacity-100 group-hover:translate-x-0 
-			group-hover:-skew-x-3 group-focus:opacity-100 group-focus:translate-x-0
-			group-focus:-skew-x-3 "
+			class="absolute pointer-events-none h-full w-full flex justify-start items-end translate-x-2 p-3 opacity-0 will-change-transform transition-all duration-150 ease-out  group-hover:opacity-100 group-hover:translate-x-0 group-focus:opacity-100 group-focus:translate-x-0"
 		>
 			<h3
-				class="antialiased pointer-events-auto font-semibold tracking-tighter text-sm text-center leading-none bg-accent p-2 border border-primary text-primary shadow-md dark:text-accent dark:bg-primary dark:border-accent"
+				class="pointer-events-auto font-semibold tracking-tighter text-lg text-center leading-none bg-accent p-2 border border-primary !text-primary shadow-md dark:!text-accent dark:bg-primary dark:border-accent"
 			>
 				{title}
 			</h3>

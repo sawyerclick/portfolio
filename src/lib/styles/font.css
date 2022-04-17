@@ -21,16 +21,19 @@
 @font-face {
 	font-family: 'recoleta';
 	src: url('/fonts/RecoletaRegular.woff2') format('woff2');
+	font-display: swap;
 }
 
 @font-face {
 	font-family: 'Fira Code';
 	src: url('/fonts/firacode.ttf');
 	font-weight: 1 999;
+	font-display: swap;
 }
 
 @font-face {
 	font-family: 'Monument';
 	src: url('/fonts/Monument.ttf');
 	font-weight: 1 999;
+	font-display: swap;
 }

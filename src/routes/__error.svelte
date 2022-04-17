@@ -18,7 +18,7 @@
 	export let err = 'Error loading page';
 </script>
 
-<Meta meta={{ title: 'Whoops...', description: 'Something went wrong.', slug: '' }} />
+<Meta meta={{ title: 'Whoops...', description: 'Something went wrong.' }} />
 
 <div class="w-screen h-screen fixed pointer-events-none z-10">
 	<Image
@@ -32,12 +32,12 @@
 <main
 	class="absolute flex flex-nowrap flex-col justify-center items-center w-screen h-screen p-12 text-center z-20"
 >
-	<h1 class="font-sans text-3xl sm:text-5xl font-bold mt-8 text-bg text-accent -skew-x-12">
+	<h2 class="font-sans text-3xl sm:text-5xl font-bold mt-8 text-bg text-accent -skew-x-12">
 		Whoops...
-	</h1>
-	<h2 class="font-sans font-bold mt-6 text-2xl sm:text-5xl text-bg text-accent -skew-x-12">
-		something went wrong
 	</h2>
+	<p class="font-sans font-bold mt-6 text-2xl sm:text-5xl text-bg text-accent -skew-x-12">
+		something went wrong
+	</p>
 	<a
 		sveltekit:prefetch
 		href="/"

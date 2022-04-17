@@ -1,22 +1,10 @@
-<script context="module">
-	export async function load({ page }) {
-		return {
-			props: {
-				slug: page.path
-			}
-		};
-	}
-</script>
-
 <script>
-	import Breadcrumbs from '$lib/components/furniture/Breadcrumbs.svelte';
 	import Meta from '$lib/components/furniture/Meta.svelte';
 	import Footer from '$lib/components/furniture/Footer.svelte';
 
 	// post-specific styles
 	import '$lib/styles/post.postcss';
 
-	export let slug;
 	export let title;
 	export let tags;
 	export let date;
@@ -25,12 +13,11 @@
 	export let related;
 </script>
 
-<Meta meta={{ title, description, slug }} />
+<Meta meta={{ title, description }} />
 
 <main id="post" class="post p-8 mt-0 max-w-2xl m-auto min-h-screen">
 	<article>
 		<header class="mb-8">
-			<!-- <Breadcrumbs /> -->
 			<h1 class="text-xl font-semibold font-sans mt-0 leading-none text-shadow sm:text-6xl">
 				{title}
 			</h1>

@@ -1,11 +1,13 @@
 <script>
-	import Nav from '$lib/components/Nav.svelte';
 	import '$lib/styles/app.postcss';
 	import '$lib/styles/font.css';
+	import Meta from '$lib/components/furniture/Meta.svelte';
+
 	// import FollowMouse from '$lib/components/FollowMouse.svelte';
 </script>
 
-<Nav />
+<Meta />
+
 <!-- <FollowMouse /> -->
 
 <slot />

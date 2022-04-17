@@ -1,5 +1,5 @@
 <script>
-	import { Image, Picture } from 'svelte-lazy-loader';
+	import { Picture } from 'svelte-lazy-loader';
 
 	export let alt = 'hello world';
 	export let slug = 'cloudkitchens-map';

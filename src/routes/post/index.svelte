@@ -1,34 +1,15 @@
-<script context="module">
-	export async function load({ page, fetch }) {
-		const res = await fetch('/api/post.json');
-		const { posts } = await res.json();
-		const slug = page.path;
-		return {
-			props: {
-				posts,
-				slug
-			}
-		};
-	}
-</script>
-
 <script>
 	import Meta from '$lib/components/furniture/Meta.svelte';
 	import Footer from '$lib/components/furniture/Footer.svelte';
-	import Nav from '$lib/components/Nav.svelte';
 	export let posts = [];
-	export let slug;
 </script>
 
 <Meta
 	meta={{
 		title: 'Post',
-		description: "Thoughts, musings and otherwise dumb ideas I've had.",
-		slug
+		description: "Thoughts, musings and otherwise dumb ideas I've had."
 	}}
 />
-
-<Nav />
 
 <main class="max-w-lg mx-auto px-6 pt-12 min-h-screen">
 	<article>
