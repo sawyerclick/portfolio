@@ -5,6 +5,7 @@ export default {
 	description: 'A newsroom developer working on data-driven visual and interactive storytelling',
 	keywords: ['Sawyer Click', 'data visualization', 'svelte', 'd3', 'data graphics'],
 	email: 'sawyer@hey.com',
+	site: 'https://www.sawyer.codes',
 	job: {
 		title: 'Data Viz Developer',
 		company: 'The DataFace',

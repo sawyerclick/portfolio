@@ -1,7 +1,8 @@
-import { page } from '$app/stores';
-import { get as getStore } from 'svelte/store';
+import site from '$lib/data/site.js';
 
 export const get = async () => {
+	const pages = ['about'];
+
 	return {
 		headers: {
 			'Cache-Control': 'max-age=0, s-maxage=3600',
@@ -17,15 +18,21 @@ export const get = async () => {
       xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
     >
       <url>
-        <loc>${getStore(page).url.origin}</loc>
-        <changefreq>daily</changefreq>
-        <priority>1</priority>
+        <loc>${site.site}</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
       </url>
-      <url>
-        <loc>${getStore(page).url.origin}/about</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.7/priority>
-      </url>
+  ${pages
+		.map(
+			(page) => `
+  <url>
+    <loc>${site.site}/${page}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  `
+		)
+		.join('')}
     </urlset>`
 	};
 };
