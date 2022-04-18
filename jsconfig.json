@@ -2,9 +2,11 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
+			"$lib": ["src/lib"],
 			"$lib/*": ["src/lib/*"]
 		}
 	},
 	"include": ["src/**/*.js", "src/**/*.svelte", "src/lib/markdown.cjs"],
-	"exclude": ["scripts/*.js"]
+	"exclude": ["scripts/*.js"],
+	"extends": "./.svelte-kit/tsconfig.json"
 }

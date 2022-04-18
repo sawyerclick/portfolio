@@ -21,8 +21,8 @@ export const get = async () => {
 					purpose: 'any maskable'
 				}
 			],
-			theme_color: '#ff00ff',
-			background_color: '#f8f8f8',
+			theme_color: site.colors.theme,
+			background_color: site.colors.background,
 			display: 'standalone'
 		}
 	};

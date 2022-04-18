@@ -15,6 +15,10 @@ export default {
 		alt: 'Sawyer Click on his computer screen via PhotoBooth',
 		src: '/images/share.png'
 	},
+	colors: {
+		background: '#f8f8f8',
+		theme: '#f8f8f8'
+	},
 	socials: {
 		github: {
 			title: 'Github',

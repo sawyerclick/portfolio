@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 	import { serializeSchema } from '$lib/utils';
 	import site from '$lib/data/site';
-	export let meta = false;
+	export let meta = {};
 
 	// Page URL
 	$: url = $page.url.toString();
@@ -10,7 +10,11 @@
 
 <svelte:head>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta
+		name="viewport"
+		content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86"
+	/>
+
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Language" content="en" />
 	<meta name="robots" content="index,follow" />
@@ -26,6 +30,7 @@
 	<meta property="og:url" content={url} />
 	<meta property="og:title" content={meta?.title || site.title} />
 	<meta property="og:description" content={meta?.description || site.description} />
+	<meta property="og:locale" content="en-US" />
 	<meta itemprop="image" content={meta?.img?.src || site.img.src} />
 	<meta property="og:image:alt" content={meta?.img?.alt || site.img.alt} />
 
@@ -52,7 +57,7 @@
 
 	<meta name="application-name" content={site.title} />
 	<meta name="msapplication-starturl" content={url} />
-	<meta name="theme-color" content="#ff00ff" />
+	<meta name="theme-color" content={site.colors.background} />
 
 	<meta name="mobile-web-app-capable" content="yes" />
 	<meta name="application-name" content={site.title} />

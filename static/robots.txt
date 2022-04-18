@@ -3,4 +3,4 @@ User-agent: Googlebot
 Disallow: /nogooglebot/
 User-agent: *
 Allow: /
-Sitemap: http://www.sawyer.codes/sitemap.xml
+Sitemap: https://www.sawyer.codes/sitemap.xml

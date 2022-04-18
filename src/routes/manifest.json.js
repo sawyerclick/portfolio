@@ -11,9 +11,9 @@ export const get = async () => {
 			display: 'minimal-ui',
 			orientation: 'any',
 			scope: '/',
-			start_url: '/',
-			background_color: '#f8f8f8',
-			theme_color: '#ff00ff',
+			start_url: '.',
+			background_color: site.colors.background,
+			theme_color: site.colors.theme,
 			icons: [
 				{
 					src: '/android-chrome-192x192.png',
