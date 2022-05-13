@@ -73,12 +73,6 @@
 			</div>
 		</div>
 	{:else}
-		<!-- <button
-			class="block fixed right-4 bottom-2 -skew-x-12"
-			in:fly={{ x: 50, delay: 300, easing: quintOut }}
-		>
-			<MenuIcon size="26" />
-		</button> -->
 		<button
 			class="styled-border block fixed right-4 bottom-2 z-50 text-xl leading-none px-1 py-0.5"
 			aria-label="{$theme === 'dark' ? 'light' : 'dark'} mode"
