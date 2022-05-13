@@ -1,3 +1,0 @@
-title,github,link,description
-svelte-lazy-loader,https://github.com/sawyerclick/svelte-lazy-loader,https://svelte-lazy-loader.sawyer.codes,"A component library for effortlessly loading media using a shared IntersectionObserver instance if native lazy-loading doesn't exist."
-CMSvelte,https://github.com/sawyerclick/CMSvelte,https://sawyerclick.github.io/CMSvelte,"A Svelte starter template built with newsroom CMS's in mind. Dynamically create inline graphics based on the placement of figure elements with defined data-chart attributes."

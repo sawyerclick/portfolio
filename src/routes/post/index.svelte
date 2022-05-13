@@ -1,6 +1,5 @@
 <script>
 	import Meta from '$lib/components/furniture/Meta.svelte';
-	import Footer from '$lib/components/furniture/Footer.svelte';
 	export let posts = [];
 </script>
 
@@ -37,8 +36,6 @@
 		{/if}
 	</article>
 </main>
-
-<Footer />
 
 <style lang="postcss">
 	a:hover * {

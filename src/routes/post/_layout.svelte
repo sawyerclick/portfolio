@@ -1,6 +1,5 @@
 <script>
 	import Meta from '$lib/components/furniture/Meta.svelte';
-	import Footer from '$lib/components/furniture/Footer.svelte';
 
 	// post-specific styles
 	import '$lib/styles/post.postcss';

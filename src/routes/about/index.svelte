@@ -1,5 +1,4 @@
 <script>
-	import Footer from '$lib/components/furniture/Footer.svelte';
 	import site from '$lib/data/site';
 	import '$lib/styles/post.postcss';
 </script>
@@ -52,6 +51,4 @@
 			<li>{@html interest}</li>
 		{/each}
 	</ul>
-
-	<Footer />
 </main>

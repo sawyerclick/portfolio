@@ -1,24 +1,55 @@
+<script context="module">
+	export const load = async ({ fetch }) => {
+		const projects = await fetch('/api/projects');
+		const awards = await fetch('/api/awards');
+		const openSource = await fetch('/api/open-source');
+
+		return {
+			props: {
+				projects: projects.ok && (await projects.json()),
+				awards: awards.ok && (await awards.json()),
+				openSource: openSource.ok && (await openSource.json())
+			}
+		};
+	};
+</script>
+
 <script>
 	import { setContext } from 'svelte';
+	import { gsap } from 'gsap';
+	import { scaleLinear } from 'd3';
+	import debounce from 'lodash.debounce';
 	import { ArrowRightIcon, GithubIcon } from 'svelte-feather-icons';
 
 	import Nav from '$lib/components/Nav.svelte';
 	import Project from '$lib/components/Project.svelte';
 	import Grid from '$lib/components/Grid.svelte';
 	import CanvasWrapper from '$lib/components/hero/CanvasWrapper.svelte';
-	import Footer from '$lib/components/furniture/Footer.svelte';
 	import Carousel from '$lib/components/Carousel.svelte';
 
-	import projects from '$lib/data/projects.js';
-	import openSource from '$lib/data/open-source.csv';
-	import awards from '$lib/data/awards.csv';
+	export let projects = {};
+	export let openSource = [];
+	export let awards = [];
 
 	setContext('graphics', [...projects.pinned, ...projects.recent]);
 
+	let heroWrapperEl;
 	let pageWidth = 300;
+	let pageHeight = 600;
+
+	const moveScale = scaleLinear().domain([0, 1]).range([-10, 10]);
+
+	const mousemove = ({ clientX, clientY }) => {
+		if (!heroWrapperEl) return;
+
+		gsap.to(heroWrapperEl, {
+			x: moveScale(clientX / pageWidth),
+			y: moveScale(clientY / pageHeight)
+		});
+	};
 </script>
 
-<svelte:window bind:innerWidth={pageWidth} />
+<svelte:window bind:innerWidth={pageWidth} bind:innerHeight={pageHeight} />
 
 <Nav />
 
@@ -26,12 +57,14 @@
 	<div
 		id="home"
 		class="h-screen min-h-screen flex justify-start items-end relative"
-		style="height:100vh;"
+		on:mousemove={debounce(mousemove, 50)}
 	>
 		<div
 			class="absolute inset-0 h-full min-h-screen w-full after:absolute after:z-1 after:right-0 after:bottom-0 after:left-0 after:h-24 after:w-full after:bg-gradient-to-t after:from-accent dark:after:from-primary"
 		>
-			<CanvasWrapper />
+			<div class="h-full w-full origin-center scale-105" bind:this={heroWrapperEl}>
+				<CanvasWrapper />
+			</div>
 		</div>
 	</div>
 
@@ -39,7 +72,7 @@
 		<header
 			class="sm:flex justify-between items-end px-6 pb-2 pt-4 mt-16 mb-8 border-b-1 border-primary dark:border-accent text-center md:text-left"
 		>
-			<h2 class="text-2xl normal-case leading-none font-sans font-bold  md:text-left md:text-6xl">
+			<h2 class="text-2xl normal-case leading-none font-sans font-bold md:text-left md:text-6xl">
 				Selected works
 			</h2>
 		</header>
@@ -60,10 +93,10 @@
 			<h class="text-2xl normal-case leading-none font-sans font-bold  md:text-left md:text-6xl">
 				Recent works
 			</h>
-			<span class="sm:w-50 font-light text-right italic text-xs leading-none -skew-x-12">
+			<p class="sm:w-50 sm:text-right block font-light  italic text-xs leading-none -skew-x-12">
 				scroll for more
 				<ArrowRightIcon size="14" />
-			</span>
+			</p>
 		</header>
 
 		<Carousel>
@@ -117,15 +150,15 @@
 			</h2>
 		</header>
 		<div class="flex flex-col mx-0 px-6">
-			{#each awards as { awardLink, awardName, projectLink, projectName }, i}
+			{#each awards as { award, project }, i}
 				<article class="mt-6 flex flex-col sm:flex-row items-center">
 					<div class="p-2">
 						<a
 							class="styled-border block body text-center sm:text-left"
-							href={projectLink}
+							href={project.href}
 							target="_blank"
 						>
-							{projectName}
+							{project.name}
 						</a>
 					</div>
 					<span class="font-bold text-2xl -skew-x-12 text-primary dark:text-white">
@@ -134,10 +167,10 @@
 					<div class="p-2">
 						<a
 							class="styled-border block body text-center sm:text-left"
-							href={awardLink}
+							href={award.href}
 							target="_blank"
 						>
-							{awardName}
+							{award.name}
 						</a>
 					</div>
 
@@ -149,5 +182,3 @@
 		</div>
 	</section>
 </main>
-
-<Footer />

@@ -1,15 +1,14 @@
-import data from '$lib/data/projects.csv';
+import projects from '$lib/data/projects.yaml';
 import slugify from 'slugify';
 
-data.forEach((d) => {
+projects.forEach((d) => {
 	d.slug = slugify(d.title, { lowercase: true });
 });
 
-const pinned = data.filter(({ pinned }) => pinned === 'TRUE');
+const pinned = projects.filter(({ pinned }) => pinned);
 
-const recent = data.filter(
-	({ lead, img, type, pinned }) =>
-		pinned === 'FALSE' && type === 'graphics' && lead === 'TRUE' && img
+const recent = projects.filter(
+	({ lead, img, type, pinned }) => !pinned && type === 'graphics' && lead && img
 );
 
 export default { pinned, recent };
