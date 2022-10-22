@@ -1,6 +1,6 @@
-import { browser } from '$app/env';
-import { writable } from 'svelte/store';
-import { readable } from 'svelte/store';
+import { browser } from '$app/environment';
+import { readable, writable } from 'svelte/store';
+import debounce from 'lodash.debounce';
 
 export const hasNav = writable(false);
 
@@ -33,5 +33,16 @@ export const prefersReducedMotion = readable(false, (set) => {
 
 	return () => {
 		if (typeof window !== 'undefined') mediaQueryList.removeListener(onChange);
+	};
+});
+
+export const viewport = readable({ width: 0, height: 0 }, (set) => {
+	const onResize = () => set({ width: window.innerWidth, height: window.innerHeight });
+	if (browser) {
+		onResize();
+		window.addEventListener('resize', debounce(onResize, 50));
+	}
+	return () => {
+		if (browser) window.removeEventListener('resize', onResize);
 	};
 });

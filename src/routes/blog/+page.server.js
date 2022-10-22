@@ -1,7 +1,9 @@
+// throw new Error("@migration task: Update +page.server.js (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292699)");
+
 import pMap from 'p-map';
 import { basename } from 'path';
 
-export async function get() {
+export const GET = async () => {
 	const modules = Object.entries(import.meta.glob('../../blog/*.svelte.md'));
 
 	const posts = await pMap(modules, async ([filename, module]) => {
@@ -15,7 +17,5 @@ export async function get() {
 
 	posts.sort((a, b) => (new Date(a.date) > new Date(b.date) ? -1 : 1));
 
-	return {
-		body: { posts }
-	};
-}
+	return posts;
+};

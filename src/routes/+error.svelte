@@ -1,30 +1,24 @@
-<script context="module">
-	/** @type {import('@sveltejs/kit').ErrorLoad} */
-	export function load({ error, status }) {
-		return {
-			props: {
-				err: `${status}: ${error.message}`
-			}
-		};
-	}
-</script>
-
 <script>
-	import { dev } from '$app/env';
+	import { page } from '$app/stores';
+	import { dev } from '$app/environment';
 	import Meta from '$lib/components/furniture/Meta.svelte';
 	import RickRollGif from '$lib/assets/rickroll.gif?quality=75';
-	export let err = 'Error loading page';
+
+	$: console.error($page.status, $page.error.message);
 </script>
 
 <Meta meta={{ title: 'Whoops...', description: 'Something went wrong.' }} />
 
 <div class="w-screen h-screen fixed pointer-events-none z-10">
 	<img
+		class="w-full h-full object-center object-cover"
 		src={RickRollGif}
 		alt="A gif of the iconic Rick Astley dancing to his song 'Never Gonna Give You Up' in the titular music video"
-		class="w-full h-full object-center object-cover"
+		width="200"
+		height="150"
 		loading="eager"
 		decoding="async"
+		draggable="false"
 	/>
 </div>
 
@@ -49,6 +43,6 @@
 {#if dev}
 	<pre
 		class="w-full p-2 leading-tight font-mono text-lg whitespace-pre-wrap text-accent font-bold bg-red-600 z-50 fixed top-0">
-		{err}
+		{$page.status}: {$page.error.message}
 	</pre>
 {/if}

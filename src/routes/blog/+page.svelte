@@ -1,6 +1,9 @@
 <script>
+	// throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
+
 	import Meta from '$lib/components/furniture/Meta.svelte';
-	export let posts = [];
+
+	export let data;
 </script>
 
 <Meta
@@ -18,9 +21,9 @@
 			</h1>
 		</header>
 
-		{#if posts.length > 0}
+		{#if data.posts.length > 0}
 			<ul class="font-mono w-full flex flex-wrap gap-4">
-				{#each posts as { slug, date }}
+				{#each data.posts as { slug, date }}
 					<li class="text-lg w-full font-light">
 						<a href="/blog/{slug}" class="styled-border w-full flex justify-between">
 							<span>&gt;&nbsp;<b>{slug}</b></span>

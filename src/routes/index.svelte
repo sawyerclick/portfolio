@@ -1,6 +1,23 @@
+<script context="module">
+	export const load = async ({ fetch }) => {
+		const projects = await fetch('/api/projects');
+		const awards = await fetch('/api/awards');
+		const openSource = await fetch('/api/open-source');
+
+		return {
+			props: {
+				projects: projects.ok && (await projects.json()),
+				awards: awards.ok && (await awards.json()),
+				openSource: openSource.ok && (await openSource.json())
+			}
+		};
+	};
+</script>
+
 <script>
 	import { setContext } from 'svelte';
 	import { GithubIcon } from 'svelte-feather-icons';
+
 	import Nav from '$lib/components/Nav.svelte';
 	import Project from '$lib/components/Project.svelte';
 	import Grid from '$lib/components/Grid.svelte';
@@ -8,10 +25,11 @@
 	import Carousel from '$lib/components/Carousel.svelte';
 	import Footer from '$lib/components/furniture/Footer.svelte';
 
-	/** @type {import('./$types').PageData} */
-	export let data;
+	export let projects = {};
+	export let openSource = [];
+	export let awards = [];
 
-	setContext('graphics', [...data.projects.pinned, ...data.projects.recent]);
+	setContext('graphics', [...projects.pinned, ...projects.recent]);
 
 	let pageWidth = 300;
 	let pageHeight = 600;
@@ -49,7 +67,7 @@
 				</header>
 
 				<Grid>
-					{#each data.projects.pinned as project (project.title)}
+					{#each projects.pinned as project (project.title)}
 						<li class="project relative w-full h-full">
 							<Project {project} />
 						</li>
@@ -72,7 +90,7 @@
 				</header>
 
 				<Carousel>
-					{#each data.projects.recent as project (project.title)}
+					{#each projects.recent as project (project.title)}
 						<li class="project snap-center shrink-0 w-96 sm:snap-start">
 							<Project {project} />
 						</li>
@@ -92,7 +110,7 @@
 				</header>
 
 				<Grid>
-					{#each data.openSource as { title, github, description }}
+					{#each openSource as { title, github, description }}
 						<li class="h-full">
 							<a
 								class="styled-border no-hover-style block h-full text-xs group hover:text-secondary"
@@ -126,14 +144,14 @@
 					</h2>
 				</header>
 				<div class="flex flex-col mx-0 px-6">
-					{#each data.awards as { award, project }, i}
+					{#each awards as { award, project }, i}
 						<article class="mt-6 flex flex-col sm:flex-row items-center">
 							<div class="p-2">
 								<a
 									class="styled-border block body text-center sm:text-left"
 									href={project.href}
-									rel="noreferrer"
 									target="_blank"
+									rel="noreferrer"
 								>
 									{project.name}
 								</a>
@@ -152,7 +170,7 @@
 								</a>
 							</div>
 
-							{#if i < data.awards.length - 1 && pageWidth < 640}
+							{#if i < awards.length - 1 && pageWidth < 640}
 								<hr class="mt-6 w-64 max-w-[90%] m-auto border-primary dark:border-accent" />
 							{/if}
 						</article>
