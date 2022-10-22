@@ -5,7 +5,7 @@ projects.forEach((d) => {
 	d.slug = slugify(d.title, { lowercase: true });
 });
 
-export const get = async ({ params: { slug } }) => {
+export const GET = async ({ params: { slug } }) => {
 	return {
 		body: projects.find((d) => d.slug === slug) || {}
 	};

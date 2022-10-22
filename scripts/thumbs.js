@@ -2,7 +2,8 @@ import fs from 'fs';
 import sharp from 'sharp';
 import shell from 'shelljs';
 
-const sizes = [200, 400, 600, 800, 1000];
+const blurred = false;
+const sizes = [300, 600, 900, 1200];
 const formats = ['avif', 'webp', 'jpeg'];
 const acceptedTypes = ['png', 'gif', 'jpeg', 'jpg', 'avif', 'webp'];
 
@@ -30,17 +31,21 @@ const makeThumb = async (fileName) => {
 				.flatten({ background: { r: 248, g: 248, b: 248 } })
 				.toFormat(format)
 				.toFile(`${dest}/${size}.${format}`)
-				.then(() => console.log('\x1b[32m', `${dest}/${size}.${format}`));
+				.then(() => {
+					console.log('\x1b[32m', `${dest}/${size}.${format}`);
+				});
 		}
 	}
 
 	// create jpeg blur as placeholder
-	sharp(`${inDir}/${fileName}`)
-		.resize(50)
-		.blur(2)
-		.toFormat('jpeg')
-		.toFile(`${dest}/blurred.jpeg`)
-		.then(() => console.log('\x1b[32m', `${fileName} | BLURRED.jpeg`));
+
+	if (blurred)
+		sharp(`${inDir}/${fileName}`)
+			.resize(50)
+			.blur(2)
+			.toFormat('jpeg')
+			.toFile(`${dest}/blurred.jpeg`)
+			.then(() => console.log('\x1b[32m', `${fileName} | BLURRED.jpeg`));
 };
 
 // find all img files and run makeThumb on them

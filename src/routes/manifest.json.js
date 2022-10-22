@@ -1,6 +1,6 @@
 import site from '$lib/data/site';
 
-export const get = async () => {
+export const GET = async () => {
 	return {
 		body: {
 			name: site.title,

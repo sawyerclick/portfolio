@@ -5,13 +5,13 @@ projects.forEach((d) => {
 	d.slug = slugify(d.title, { lowercase: true });
 });
 
-export const get = async () => {
+export const GET = async () => {
 	return {
 		body: {
 			all: projects,
 			pinned: projects.filter(({ pinned }) => pinned),
 			recent: projects.filter(
-				({ lead, img, type, pinned }) => !pinned && type === 'graphics' && lead && img
+				({ show, img, type, pinned }) => !pinned && type === 'graphics' && show && img
 			)
 		}
 	};

@@ -1,7 +1,6 @@
 import urls from 'rehype-urls';
 import slug from 'rehype-slug';
 import autoLinkHeadings from 'rehype-autolink-headings';
-import addClasses from 'rehype-add-classes';
 import { visit } from 'unist-util-visit';
 import { h } from 'hastscript';
 
@@ -33,9 +32,7 @@ function figure() {
 
 function processUrl(url, node) {
 	if (node.tagName === 'a') {
-		node.properties.class = 'text-link';
-
-		if (!url.href.startsWith('/')) {
+		if (!(url.href.startsWith('/') || url.href.startsWith('#'))) {
 			// Open external links in new tab
 			node.properties.target = '_blank';
 			// Fix a security concern with offsite links
@@ -48,25 +45,25 @@ function processUrl(url, node) {
 const config = {
 	extensions: ['.svelte.md'],
 	layout: {
-		post: './src/routes/post/_layout.svelte'
+		post: './src/routes/blog/_layout.svelte'
 	},
 	smartypants: true,
 	rehypePlugins: [
 		figure, // convert images into <figure> elements
 		[urls, processUrl], // adds rel and target to <a> elements
 		slug, // adds slug to <h1>-<h6> elements
-		[autoLinkHeadings, { behavior: 'wrap' }], // adds a <a> around slugged <h1>-<h6> elements
-		[
-			addClasses,
-			{
-				h1: 'font-semibold',
-				h2: 'text-3xl',
-				'h2,h3,h4,h5,h6': 'font-sans font-bold tracking-wider leading-none mt-8 mb-4 pt-6',
-				'ul,ol': 'list-chevron marker:text-secondary',
-				li: '',
-				p: 'body'
-			}
-		] // add classes to these elements
+		[autoLinkHeadings, { behavior: 'wrap' }] // adds a <a> around slugged <h1>-<h6> elements
+		// [
+		// 	addClasses,
+		// 	{
+		// 		h1: 'font-semibold',
+		// 		h2: 'text-3xl',
+		// 		'h2,h3,h4,h5,h6': 'font-sans font-bold tracking-wider leading-none mt-8 mb-4 pt-6',
+		// 		'ul,ol': 'list-chevron marker:text-secondary',
+		// 		li: '',
+		// 		p: 'body'
+		// 	}
+		// ] // add classes to these elements
 	]
 };
 

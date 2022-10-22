@@ -1,7 +1,7 @@
 import site from '$lib/data/site.js';
 
-export const get = async () => {
-	const pages = ['about'];
+export const GET = async () => {
+	const pages = ['whoami'];
 
 	return {
 		headers: {
