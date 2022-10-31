@@ -1,4 +1,39 @@
 ---
+- title: Reinventing Dealey Plaza
+  description:
+  date: 2022-10
+  tags:
+    - Svelte
+    - SvelteKit
+    - Image optimization
+    - GSAP
+    - Design
+  link: https://interactives.dallasnews.com/2022/designers-reimagine-site-of-jfk-assassination-triple-underpass-in-downtown-dallas/
+  img: dealey
+  alt: A rendering of the proposed reinvention of Dealey Plaza in Dallas, Texas.
+  publication: The Dallas Morning News
+  type: graphics
+  show: TRUE
+  pinned: FALSE
+  award: FALSE
+- title: End Qualified Immunity
+  description: A website for Campaign Zero tracking legislation on qualified immunity for police officers. The website features several bespoke data visualizations, CMS-driven copy and ultimately funnels users to contact their local legislators via the openstates API, the Google GeoLocation API, and the GeoLocation API.
+  date: 2022-10
+  tags:
+    - Svelte
+    - SvelteKit
+    - D3
+    - GeoLocation
+    - Google API
+    - Directus
+  link: https://endqi.org/
+  img: endqi
+  alt: A map of the United States with dozens of markers placed at locations where qualified immunity impacted a court case
+  publication: The DataFace
+  type: graphics
+  show: TRUE
+  pinned: TRUE
+  award: FALSE
 - title: Sizzle Across America
   description: An interactive report into America's food trends for Independence Day. There is a lot of beef, sausage and steak, but D.C. ate a lot of vegetarian burgers!
   date: 2022-05
@@ -7,7 +42,7 @@
     - D3
   link: https://www.instacart.com/company/updates/instacarts-summer-bbq-report-is-hot-off-the-grill/
   img: sizzle-across-america
-  alt: A choropleth map of the US showing the most uniquely popular meat purchased via InstaCart in each state near Independence Day 2022.There is a lot of beef, sausage and steak, but D.C. ate a lot of vegetarian burgers!
+  alt: A choropleth map of the US showing the most uniquely popular meat purchased via InstaCart in each state near Independence Day 2022. There is a lot of beef, sausage and steak, but D.C. ate a lot of vegetarian burgers!
   publication: The DataFace
   type: graphics
   show: TRUE
@@ -39,7 +74,7 @@
   publication: The DataFace
   type: graphics
   show: TRUE
-  pinned: TRUE
+  pinned: FALSE
   award: FALSE
 - title: Mapping Police Violence
   description: Led development of a multi-page site featuring several prominent data visualizations on police violence in America for Campaign Zero

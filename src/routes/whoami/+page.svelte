@@ -42,7 +42,7 @@
 		<p class="body">Here are a few of my skills:</p>
 
 		<ul class="list-chevron marker:text-secondary list-inside">
-			{#each ['Svelte', 'D3.js', 'GSAP', 'Python/Pandas', 'SQL', 'QGIS/Mapshaper'] as skill}
+			{#each ['Svelte/SvelteKit', 'D3.js', 'GSAP', 'Python/Pandas', 'SQL', 'QGIS/Mapshaper'] as skill}
 				<li>{@html skill}</li>
 			{/each}
 		</ul>

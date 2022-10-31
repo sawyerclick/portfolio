@@ -1,16 +1,22 @@
 ---
-- award:
-    href: https://www.today.com/video/these-are-the-top-uniquely-popular-meats-for-grilling-across-the-us-143375941589
-    name: The Today Show
-  project:
-    href: https://www.instacart.com/company/updates/instacarts-summer-bbq-report-is-hot-off-the-grill/
-    name: Sizzle Across America
+# - award:
+#     href: https://www.today.com/video/these-are-the-top-uniquely-popular-meats-for-grilling-across-the-us-143375941589
+#     name: The Today Show
+#   project:
+#     href: https://www.instacart.com/company/updates/instacarts-summer-bbq-report-is-hot-off-the-grill/
+#     name: Sizzle Across America
 - award:
     href: https://shortyawards.com/14th/conflicted-congress
     name: Shorty Awards' Data Vizualization
   project:
     href: https://www.businessinsider.com/financial-conflicts-congress-members-rated-2021-12
     name: Conflicted Congress
+- award:
+    href:
+    name: 'Society of News Design - Design: Investigative Award of Excellence'
+  project:
+    href: https://www.businessinsider.com/mark-zuckerberg-kauai-estate-hawaii-land-appropriation-history-2021-11
+    name: The New Monarchy
 - award:
     href: https://spjdc.org/2022/06/dateline-awards-2022-finalists-winners/
     name: Dateline Awards, Infographic

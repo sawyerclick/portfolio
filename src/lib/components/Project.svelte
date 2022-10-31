@@ -8,12 +8,12 @@
 <a
 	class="group styled-border block h-full text-primary shadow-md relative z-100 p-0 grayscale-[80%] hover:z-40 hover:grayscale-0"
 	href={link}
-	target="_blank"
+	target="_blank noreferrer"
 	title={description}
 >
 	<div class="flex justify-center items-end flex-row flex-wrap group">
 		<div
-			class="picture-wrapper h-60 max-w-sm w-full object-center object-cover overflow-hidden z-0 duration-150 group-hover:transition-all
+			class="picture-wrapper h-60 w-full object-center object-cover overflow-hidden z-0 duration-150 group-hover:transition-all
 			group-focus:transition-all"
 		>
 			<Picture slug={img} {alt} width="380" height="240" />
