@@ -1,6 +1,6 @@
 <script>
 	import { onMount, onDestroy, setContext } from 'svelte';
-	import { scaleCanvas } from '$lib/utils';
+	import scaleCanvas from '$lib/utils/scaleCanvas';
 
 	export let width = 0;
 	export let height = 0;

@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import { serializeSchema } from '$lib/utils';
+	import serializeSchema from '$lib/utils/serializeSchema';
 	import site from '$lib/data/site';
 	export let meta = {};
 
@@ -69,7 +69,7 @@
 	{@html serializeSchema({
 		'@context': 'https://schema.org/',
 		'@type': 'Person',
-		'@id': `${$page.url.origin}/about`,
+		'@id': `${$page.url.origin}/whoami`,
 		url: $page.url,
 		name: site.title,
 		description: site.description,

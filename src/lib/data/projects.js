@@ -8,7 +8,7 @@ projects.forEach((d) => {
 const pinned = projects.filter(({ pinned }) => pinned);
 
 const recent = projects.filter(
-	({ lead, img, type, pinned }) => !pinned && type === 'graphics' && lead && img
+	({ show, img, type, pinned }) => !pinned && type === 'graphics' && show && img
 );
 
 export default { pinned, recent };

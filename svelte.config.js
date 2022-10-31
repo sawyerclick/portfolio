@@ -1,26 +1,22 @@
-/** @type {import('@sveltejs/kit').Config} */
-
-import { mdsvex } from 'mdsvex';
-import mdsvexConfig from './mdsvex.config.js';
-import dsv from '@rollup/plugin-dsv';
-import yaml from '@rollup/plugin-yaml';
 import adapter from '@sveltejs/adapter-netlify';
+import { mdsvex } from 'mdsvex';
 import sveltePreprocess from 'svelte-preprocess';
 
+import mdsvexConfig from './mdsvex.config.js';
+
+/** @type {import('@sveltejs/kit').Config} */
 const config = {
-	extensions: ['.svelte', ...mdsvexConfig.extensions],
-	preprocess: [mdsvex(mdsvexConfig), sveltePreprocess({ postcss: true })],
+	// extensions: ['.svelte', ...mdsvexConfig.extensions],
+	preprocess: [
+		mdsvex(mdsvexConfig),
+		sveltePreprocess({
+			postcss: true,
+			preserve: ['ld+json']
+		})
+	],
 	kit: {
 		adapter: adapter(),
-		prerender: {
-			enabled: true,
-			crawl: true,
-			default: true
-		},
-		trailingSlash: 'never',
-		vite: {
-			plugins: [dsv(), yaml()]
-		}
+		trailingSlash: 'never'
 	}
 };
 
