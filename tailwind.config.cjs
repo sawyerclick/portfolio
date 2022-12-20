@@ -1,5 +1,4 @@
 const config = {
-	mode: 'jit',
 	content: ['./src/**/*.{html,js,svelte,ts}', './mdsvex.config.js'],
 	darkMode: 'class',
 	theme: {
@@ -43,10 +42,10 @@ const config = {
 				xs: '400px'
 			},
 			colors: {
-				primary: '#323232',
-				secondary: '#ff00ff',
-				tertiary: '#00ffff',
-				accent: '#f8f8f8'
+				primary: 'var(--primary)',
+				secondary: 'var(--secondary)',
+				tertiary: 'var(--tertiary)',
+				accent: 'var(--accent)'
 			},
 			fontSize: {
 				'8xl': '5.15rem'

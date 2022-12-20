@@ -7,6 +7,18 @@
 	class="bg-accent dark:bg-primary overflow-x-hidden text-base scroll-smooth overscroll-y-none"
 >
 	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Language" content="en" />
+
+		<link rel="icon" href="/favicon.ico" sizes="any" />
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link rel="manifest" href="/site.webmanifest" crossorigin="use-credentials" />
+
+		%sveltekit.head%
+
 		<script
 			data-goatcounter="https://sawyer.goatcounter.com/count"
 			async
@@ -24,9 +36,8 @@
 				localStorage.theme = 'light';
 			}
 		</script>
-		%sveltekit.head%
 	</head>
 	<body class="bg-accent dark:bg-primary min-h-screen antialiased">
-		%sveltekit.body%
+		<div class="contents">%sveltekit.body%</div>
 	</body>
 </html>

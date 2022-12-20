@@ -12,7 +12,7 @@
  * use:inView={ bottom: 100 } // 100 pixels from bottom of viewport
  */
 
-const inView = (node, params = {}) => {
+export default (node, params = {}) => {
 	let observer;
 
 	const handleIntersect = (e) => {

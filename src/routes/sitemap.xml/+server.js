@@ -1,9 +1,10 @@
-import site from '$lib/data/site.js';
+import site from '$lib/site.js';
 
 export const GET = async () => {
 	const pages = ['whoami'];
 
-	return new Response(`<?xml version="1.0" encoding="UTF-8" ?>
+	return new Response(
+		`<?xml version="1.0" encoding="UTF-8" ?>
     <urlset
       xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:news="https://www.google.com/schemas/sitemap-news/0.9"
@@ -28,10 +29,12 @@ export const GET = async () => {
   `
 		)
 		.join('')}
-    </urlset>`, {
-	  headers: {
-			'Cache-Control': 'max-age=0, s-maxage=3600',
-			'Content-Type': 'application/xml'
+    </urlset>`,
+		{
+			headers: {
+				'Cache-Control': 'max-age=0, s-maxage=3600',
+				'Content-Type': 'application/xml'
+			}
 		}
-	});
+	);
 };
