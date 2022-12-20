@@ -1,5 +1,5 @@
 <script>
-	import site from '$lib/data/site';
+	import { page } from '$app/stores';
 	import '$lib/styles/post.postcss';
 </script>
 
@@ -21,9 +21,9 @@
 			data-driven graphics and front-end development. I work at <a
 				class="text-link"
 				rel="external"
-				href={site.job.link}>{site.job.company}</a
+				href={$page.data.job.link}>{$page.data.job.company}</a
 			>
-			as a {site.job.title}.
+			as a {$page.data.job.title}.
 		</p>
 
 		<p class="body">

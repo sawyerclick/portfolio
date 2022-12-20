@@ -6,7 +6,7 @@ import mdsvexConfig from './mdsvex.config.js';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// extensions: ['.svelte', ...mdsvexConfig.extensions],
+	// extensions: mdsvexConfig.extensions,
 	preprocess: [
 		mdsvex(mdsvexConfig),
 		sveltePreprocess({
@@ -15,8 +15,7 @@ const config = {
 		})
 	],
 	kit: {
-		adapter: adapter(),
-		trailingSlash: 'never'
+		adapter: adapter()
 	}
 };
 

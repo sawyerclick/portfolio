@@ -18,7 +18,7 @@
 	class="h-screen min-h-screen flex justify-center items-center relative overflow-hidden"
 >
 	<div
-		class="absolute inset-0 h-full min-h-screen w-full after:absolute after:z-1 after:right-0 after:bottom-0 after:left-0 after:h-24 after:w-full after:bg-gradient-to-t after:from-accent dark:after:from-primary"
+		class="absolute inset-0 h-full min-h-screen w-full after:absolute after:z-1 after:inset-x-0 after:-bottom-2 after:h-24 after:w-full after:bg-gradient-to-t after:from-accent dark:after:from-primary"
 	>
 		<div class="h-full w-full origin-center scale-105">
 			<CanvasWrapper />

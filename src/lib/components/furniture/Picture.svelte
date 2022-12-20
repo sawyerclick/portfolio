@@ -3,11 +3,11 @@
 	export let slug = 'cloudkitchens-map';
 	export let width = '380';
 	export let height = '240';
-	const sizes = [600, 900, 1200];
-	const formats = ['avif', 'webp', 'jpeg'];
+	export let sizes = [600, 900, 1200];
+	export let formats = ['avif', 'webp', 'jpeg'];
 </script>
 
-<picture data-speed="auto">
+<picture>
 	{#each formats as format}
 		{#each sizes as size}
 			<source srcset="/images/thumbnails/{slug}/{size}.{format}" type="image/{format}" />

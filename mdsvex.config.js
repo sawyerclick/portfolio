@@ -1,8 +1,8 @@
-import urls from 'rehype-urls';
-import slug from 'rehype-slug';
-import autoLinkHeadings from 'rehype-autolink-headings';
-import { visit } from 'unist-util-visit';
 import { h } from 'hastscript';
+import autoLinkHeadings from 'rehype-autolink-headings';
+import slug from 'rehype-slug';
+import urls from 'rehype-urls';
+import { visit } from 'unist-util-visit';
 
 /**
  * Modified from https://github.com/josestg/rehype-figure

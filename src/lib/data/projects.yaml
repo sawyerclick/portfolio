@@ -1,6 +1,40 @@
 ---
-- title: Reinventing Dealey Plaza
+- title: '#FoodTok'
   description:
+  date: 2022-12
+  tags:
+    - Svelte
+    - SvelteKit
+    - D3.js
+    - GSAP
+    - THREE.js
+  link: https://www.instacart.com/food-trends-delivered/
+  img: foodtok
+  alt: A line chart show the sharp uptick of Instacart orders for Baked Feta Pasta following it's virality on TikTok
+  publication: The DataFace
+  type: graphics
+  show: TRUE
+  pinned: TRUE
+  award: FALSE
+- title: Wakanda Forever
+  description:
+  date: 2022-11
+  tags:
+    - Svelte
+    - SvelteKit
+    - Offline experiences
+    - GSAP
+    - THREE.js
+  link: https://www.wakandaforever.com
+  img: wakanda-forever
+  alt: A globe surrounded by the Black Panther necklace. In the foreground are the words "Searching for Wakanda..."
+  publication: The DataFace
+  type: graphics
+  show: TRUE
+  pinned: TRUE
+  award: FALSE
+- title: Reinventing Dealey Plaza
+  description: Dealey Plaza and Triple Underpass are among downtown Dallas' most profound urban failings, architecture critic Mark Lamster writes. But they don't have to be.
   date: 2022-10
   tags:
     - Svelte
@@ -32,7 +66,7 @@
   publication: The DataFace
   type: graphics
   show: TRUE
-  pinned: TRUE
+  pinned: FALSE
   award: FALSE
 - title: Sizzle Across America
   description: An interactive report into America's food trends for Independence Day. There is a lot of beef, sausage and steak, but D.C. ate a lot of vegetarian burgers!
@@ -247,7 +281,7 @@
   publication: Side project
   type: graphics
   show: TRUE
-  pinned: TRUE
+  pinned: FALSE
   award: TRUE
 - title: Ghost Kitchens
   description: Mapping out CloudKitchens and REEF locations

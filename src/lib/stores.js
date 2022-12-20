@@ -10,29 +10,25 @@ theme.subscribe((value) => {
 	if (browser) {
 		// change classes and settings
 		window.localStorage.setItem('theme', value);
-
-		if (value === 'dark') {
-			document.documentElement.classList.add('dark');
-		} else {
-			document.documentElement.classList.remove('dark');
-		}
+		document.documentElement.classList.toggle('dark', value === 'dark');
 	}
 });
 
 // prefers reduced motion
 export const prefersReducedMotion = readable(false, (set) => {
-	const query = '(prefers-reduced-motion: no-preference)';
-	const mediaQueryList = typeof window !== 'undefined' ? window.matchMedia(query) : {};
+	const mediaQueryList = browser
+		? window.matchMedia('(prefers-reduced-motion: no-preference)')
+		: {};
 
 	const onChange = () => set(!mediaQueryList.matches);
 
-	if (typeof window !== 'undefined') {
+	if (browser) {
 		mediaQueryList.addListener(onChange);
 		onChange();
 	}
 
 	return () => {
-		if (typeof window !== 'undefined') mediaQueryList.removeListener(onChange);
+		if (browser) mediaQueryList.removeListener(onChange);
 	};
 });
 

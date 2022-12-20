@@ -1,28 +1,28 @@
 import { json } from '@sveltejs/kit';
-import site from '$lib/data/site';
+import site from '$lib/site';
 
 export const GET = async () => {
 	return json({
 		name: site.title,
-		short_name: site.title,
+		short_name: site.tag || site.title,
 		description: site.description,
 		start_url: '/',
 		icons: [
 			{
-				src: '/android-chrome-192x192.png',
+				src: '/favicon-192x192.png',
 				sizes: '192x192',
 				type: 'image/png',
-				purpose: 'any maskable'
+				purpose: 'maskable any'
 			},
 			{
-				src: '/android-chrome-512x512.png',
+				src: '/favicon-512x512.png',
 				sizes: '512x512',
 				type: 'image/png',
-				purpose: 'any maskable'
+				purpose: 'maskable any'
 			}
 		],
 		theme_color: site.colors.theme,
 		background_color: site.colors.background,
-		display: 'standalone'
+		display: 'minimal-ui'
 	});
 };

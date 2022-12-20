@@ -95,6 +95,14 @@ pre[class*='language-'] *::-moz-selection {
 	text-shadow: none;
 }
 
+code[class*='language-']::-moz-selection,
+code[class*='language-'] *::-moz-selection,
+pre[class*='language-'] *::-moz-selection {
+	background: var(--syntax-selection-color);
+	color: inherit;
+	text-shadow: none;
+}
+
 code[class*='language-']::-moz-selection, code[class*='language-'] *::-moz-selection, pre[class*='language-'] *::-moz-selection {
 	background: var(--syntax-selection-color);
 	color: inherit;
@@ -422,6 +430,13 @@ pre > code.diff-highlight .token.token.deleted:not(.prefix) *::-moz-selection {
 	background-color: hsla(353, 95%, 66%, 0.25);
 }
 
+pre.diff-highlight > code .token.token.deleted:not(.prefix)::-moz-selection,
+pre.diff-highlight > code .token.token.deleted:not(.prefix) *::-moz-selection,
+pre > code.diff-highlight .token.token.deleted:not(.prefix)::-moz-selection,
+pre > code.diff-highlight .token.token.deleted:not(.prefix) *::-moz-selection {
+	background-color: hsla(353, 95%, 66%, 0.25);
+}
+
 pre.diff-highlight > code .token.token.deleted:not(.prefix)::-moz-selection, pre.diff-highlight > code .token.token.deleted:not(.prefix) *::-moz-selection, pre > code.diff-highlight .token.token.deleted:not(.prefix)::-moz-selection, pre > code.diff-highlight .token.token.deleted:not(.prefix) *::-moz-selection {
 	background-color: hsla(353, 95%, 66%, 0.25);
 }
@@ -436,6 +451,13 @@ pre > code.diff-highlight .token.token.deleted:not(.prefix) *::selection {
 pre.diff-highlight > code .token.token.inserted:not(.prefix),
 pre > code.diff-highlight .token.token.inserted:not(.prefix) {
 	background-color: hsla(137, 100%, 55%, 0.15);
+}
+
+pre.diff-highlight > code .token.token.inserted:not(.prefix)::-moz-selection,
+pre.diff-highlight > code .token.token.inserted:not(.prefix) *::-moz-selection,
+pre > code.diff-highlight .token.token.inserted:not(.prefix)::-moz-selection,
+pre > code.diff-highlight .token.token.inserted:not(.prefix) *::-moz-selection {
+	background-color: hsla(135, 73%, 55%, 0.25);
 }
 
 pre.diff-highlight > code .token.token.inserted:not(.prefix)::-moz-selection,
