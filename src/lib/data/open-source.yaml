@@ -6,7 +6,7 @@
 - title: CMSvelte
   github: https://github.com/sawyerclick/CMSvelte
   link: https://sawyerclick.github.io/CMSvelte
-  description: A Svelte starter template built with newsroom CMS's in mind. Dynamically create inline graphics based on the placement of figure elements with defined data-chart attributes.
+  description: A Svelte starter template built with newsroom CMS's in mind. Embed modular inline graphics based on the placement of figure elements with data attributes.
 # - title: modalize
 #   github: https://github.com/sawyerclick/portfolio/blob/master/src/lib/actions/modalize.js
 #   link: /introducing-modalize
