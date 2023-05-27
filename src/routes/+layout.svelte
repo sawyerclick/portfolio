@@ -1,21 +1,23 @@
 <script>
+	import '@fontsource/esteban';
 	import '$lib/styles/app.postcss';
-	import '$lib/styles/font.css';
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
-	import { gsap } from 'gsap/dist/gsap';
+	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { ScrollSmoother } from 'gsap/dist/ScrollSmoother';
+	import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
 	import Meta from '$lib/components/furniture/Meta.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/furniture/Footer.svelte';
-	// import FollowMouse from '$lib/components/FollowMouse.svelte';
-	gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+	gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
 	onMount(() => {
 		ScrollSmoother.create({
-			smooth: 0.5,
-			effects: true
+			smooth: 1,
+			effects: true,
+			smoothTouch: 0.1
 		});
 	});
 </script>
@@ -24,9 +26,9 @@
 
 <!-- <FollowMouse /> -->
 
-{#if $page.data.nav}
+<!-- {#if $page.data.nav}
 	<Nav />
-{/if}
+{/if} -->
 
 <div id="smooth-wrapper">
 	<main id="smooth-content" class="z-10 min-h-screen">

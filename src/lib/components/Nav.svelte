@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
 	import { SunIcon, MoonIcon } from 'svelte-feather-icons';
 	import { hasNav, theme } from '$lib/stores';
-	import animate from '$lib/actions/animate';
+	// import animate from '$lib/actions/animate';
 
 	/** @type {String} */
 	export let size = '26';
@@ -30,7 +30,7 @@
 		<a
 			sveltekit:prefetch
 			href="/#home"
-			class="inline-block uppercase text-shadow pt-2 leading-none font-bold tracking-tighter font-sans text-3xl xs:text-5xl text-primary -skew-x-12 duration-150 ease-out dark:text-accent hover:transition-all hover:skew-x-12"
+			class="inline-block uppercase text-shadow pt-2 leading-none font-bold tracking-tighter text-3xl xs:text-5xl text-primary -skew-x-12 duration-150 ease-out dark:text-accent hover:transition-all hover:skew-x-12"
 		>
 			{$page.data.title}
 		</a>

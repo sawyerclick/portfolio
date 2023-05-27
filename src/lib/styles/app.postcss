@@ -1,95 +1,82 @@
 /* Write your global styles here, in PostCSS syntax */
 
+@font-face {
+	font-family: 'Quest Knight';
+	src: url('/fonts/questknight.ttf') format('truetype');
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Quest Knight';
+	src: url('/fonts/questknighti.ttf') format('truetype');
+	font-display: swap;
+	font-style: italic;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-	.neon {
-		box-shadow: var(--neon);
-	}
-	.styled-border {
-		@apply font-sans text-primary no-underline py-2 px-4 border-primary bg-accent border-2 hover:transition-all duration-150 overflow-hidden dark:text-accent dark:border-accent dark:bg-primary -skew-x-3;
-	}
-
-	svg.feather {
-		display: unset;
-		margin: 0 !important;
-	}
-
-	* {
-		@apply text-primary dark:text-accent;
-	}
-
-	a:hover {
-		@apply text-secondary dark:text-secondary;
-	}
-
-	h2 {
-		@apply font-sans text-5xl sm:text-5xl lg:text-7xl text-primary;
-	}
-	h3 {
-		@apply font-mono md:text-7xl text-5xl;
-	}
-
-	.body {
-		@apply text-base font-mono leading-tight;
-	}
-
-	.text-shadow {
-		--color: var(--accent);
-		text-shadow: -2px -2px var(--color), -2px -1px var(--color), -2px 0px var(--color),
-			-2px 1px var(--color), -2px 2px var(--color), -1px -2px var(--color), -1px -1px var(--color),
-			-1px 0px var(--color), -1px 1px var(--color), -1px 2px var(--color), 0px -2px var(--color),
-			0px -1px var(--color), 0px 1px var(--color), 0px 2px var(--color), 1px -2px var(--color),
-			1px -1px var(--color), 1px 0px var(--color), 1px 1px var(--color), 1px 2px var(--color),
-			2px -2px var(--color), 2px -1px var(--color), 2px 0px var(--color), 2px 1px var(--color),
-			2px 2px var(--color);
-	}
-	html.dark .text-shadow {
-		--color: var(--primary);
-	}
-
-	html {
-		cursor: url('/images/cursor.png'), auto;
-	}
-
-	body.has-nav footer div {
-		@apply pb-12 leading-tight !important;
-	}
-
-	::-moz-selection {
-		@apply bg-secondary text-accent;
-	}
-	::selection {
-		@apply bg-secondary text-accent;
-	}
-
-	a {
-		@apply hover:text-secondary focus:text-secondary;
-	}
-
-	button:disabled {
-		@apply cursor-not-allowed opacity-40;
-	}
-
-	a.styled-border:hover,
-	button.styled-border:hover,
-	label.styled-border:hover {
-		@apply border-secondary text-secondary cursor-pointer dark:text-secondary dark:border-secondary hover:neon;
-	}
-	a.styled-border:hover *,
-	button.styled-border:hover * {
-		@apply stroke-secondary text-secondary dark:stroke-secondary dark:text-secondary;
-	}
+}
+@layer components {
+}
+@layer utilities {
 }
 
 :root {
-	--sans: monospace;
-	--serif: 'Monument', Georgia, Times, serif;
+	--sans: sans-serif;
+	--gothic: 'Quest Knight', Georgia, Times, serif;
 	--primary: #323232;
 	--secondary: #ff00ff;
 	--tertiary: #00ffff;
 	--accent: #f8f8f8;
 	--neon: 0 0 0.5rem var(--secondary);
+}
+
+::-moz-selection {
+	@apply bg-secondary text-accent;
+}
+::selection {
+	@apply bg-secondary text-accent;
+}
+
+html {
+	cursor: url('/images/cursor.png'), auto;
+}
+
+body {
+	font-family: 'Esteban', sans-serif;
+	font-size: 18px;
+}
+
+h1 {
+	@apply font-gothic lowercase;
+	font-size: 3.75rem;
+	line-height: 1;
+	letter-spacing: -0.025em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply font-serif;
+}
+
+.blink {
+	animation: blink-animation 2s steps(2, start) infinite;
+	-webkit-animation: blink-animation 2s steps(2, start) infinite;
+}
+@keyframes blink-animation {
+	to {
+		visibility: hidden;
+	}
+}
+@-webkit-keyframes blink-animation {
+	to {
+		visibility: hidden;
+	}
 }

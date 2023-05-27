@@ -30,7 +30,7 @@ main#post ol {
 main#post p.body {
 	@apply my-8 leading-tight first-of-type:mt-12 first-of-type:first-letter:mt-6 first-of-type:first-letter:pr-2
 	first-of-type:first-letter:py-0 first-of-type:first-letter:mr-1
-	first-of-type:first-letter:leading-[.6] first-of-type:first-letter:float-left  first-of-type:first-letter:font-sans 
+	first-of-type:first-letter:leading-[.6] first-of-type:first-letter:float-left  first-of-type:first-letter:font-gothic 
 	first-of-type:first-letter:font-bold
 	first-of-type:first-letter:text-accent 
 dark:first-of-type:first-letter:text-primary first-of-type:first-letter:text-[400%]
@@ -38,7 +38,7 @@ first-of-type:first-letter:[text-shadow:-1px_-1px_0_var(--secondary),1px_-1px_0_
 }
 
 main#post a {
-	@apply underline decoration-solid decoration-secondary decoration-1 underline-offset-4 duration-150 ease-out relative text-secondary font-sans text-sm tracking-wide hover:transition-all hover:text-secondary hover:font-bold hover:z-40;
+	@apply underline decoration-solid decoration-secondary decoration-1 underline-offset-4 duration-150 ease-out relative text-secondary font-gothic text-sm tracking-wide hover:transition-all hover:text-secondary hover:font-bold hover:z-40;
 }
 ::marker {
 	@apply text-2xl;
@@ -71,6 +71,14 @@ pre[class*='language-'] {
 }
 
 /* Selection */
+code[class*='language-']::-moz-selection,
+code[class*='language-'] *::-moz-selection,
+pre[class*='language-'] *::-moz-selection {
+	background: var(--syntax-selection-color);
+	color: inherit;
+	text-shadow: none;
+}
+
 code[class*='language-']::-moz-selection,
 code[class*='language-'] *::-moz-selection,
 pre[class*='language-'] *::-moz-selection {
@@ -437,6 +445,13 @@ pre > code.diff-highlight .token.token.deleted:not(.prefix) *::-moz-selection {
 	background-color: hsla(353, 95%, 66%, 0.25);
 }
 
+pre.diff-highlight > code .token.token.deleted:not(.prefix)::-moz-selection,
+pre.diff-highlight > code .token.token.deleted:not(.prefix) *::-moz-selection,
+pre > code.diff-highlight .token.token.deleted:not(.prefix)::-moz-selection,
+pre > code.diff-highlight .token.token.deleted:not(.prefix) *::-moz-selection {
+	background-color: hsla(353, 95%, 66%, 0.25);
+}
+
 pre.diff-highlight > code .token.token.deleted:not(.prefix)::-moz-selection, pre.diff-highlight > code .token.token.deleted:not(.prefix) *::-moz-selection, pre > code.diff-highlight .token.token.deleted:not(.prefix)::-moz-selection, pre > code.diff-highlight .token.token.deleted:not(.prefix) *::-moz-selection {
 	background-color: hsla(353, 95%, 66%, 0.25);
 }
@@ -451,6 +466,13 @@ pre > code.diff-highlight .token.token.deleted:not(.prefix) *::selection {
 pre.diff-highlight > code .token.token.inserted:not(.prefix),
 pre > code.diff-highlight .token.token.inserted:not(.prefix) {
 	background-color: hsla(137, 100%, 55%, 0.15);
+}
+
+pre.diff-highlight > code .token.token.inserted:not(.prefix)::-moz-selection,
+pre.diff-highlight > code .token.token.inserted:not(.prefix) *::-moz-selection,
+pre > code.diff-highlight .token.token.inserted:not(.prefix)::-moz-selection,
+pre > code.diff-highlight .token.token.inserted:not(.prefix) *::-moz-selection {
+	background-color: hsla(135, 73%, 55%, 0.25);
 }
 
 pre.diff-highlight > code .token.token.inserted:not(.prefix)::-moz-selection,
