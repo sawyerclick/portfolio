@@ -1,21 +1,13 @@
 <script>
 	import { page } from '$app/stores';
-	import '$lib/styles/post.postcss';
 </script>
 
 <div class="p-8 max-w-3xl m-auto">
 	<nav>
-		<a
-			href="/"
-			class="inline-block font-light leading-none styled-border px-2 py-2 text-sm  hover:-skew-x-12 hover:transition-all focus:transition-all focus:-skew-x-12"
-		>
-			&#8592; home
-		</a>
+		<a href="/" class="font-gothic text-sm tracking-widest">&leftarrow; home</a>
 	</nav>
 
 	<main id="post" class="post">
-		<h2 class="font-semibold tracking-tight mt-8 text-5xl">Hi! I'm Sawyer.</h2>
-
 		<p class="body">
 			I'm a data and graphics journalist living in Texas. My speciality is weaving narratives into
 			data-driven graphics and front-end development. I work at <a

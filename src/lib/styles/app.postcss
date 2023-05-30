@@ -19,8 +19,28 @@
 @tailwind utilities;
 
 @layer base {
+	.text-vertical {
+		-webkit-writing-mode: vertical-rl;
+		-ms-writing-mode: tb-rl;
+		writing-mode: vertical-rl;
+		-webkit-text-orientation: upright;
+		text-orientation: upright;
+	}
+
+	.prose a,
+	a.styled,
+	main#post a {
+		@apply underline decoration-2 underline-offset-4 hover:decoration-double focus:decoration-double;
+	}
 }
 @layer components {
+	.hed.banner {
+		@apply text-[4.5vw] md:text-[4.875vw] xl:text-[5.045vw] translate-x-[-0.6%];
+	}
+
+	.articles {
+		@apply grid grid-cols-9 gap-6;
+	}
 }
 @layer utilities {
 }
@@ -28,18 +48,21 @@
 :root {
 	--sans: sans-serif;
 	--gothic: 'Quest Knight', Georgia, Times, serif;
-	--primary: #323232;
-	--secondary: #ff00ff;
-	--tertiary: #00ffff;
-	--accent: #f8f8f8;
-	--neon: 0 0 0.5rem var(--secondary);
 }
 
 ::-moz-selection {
-	@apply bg-secondary text-accent;
+	@apply bg-dark text-light;
 }
 ::selection {
-	@apply bg-secondary text-accent;
+	@apply bg-dark text-light;
+}
+
+html.dark ::-moz-selection {
+	@apply bg-light text-dark;
+}
+
+html.dark ::selection {
+	@apply bg-light text-dark;
 }
 
 html {
@@ -49,13 +72,6 @@ html {
 body {
 	font-family: 'Esteban', sans-serif;
 	font-size: 18px;
-}
-
-h1 {
-	@apply font-gothic lowercase;
-	font-size: 3.75rem;
-	line-height: 1;
-	letter-spacing: -0.025em;
 }
 
 h2,

@@ -1,87 +1,119 @@
 <script>
-	import { setContext } from 'svelte';
-	import { slide } from 'svelte/transition';
-	import { GithubIcon } from 'svelte-feather-icons';
-	import { timeFormat } from 'd3';
-	import { prefersReducedMotion, viewport } from '$lib/stores';
-	import timeline from '$lib/actions/timeline';
-	import Project from '$lib/components/Project.svelte';
-	import Grid from '$lib/components/Grid.svelte';
-	import Carousel from '$lib/components/Carousel.svelte';
 	import Separator from '$lib/components/furniture/Separator.svelte';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
-
-	setContext('graphics', [...data.projects.pinned, ...data.projects.recent]);
-
-	// marquee stuff
-	const marqueeInterval = 5000;
-	const marquees = [
-		{ noun: 'pixels', verb: 'push' },
-		{ noun: 'data', verb: 'chart' },
-		{ noun: 'stories', verb: 'tell' },
-		{ noun: 'juice', verb: 'squeeze' },
-		{ noun: 'code', verb: 'ship' }
-	];
-	let activeMarqueeIndex = 0;
-	const marqueeTimer = setInterval(() => {
-		activeMarqueeIndex = activeMarqueeIndex === marquees.length - 1 ? 0 : activeMarqueeIndex + 1;
-	}, marqueeInterval);
-
-	// time stuff
-	let showSeconds = true;
-	let todaysDate = Date.now();
-	const todaysDateTimer = setInterval(() => (todaysDate = Date.now()), 1000);
-
-	// optionally stop timers based on user pref
-	$: if ($prefersReducedMotion) {
-		clearInterval(marqueeTimer);
-		clearInterval(todaysDateTimer);
-	}
 </script>
 
-<!-- https://greensock.com/forums/topic/32705-scrollsmoother-and-position-sticky/ -->
-
-<header id="hero" class="grid grid-cols-9 grid-rows-1 gap-3 overflow-hidden pt-4 px-8">
-	<div class="col-start-4 col-end-7 text-center">
-		<h1 class="lowercase row-start-1 sticky top-0">Sawyer Click</h1>
-		<p class="sr-only">Data viz reporter</p>
+<section id="above-the-fold" aria-label="Above the fold" class="px-8 my-8">
+	<h2 class="sr-only">Above the fold. A curated selection of my work.</h2>
+	<div class="articles">
+		<div class="col-span-6">
+			<article class="border-l-0 border-t-0 p-3" data-speed="auto" data-lag="2">
+				<a href="/">
+					<h3
+						class="hed font-black italic text-5xl -translate-x-1 leading-snug -mb-2 -translate-y-6"
+					>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit
+					</h3>
+					<div class="">
+						<img
+							class="float-left mr-6 mb-2"
+							src="https://via.placeholder.com/400x400.png"
+							alt=""
+							width="400"
+							height="400"
+						/>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque fugit sapiente rerum
+							iste deserunt omnis dignissimos optio corporis quaerat, <b>laborum consequatur modi</b
+							>, reiciendis quasi impedit ratione natus. Voluptate, cumque aliquam?
+						</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptas vitae ipsa
+							animi tempore harum est, officia consectetur. Aliquid architecto est eaque tempora.
+							Blanditiis assumenda mollitia, dolorem sunt labore praesentium.
+						</p>
+					</div>
+				</a>
+			</article>
+		</div>
+		<div class="col-span-3">
+			<article>
+				<a href="/whoami" aria-labelledby="whoami-right-rail" class="group">
+					<h3 id="whoami-right-rail" class="hed font-black italic text-3xl mb-2 -translate-x-1">
+						Who am I?
+					</h3>
+					<div class="grid grid-cols-3 gap-3">
+						<p class="col-span-2 group-hover:underline group-focus:underline">
+							I'm a data and graphics journalist born and raised in Texas. My speciality is weaving
+							narratives into data-driven graphics, often using novel datasets.
+						</p>
+						<img
+							class="col-span-1"
+							src="images/me.jpeg"
+							width="200"
+							height="200"
+							alt="Sawyer Click"
+						/>
+					</div>
+				</a>
+			</article>
+			<Separator class="my-6" />
+			<article>
+				<a href="/" class="group">
+					<h3 class="hed font-black italic text-3xl mb-2 -translate-x-1">
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit
+					</h3>
+					<div class="grid grid-cols-3 gap-3">
+						<p class="col-span-2 group-hover:underline group-focus:underline">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas molestias,
+							dignissimos delectus eum officia aspernatur saepe nihil.
+						</p>
+						<img
+							class="col-span-1"
+							src="https://via.placeholder.com/200x200.png"
+							width="200"
+							height="200"
+							alt=""
+						/>
+					</div>
+				</a>
+			</article>
+			<Separator class="my-6" />
+			<article>
+				<a href="/" class="group">
+					<h3 class="hed font-black italic text-3xl mb-2 -translate-x-1">
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit
+					</h3>
+					<div class="grid grid-cols-3 gap-3">
+						<p class="col-span-2 group-hover:underline group-focus:underline">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas molestias,
+							dignissimos delectus eum officia aspernatur saepe nihil.
+						</p>
+						<img
+							class="col-span-1"
+							src="https://via.placeholder.com/200x200.png"
+							width="200"
+							height="200"
+							alt=""
+						/>
+					</div>
+				</a>
+			</article>
+		</div>
 	</div>
+</section>
 
-	<div class="col-start-1 col-end-3 row-start-1 flex items-center">
-		<p class="border border-black p-3 text-center inline-block text-sm">
-			<!-- TODO: scramble letter effect -->
-			{#key activeMarqueeIndex}
-				All the <span>{marquees[activeMarqueeIndex].noun}</span> fit to
-				<span>{marquees[activeMarqueeIndex].verb}</span>.
-			{/key}
-		</p>
-	</div>
+<Separator class="mx-8" />
 
-	<div class="col-start-8 col-end-10 row-start-1 flex items-center justify-end">
-		<button
-			title="Today's date, local time. Click to disable blinking."
-			class="border border-black p-3 text-center text-sm flex items-center justify-center overflow-hidden"
-			on:click={() => (showSeconds = !showSeconds)}
-		>
-			<div>{timeFormat('%B %d, %Y %I:%M')(todaysDate)}</div>
-			{#if showSeconds && !$prefersReducedMotion}
-				<div class="whitespace-nowrap" transition:slide|local={{ axis: 'x' }}>
-					<span>::</span><span>{timeFormat('%Ss %p')(todaysDate)}</span>
-				</div>
-			{/if}
-		</button>
-	</div>
-</header>
-
-<Separator class="mx-8 my-4" />
-
-<section id="pinned" class="my-24">
+<!-- <section id="pinned" class="my-24">
 	<header
 		class="sm:flex justify-between items-end px-6 pb-2 pt-4 mt-16 mb-8 border-b-1 border-primary dark:border-accent"
 	>
-		<h2 class="text-2xl normal-case leading-none font-gothic font-bold md:text-6xl text-center">
+		<h2
+			class="text-2xl normal-case leading-none font-gothic font-bold md:text-6xl text-center mx-auto"
+		>
 			Selected works
 		</h2>
 	</header>
@@ -190,4 +222,4 @@
 			</article>
 		{/each}
 	</div>
-</section>
+</section> -->

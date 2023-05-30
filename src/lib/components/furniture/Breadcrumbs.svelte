@@ -17,6 +17,6 @@
 		@apply inline-block;
 	}
 	a {
-		@apply font-mono font-semibold uppercase tracking-widest leading-none mx-1 hover:underline;
+		@apply font-gothic font-semibold uppercase tracking-widest leading-none mx-1 hover:underline;
 	}
 </style>

@@ -2,22 +2,22 @@
 	let classes = '';
 	export { classes as class };
 
-	let width = 300;
-
-	// the width of an X
-	const xWidth = 3.68;
-
-	$: fits = width / xWidth;
+	export let light = false;
 </script>
 
-<div
-	class="flex flex-row gap-0 leading-none text-3xs font-gothic {classes}"
-	role="separator"
-	bind:clientWidth={width}
->
-	<div class="contents" aria-hidden="true">
-		{#each Array.from({ length: fits }) as _}
-			x
-		{/each}
-	</div>
-</div>
+<hr class={classes} class:x-light={light} class:x-dark={!light} />
+
+<style>
+	hr {
+		background-repeat: repeat-x;
+		background-size: contain;
+		width: 100%;
+		height: 5px;
+	}
+	hr.x-light {
+		background-image: url('/images/x-light.png');
+	}
+	hr.x-dark {
+		background-image: url('/images/x-dark.png');
+	}
+</style>

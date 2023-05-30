@@ -11,21 +11,24 @@ module.exports = {
 				xs: '400px'
 			},
 			colors: {
-				primary: 'var(--primary)',
-				secondary: 'var(--secondary)',
-				tertiary: 'var(--tertiary)',
-				accent: 'var(--accent)'
+				dark: '#000000',
+				light: '#f8f8f8'
 			},
 			fontSize: {
 				'3xs': '.5rem',
 				'2xs': '.625rem',
-				'8xl': '5.15rem'
+				'8xl': '5.15rem',
+				'9xl': '6rem',
+				'10xl': '7rem'
 			},
 			zIndex: {
 				'-1': '-1'
 			},
 			borderRadius: {
 				100: '100%'
+			},
+			listStyleType: {
+				floral: '❧'
 			}
 		}
 	},

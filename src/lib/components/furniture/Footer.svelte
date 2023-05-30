@@ -1,7 +1,25 @@
 <footer
-	class="text-center max-w-full relative z-50 bg-accent dark:bg-primary w-full h-full pt-12 pb-6"
+	class="flex items-start justify-between gap-6 max-w-full relative z-50 bg-accent dark:bg-primary w-full h-full py-6 px-8"
 >
-	<p class="text-xs -skew-x-12 max-w-[210px] mx-auto leading-normal">
-		Made with ♡ by <a href="https://www.twitter.com/sawyerdabear">Sawyer Click&#8599;</a>
+	<ul
+		class="text-lg font-bold italic flex flex-row gap-3"
+		aria-label="Reach out to Sawyer"
+		role="navigation"
+	>
+		<li>
+			<a class="styled" href="mailto:sawyerclick@gmail.com" target="_blank" rel="noreferrer"
+				>E-mail</a
+			>
+		</li>
+		<li><a class="styled" href="https://twitter.com/sawyerdabear" rel="noreferrer">Twitter</a></li>
+		<li><a class="styled" href="https://github.com/sawyerclick" rel="noreferrer">GitHub</a></li>
+	</ul>
+	<p class="text-lg font-bold italic leading-normal">
+		Made with ❦ by
+		<a
+			class="font-gothic underline hover:decoration-double focus:decoration-double"
+			href="/"
+			data-sveltekit-preload-data="hover">sawyer click</a
+		>
 	</p>
 </footer>

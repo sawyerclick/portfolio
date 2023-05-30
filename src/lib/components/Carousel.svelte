@@ -14,10 +14,10 @@
 		@apply h-2;
 	}
 	ul::-webkit-scrollbar-thumb {
-		@apply bg-primary dark:bg-accent rounded-xl;
+		@apply bg-dark dark:bg-light rounded-xl;
 	}
 	:global(.dark) ul::-webkit-scrollbar-thumb {
-		@apply bg-accent;
+		@apply bg-light;
 	}
 	ul::-webkit-scrollbar-track {
 		@apply bg-transparent mx-2 sm:mx-6;

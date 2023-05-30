@@ -5,9 +5,6 @@ export const load = async ({ fetch }) => {
 	const openSource = await fetch('/api/open-source');
 
 	return {
-		nav: true,
-		footer: true,
-
 		// specific page data
 		projects: projects.ok && (await projects.json()),
 		awards: awards.ok && (await awards.json()),

@@ -27,8 +27,8 @@ export default {
 		}
 	},
 	colors: {
-		background: '#f8f8f8',
-		theme: '#f8f8f8'
+		background: '#ffffff',
+		theme: '#000000'
 	},
 	socials: {
 		github: {

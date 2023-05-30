@@ -3,6 +3,7 @@
 	import { dev } from '$app/environment';
 	import Meta from '$lib/components/furniture/Meta.svelte';
 	import RickRollGif from '$lib/assets/rickroll.gif?quality=75';
+	import Separator from '$lib/components/furniture/Separator.svelte';
 
 	$: console.error($page.status, $page.error.message);
 </script>
@@ -25,24 +26,20 @@
 <main
 	class="absolute flex flex-nowrap flex-col justify-center items-center w-screen h-screen p-12 text-center z-20"
 >
-	<h2 class="font-gothic text-3xl sm:text-5xl font-bold mt-8 text-bg text-accent -skew-x-12">
-		Whoops...
-	</h2>
-	<p class="font-gothic font-bold mt-6 text-2xl sm:text-5xl text-bg text-accent -skew-x-12">
-		something went wrong
+	<h1 class="font-gothic text-light text-[10vw]">Whoops...</h1>
+	<p class="lowercase font-serif font-bold mt-6 text-xl sm:text-3xl text-light">
+		Something went wrong.
 	</p>
-	<a
-		sveltekit:prefetch
-		href="/"
-		class="styled-border font-gothic mt-8 px-3 py-1 sm:text-2xl -skew-x-12"
-	>
+	<a sveltekit:prefetch href="/" class="styled text-white font-serif mt-6 px-3 py-1 sm:text-2xl">
 		Go home?
 	</a>
 </main>
 
 {#if dev}
-	<pre
-		class="w-full p-2 leading-tight font-mono text-lg whitespace-pre-wrap text-accent font-bold bg-red-600 z-50 fixed top-0">
+	<dialog
+		open
+		class="w-full h-auto p-2 m-0 leading-none font-serif text-lg whitespace-pre-wrap text-light font-bold bg-red-600 z-50 fixed top-0"
+	>
 		{$page.status}: {$page.error.message}
-	</pre>
+	</dialog>
 {/if}
