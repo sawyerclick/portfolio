@@ -69,6 +69,15 @@ html {
 	cursor: url('/images/cursor.png'), auto;
 }
 
+html,
+html.light {
+	@apply text-dark;
+}
+
+html.dark {
+	@apply text-light;
+}
+
 body {
 	font-family: 'Esteban', sans-serif;
 	font-size: 18px;

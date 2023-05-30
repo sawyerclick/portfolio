@@ -5,7 +5,7 @@ import debounce from 'lodash.debounce';
 export const hasNav = writable(false);
 
 // theme tracker, default to dark
-export const theme = writable(browser ? window.localStorage.getItem('theme') : 'dark');
+export const theme = writable(browser ? window.localStorage.getItem('theme') : 'light');
 theme.subscribe((value) => {
 	if (browser) {
 		// change classes and settings

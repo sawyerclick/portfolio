@@ -9,7 +9,7 @@
 </script>
 
 <div
-	class="p-3 border-black {classes}"
+	class="p-3 border-dark dark:border-light {classes}"
 	class:border-t-2={top}
 	class:border-r-2={right}
 	class:border-b-2={bottom}
