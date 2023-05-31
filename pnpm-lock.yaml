@@ -93,6 +93,9 @@ devDependencies:
   postcss:
     specifier: ^8.4.23
     version: 8.4.23
+  postcss-import:
+    specifier: ^15.1.0
+    version: 15.1.0(postcss@8.4.23)
   postcss-load-config:
     specifier: ^4.0.1
     version: 4.0.1(postcss@8.4.23)

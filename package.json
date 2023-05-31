@@ -51,6 +51,7 @@
 		"markdown-it-bracketed-spans": "^1.0.1",
 		"markdown-it-container": "^3.0.0",
 		"postcss": "^8.4.23",
+		"postcss-import": "^15.1.0",
 		"postcss-load-config": "^4.0.1",
 		"prettier": "^2.8.8",
 		"prettier-plugin-svelte": "^2.10.0",
