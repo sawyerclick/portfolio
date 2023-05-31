@@ -1,4 +1,4 @@
-import site from '$lib/site.js';
+import site from '$lib/site';
 
 export const GET = async () => {
 	const pages = ['whoami'];
