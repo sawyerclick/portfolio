@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 </script>
 
 <slot />
@@ -34,11 +34,15 @@
 	}
 
 	main#post p.body {
-		@apply my-8 leading-tight first-of-type:mt-12 first-of-type:first-letter:mt-6 first-of-type:first-letter:pr-2
-	first-of-type:first-letter:py-0 first-of-type:first-letter:mr-1
-	first-of-type:first-letter:leading-[.6] first-of-type:first-letter:float-left  first-of-type:first-letter:font-gothic 
-	first-of-type:first-letter:font-bold first-of-type:first-letter:text-[400%]
-first-of-type:first-letter:[text-shadow:-1px_-1px_0_black,1px_-1px_0_black,-1px_1px_0_black,1px_1px_0_black,4px_-4px_1px_black];
+		@apply my-8 leading-tight;
+	}
+	main#post p.body:first-of-type {
+		@apply mt-12;
+	}
+	main#post p.body:first-of-type:first-letter {
+		@apply mt-6 pr-2 py-0 mr-1 leading-[.6] float-left font-gothic font-bold text-[400%];
+		text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black,
+			4px -4px 1px black;
 	}
 
 	::marker {

@@ -1,6 +1,11 @@
 ---
-- title: '#FoodTok'
-  description:
+- title: 'Did Anyone Actually ‘Cart’ That #FoodTok Recipe?'
+  description: >
+    #FoodTok, a mouthwatering subgenre of TikTok, has propelled some of the buzziest (and wackiest) food and recipe trends on social media over the past few years. We watched with fascination and wondered, **how much of this content is making it into people’s carts?**
+
+
+    To find out, we analyzed Instacart’s purchase data — which reflects millions of grocery transactions across the U.S. and Canada — to uncover whether people actually “carted” the ingredients for 20 prominent #FoodTok recipes.
+
   date: 2022-12
   tags:
     - Svelte
@@ -12,10 +17,11 @@
   img: foodtok
   alt: A line chart show the sharp uptick of Instacart orders for Baked Feta Pasta following it's virality on TikTok
   publication: The DataFace
+  client: Instacart
   type: graphics
   show: TRUE
-  pinned: TRUE
   award: FALSE
+
 - title: Wakanda Forever
   description:
   date: 2022-11
@@ -31,8 +37,8 @@
   publication: The DataFace
   type: graphics
   show: TRUE
-  pinned: TRUE
   award: FALSE
+
 - title: Reinventing Dealey Plaza
   description: Dealey Plaza and Triple Underpass are among downtown Dallas' most profound urban failings, architecture critic Mark Lamster writes. But they don't have to be.
   date: 2022-10
@@ -48,8 +54,8 @@
   publication: The Dallas Morning News
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: End Qualified Immunity
   description: A website for Campaign Zero tracking legislation on qualified immunity for police officers. The website features several bespoke data visualizations, CMS-driven copy and ultimately funnels users to contact their local legislators via the openstates API, the Google GeoLocation API, and the GeoLocation API.
   date: 2022-10
@@ -66,8 +72,8 @@
   publication: The DataFace
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Sizzle Across America
   description: An interactive report into America's food trends for Independence Day. There is a lot of beef, sausage and steak, but D.C. ate a lot of vegetarian burgers!
   date: 2022-05
@@ -80,8 +86,8 @@
   publication: The DataFace
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: TRUE
+
 - title: STAATUS Index
   description: Created interactive graphics encouraging exploratory analysis into how Asian Americans are perceived for LAAUNCH
   date: 2022-05
@@ -94,8 +100,8 @@
   publication: The DataFace
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Medicare Facts
   description: Led development of an interactive data-driven essay on varying medicare data for KFF
   date: 2022-04
@@ -108,8 +114,8 @@
   publication: The DataFace
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Mapping Police Violence
   description: Led development of a multi-page site featuring several prominent data visualizations on police violence in America for Campaign Zero
   date: 2022-02
@@ -122,8 +128,8 @@
   publication: The DataFace
   type: graphics
   show: TRUE
-  pinned: TRUE
   award: FALSE
+
 - title: Conflicted Congress
   description: Led front-end and back-end development peering into the financial transparency of members of Congress
   date: 2021-12
@@ -137,8 +143,8 @@
   publication: Business Insider
   type: graphics
   show: TRUE
-  pinned: TRUE
   award: FALSE
+
 - title: Zuck's Hawaiʻi
   description: An investigation featuring drone footage, maps, charts & soundbites
   date: 2021-11
@@ -153,8 +159,8 @@
   publication: Business Insider
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Esports Winners
   description: Who's winning what in the esports world
   date: 2021-11
@@ -163,13 +169,12 @@
     - D3
     - Tweens
   link: https://www.businessinsider.com/esports-database-top-teams-prize-money-titles-2021-10
-  img: esports-winners
-  alt: A bubble chart of top esports teams, sized according to who has won the most awards
+  img: esports-winners  awards
   publication: Business Insider
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Buy a House
   description: Wielding RedFin and Zillow data to ask if you should buy a house
   date: 2021-10
@@ -182,8 +187,8 @@
   publication: Business Insider
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Insider Reviews
   description: An updating list of Insider Reviews' fav products
   date: 2021-10
@@ -195,8 +200,8 @@
   publication: Business Insider
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Salary database
   description: Wrangling 250,000 salaries into a readable database
   date: 2021-09
@@ -210,8 +215,8 @@
   publication: Business Insider
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: BioTech Quiz
   description: A quirky quiz to highlight pay disparity in the biotech industry
   date: 2021-08
@@ -224,8 +229,8 @@
   publication: Business Insider
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Vaxxed Govs
   description: A cartogram to track which governors are vaccinated and how it stacks up against CDC case data
   date: 2021-06
@@ -238,8 +243,8 @@
   publication: Business Insider
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: LGBTQ+ Cartoons
   description: A multi-page site displaying the rise in LGBTQ+ characters in cartoons
   date: 2021-05
@@ -252,8 +257,8 @@
   publication: Business Insider
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: TRUE
+
 - title: Steve's Connections
   description: Steve Cohen's sphere of influence
   date: 2021-05
@@ -266,8 +271,8 @@
   publication: Business Insider
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Like a Ritual
   description: Why Title Fight deserved better from fans and critics via Spotify data
   date: 2021-01
@@ -281,8 +286,8 @@
   publication: Side project
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: TRUE
+
 - title: Ghost Kitchens
   description: Mapping out CloudKitchens and REEF locations
   date: 2021-01
@@ -294,8 +299,8 @@
   publication: Business Insider
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Gender Diversity
   description: Gender diversity on the boards of pre-IPO companies
   date: 2021-01
@@ -307,8 +312,8 @@
   publication: Business Insider
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Georgia's Run-off
   description: Legislative issues to be determined by Georgia's Senate race
   date: 2021-01
@@ -320,8 +325,8 @@
   publication: Business Insider
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Joe's Cabinet
   description: A visual database of Joe Biden's cabinet
   date: 2021-01
@@ -333,8 +338,8 @@
   publication: Business Insider
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Q's Supporters
   description: A visual database of QAnon supporters
   date: 2020-12
@@ -346,8 +351,8 @@
   publication: Business Insider
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Influencer Agents
   description: A database of influencer agents and managers
   date: 2020-11
@@ -359,8 +364,8 @@
   publication: Business Insider
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Q Drops
   description: A timeline of Q's first 5,000 drops
   date: 2020-11
@@ -372,8 +377,8 @@
   publication: Business Insider
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: COVID Condegram
   description: A radial bar chart with COVID-19 data
   date: 2020-12
@@ -385,8 +390,8 @@
   publication: Observable
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Biotech Sell Offs
   description: Packed bubble chart showing stock sold from biotech executives
   date: 2020-10
@@ -398,8 +403,8 @@
   publication: Business Insider
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Izzy's Orbit
   description: A force-directed chart on the influence of hedge-fund behemoth Millennium
   date: 2020-10
@@ -411,8 +416,8 @@
   publication: Business Insider
   type: graphics
   show: FALSE
-  pinned: FALSE
   award: FALSE
+
 - title: The GOP & QAnon
   description: Visualizing QAnon-related tweets from GOP and conservative personalities
   date: 2020-10
@@ -424,8 +429,8 @@
   publication: Business Insider
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Joppa
   description: A special on how Dallas has neglected a freedman's town
   date: 2020-09
@@ -438,8 +443,8 @@
   publication: The Dallas Morning News
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Police Complaints
   description: How Indianapolis Police Department's few bad apples spoil the bunch
   date: 2020-09
@@ -451,8 +456,8 @@
   publication: NYU Criminal Justice Lab
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Internet Usage
   description: Scrollytelling radial-chart clocks on how internet usage patterns have been disrupted
   date: 2020-08
@@ -464,8 +469,8 @@
   publication: The Wall Street Journal
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Home Economics
   description: A small-multiple cartogram that showcases Home Depot's boom in foot traffic
   date: 2020-08
@@ -477,8 +482,8 @@
   publication: The Wall Street Journal
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Quake Swarm
   description: How A.I. uncovered secrets about a flurry of earthquakes in California
   date: 2020-06
@@ -491,8 +496,8 @@
   publication: The Wall Street Journal
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Warming Up
   description: Projected CO2 emissions and how the coronavirus could change things
   date: 2020-07
@@ -505,8 +510,8 @@
   publication: The Wall Street Journal
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Small Slice
   description: How the world is funding sustainable enterprises amid the pandemic
   date: 2020-07
@@ -519,8 +524,8 @@
   publication: The Wall Street Journal
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Protest Data
   description: Simplifying how political groups serve protestors ads based on geofencing
   date: 2020-06
@@ -532,8 +537,8 @@
   publication: The Wall Street Journal
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Superyachts
   description: Mapping how superyachts fled back to the U.S. after ports closed
   date: 2020-05
@@ -545,8 +550,8 @@
   publication: NBC News
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Contour Density Maps
   description: A walkthrough on how to create a contour density map
   date: 2020-05
@@ -558,8 +563,8 @@
   publication: Observable
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: COVID's Spread
   description: Visualizing the spread of confirmed cases and deaths using a choropleth
   date: 2020-03
@@ -571,8 +576,8 @@
   publication: Observable
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Zero Waste
   description: Data on why NYC's dreams to cut its waste to nil by 2030 won't come true
   date: 2020-03
@@ -584,8 +589,8 @@
   publication: Columbia University
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Domestic Surveillance
   description: The spread of law partnerships between law enforcement agency and Amazon Ring
   date: 2020-02
@@ -597,8 +602,8 @@
   publication: NBC News
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Coronavirus Tracker
   description: Auto-updating histogram tracking new coronavirus cases in the U.S. per day
   date: 2020-03
@@ -610,8 +615,8 @@
   publication: NBC News
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Is Punk Dead?
   description: How Spotify's punk playlists forget the genre's forefathers
   date: 2019-11
@@ -623,8 +628,8 @@
   publication: Columbia University
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: TRUE
+
 - title: Quarantine Streaming
   description: Visualizing the coronavirus bump for streaming services
   date: 2020-03
@@ -636,8 +641,8 @@
   publication: NBC News
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Tax Loophole
   description: The projected revenue loss from a century-old tax loophole
   date: 2020-03
@@ -649,8 +654,8 @@
   publication: Observable
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: 2020's Dem. candidates
   description: Following some 2020 Dem. candidates around the country via their Facebook events
   date: 2019-07
@@ -663,8 +668,8 @@
   publication: Columbia University
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Immigration Court
   description: Immigration court hearings by the medium through which they are presided over
   date: 2020-02
@@ -676,8 +681,8 @@
   publication: Observable
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: State of the Union
   description: How long President Trump spent on topics during 2020's State of the Union address
   date: 2020-02
@@ -689,8 +694,8 @@
   publication: NBC News
   type: graphics
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Debate Live Blog
   description: Live blogging interesting attack stats from the ninth Dem. debate
   date: 2020-02
@@ -702,8 +707,8 @@
   publication: NBC News
   type: words
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Fare Court
   description: A day spent with those trapped at fare evasion court in Brooklyn
   date: 2019-08
@@ -715,8 +720,8 @@
   publication: Transit
   type: words
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Rogue Trains
   description: Covering the rogue F train's controversial schedule
   date: 2019-07
@@ -728,8 +733,8 @@
   publication: Transit
   type: words
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: TPUSA Allegations
   description: An investigation I led uncovering TXST student government's ties to Turning Point USA. The president later resigned because of the story
   date: 2018-08
@@ -741,8 +746,8 @@
   publication: University Star
   type: words
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: campus hate
   description: An investigation I led uncovering the white supremacist group haunting Texas State University
   date: 2019-10
@@ -754,10 +759,9 @@
   publication: University Star
   type: words
   show: TRUE
-  pinned: FALSE
   award: FALSE
-- title: Apartment Fire
-  description: Covering the deadly Iconic Village fire in San Marcos. Ranked 17th nationally for a breaking news Hearst Award
+
+- title: Apartment Fire  award
   date: 2018-07
   tags:
     - Breaking News
@@ -767,8 +771,8 @@
   publication: University Star
   type: words
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Service Fees
   description: Detailing the ballooning student service fee revenue at Texas State and it's refusal to fund student services
   date: 2018-10
@@ -780,8 +784,8 @@
   publication: University Star
   type: words
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Save the Church
   description: Profiling San Marcos' fight to get funding for a historic black church facing destruction and gentrification
   date: 2018-10
@@ -793,8 +797,8 @@
   publication: University Star
   type: words
   show: TRUE
-  pinned: FALSE
   award: FALSE
+
 - title: Road to Recovery
   description: A freelance feature piece covering a college student's road to recovery after a deadly apartment fire
   date: 2018-08
@@ -806,5 +810,4 @@
   publication: In Forney
   type: words
   show: TRUE
-  pinned: FALSE
   award: FALSE

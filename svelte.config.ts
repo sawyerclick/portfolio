@@ -1,13 +1,13 @@
 import adapter from '@sveltejs/adapter-netlify';
-import sveltePreprocess from 'svelte-preprocess';
+import { vitePreprocess } from '@sveltejs/kit/vite';
 
 /** @type {import('@sveltejs/kit').Config} */
-const config = {
+export default {
 	// extensions: mdsvexConfig.extensions,
 	preprocess: [
-		sveltePreprocess({
-			postcss: true,
-			preserve: ['ld+json']
+		vitePreprocess({
+			script: true,
+			style: true
 		})
 	],
 	kit: {
@@ -18,5 +18,3 @@ const config = {
 		}
 	}
 };
-
-export default config;

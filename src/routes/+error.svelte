@@ -1,14 +1,11 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import { dev } from '$app/environment';
-	import Meta from '$lib/components/furniture/Meta.svelte';
+	// @ts-ignore
 	import RickRollGif from '$lib/assets/rickroll.gif?quality=75';
-	import Separator from '$lib/components/furniture/Separator.svelte';
 
-	$: console.error($page.status, $page.error.message);
+	$: console.error($page.status, $page?.error?.message);
 </script>
-
-<Meta meta={{ title: 'Whoops...', description: 'Something went wrong.' }} />
 
 <div class="w-screen h-screen fixed pointer-events-none z-10">
 	<img
@@ -30,7 +27,11 @@
 	<p class="lowercase font-serif font-bold mt-6 text-xl sm:text-3xl text-light">
 		Something went wrong.
 	</p>
-	<a sveltekit:prefetch href="/" class="styled text-white font-serif mt-6 px-3 py-1 sm:text-2xl">
+	<a
+		class="styled text-white font-serif mt-6 px-3 py-1 sm:text-2xl"
+		href="/"
+		data-sveltekit-preload-data="hover"
+	>
 		Go home?
 	</a>
 </main>
@@ -40,6 +41,6 @@
 		open
 		class="w-full h-auto p-2 m-0 leading-none font-serif text-lg whitespace-pre-wrap text-light font-bold bg-red-600 z-50 fixed top-0"
 	>
-		{$page.status}: {$page.error.message}
+		{$page.status}: {$page?.error?.message}
 	</dialog>
 {/if}

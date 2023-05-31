@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
+	import md from '$lib/utils/md.js';
 	import Separator from '$lib/components/furniture/Separator.svelte';
-
-	/** @type {import('./$types').PageData} */
+	import Picture from '$lib/components/furniture/Picture.svelte';
 	export let data;
 </script>
 
@@ -9,31 +9,32 @@
 	<h2 class="sr-only">Above the fold. A curated selection of my work.</h2>
 	<div class="articles">
 		<div class="col-span-6">
-			<article class="border-l-0 border-t-0 p-3" data-speed="auto" data-lag="2">
-				<a href="/">
+			<article
+				class="article feature border-l-0 border-t-0 p-3 group"
+				data-speed="auto"
+				data-lag="2"
+			>
+				<a href={data.projects.feature.link} target="_blank" rel="noreferrer">
 					<h3
 						class="hed font-black italic text-5xl -translate-x-1 leading-snug -mb-2 -translate-y-6"
 					>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit
+						{data.projects.feature.title}
 					</h3>
-					<div class="">
-						<img
-							class="float-left mr-6 mb-2"
-							src="https://via.placeholder.com/400x400.png"
-							alt=""
-							width="400"
-							height="400"
+					<div>
+						<Picture
+							src={data.projects.feature.img}
+							alt={data.projects.feature.title}
+							class="lg:float-left lg:mr-6 mb-6 max-w-[400px] grayscale"
+							width={400}
+							height={400}
+							loading="eager"
 						/>
-						<p>
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque fugit sapiente rerum
-							iste deserunt omnis dignissimos optio corporis quaerat, <b>laborum consequatur modi</b
-							>, reiciendis quasi impedit ratione natus. Voluptate, cumque aliquam?
-						</p>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptas vitae ipsa
-							animi tempore harum est, officia consectetur. Aliquid architecto est eaque tempora.
-							Blanditiis assumenda mollitia, dolorem sunt labore praesentium.
-						</p>
+						<div class="byline">
+							<p>For <b>{data.projects.feature.client}</b></p>
+							<span>❦</span>
+							<p><time>{data.projects.feature.date}</time></p>
+						</div>
+						{@html md(data.projects.feature.description, { class: 'article-description' })}
 					</div>
 				</a>
 			</article>
@@ -42,7 +43,7 @@
 			<article>
 				<a href="/whoami" aria-labelledby="whoami-right-rail" class="group">
 					<h3 id="whoami-right-rail" class="hed font-black italic text-3xl mb-2 -translate-x-1">
-						Who am I?
+						Who Am I?
 					</h3>
 					<div class="grid grid-cols-3 gap-3">
 						<p class="col-span-2 group-hover:underline group-focus:underline">
@@ -50,11 +51,12 @@
 							narratives into data-driven graphics, often using novel datasets.
 						</p>
 						<img
-							class="col-span-1"
+							class="col-span-1 grayscale"
 							src="images/me.jpeg"
 							width="200"
 							height="200"
 							alt="Sawyer Click"
+							loading="eager"
 						/>
 					</div>
 				</a>

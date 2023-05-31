@@ -1,5 +1,5 @@
-<script>
-	import { page } from '$app/stores';
+<script lang="ts">
+	export let data;
 </script>
 
 <div class="p-8 max-w-3xl m-auto">
@@ -13,9 +13,9 @@
 			data-driven graphics and front-end development. I work at <a
 				class="text-link"
 				rel="external"
-				href={$page.data.job.link}>{$page.data.job.company}</a
+				href={data.job.link}>{data.job.company}</a
 			>
-			as a {$page.data.job.title}.
+			as a {data.job.title}.
 		</p>
 
 		<p class="body">

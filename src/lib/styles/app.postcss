@@ -33,20 +33,57 @@
 		@apply underline decoration-2 underline-offset-4 hover:decoration-double focus:decoration-double;
 	}
 }
+
 @layer components {
 	.hed.banner {
 		@apply text-[4.5vw] md:text-[4.875vw] xl:text-[5.045vw] translate-x-[-0.6%];
 	}
 
+	/* boxes in top left + right of masthead */
+	.ear {
+		@apply border border-dark dark:border-light p-3 text-center text-sm;
+	}
+
+	/* block of text that introduces the story, normally in a style different to the body text and headline.  */
+	.standfirst {
+	}
+
+	/* a brief description of a photograph or graphic */
+	.caption {
+	}
+
 	.articles {
 		@apply grid grid-cols-9 gap-6;
 	}
+
+	.article {
+		.article-description p,
+		p.article-description {
+			@apply my-2 first-of-type:mt-0 last-of-type:mb-0;
+		}
+		&.feature :where(.article-description p, p.article-description) {
+			@apply text-xl;
+		}
+
+		&:where(:hover, :focus) .article-description {
+			@apply underline;
+		}
+
+		.byline {
+			@apply mb-2 flex flex-row flex-wrap gap-2 items-center;
+			p {
+				@apply font-sans text-sm leading-tight;
+			}
+		}
+	}
 }
+
 @layer utilities {
 }
 
 :root {
-	--sans: sans-serif;
+	--sans: helvetica, arial, sans-serif;
+	--serif: 'Esteban', serif;
 	--gothic: 'Quest Knight', Georgia, Times, serif;
 }
 

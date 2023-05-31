@@ -20,8 +20,10 @@
 	<Masthead />
 {/if}
 
-<main class="z-10 min-h-screen">
-	<slot />
+<main class="z-10">
+	<div class="min-h-screen-minus-masthead">
+		<slot />
+	</div>
 	{#if $page.data.footer !== false && !$page.error}
 		<Footer />
 	{/if}

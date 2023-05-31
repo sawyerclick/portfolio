@@ -3,15 +3,19 @@ module.exports = {
 	darkMode: 'class',
 	theme: {
 		fontFamily: {
-			serif: ['Esteban', 'ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
+			sans: ['helvetica', 'arial', 'sans-serif'],
+			serif: ['Esteban', 'serif'],
 			gothic: ['Quest Knight', 'Century Gothic', 'CenturyGothic', 'AppleGothic', 'sans-serif']
 		},
 		extend: {
 			screens: {
 				xs: '400px'
 			},
+			minHeight: {
+				'screen-minus-masthead': 'calc(100vh - var(--masthead-height))'
+			},
 			colors: {
-				dark: '#000000',
+				dark: '#222222',
 				light: '#f8f8f8'
 			},
 			fontSize: {

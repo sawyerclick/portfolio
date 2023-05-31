@@ -2,10 +2,8 @@ import { browser } from '$app/environment';
 import { readable, writable } from 'svelte/store';
 import debounce from 'lodash.debounce';
 
-export const hasNav = writable(false);
-
 // theme tracker, default to dark
-export const theme = writable(browser ? window.localStorage.getItem('theme') : 'light');
+export const theme = writable((browser && window?.localStorage?.getItem('theme')) || 'light');
 theme.subscribe((value) => {
 	if (browser) {
 		// change classes and settings
@@ -16,19 +14,20 @@ theme.subscribe((value) => {
 
 // prefers reduced motion
 export const prefersReducedMotion = readable(false, (set) => {
-	const mediaQueryList = browser
-		? window.matchMedia('(prefers-reduced-motion: no-preference)')
-		: {};
+	const mediaQueryList = browser && window.matchMedia('(prefers-reduced-motion: no-preference)');
 
-	const onChange = () => set(!mediaQueryList.matches);
+	const onChange = () => {
+		if (!mediaQueryList) return;
+		set(!mediaQueryList?.matches);
+	};
 
-	if (browser) {
+	if (browser && mediaQueryList) {
 		mediaQueryList.addListener(onChange);
 		onChange();
 	}
 
 	return () => {
-		if (browser) mediaQueryList.removeListener(onChange);
+		if (browser && mediaQueryList) mediaQueryList.removeListener(onChange);
 	};
 });
 
