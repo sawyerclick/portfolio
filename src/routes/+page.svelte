@@ -2,11 +2,12 @@
 	import md from '$lib/utils/md.js';
 	import Separator from '$lib/components/furniture/Separator.svelte';
 	import Picture from '$lib/components/furniture/Picture.svelte';
+
 	export let data;
 </script>
 
 <section id="above-the-fold" aria-label="Above the fold" class="px-8 my-8">
-	<h2 class="sr-only">Above the fold. A curated selection of my work.</h2>
+	<h2 class="sr-only">Above the fold. A curated selection of my work and articles.</h2>
 	<div class="articles">
 		<div class="col-span-6">
 			<article
@@ -82,32 +83,13 @@
 					</div>
 				</a>
 			</article>
-			<Separator class="my-6" />
-			<article>
-				<a href="/" class="group">
-					<h3 class="hed font-black italic text-3xl mb-2 -translate-x-1">
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit
-					</h3>
-					<div class="grid grid-cols-3 gap-3">
-						<p class="col-span-2 group-hover:underline group-focus:underline">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas molestias,
-							dignissimos delectus eum officia aspernatur saepe nihil.
-						</p>
-						<img
-							class="col-span-1"
-							src="https://via.placeholder.com/200x200.png"
-							width="200"
-							height="200"
-							alt=""
-						/>
-					</div>
-				</a>
-			</article>
 		</div>
 	</div>
 </section>
 
-<Separator class="mx-8" />
+<div class="md:px-8">
+	<Separator />
+</div>
 
 <section id="recent" class="mx-8 my-8">
 	<h2 class="font-gothic text-6xl mb-4">Recent works</h2>

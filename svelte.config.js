@@ -7,12 +7,7 @@ const config = {
 		if (warning.code === 'css-unused-selector') return;
 		handler(warning);
 	},
-	preprocess: [
-		vitePreprocess({
-			script: true,
-			style: true
-		})
-	],
+	preprocess: [vitePreprocess()],
 	kit: {
 		adapter: adapter({}),
 		prerender: {

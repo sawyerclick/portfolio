@@ -9,6 +9,7 @@
 
 <style>
 	hr {
+		display: block;
 		background-repeat: repeat-x;
 		background-size: contain;
 		width: 100%;

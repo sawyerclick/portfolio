@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { timeFormat } from 'd3';
+	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
 	import { prefersReducedMotion, theme } from '$lib/stores';
 	import Separator from './furniture/Separator.svelte';
-	import { browser } from '$app/environment';
+	import timeline from '$lib/actions/timeline';
 
 	let height = 188;
 
@@ -35,10 +36,10 @@
 	}
 </script>
 
-<header id="hero" class="px-8" bind:offsetHeight={height}>
+<header id="hero" class="contents" bind:offsetHeight={height}>
 	<div class="sticky top-0 inset-x-0 bg-light dark:bg-dark z-50 pt-4">
-		<div class="grid grid-cols-9 grid-rows-1 gap-3 overflow-hidden">
-			<div class="col-start-4 col-end-7 text-center">
+		<div class="grid grid-cols-9 grid-rows-1 gap-3 overflow-hidden px-8">
+			<div class="col-span-full md:col-start-4 md:col-end-7 text-center">
 				<a
 					class="lowercase row-start-1 sticky top-0 italic font-gothic text-6xl leading-none tracking-tight"
 					href="/"
@@ -47,9 +48,8 @@
 				<p class="sr-only">Data viz reporter</p>
 			</div>
 
-			<div class="col-start-1 col-end-3 row-start-1 flex items-center">
+			<div class="hidden md:flex col-start-1 col-end-3 row-start-1 items-center">
 				<p class="ear">
-					<!-- TODO: scramble letter effect -->
 					{#key activeMarqueeIndex}
 						<span class="font-gothic">&OpenCurlyDoubleQuote;</span>All the
 						<span>{marquees[activeMarqueeIndex].noun}</span>
@@ -61,9 +61,11 @@
 				</p>
 			</div>
 
-			<div class="col-start-8 col-end-10 row-start-1 flex gap-3 items-center justify-end">
+			<div
+				class="absolute top-6 right-2 md:static col-start-8 col-end-10 row-start-1 gap-3 flex items-center justify-end"
+			>
 				<button
-					class="text-lg leading-none p-3"
+					class="text-lg leading-none p-3 border border-transparent hover:bg-gray-100 hover:border-dark focus:bg-gray-100 focus:border-dark dark:hover:bg-gray-800 dark:hover:border-light dark:focus:bg-gray-800 dark:focus:border-light"
 					aria-label="Toggle {$theme === 'light' ? 'dark' : 'light'} mode"
 					on:click={() => {
 						theme.set($theme === 'light' ? 'dark' : 'light');
@@ -72,23 +74,29 @@
 					{$theme === 'light' ? '☽' : '☀︎'}
 				</button>
 
-				<time class="ear" aria-label="Today's date" datetime={timeFormat('%Y-%m-%d')(todaysDate)}>
-					{timeFormat('%A, %B %d, %Y')(todaysDate)}
-				</time>
+				<div class="hidden md:flex">
+					<time class="ear" aria-label="Today's date" datetime={timeFormat('%Y-%m-%d')(todaysDate)}>
+						{timeFormat('%A, %B %d, %Y')(todaysDate)}
+					</time>
+				</div>
 			</div>
 		</div>
 
-		<Separator class="my-4" />
+		<div class="md:px-8">
+			<Separator class="my-4" />
+		</div>
 	</div>
 
-	<h1 class="font-black mx-auto text-center leading-none uppercase italic hed banner">
-		{#if $page.url.pathname === '/'}
-			<span class="sr-only">Sawyer Click is a </span>
-			Data viz developer at <a class="styled" href="https://thedataface.com">The DataFace</a>
-		{:else}
-			{@html $page.data.title}
-		{/if}
-	</h1>
+	<div class="md:px-8">
+		<h1 class="font-black mx-auto text-center leading-none uppercase italic hed banner">
+			{#if $page.url.pathname === '/'}
+				<span class="sr-only">Sawyer Click is a </span>
+				Data viz developer at <a class="styled" href="https://thedataface.com">The DataFace</a>
+			{:else}
+				{@html $page.data.title}
+			{/if}
+		</h1>
 
-	<Separator class="my-4" />
+		<Separator class="my-4" />
+	</div>
 </header>

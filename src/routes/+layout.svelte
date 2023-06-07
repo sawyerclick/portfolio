@@ -5,11 +5,12 @@
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
+	import { ScrambleTextPlugin } from 'gsap/dist/ScrambleTextPlugin';
 	import Meta from '$lib/components/furniture/Meta.svelte';
 	import Masthead from '$lib/components/Masthead.svelte';
 	import Footer from '$lib/components/furniture/Footer.svelte';
 
-	gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+	gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, ScrambleTextPlugin);
 </script>
 
 <Meta />
