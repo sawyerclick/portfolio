@@ -24,7 +24,7 @@ declare global {
 	type type = 'graphics' | 'words';
 
 	interface Link {
-		href: URL;
+		url: URL;
 		text: string;
 	}
 
@@ -34,8 +34,9 @@ declare global {
 		title: string;
 		description: string;
 		date: Date;
-		tags: string[];
-		link: URL;
+		techstack: string[];
+		github: URL | null;
+		url: URL;
 		img: string;
 		alt: string;
 		publication: publications;
@@ -64,7 +65,7 @@ declare module '$lib/data/projects.yaml' {
 	export default value;
 }
 
-declare module '$lib/data/awards.yaml' {
+declare module '$lib/data/mentionables.yaml' {
 	const value: Award[];
 	export default value;
 }

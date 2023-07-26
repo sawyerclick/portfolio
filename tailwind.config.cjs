@@ -1,5 +1,6 @@
 module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
+	plugins: [require('@tailwindcss/typography')],
 	darkMode: 'class',
 	theme: {
 		fontFamily: {
@@ -35,6 +36,5 @@ module.exports = {
 				floral: '❧'
 			}
 		}
-	},
-	plugins: []
+	}
 };

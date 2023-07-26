@@ -1,11 +1,13 @@
-<script>
-	let classes = '';
-	export { classes as class };
+<script lang="ts">
+	import type { HTMLAttributes } from 'svelte/elements';
+	import { theme } from '$lib/stores';
 
-	export let light = false;
+	interface $$Props extends HTMLAttributes<HTMLHRElement> {}
+
+	$: light = $theme !== 'light';
 </script>
 
-<hr class={classes} class:x-light={light} class:x-dark={!light} />
+<hr {...$$restProps} class:x-light={light} class:x-dark={!light} />
 
 <style>
 	hr {

@@ -4,7 +4,8 @@
 	import { page } from '$app/stores';
 	import { prefersReducedMotion, theme } from '$lib/stores';
 	import Separator from './furniture/Separator.svelte';
-	import timeline from '$lib/actions/timeline';
+
+	$: console.log($page.data);
 
 	let height = 188;
 

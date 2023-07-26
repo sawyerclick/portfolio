@@ -1,3 +1,5 @@
+<script lang="ts"></script>
+
 <footer
 	class="flex items-start justify-between gap-6 max-w-full relative z-50 bg-accent dark:bg-primary w-full h-full py-6 px-8"
 >
@@ -8,7 +10,7 @@
 	>
 		<li>
 			<a class="styled" href="mailto:sawyerclick@gmail.com" target="_blank" rel="noreferrer"
-				>E-mail</a
+				>Electronic Mail</a
 			>
 		</li>
 		<li><a class="styled" href="https://twitter.com/sawyerdabear" rel="noreferrer">Twitter</a></li>

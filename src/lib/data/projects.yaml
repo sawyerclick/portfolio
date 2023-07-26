@@ -1,11 +1,6 @@
 ---
 - title: 'Did Anyone Actually ‘Cart’ That #FoodTok Recipe?'
-  description: >
-    #FoodTok, a mouthwatering subgenre of TikTok, has propelled some of the buzziest (and wackiest) food and recipe trends on social media over the past few years. We watched with fascination and wondered, **how much of this content is making it into people’s carts?**
-
-
-    To find out, we analyzed Instacart’s purchase data — which reflects millions of grocery transactions across the U.S. and Canada — to uncover whether people actually “carted” the ingredients for 20 prominent #FoodTok recipes.
-
+  description: 'We watched #FookTok with fascination and wondered, how much of this content is making it into people’s carts?'
   date: 2022-12
   tags:
     - Svelte

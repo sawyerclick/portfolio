@@ -49,7 +49,7 @@
 					<div class="grid grid-cols-3 gap-3">
 						<p class="col-span-2 group-hover:underline group-focus:underline">
 							I'm a data and graphics journalist born and raised in Texas. My speciality is weaving
-							narratives into data-driven graphics, often using novel datasets.
+							narratives into stats-driven graphics, often using novel databases.
 						</p>
 						<img
 							class="col-span-1 grayscale"
