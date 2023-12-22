@@ -23,9 +23,10 @@
 		"@dimforge/rapier3d-compat": "^0.11.2",
 		"@rollup/plugin-dsv": "^3.0.3",
 		"@rollup/plugin-yaml": "^4.1.1",
-		"@sveltejs/adapter-auto": "^2.1.0",
-		"@sveltejs/adapter-netlify": "^2.0.8",
-		"@sveltejs/kit": "^1.25.1",
+		"@sveltejs/adapter-auto": "^3.0.0",
+		"@sveltejs/adapter-netlify": "^3.0.0",
+		"@sveltejs/kit": "^2.0.0",
+		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@tailwindcss/typography": "^0.5.10",
 		"@threlte/core": "^6.0.8",
 		"@threlte/extras": "^5.7.0",
@@ -69,7 +70,7 @@
 		"three": "^0.157.0",
 		"tslib": "^2.6.2",
 		"typescript": "^5.2.2",
-		"vite": "^4.4.9",
+		"vite": "^5.0.0",
 		"vite-imagetools": "^5.0.8"
 	},
 	"dependencies": {
