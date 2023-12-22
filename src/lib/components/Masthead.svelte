@@ -37,12 +37,12 @@
 	}
 </script>
 
-<header id="hero" class="contents" bind:offsetHeight={height}>
+<header id="hero" class="hidden contents" bind:offsetHeight={height}>
 	<div class="sticky top-0 inset-x-0 bg-light dark:bg-dark z-50 pt-4">
 		<div class="grid grid-cols-9 grid-rows-1 gap-3 overflow-hidden px-8">
 			<div class="col-span-full md:col-start-4 md:col-end-7 text-center">
 				<a
-					class="lowercase row-start-1 sticky top-0 italic font-gothic text-6xl leading-none tracking-tight"
+					class="lowercase row-start-1 sticky top-0 italic font-gothic text-6xl leading-none tracking-tighter"
 					href="/"
 					data-sveltekit-preload-data="hover">Sawyer Click</a
 				>

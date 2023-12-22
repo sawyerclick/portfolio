@@ -1,6 +1,6 @@
 import { mdsvex } from 'mdsvex';
 import mdsvexConfig from './mdsvex.config.js';
-import adapter from '@sveltejs/adapter-netlify';
+import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -15,7 +15,7 @@ const config = {
 	preprocess: [vitePreprocess(), mdsvex(mdsvexConfig)],
 
 	kit: {
-		adapter: adapter({}),
+		adapter: adapter(),
 		prerender: {
 			crawl: true,
 			origin: 'https://sawyer.codes'
