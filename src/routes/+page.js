@@ -1,13 +1,12 @@
 /** @type {import('./$types').PageLoad} */
 export const load = async ({ fetch }) => {
-	const projects = await fetch('/api/projects');
-	const awards = await fetch('/api/awards');
-	const openSource = await fetch('/api/open-source');
+	const [projects, awards, openSource] = await Promise.all([
+		fetch('/api/projects'),
+		fetch('/api/awards'),
+		fetch('/api/open-source')
+	]);
 
 	return {
-		nav: true,
-		footer: true,
-
 		// specific page data
 		projects: projects.ok && (await projects.json()),
 		awards: awards.ok && (await awards.json()),

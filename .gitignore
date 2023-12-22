@@ -1,7 +1,13 @@
 .DS_Store
 node_modules
+/build
 /.svelte-kit
 /package
-/build
-.netlify
 .env
+.env.*
+!.env.example
+.vercel
+.output
+.netlify
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*

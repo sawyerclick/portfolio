@@ -28,9 +28,7 @@
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={url} />
-	{#if $page.pathname !== '/'}
-		<meta property="og:site_name" content={tag} />
-	{/if}
+	<meta property="og:site_name" content={tag} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
 	<meta property="og:locale" content="en-US" />

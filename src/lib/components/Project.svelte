@@ -16,10 +16,10 @@
 			class="picture-wrapper h-60 w-full object-center object-cover overflow-hidden z-0 duration-150 group-hover:transition-all
 			group-focus:transition-all"
 		>
-			<Picture slug={img} {alt} width="380" height="240" />
+			<Picture src={img} {alt} width="380" height="240" />
 		</div>
 		<div
-			class="absolute pointer-events-none h-full w-full flex justify-between items-end translate-x-2 p-3 opacity-0 will-change-transform transition-all duration-150 ease-out  group-hover:opacity-100 group-hover:translate-x-0 group-focus:opacity-100 group-focus:translate-x-0"
+			class="absolute pointer-events-none h-full w-full flex justify-between items-end translate-x-2 p-3 opacity-0 will-change-transform transition-all duration-150 ease-out group-hover:opacity-100 group-hover:translate-x-0 group-focus:opacity-100 group-focus:translate-x-0"
 		>
 			<h3
 				class="pointer-events-auto font-semibold tracking-tighter text-lg text-center leading-none bg-accent p-2 border border-primary !text-primary shadow-md dark:!text-accent dark:bg-primary dark:border-accent"

@@ -1,64 +1,40 @@
-const config = {
-	content: ['./src/**/*.{html,js,svelte,ts}', './mdsvex.config.js'],
+const colors = require('./src/lib/styles/colors.json');
+
+module.exports = {
+	content: ['./src/**/*.{html,js,svelte,ts}'],
+	plugins: [require('@tailwindcss/typography')],
 	darkMode: 'class',
 	theme: {
 		fontFamily: {
-			serif: ['ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
-			sans: [
-				'Monument',
-				'ui-sans-serif',
-				'system-ui',
-				'-apple-system',
-				'BlinkMacSystemFont',
-				'Segoe UI',
-				'Roboto',
-				'Helvetica Neue',
-				'Arial',
-				'Noto Sans',
-				'sans-serif',
-				'Apple Color Emoji',
-				'Segoe UI Emoji',
-				'Segoe UI Symbol',
-				'Noto Color Emoji'
-			],
-			mono: [
-				'Fira Code',
-				'ui-monospace',
-				'SFMono-Regular',
-				'Menlo',
-				'Monaco',
-				'Consolas',
-				'Liberation Mono',
-				'Courier New',
-				'monospace'
-			]
-		},
-		listStyleType: {
-			none: 'none',
-			chevron: '"› "'
+			sans: ['helvetica', 'arial', 'sans-serif'],
+			serif: ['Esteban', 'serif'],
+			gothic: ['Grandmaster Clash', 'Century Gothic', 'CenturyGothic', 'AppleGothic', 'sans-serif']
 		},
 		extend: {
 			screens: {
-				xs: '400px'
+				xs: '460px'
 			},
-			colors: {
-				primary: 'var(--primary)',
-				secondary: 'var(--secondary)',
-				tertiary: 'var(--tertiary)',
-				accent: 'var(--accent)'
+			minHeight: {
+				'screen-minus-masthead': 'calc(100vh - var(--masthead-height))'
 			},
+			colors: colors,
 			fontSize: {
-				'8xl': '5.15rem'
-			},
-			borderWidth: {
-				1: '1px'
+				'3xs': '.5rem',
+				'2xs': '.625rem',
+				'8xl': '5.15rem',
+				'9xl': '6rem',
+				'10xl': '8.25rem',
+				'11xl': '10rem'
 			},
 			zIndex: {
 				'-1': '-1'
+			},
+			borderRadius: {
+				100: '100%'
+			},
+			listStyleType: {
+				floral: '❧'
 			}
 		}
-	},
-	plugins: []
+	}
 };
-
-module.exports = config;

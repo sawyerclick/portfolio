@@ -1,21 +1,25 @@
-import adapter from '@sveltejs/adapter-netlify';
 import { mdsvex } from 'mdsvex';
-import sveltePreprocess from 'svelte-preprocess';
-
 import mdsvexConfig from './mdsvex.config.js';
+import adapter from '@sveltejs/adapter-auto';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// extensions: mdsvexConfig.extensions,
-	preprocess: [
-		mdsvex(mdsvexConfig),
-		sveltePreprocess({
-			postcss: true,
-			preserve: ['ld+json']
-		})
-	],
+	extensions: ['.svelte', ...mdsvexConfig.extensions],
+
+	onwarn: (warning, handler) => {
+		if (warning.code === 'css-unused-selector') return;
+		handler(warning);
+	},
+
+	preprocess: [vitePreprocess(), mdsvex(mdsvexConfig)],
+
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		prerender: {
+			crawl: true,
+			origin: 'https://sawyer.codes'
+		}
 	}
 };
 
