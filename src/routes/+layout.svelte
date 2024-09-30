@@ -18,12 +18,12 @@
 	<!-- <Masthead /> -->
 {/if}
 
-<main class="z-10">
-	<div class="min-h-screen-minus-masthead">
+<div class="flex flex-col min-h-svh">
+	<main class="z-10 flex-1">
 		<slot />
-	</div>
-</main>
+	</main>
 
-<!-- {#if $page.data.footer !== false && !$page.error} -->
-<Footer />
-<!-- {/if} -->
+	<!-- {#if $page.data.footer !== false && !$page.error} -->
+	<Footer />
+	<!-- {/if} -->
+</div>

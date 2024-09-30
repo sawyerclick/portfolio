@@ -61,7 +61,7 @@
 		"prettier-plugin-svelte": "^2.10.1",
 		"sharp": "^0.32.6",
 		"slugify": "^1.6.6",
-		"svelte": "^4.2.1",
+		"svelte": "^4.2.8",
 		"svelte-check": "^3.5.2",
 		"svelte-device-info": "^1.0.0",
 		"svelte-feather-icons": "^4.0.1",
