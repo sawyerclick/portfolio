@@ -1,4 +1,149 @@
 ---
+- title: Campaign Zero's Impact
+  description:
+  date: 2024-09
+  tags:
+    - Svelte
+    - SvelteKit
+    - D3.js
+    - GSAP
+  link: https://impact.campaignzero.org/
+  img: czdecadeofimpact
+  alt: Campaign Zero's 10 Years of Impact
+  publication: The DataFace
+  type: graphics
+  show: TRUE
+  pinned: FALSE
+  award: FALSE
+- title: AAPI History Hub
+  description:
+  date: 2024-08
+  tags:
+    - Svelte
+    - SvelteKit
+    - D3.js
+    - GSAP
+    - Supabase
+    - User Authentication
+  link: https://www.aapihistoryhub.org/
+  img: aapihistoryhub
+  alt: AAPI History Hub
+  publication: The DataFace
+  type: graphics
+  show: TRUE
+  pinned: FALSE
+  award: FALSE
+- title: i5 PRME
+  description:
+  date: 2024-01
+  tags:
+    - Svelte
+    - SvelteKit
+    - D3.js
+    - GSAP
+  link: https://www.i5playbook.org/
+  img: i5prme
+  alt: Symbols representing the pillars of the i5 PRME initiative
+  publication: The DataFace
+  type: graphics
+  show: TRUE
+  pinned: FALSE
+  award: FALSE
+- title: 'Replacing the Refs'
+  description:
+  date: 2023-11
+  tags:
+    - Svelte
+    - SvelteKit
+    - D3.js
+    - GSAP
+  link: https://electiondeniers.org/
+  img: replacingtherefs
+  alt: The Landscape of Election Denial in America
+  publication: The DataFace
+  type: graphics
+  show: TRUE
+  pinned: FALSE
+  award: TRUE
+- title: Instacart's Scare Score
+  description:
+  date: 2023-10
+  tags:
+    - Svelte
+    - SvelteKit
+    - D3.js
+    - GSAP
+  link: https://trickortreat.instacart.com/
+  img: instacartscarescore
+  alt: Clip art of halloween items
+  publication: The DataFace
+  type: graphics
+  show: TRUE
+  pinned: FALSE
+  award: FALSE
+- title: The AAPI Nonprofit Database
+  description:
+  date: 2023-08
+  tags:
+    - Svelte
+    - SvelteKit
+    - D3.js
+    - Airtable
+  link: https://impactaapi.org/
+  img: aapinonprofitdatabase
+  alt: A map of the United States with markers indicating the location of AAPI nonprofits
+  publication: The DataFace
+  type: graphics
+  show: TRUE
+  pinned: TRUE
+  award: TRUE
+- title: Harvard's Faculty Explorer
+  description:
+  date: 2023-05
+  tags:
+    - Svelte
+    - SvelteKit
+    - D3.js
+  link: https://facultyexplorer.seas.harvard.edu/
+  img: harvardfacultyexplorer
+  alt: A radial network graph of Harvard Engineering School faculty collaborations
+  publication: The DataFace
+  type: graphics
+  show: TRUE
+  pinned: TRUE
+  award: FALSE
+- title: Health Care Vitals
+  description:
+  date: 2023-01
+  tags:
+    - Svelte
+    - SvelteKit
+    - D3.js
+    - GSAP
+  link: https://vitals.healthcostinstitute.org/
+  img: healthcarevitals
+  alt: A chart from the Health Care Vitals site.
+  publication: The DataFace
+  type: graphics
+  show: TRUE
+  pinned: TRUE
+  award: FALSE
+- title: Yelp's Top 100 Places to Eat
+  description:
+  date: 2023-01
+  tags:
+    - Svelte
+    - SvelteKit
+    - D3.js
+    - GSAP
+  link: https://top100.yelp.com/2023
+  img: yelptop100
+  alt: A chart from the site.
+  publication: The DataFace
+  type: graphics
+  show: TRUE
+  pinned: FALSE
+  award: FALSE
 - title: '#FoodTok'
   description:
   date: 2022-12
@@ -16,6 +161,22 @@
   show: TRUE
   pinned: TRUE
   award: FALSE
+- title: McKinsey's Brain Health
+  description:
+  date: 2022-11
+  tags:
+    - Svelte
+    - SvelteKit
+    - D3.js
+    - GSAP
+  link: https://www.mckinsey.com/mhi/our-insights/prioritizing-brain-health-scaling-what-works-to-add-years-to-life-and-life-to-years
+  img: mckinseybrainhealth
+  alt: A pie chart from Mckinsey's Prioritizing Brain Health site.
+  publication: The DataFace
+  type: graphics
+  show: TRUE
+  pinned: FALSE
+  award: FALSE
 - title: Wakanda Forever
   description:
   date: 2022-11
@@ -31,7 +192,7 @@
   publication: The DataFace
   type: graphics
   show: TRUE
-  pinned: TRUE
+  pinned: FALSE
   award: FALSE
 - title: Reinventing Dealey Plaza
   description: Dealey Plaza and Triple Underpass are among downtown Dallas' most profound urban failings, architecture critic Mark Lamster writes. But they don't have to be.
@@ -68,6 +229,21 @@
   show: TRUE
   pinned: FALSE
   award: FALSE
+- title: More Than Fair
+  description:
+  date: 2022-09
+  tags:
+    - Svelte
+    - SvelteKit
+    - D3.js
+  link: https://morethanfair.com/
+  img: morethanfair
+  alt: More Than Fair
+  publication: The DataFace
+  type: graphics
+  show: TRUE
+  pinned: FALSE
+  award: TRUE
 - title: Sizzle Across America
   description: An interactive report into America's food trends for Independence Day. There is a lot of beef, sausage and steak, but D.C. ate a lot of vegetarian burgers!
   date: 2022-05
@@ -122,7 +298,7 @@
   publication: The DataFace
   type: graphics
   show: TRUE
-  pinned: TRUE
+  pinned: FALSE
   award: FALSE
 - title: Conflicted Congress
   description: Led front-end and back-end development peering into the financial transparency of members of Congress
@@ -137,7 +313,7 @@
   publication: Business Insider
   type: graphics
   show: TRUE
-  pinned: TRUE
+  pinned: FALSE
   award: FALSE
 - title: Zuck's Hawaiʻi
   description: An investigation featuring drone footage, maps, charts & soundbites

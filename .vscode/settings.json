@@ -1,0 +1,8 @@
+{
+	"yaml.schemas": {
+		"https://json.schemastore.org/yamllint.json": [
+			"*.yaml",
+			"file:///Users/sawyerclick/repos/portfolio/src/lib/data/projects.yaml"
+		]
+	}
+}

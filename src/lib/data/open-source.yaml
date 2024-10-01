@@ -1,12 +1,28 @@
 ---
-- title: svelte-lazy-loader
-  github: https://github.com/sawyerclick/svelte-lazy-loader
-  link: https://svelte-lazy-loader.sawyer.codes
-  description: A component library for effortlessly loading media using a shared IntersectionObserver instance if native lazy-loading doesn't exist.
+- title: figma2html
+  github: https://github.com/the-dataface/figma2html
+  link: https://www.figma.com/community/plugin/1109185297790825980/figma2html
+  description: A Figma port of The New York Times' popular ai2html script, which converts Adobe Illustrator frames into HTML and CSS.
+- title: Figma Plugin Template
+  github: https://github.com/the-dataface/figma-plugin-svelte-vite
+  link: https://github.com/the-dataface/figma-plugin-svelte-vite
+  description: An opinionated boilerplate for creating Figma plugins with Svelte and Vite that lets developers focus on development instead of design.
+- title: Handoff
+  github: https://github.com/the-dataface/figma-handoff
+  link: https://www.figma.com/community/plugin/1335332559518815758/handoff
+  description: A Figma plugin supercharging the design-to-development workflow via file generation for design tokens and text styles, all with TailwindCSS in mind.
+- title: Coordinate
+  github: https://github.com/the-dataface/figma-coordinate
+  link: https://www.figma.com/community/plugin/1324536682559348646/coordinate
+  description: A Figma plugin for gathering the positional and style data of targeted nodes.
 - title: CMSvelte
   github: https://github.com/sawyerclick/CMSvelte
   link: https://sawyerclick.github.io/CMSvelte
   description: A Svelte starter template built with newsroom CMS's in mind. Embed modular inline graphics based on the placement of figure elements with data attributes.
+- title: svelte-lazy-loader
+  github: https://github.com/sawyerclick/svelte-lazy-loader
+  link: https://svelte-lazy-loader.sawyer.codes
+  description: A component library for effortlessly loading media using a shared IntersectionObserver instance if native lazy-loading doesn't exist.
 # - title: modalize
 #   github: https://github.com/sawyerclick/portfolio/blob/master/src/lib/actions/modalize.js
 #   link: /introducing-modalize

@@ -1,13 +1,43 @@
 ---
-# - award:
-#     href: https://www.today.com/video/these-are-the-top-uniquely-popular-meats-for-grilling-across-the-us-143375941589
-#     name: The Today Show
-#   project:
-#     href: https://www.instacart.com/company/updates/instacarts-summer-bbq-report-is-hot-off-the-grill/
-#     name: Sizzle Across America
+- award:
+    href: https://winners.webbyawards.com/2024/websites-and-mobile-sites/general-desktop-mobile-sites/charitable-organizationsnon-profit/290068/aapi-nonprofit-database
+    name: Webby Awards, Best Charitable Organizations/Non-Profit Website
+  project:
+    href: https://impactaapi.org/
+    name: The AAPI Nonprofit Database
+- award:
+    href: https://winners.webbyawards.com/2024/websites-and-mobile-sites/general-desktop-mobile-sites/news-politics/288544/replacing-the-refs
+    name: Webby Awards, Best News & Politics Website
+  project:
+    href: https://electiondeniers.org/
+    name: Replacing the Refs
+- award:
+    href: https://shortyawards.com/16th/harvard-engineering-school-faculty-explorer
+    name: Shorty Awards, Data Visualization Winner
+  project:
+    href: https://facultyexplorer.seas.harvard.edu/faculty-collaborations/
+    name: Harvard Engineering School Faculty Explorer
+- award:
+    href: https://shortyawards.com/16th/replacing-the-refs
+    name: Shorty Awards, Government & Politics Finalist
+  project:
+    href: https://electiondeniers.org/
+    name: Replacing the Refs
+- award:
+    href: https://shortyawards.com/15th/morethanfair
+    name: Shorty Awards, Micro-Site Finalist
+  project:
+    href: https://morethanfair.com/
+    name: More Than Fair
+- award:
+    href: https://www.today.com/video/these-are-the-top-uniquely-popular-meats-for-grilling-across-the-us-143375941589
+    name: The Today Show
+  project:
+    href: https://www.instacart.com/company/updates/instacarts-summer-bbq-report-is-hot-off-the-grill/
+    name: Sizzle Across America
 - award:
     href: https://shortyawards.com/14th/conflicted-congress
-    name: Shorty Awards' Data Vizualization
+    name: Shorty Awards, Data Vizualization
   project:
     href: https://www.businessinsider.com/financial-conflicts-congress-members-rated-2021-12
     name: Conflicted Congress

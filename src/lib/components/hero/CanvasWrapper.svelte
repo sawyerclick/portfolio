@@ -35,16 +35,18 @@
 	// an array of forces to pass
 	$: forces = [
 		['center', forceCenter(...centerPosition)],
-		['x', forceX(centerPosition[0]).strength((d) => gravityStrengthScale(d.r))],
-		['y', forceY(centerPosition[1]).strength((d) => gravityStrengthScale(d.r))],
-		['charge', forceManyBody().strength(width < 500 ? 0 : -1500)],
-		['boundary', width > 500 ? forceBoundary(0, 0, width, height).strength(1) : null],
-		['collide', forceCollide().radius((d) => d.r + 10)]
+		// ['x', forceX(centerPosition[0]).strength((d) => gravityStrengthScale(d.r))],
+		// ['y', forceY(centerPosition[1]).strength((d) => gravityStrengthScale(d.r))],
+		['charge', forceManyBody().strength(-1)],
+		// ['boundary', width > 500 ? forceBoundary(0, 0, width, height).strength(1) : null],
+		['collide', forceCollide().radius((d) => d.r + 5)]
 	];
 
 	// impact dots
 	let usedForceNames = [];
 	$: simulation = forceSimulation()
+		.alphaTarget(0.3) // stay hot
+		.velocityDecay(0.1) // low friction
 		.nodes(dots)
 		.on('tick', () => (renderedDots = [...dots]));
 

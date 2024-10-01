@@ -2,22 +2,15 @@
 	import '$lib/styles/app.postcss';
 	import '$lib/styles/font.css';
 	import { page } from '$app/stores';
-	import { onMount } from 'svelte';
 	import { gsap } from 'gsap/dist/gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-	import { ScrollSmoother } from 'gsap/dist/ScrollSmoother';
 	import Meta from '$lib/components/furniture/Meta.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/furniture/Footer.svelte';
 	// import FollowMouse from '$lib/components/FollowMouse.svelte';
-	gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+	gsap.registerPlugin(ScrollTrigger);
 
-	onMount(() => {
-		ScrollSmoother.create({
-			smooth: 0.5,
-			effects: true
-		});
-	});
+
 </script>
 
 <Meta />

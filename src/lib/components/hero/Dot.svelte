@@ -8,6 +8,8 @@
 	export let img = 'me.jpeg';
 	export let contextName = 'canvas';
 
+	export let springParameters = { stiffness: 0.1, damping: 1 };
+
 	const { register, deregister, invalidate } = getContext(contextName);
 
 	const diameter = r * 2;
@@ -19,8 +21,9 @@
 	image.src =
 		img === 'me.jpeg' ? `images/me.jpeg` : `/images/thumbnails/${img.split('.')[0]}/300.jpeg`;
 
-	const tX = spring(null);
-	const tY = spring(null);
+	const tX = spring(null, springParameters);
+	const tY = spring(null, springParameters);
+	
 
 	const draw = (ctx) => {
 		ctx.translate($tX, $tY);
