@@ -1,20 +1,11 @@
-const tailwindcss = require("tailwindcss");
-const autoprefixer = require("autoprefixer");
-const cssnano = require("cssnano");
+const dev = process.env.NODE_ENV === 'development';
 
-const mode = process.env.NODE_ENV;
-const dev = mode === "development";
-
-const config = {
+module.exports = {
 	plugins: [
-        //Some plugins, like tailwindcss/nesting, need to run before Tailwind,
-        tailwindcss(),
-        //But others, like autoprefixer, need to run after,
-        autoprefixer(),
-        !dev && cssnano({
-			preset: "default",
-		})
-    ],
+		require('postcss-import'),
+		require('tailwindcss/nesting'),
+		require('tailwindcss'),
+		require('autoprefixer'),
+		!dev && require('cssnano')
+	]
 };
-
-module.exports = config;

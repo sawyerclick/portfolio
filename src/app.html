@@ -4,7 +4,8 @@
 	xmlns:og="http://opengraphprotocol.org/schema/"
 	itemscope
 	itemtype="http://schema.org/WebPage"
-	class="bg-accent dark:bg-primary overflow-x-hidden text-base scroll-smooth overscroll-y-none"
+	class="bg-light dark:bg-dark overflow-x-hidden text-base scroll-smooth overscroll-y-none"
+	style="--masthead-height: 188px"
 >
 	<head>
 		<meta charset="UTF-8" />
@@ -17,13 +18,14 @@
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<link rel="manifest" href="/site.webmanifest" crossorigin="use-credentials" />
 
-		%sveltekit.head%
-
 		<script
 			data-goatcounter="https://sawyer.goatcounter.com/count"
 			async
 			src="//gc.zgo.at/count.js"
 		></script>
+
+		%sveltekit.head%
+
 		<script>
 			if (
 				localStorage.theme === 'dark' ||
@@ -37,7 +39,11 @@
 			}
 		</script>
 	</head>
-	<body class="bg-accent dark:bg-primary min-h-screen antialiased">
-		<div class="contents">%sveltekit.body%</div>
+	<body
+		class="bg-light text-dark dark:text-light dark:bg-dark min-h-screen antialiased"
+		data-sveltekit-preload-data="hover"
+	>
+		<div id="top"></div>
+		<div>%sveltekit.body%</div>
 	</body>
 </html>

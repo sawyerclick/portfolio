@@ -1,0 +1,6 @@
+title: svelte-lazy-loader
+github: https://github.com/sawyerclick/svelte-lazy-loader
+link: https://svelte-lazy-loader.sawyer.codes
+description: >-
+  A component library for effortlessly loading media using a shared
+  IntersectionObserver instance if native lazy-loading doesn't exist.
