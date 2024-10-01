@@ -1,7 +1,7 @@
 import site from '$lib/site';
 
 export const GET = async () => {
-	const pages = ['whoami'];
+	const pages = [];
 
 	return new Response(
 		`<?xml version="1.0" encoding="UTF-8" ?>

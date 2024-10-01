@@ -21,10 +21,8 @@
 	</address>
 	<p class="text-lg font-bold italic leading-normal">
 		Made with ❦ by
-		<a
-			class="font-gothic underline hover:decoration-double focus:decoration-double"
-			href="/"
-			data-sveltekit-preload-data="hover">sawyer click</a
+		<a class="font-gothic underline hover:decoration-double focus:decoration-double" href="/"
+			>sawyer click</a
 		>
 	</p>
 </footer>

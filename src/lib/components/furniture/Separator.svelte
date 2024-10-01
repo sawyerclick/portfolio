@@ -15,7 +15,8 @@
 		background-repeat: repeat-x;
 		background-size: contain;
 		width: 100%;
-		height: 5px;
+		height: var(--height, 5px);
+		border: none;
 	}
 	hr.x-light {
 		background-image: url('/images/x-light.png');

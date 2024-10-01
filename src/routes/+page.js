@@ -1,15 +1,12 @@
-/** @type {import('./$types').PageLoad} */
-export const load = async ({ fetch }) => {
-	const [projects, awards, openSource] = await Promise.all([
-		fetch('/api/projects'),
-		fetch('/api/awards'),
-		fetch('/api/open-source')
-	]);
+import projects from '$lib/data/projects/index';
+import openSource from '$lib/data/open-source/index';
+import mentionables from '$lib/data/mentionables/index';
 
+/** @type {import('./$types').PageLoad} */
+export const load = async () => {
 	return {
-		// specific page data
-		projects: projects.ok && (await projects.json()),
-		awards: awards.ok && (await awards.json()),
-		openSource: openSource.ok && (await openSource.json())
+		projects: { all: projects, pinned: projects.pinned, recent: projects.recent },
+		mentionables,
+		openSource
 	};
 };
